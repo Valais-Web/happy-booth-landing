@@ -8,6 +8,7 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
+    /* Happy Booth Design System */
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
 
@@ -17,7 +18,8 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
+    /* Primary violet */
+    --primary: 264 49% 60%;
     --primary-foreground: 210 40% 98%;
 
     --secondary: 210 40% 96.1%;
@@ -26,8 +28,9 @@ All colors MUST be HSL.
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent colors for Happy Booth */
+    --accent: 264 49% 60%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
@@ -36,7 +39,29 @@ All colors MUST be HSL.
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Happy Booth Color Palette */
+    --violet-primary: 264 49% 60%;
+    --blue-primary: 198 93% 60%;
+    --green-accent: 158 64% 52%;
+    --orange-cta: 30 100% 50%;
+    --orange-hover: 14 100% 57%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(198, 93%, 60%) 0%, hsl(264, 49%, 60%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(158, 64%, 72%) 0%, hsl(158, 100%, 41%) 100%);
+    --gradient-cta: linear-gradient(135deg, hsl(44, 100%, 51%) 0%, hsl(30, 100%, 50%) 100%);
+    --gradient-cta-hover: linear-gradient(135deg, hsl(30, 100%, 50%) 0%, hsl(348, 83%, 47%) 100%);
+    --gradient-neutral: linear-gradient(135deg, hsl(0, 0%, 93%) 0%, hsl(210, 14%, 74%) 100%);
+
+    /* Shadows */
+    --shadow-natural: 0 6px 6px -3px rgba(0, 0, 0, 0.2);
+    --shadow-deep: 0 12px 50px -12px rgba(0, 0, 0, 0.4);
+
+    /* Typography */
+    --font-heading: 'Dosis', sans-serif;
+    --font-body: 'Nunito Sans', sans-serif;
 
     --sidebar-background: 0 0% 98%;
 
@@ -101,5 +126,210 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  /* Import Google Fonts */
+  @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;600;700&family=Nunito+Sans:wght@300;400;600;700&display=swap');
+}
+
+@layer components {
+  /* Typography */
+  .hero-title {
+    font-family: var(--font-heading);
+    font-size: 2.625rem;
+    font-weight: 700;
+    line-height: 1.2;
+    background: var(--gradient-hero);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-subtitle {
+    font-family: var(--font-body);
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: hsl(var(--muted-foreground));
+  }
+
+  .section-title {
+    font-family: var(--font-heading);
+    font-size: 2.25rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .section-subtitle {
+    font-family: var(--font-body);
+    font-size: 1.125rem;
+    color: hsl(var(--muted-foreground));
+    text-align: center;
+  }
+
+  /* Gradients */
+  .hero-gradient {
+    background: var(--gradient-hero);
+    color: white;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-gradient::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 30% 40%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .model-gradient {
+    background: var(--gradient-accent);
+  }
+
+  /* Navigation */
+  .nav-link {
+    font-family: var(--font-body);
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .nav-link:hover {
+    color: white;
+  }
+
+  /* Cards */
+  .form-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: var(--shadow-deep);
+  }
+
+  .feature-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid hsl(var(--border));
+    box-shadow: var(--shadow-natural);
+  }
+
+  .feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-deep);
+  }
+
+  .model-card {
+    padding: 2rem;
+    border: 1px solid hsl(var(--border));
+    box-shadow: var(--shadow-natural);
+  }
+
+  .pricing-card {
+    border: 2px solid hsl(var(--border));
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  }
+
+  .pricing-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-deep);
+    border-color: hsl(var(--violet-primary));
+  }
+
+  /* Use Case Cards */
+  .use-case-card {
+    padding: 2rem;
+    color: white;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .use-case-wedding {
+    background: linear-gradient(135deg, hsl(330, 100%, 45%) 0%, hsl(300, 100%, 35%) 100%);
+  }
+
+  .use-case-business {
+    background: linear-gradient(135deg, hsl(220, 100%, 45%) 0%, hsl(200, 100%, 35%) 100%);
+  }
+
+  .use-case-party {
+    background: linear-gradient(135deg, hsl(280, 100%, 45%) 0%, hsl(260, 100%, 35%) 100%);
+  }
+
+  /* Badges */
+  .badge-feature {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    font-weight: 500;
+  }
+
+  /* Buttons */
+  .cta-primary {
+    background: var(--gradient-cta);
+    color: white;
+    font-family: var(--font-body);
+    font-weight: 600;
+    text-transform: uppercase;
+    border: none;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-natural);
+  }
+
+  .cta-primary:hover {
+    background: var(--gradient-cta-hover);
+    transform: scale(1.02) rotate(0.5deg);
+    box-shadow: var(--shadow-deep);
+    color: white;
+  }
+
+  .cta-phone {
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+  }
+
+  .cta-phone:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+
+  /* Model Image */
+  .model-image {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .model-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+    pointer-events: none;
+  }
+
+  /* Responsive */
+  @media (max-width: 767px) {
+    .hero-title {
+      font-size: 2rem;
+    }
+    
+    .section-title {
+      font-size: 1.875rem;
+    }
+    
+    .hero-subtitle {
+      font-size: 1.125rem;
+    }
   }
 }
