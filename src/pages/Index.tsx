@@ -19,7 +19,6 @@ import corporateEvent from "@/assets/corporate-event.jpg";
 import weddingPhotobooth from "@/assets/wedding-photobooth.jpg";
 import booth360 from "@/assets/360-booth.jpg";
 import birthdayParty from "@/assets/birthday-party.jpg";
-import happyBoothLogo from "@/assets/happy-booth-logo.png";
 
 const Index = () => {
   const [formStep, setFormStep] = useState(1);
@@ -266,100 +265,44 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Background with overlay */}
-        <div className="absolute inset-0">
-          <div className="hero-gradient absolute inset-0 z-10"></div>
-          <img 
-            src={heroPhotobooth} 
-            alt="Photobooth miroir élégant" 
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-black/40 z-20"></div>
+      <section className="hero-gradient pt-24 pb-20 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-20">
+          <img src={heroPhotobooth} alt="Photobooth Hero" className="w-full h-full object-cover" />
         </div>
-        
-        {/* Content */}
-        <div className="container mx-auto px-4 relative z-30 text-center">
-          <div className="max-w-5xl mx-auto space-y-12">
-            {/* Logo */}
-            <div className="flex justify-center mb-8">
-              <img 
-                src={happyBoothLogo} 
-                alt="Happy Booth Logo" 
-                className="w-24 h-24 drop-shadow-2xl"
-              />
-            </div>
-            
-            {/* Main visual - Large photobooth image */}
-            <div className="flex justify-center mb-12">
-              <div className="relative">
-                <div className="w-80 h-80 md:w-96 md:h-96 rounded-3xl overflow-hidden shadow-2xl border-4 border-white/20">
-                  <img 
-                    src={photoboothCollection} 
-                    alt="Photobooth professionnel en action" 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                {/* Floating elements */}
-                <div className="absolute -top-4 -right-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-4 py-2 rounded-full font-bold shadow-lg animate-pulse">
-                  Dès 290 CHF
-                </div>
-                <div className="absolute -bottom-4 -left-4 bg-gradient-to-r from-green-400 to-blue-500 text-white px-4 py-2 rounded-full font-bold shadow-lg">
-                  Impressions illimitées
-                </div>
-              </div>
-            </div>
-            
-            {/* Title and subtitle with better contrast */}
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center space-y-8">
             <div className="space-y-6">
-              <h1 className="text-5xl md:text-7xl font-bold text-white drop-shadow-2xl leading-tight">
-                Location de Photobooth en<br />
-                <span className="bg-gradient-to-r from-yellow-300 via-orange-400 to-red-500 bg-clip-text text-transparent">
-                  Suisse Romande
-                </span>
+              <h1 className="hero-title text-white">
+                Location de Photobooth en Suisse Romande
               </h1>
               
-              <p className="text-2xl md:text-3xl text-white/95 max-w-3xl mx-auto font-medium drop-shadow-lg leading-relaxed">
+              <p className="hero-subtitle text-white/90 text-xl max-w-2xl mx-auto">
                 Transformez vos événements en souvenirs inoubliables avec nos photomatons dernière génération
               </p>
-            </div>
 
-            {/* Benefit bubbles */}
-            <div className="flex flex-wrap justify-center gap-6 mt-12">
-              <div className="bg-white/95 backdrop-blur-sm rounded-full px-8 py-4 flex items-center space-x-3 shadow-xl border border-white/20">
-                <Camera className="w-6 h-6 text-primary" />
-                <span className="text-lg font-semibold text-gray-800">Impressions illimitées</span>
+              <div className="flex flex-wrap justify-center gap-4 mt-8">
+                <Badge variant="secondary" className="badge-feature text-lg px-6 py-3">
+                  <Camera className="w-5 h-5 mr-2" />
+                  Impressions illimitées
+                </Badge>
+                <Badge variant="secondary" className="badge-feature text-lg px-6 py-3">
+                  <CheckCircle className="w-5 h-5 mr-2" />
+                  Service clé en main
+                </Badge>
+                <Badge variant="secondary" className="badge-feature text-lg px-6 py-3">
+                  <Sparkles className="w-5 h-5 mr-2" />
+                  100% personnalisable
+                </Badge>
               </div>
-              <div className="bg-white/95 backdrop-blur-sm rounded-full px-8 py-4 flex items-center space-x-3 shadow-xl border border-white/20">
-                <CheckCircle className="w-6 h-6 text-green-600" />
-                <span className="text-lg font-semibold text-gray-800">Service clé en main</span>
-              </div>
-              <div className="bg-white/95 backdrop-blur-sm rounded-full px-8 py-4 flex items-center space-x-3 shadow-xl border border-white/20">
-                <Sparkles className="w-6 h-6 text-purple-600" />
-                <span className="text-lg font-semibold text-gray-800">100% personnalisable</span>
-              </div>
-            </div>
 
-            {/* Single CTA */}
-            <div className="flex justify-center mt-16">
-              <Button 
-                size="lg" 
-                className="cta-primary text-xl px-12 py-6 rounded-full shadow-2xl transform hover:scale-105 transition-all duration-300" 
-                onClick={() => scrollToSection('contact-form')}
-              >
-                <Sparkles className="w-6 h-6 mr-3" />
-                Demander une offre
-                <ArrowRight className="w-6 h-6 ml-3" />
-              </Button>
-            </div>
-          </div>
-        </div>
-        
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-30">
-          <div className="animate-bounce">
-            <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
-              <div className="w-1 h-3 bg-white/70 rounded-full mt-2 animate-pulse"></div>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
+                <Button size="lg" className="cta-primary text-lg px-8 py-4" onClick={() => scrollToSection('contact-form')}>
+                  Demander une offre
+                </Button>
+                <Button variant="outline" size="lg" className="text-lg px-8 py-4 border-white text-white hover:bg-white hover:text-primary" onClick={() => scrollToSection('models')}>
+                  Voir nos modèles
+                </Button>
+              </div>
             </div>
           </div>
         </div>
