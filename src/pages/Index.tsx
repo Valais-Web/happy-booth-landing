@@ -19,6 +19,7 @@ import corporateEvent from "@/assets/corporate-event.jpg";
 import weddingPhotobooth from "@/assets/wedding-photobooth.jpg";
 import booth360 from "@/assets/360-booth.jpg";
 import birthdayParty from "@/assets/birthday-party.jpg";
+import happyBoothLogo from "@/assets/happy-booth-logo.png";
 
 const Index = () => {
   const [formStep, setFormStep] = useState(1);
@@ -265,45 +266,78 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="hero-gradient pt-24 pb-20 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
-          <img src={heroPhotobooth} alt="Photobooth Hero" className="w-full h-full object-cover" />
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Background Image with Overlay */}
+        <div className="absolute inset-0">
+          <img 
+            src={heroPhotobooth} 
+            alt="Photobooth moderne en action" 
+            className="w-full h-full object-cover object-center" 
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/50 to-black/60"></div>
         </div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center space-y-8">
-            <div className="space-y-6">
-              <h1 className="hero-title text-white">
-                Location de Photobooth en Suisse Romande
+
+        {/* Content */}
+        <div className="container mx-auto px-4 relative z-10 text-center">
+          <div className="max-w-5xl mx-auto space-y-12">
+            {/* Logo */}
+            <div className="flex justify-center mb-8">
+              <div className="flex items-center space-x-4 bg-white/10 backdrop-blur-sm rounded-full px-8 py-4 border border-white/20">
+                <div className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center">
+                  <span className="text-2xl">😄</span>
+                </div>
+                <span className="text-3xl font-bold text-white tracking-wide">HAPPY BOOTH</span>
+              </div>
+            </div>
+
+            {/* Main Content */}
+            <div className="space-y-8">
+              <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight">
+                Location de Photobooth
+                <span className="block text-accent bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
+                  en Suisse Romande
+                </span>
               </h1>
               
-              <p className="hero-subtitle text-white/90 text-xl max-w-2xl mx-auto">
+              <p className="text-xl md:text-2xl text-white/95 max-w-3xl mx-auto leading-relaxed font-medium">
                 Transformez vos événements en souvenirs inoubliables avec nos photomatons dernière génération
               </p>
 
-              <div className="flex flex-wrap justify-center gap-4 mt-8">
-                <Badge variant="secondary" className="badge-feature text-lg px-6 py-3">
-                  <Camera className="w-5 h-5 mr-2" />
-                  Impressions illimitées
-                </Badge>
-                <Badge variant="secondary" className="badge-feature text-lg px-6 py-3">
-                  <CheckCircle className="w-5 h-5 mr-2" />
-                  Service clé en main
-                </Badge>
-                <Badge variant="secondary" className="badge-feature text-lg px-6 py-3">
-                  <Sparkles className="w-5 h-5 mr-2" />
-                  100% personnalisable
-                </Badge>
+              {/* Benefit Badges */}
+              <div className="flex flex-wrap justify-center gap-4 mt-12">
+                <div className="bg-white/15 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3 flex items-center space-x-2">
+                  <Camera className="w-5 h-5 text-yellow-400" />
+                  <span className="text-white font-semibold">Impressions illimitées</span>
+                </div>
+                <div className="bg-white/15 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3 flex items-center space-x-2">
+                  <CheckCircle className="w-5 h-5 text-green-400" />
+                  <span className="text-white font-semibold">Service clé en main</span>
+                </div>
+                <div className="bg-white/15 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3 flex items-center space-x-2">
+                  <Sparkles className="w-5 h-5 text-purple-400" />
+                  <span className="text-white font-semibold">100% personnalisable</span>
+                </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
-                <Button size="lg" className="cta-primary text-lg px-8 py-4" onClick={() => scrollToSection('contact-form')}>
+              {/* CTA Button */}
+              <div className="pt-8">
+                <Button 
+                  size="lg" 
+                  className="bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-black font-bold text-xl px-12 py-6 rounded-full shadow-2xl transform hover:scale-105 transition-all duration-300" 
+                  onClick={() => scrollToSection('contact-form')}
+                >
                   Demander une offre
-                </Button>
-                <Button variant="outline" size="lg" className="text-lg px-8 py-4 border-white text-white hover:bg-white hover:text-primary" onClick={() => scrollToSection('models')}>
-                  Voir nos modèles
+                  <ArrowRight className="ml-2 w-6 h-6" />
                 </Button>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Visual Element - Floating Photobooth Illustration */}
+        <div className="absolute bottom-10 right-10 hidden lg:block">
+          <div className="w-32 h-32 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 flex items-center justify-center">
+            <Camera className="w-16 h-16 text-yellow-400" />
           </div>
         </div>
       </section>
