@@ -191,7 +191,10 @@ const Index = () => {
       {/* Header */}
       <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${isHeaderSticky ? 'bg-primary/10 backdrop-blur-md shadow-lg' : 'bg-transparent'}`}>
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          
+          {/* Logo */}
+          <div className="flex items-center">
+            <img src={happyBoothLogo} alt="Happy Booth Logo" className="h-12 w-auto" />
+          </div>
           
           <nav className="hidden md:flex items-center space-x-6">
             <button onClick={() => scrollToSection('models')} className="nav-link">Nos modèles</button>
@@ -216,15 +219,10 @@ const Index = () => {
         </div>
 
         {/* Content */}
-        <div className="container mx-auto px-4 relative z-10 text-center">
-          <div className="max-w-5xl mx-auto space-y-12">
-            {/* Logo */}
-            <div className="flex justify-center mb-8">
-              
-            </div>
-
-            {/* Main Content */}
-            <div className="space-y-8">
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
+            {/* Text Content */}
+            <div className="text-center lg:text-left space-y-8">
               <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight">
                 Location de Photobooth
                 <span className="block text-accent bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
@@ -232,12 +230,12 @@ const Index = () => {
                 </span>
               </h1>
               
-              <p className="text-xl md:text-2xl text-white/95 max-w-3xl mx-auto leading-relaxed font-medium">
+              <p className="text-xl md:text-2xl text-white/95 max-w-3xl leading-relaxed font-medium">
                 Transformez vos événements en souvenirs inoubliables avec nos photomatons dernière génération
               </p>
 
               {/* Benefit Badges */}
-              <div className="flex flex-wrap justify-center gap-4 mt-12">
+              <div className="flex flex-wrap justify-center lg:justify-start gap-4 mt-12">
                 <div className="bg-white/15 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3 flex items-center space-x-2">
                   <Camera className="w-5 h-5 text-yellow-400" />
                   <span className="text-white font-semibold">Impressions illimitées</span>
@@ -260,12 +258,17 @@ const Index = () => {
                 </Button>
               </div>
             </div>
-          </div>
-        </div>
 
-        {/* Visual Element - Floating Photobooth Illustration */}
-        <div className="absolute bottom-10 right-10 hidden lg:block">
-          
+            {/* Visual Illustration */}
+            <div className="relative lg:block hidden">
+              <div className="relative">
+                <img src={birthdayParty} alt="Personnes s'amusant avec un photobooth lors d'une fête" className="rounded-2xl shadow-2xl w-full max-w-lg mx-auto transform rotate-2 hover:rotate-0 transition-transform duration-300" />
+                <div className="absolute -top-4 -right-4 bg-yellow-400 text-black p-4 rounded-full shadow-lg">
+                  <Camera className="w-8 h-8" />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
