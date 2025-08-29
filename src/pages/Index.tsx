@@ -167,23 +167,23 @@ const Index = () => {
     title: 'Chic, moderne, super fun',
     description: 'Anneau lumineux arc-en-ciel, look tendance qui attire tous les regards.',
     features: ['Anneau lumineux arc-en-ciel, look tendance qui attire tous les regards', 'Partage réseaux sociaux + impression sur place', 'Cadres personnalisables, chaque invité choisit son préféré', 'Impressions illimitées', '"Magic Screen" & fonds thématiques', 'Option backdrops', 'NOUVEAU : effets IA'],
-    included: ['Installation & récupération', 'Impressions illimitées', 'Galerie en ligne', 'Personnalisation complète', 'Support technique']
+    included: ['Impressions illimitées', 'Galerie en ligne', 'Personnalisation complète', 'Support technique']
   }, {
     id: '360',
     name: '360 Happy Booth',
     price: '890 CHF',
     title: 'Tournez, posez, brillez',
     description: 'Vidéos illimitées avec envoi instantané (WhatsApp, e-mail, AirDrop).',
-    features: ['Vidéos illimitées avec envoi instantané (WhatsApp, e-mail, AirDrop)', 'Effets personnalisés + superpositions brandées, musique', 'Galerie en ligne. Plateforme 90 cm jusqu\'à 4 personnes, arrêt sécu', 'Livraison, installation et récupération incluses à Lausanne', 'Hôte possible 45 CHF/heure'],
-    included: ['Installation & récupération', 'Vidéos illimitées', 'Galerie en ligne', 'Personnalisation complète', 'Support technique']
+    features: ['Vidéos illimitées avec envoi instantané (WhatsApp, e-mail, AirDrop)', 'Effets personnalisés + superpositions brandées, musique', 'Galerie en ligne. Plateforme 90 cm jusqu\'à 4 personnes, arrêt sécu', 'Livraison, installation et récupération incluses à Lausanne'],
+    included: ['Vidéos illimitées', 'Galerie en ligne', 'Personnalisation complète', 'Support technique']
   }, {
     id: 'retro',
     name: 'Retro Booth',
     price: '790 CHF',
     title: 'L\'élégance vintage qui fait fondre tous les cœurs',
     description: 'Style rétro-chic, format compact, ultra simple à utiliser.',
-    features: ['Style rétro-chic, format compact, ultra simple à utiliser', 'Impressions illimitées', 'Effet miroir + écran tactile : signer, dessiner, emojis', 'Cadres perso, galerie en ligne, accessoires fournis', 'Option hôte 45 CHF/heure'],
-    included: ['Installation & récupération', 'Impressions illimitées', 'Galerie en ligne', 'Personnalisation complète', 'Support technique']
+    features: ['Style rétro-chic, format compact, ultra simple à utiliser', 'Impressions illimitées', 'Effet miroir + écran tactile : signer, dessiner, emojis', 'Cadres perso, galerie en ligne, accessoires fournis'],
+    included: ['Impressions illimitées', 'Galerie en ligne', 'Personnalisation complète', 'Support technique']
   }, {
     id: 'phone',
     name: 'Phone Booth',
