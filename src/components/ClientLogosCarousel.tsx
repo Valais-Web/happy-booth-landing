@@ -28,11 +28,6 @@ const clientLogos: ClientLogo[] = [
     name: "Valmont"
   },
   {
-    src: "/lovable-uploads/843b3ed9-bbcf-4838-91e8-af59de0bfdb6.png",
-    alt: "Ville de Lausanne",
-    name: "Ville de Lausanne"
-  },
-  {
     src: "/lovable-uploads/1f49336f-ab7b-431a-a494-036ed5b2ef80.png",
     alt: "Hyatt",
     name: "Hyatt"
