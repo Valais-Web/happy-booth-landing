@@ -437,7 +437,7 @@ const Index = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-6">Nos modèles — Tarifs transparents "all-inclusive"</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Découvrez notre gamme complète de photobooths avec tous les services inclus
+              Découvrez notre gamme complète de photomatons avec tous les services inclus
             </p>
           </div>
 
