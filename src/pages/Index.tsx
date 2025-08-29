@@ -741,7 +741,7 @@ const Index = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 bg-gradient-to-br from-primary/5 to-accent/5">
+      <section id="testimonials" className="py-20 bg-gradient-to-br from-primary/5 to-accent/5">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-6">Ce que disent nos clients</h2>
@@ -1254,7 +1254,7 @@ const Index = () => {
               <div className="space-y-2">
                 <button onClick={() => scrollToSection('models')} className="block text-white/80 hover:text-white">Nos modèles</button>
                 <button onClick={() => scrollToSection('why-us')} className="block text-white/80 hover:text-white">Pourquoi nous</button>
-                <button onClick={() => scrollToSection('use-cases')} className="block text-white/80 hover:text-white">Cas d'usage</button>
+                <button onClick={() => scrollToSection('testimonials')} className="block text-white/80 hover:text-white">Témoignages</button>
                 <button onClick={() => scrollToSection('faq')} className="block text-white/80 hover:text-white">FAQ</button>
               </div>
             </div>
