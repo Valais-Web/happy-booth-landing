@@ -175,14 +175,14 @@
   "howItWorks": {
     "title": "How does it work?",
     "subtitle": "Guaranteed simplicity in 4 steps",
-    "step1Title": "1. Booking",
-    "step1Desc": "Contact us to check availability and customize your photobooth.",
-    "step2Title": "2. Delivery & installation",
-    "step2Desc": "We deliver and install your photobooth 1-2h before your event starts.",
-    "step3Title": "3. Animation", 
-    "step3Desc": "Your guests have fun! Unlimited photos, instant prints, online sharing.",
-    "step4Title": "4. Pickup",
-    "step4Desc": "We pick up the equipment the next day and deliver all your HD photos."
+    "step1Title": "Book your date",
+    "step1Desc": "Contact us to check availability and receive a personalized quote within 24h",
+    "step2Title": "Customization",
+    "step2Desc": "We create your frames, animations and screens in your event colors",
+    "step3Title": "Delivery & installation",
+    "step3Desc": "Our team takes care of everything: delivery, installation, testing. Zero stress for you!",
+    "step4Title": "Enjoy the magic",
+    "step4Desc": "Your guests have fun, create memories and leave with their printed photos"
   },
   "testimonials": {
     "title": "What our clients say",
@@ -302,7 +302,8 @@
     "modelLabel": "Preferred model",
     "continueButton": "Continue",
     "backButton": "Back",
-    "contactConsent": "I agree to be contacted for this quote and the privacy policy *"
+    "contactConsent": "I agree to be contacted for this quote and the privacy policy *",
+    "guestsPlaceholder": "Select number of guests"
   },
   "footer": {
     "tagline": "Happy Booth - Photobooth Rental French Switzerland",

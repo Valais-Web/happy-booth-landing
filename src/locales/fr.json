@@ -175,14 +175,14 @@
   "howItWorks": {
     "title": "Comment ça marche ?",
     "subtitle": "Simplicité garantie en 4 étapes",
-    "step1Title": "1. Réservation",
-    "step1Desc": "Contactez-nous pour vérifier la disponibilité et personnaliser votre photobooth.",
-    "step2Title": "2. Livraison & installation", 
-    "step2Desc": "Nous livrons et installons votre photobooth 1-2h avant le début de votre événement.",
-    "step3Title": "3. Animation",
-    "step3Desc": "Vos invités s'amusent ! Photos illimitées, impressions instantanées, partage en ligne.",
-    "step4Title": "4. Récupération",
-    "step4Desc": "Nous récupérons le matériel le lendemain et vous livrons toutes vos photos HD."
+    "step1Title": "Réservez votre date",
+    "step1Desc": "Contactez-nous pour vérifier la disponibilité et recevoir un devis personnalisé en 24h",
+    "step2Title": "Personnalisation",
+    "step2Desc": "Nous créons vos cadres, animations et écrans aux couleurs de votre événement",
+    "step3Title": "Livraison & installation",
+    "step3Desc": "Notre équipe s'occupe de tout : livraison, installation, test. Zéro stress pour vous !",
+    "step4Title": "Profitez de la magie",
+    "step4Desc": "Vos invités s'amusent, créent des souvenirs et repartent avec leurs photos imprimées"
   },
   "testimonials": {
     "title": "Ce que disent nos clients",
@@ -268,7 +268,9 @@
     "thankYou": "Merci pour votre demande !",
     "thankYouDesc": "Nous vous contactons dans les 24h avec une offre personnalisée.",
     "errorConsent": "Veuillez accepter les conditions pour continuer",
-    "successMessage": "Demande envoyée ! Nous vous contactons rapidement."
+    "successMessage": "Demande envoyée ! Nous vous contactons rapidement.",
+    "contactConsent": "J'accepte d'être contacté pour ce devis et la politique de confidentialité *",
+    "guestsPlaceholder": "Sélectionner le nombre"
   },
   "footer": {
     "tagline": "Happy Booth - Location photobooth Suisse Romande",

@@ -636,9 +636,9 @@ const Index = () => {
               </div>
               <div className="mt-8">
                 <Calendar className="w-12 h-12 text-primary mx-auto mb-4" />
-                <h3 className="font-bold text-lg mb-3">Réservez votre date</h3>
+                <h3 className="font-bold text-lg mb-3">{t('howItWorks.step1Title')}</h3>
                 <p className="text-sm text-muted-foreground">
-                  Contactez-nous pour vérifier la disponibilité et recevoir un devis personnalisé en 24h
+                  {t('howItWorks.step1Desc')}
                 </p>
               </div>
             </Card>
@@ -649,9 +649,9 @@ const Index = () => {
               </div>
               <div className="mt-8">
                 <Sparkles className="w-12 h-12 text-primary mx-auto mb-4" />
-                <h3 className="font-bold text-lg mb-3">Personnalisation</h3>
+                <h3 className="font-bold text-lg mb-3">{t('howItWorks.step2Title')}</h3>
                 <p className="text-sm text-muted-foreground">
-                  Nous créons vos cadres, animations et écrans aux couleurs de votre événement
+                  {t('howItWorks.step2Desc')}
                 </p>
               </div>
             </Card>
@@ -662,9 +662,9 @@ const Index = () => {
               </div>
               <div className="mt-8">
                 <CheckCircle className="w-12 h-12 text-primary mx-auto mb-4" />
-                <h3 className="font-bold text-lg mb-3">Livraison & installation</h3>
+                <h3 className="font-bold text-lg mb-3">{t('howItWorks.step3Title')}</h3>
                 <p className="text-sm text-muted-foreground">
-                  Notre équipe s'occupe de tout : livraison, installation, test. Zéro stress pour vous !
+                  {t('howItWorks.step3Desc')}
                 </p>
               </div>
             </Card>
@@ -675,9 +675,9 @@ const Index = () => {
               </div>
               <div className="mt-8">
                 <Heart className="w-12 h-12 text-primary mx-auto mb-4" />
-                <h3 className="font-bold text-lg mb-3">Profitez de la magie</h3>
+                <h3 className="font-bold text-lg mb-3">{t('howItWorks.step4Title')}</h3>
                 <p className="text-sm text-muted-foreground">
-                  Vos invités s'amusent, créent des souvenirs et repartent avec leurs photos imprimées
+                  {t('howItWorks.step4Desc')}
                 </p>
               </div>
             </Card>
@@ -1045,7 +1045,7 @@ const Index = () => {
                         <Label htmlFor="eventType">{t('contact.eventType')}</Label>
                         <Select onValueChange={value => handleInputChange('eventType', value)}>
                           <SelectTrigger>
-                            <SelectValue placeholder={t('contact.selectPlaceholder')} />
+                            <SelectValue placeholder={t('contact.eventTypePlaceholder')} />
                           </SelectTrigger>
                           <SelectContent>
                             <SelectItem value="mariage">{t('contact.eventTypeOptions.mariage')}</SelectItem>
@@ -1062,13 +1062,13 @@ const Index = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
                         <Label htmlFor="city">{t('contact.city')}</Label>
-                        <Input id="city" value={formData.city} onChange={e => handleInputChange('city', e.target.value)} placeholder={t('contact.cityPlaceholder2')} />
+                        <Input id="city" value={formData.city} onChange={e => handleInputChange('city', e.target.value)} placeholder={t('contact.cityPlaceholder')} />
                       </div>
                       <div>
                         <Label htmlFor="guests">{t('contact.guests')}</Label>
                         <Select onValueChange={value => handleInputChange('guests', value)}>
                           <SelectTrigger>
-                            <SelectValue placeholder={t('contact.selectPlaceholder')} />
+                            <SelectValue placeholder={t('contact.guestsPlaceholder')} />
                           </SelectTrigger>
                           <SelectContent>
                             <SelectItem value="<50">{t('contact.guestOptions.<50')}</SelectItem>
@@ -1100,7 +1100,7 @@ const Index = () => {
                       <Label htmlFor="model">{t('contact.modelLabel')}</Label>
                       <Select value={formData.model} onValueChange={value => handleInputChange('model', value)}>
                         <SelectTrigger>
-                          <SelectValue placeholder={t('contact.advisePlaceholder')} />
+                          <SelectValue placeholder={t('contact.modelOptions.conseil')} />
                         </SelectTrigger>
                         <SelectContent>
                           <SelectItem value="mirror">{t('contact.modelOptions.mirror')}</SelectItem>
@@ -1115,7 +1115,7 @@ const Index = () => {
 
                     <div>
                       <Label htmlFor="message">{t('contact.message')}</Label>
-                      <Textarea id="message" value={formData.message} onChange={e => handleInputChange('message', e.target.value)} placeholder={t('contact.messagePlaceholder2')} rows={4} />
+                      <Textarea id="message" value={formData.message} onChange={e => handleInputChange('message', e.target.value)} placeholder={t('contact.messagePlaceholder')} rows={4} />
                     </div>
 
                     <div className="flex items-start space-x-2">
