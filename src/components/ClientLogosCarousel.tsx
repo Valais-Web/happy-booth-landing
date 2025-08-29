@@ -8,52 +8,52 @@ interface ClientLogo {
 
 const clientLogos: ClientLogo[] = [
   {
-    src: "/lovable-uploads/b6b8b200-43f3-4a87-a177-891a85e8c478.png",
+    src: "/lovable-uploads/f8e72874-69c3-4d78-a945-35607417cc89.png",
     alt: "EPFL",
     name: "EPFL"
   },
   {
-    src: "/lovable-uploads/36231319-3fe7-405b-900f-f433ff19b21d.png",
+    src: "/lovable-uploads/d776e4c3-4269-43cb-bdbc-91869552bfdf.png",
     alt: "Philip Morris International",
     name: "Philip Morris International"
   },
   {
-    src: "/lovable-uploads/95f89799-af0e-4415-b728-55a5ebbf4024.png",
+    src: "/lovable-uploads/1929a707-825a-4da2-876a-d350c9099c7a.png",
     alt: "Mandarin Oriental Geneva",
     name: "Mandarin Oriental Geneva"
   },
   {
-    src: "/lovable-uploads/d3f98e8d-de1b-4d23-800d-c3fed7c19a19.png",
+    src: "/lovable-uploads/3b5e4467-f251-4f48-a13d-d108b80cb2bf.png",
     alt: "Valmont",
     name: "Valmont"
   },
   {
-    src: "/lovable-uploads/b81d34da-8b03-4bfd-ace2-cf2d8da78706.png",
+    src: "/lovable-uploads/843b3ed9-bbcf-4838-91e8-af59de0bfdb6.png",
     alt: "Ville de Lausanne",
     name: "Ville de Lausanne"
   },
   {
-    src: "/lovable-uploads/8c0dcfa0-d398-4bd4-97a9-b80fb093f5a0.png",
+    src: "/lovable-uploads/1f49336f-ab7b-431a-a494-036ed5b2ef80.png",
     alt: "Hyatt",
     name: "Hyatt"
   },
   {
-    src: "/lovable-uploads/c87c5002-9b0c-4336-afdd-751215eec4b5.png",
+    src: "/lovable-uploads/5e7a381d-fb0f-4018-95dc-394052d9a67e.png",
     alt: "Julius Bär",
     name: "Julius Bär"
   },
   {
-    src: "/lovable-uploads/2dee958b-61e0-4db9-b9c4-dceeaaca0089.png",
+    src: "/lovable-uploads/24a9a7c9-582a-4381-9116-c89b0b8b60a8.png",
     alt: "IMD",
     name: "IMD"
   },
   {
-    src: "/lovable-uploads/52f35edc-8e78-48bc-82f5-ac6173928869.png",
+    src: "/lovable-uploads/358f41db-1555-4b5a-a1a7-72970547db92.png",
     alt: "International School Lausanne",
     name: "International School Lausanne"
   },
   {
-    src: "/lovable-uploads/98d2c74c-d782-480f-886b-d057735a0e38.png",
+    src: "/lovable-uploads/805870f1-81da-4b24-aaf5-2b91df6890ba.png",
     alt: "Facchinetti Automobiles",
     name: "Facchinetti Automobiles"
   }
