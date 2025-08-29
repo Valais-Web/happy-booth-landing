@@ -86,34 +86,6 @@ const ClientLogosCarousel = () => {
     {
       src: "/lovable-uploads/0b563ee7-2d62-4fd3-8626-177df7ce5604.png",
       alt: "Paléo"
-    },
-    {
-      src: "/lovable-uploads/eaa403b0-ec54-4f5e-b243-81e87fbd9a22.png",
-      alt: "UNIL | Université de Lausanne HEC Lausanne"
-    },
-    {
-      src: "/lovable-uploads/d928f88c-31b1-45ef-ab59-b36430c93b6a.png",
-      alt: "Uber"
-    },
-    {
-      src: "/lovable-uploads/7eeffefb-225f-4587-9c81-dcc59ad4c5a9.png",
-      alt: "Ville de Lausanne"
-    },
-    {
-      src: "/lovable-uploads/952047b3-9cb8-4495-b0ab-e42b8350d809.png",
-      alt: "AXA"
-    },
-    {
-      src: "/lovable-uploads/62383115-fc09-4a79-a3f4-4fb8dd9dc07b.png",
-      alt: "Julius Bär"
-    },
-    {
-      src: "/lovable-uploads/e7d3b263-43b7-4e96-96d5-7d9f2daec987.png",
-      alt: "Pictet 1805"
-    },
-    {
-      src: "/lovable-uploads/d02e1326-6e66-4558-af7e-02265442730a.png",
-      alt: "EPFL"
     }
   ];
 
