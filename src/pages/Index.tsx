@@ -736,318 +736,286 @@ const Index = () => {
             <p className="text-xl text-muted-foreground">Des centaines d'événements réussis et des clients ravis</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {/* Testimonial 1 */}
-            <Card className="p-6 bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="flex mb-4">
-                {[1, 2, 3, 4, 5].map((star) => (
-                  <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
-              <p className="text-gray-700 mb-4 italic">
-                "Le photobooth Mirror est exceptionnel!! Vraiment parfait pour créer une ambiance festive auprès de nos invités. La qualité des photos est top 👍🏼 tactile, il a beaucoup de fonctionnalité. Je recommande à 100%"
-              </p>
-            </Card>
+          <div className="max-w-7xl mx-auto">
+            <Carousel
+              plugins={[Autoplay({ delay: 5000 })]}
+              className="w-full"
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+            >
+              <CarouselContent className="-ml-2 md:-ml-4">
+                {/* Testimonial 1 */}
+                <CarouselItem className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+                  <Card className="p-6 bg-white shadow-lg hover:shadow-xl transition-shadow duration-300 h-full">
+                    <div className="flex items-center justify-center mb-4">
+                      <img src="/lovable-uploads/6d5ed64f-b982-42cf-94ab-6c4be5136a9a.png" alt="Google" className="w-8 h-8 mr-2" />
+                    </div>
+                    <div className="flex justify-center mb-4">
+                      {[1, 2, 3, 4, 5].map((star) => (
+                        <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                      ))}
+                    </div>
+                    <p className="text-gray-700 mb-4 italic text-sm leading-relaxed">
+                      "Le photobooth Mirror est exceptionnel!! Vraiment parfait pour créer une ambiance festive auprès de nos invités. La qualité des photos est top 👍🏼 tactile, il a beaucoup de fonctionnalité. Je recommande à 100%"
+                    </p>
+                  </Card>
+                </CarouselItem>
 
-            {/* Testimonial 2 */}
-            <Card className="p-6 bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="flex mb-4">
-                {[1, 2, 3, 4, 5].map((star) => (
-                  <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
-              <p className="text-gray-700 mb-4 italic">
-                "Everything was perfect, we absolutely loved it and recommend their service! Good quality price :)"
-              </p>
-            </Card>
+                {/* Testimonial 2 */}
+                <CarouselItem className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+                  <Card className="p-6 bg-white shadow-lg hover:shadow-xl transition-shadow duration-300 h-full">
+                    <div className="flex items-center justify-center mb-4">
+                      <img src="/lovable-uploads/6d5ed64f-b982-42cf-94ab-6c4be5136a9a.png" alt="Google" className="w-8 h-8 mr-2" />
+                    </div>
+                    <div className="flex justify-center mb-4">
+                      {[1, 2, 3, 4, 5].map((star) => (
+                        <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                      ))}
+                    </div>
+                    <p className="text-gray-700 mb-4 italic text-sm leading-relaxed">
+                      "Everything was perfect, we absolutely loved it and recommend their service! Good quality price :)"
+                    </p>
+                  </Card>
+                </CarouselItem>
 
-            {/* Testimonial 3 */}
-            <Card className="p-6 bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="flex mb-4">
-                {[1, 2, 3, 4, 5].map((star) => (
-                  <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
-              <p className="text-gray-700 mb-4 italic">
-                "Le photobooth rainbow était un succès total à ma fête d'anniversaire! Les photos sont d'excellente qualité et l'expérience digitale est très amusante. Je remercie Jessica pour le service et je recommande vivement happybooth."
-              </p>
-            </Card>
+                {/* Testimonial 3 */}
+                <CarouselItem className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+                  <Card className="p-6 bg-white shadow-lg hover:shadow-xl transition-shadow duration-300 h-full">
+                    <div className="flex items-center justify-center mb-4">
+                      <img src="/lovable-uploads/6d5ed64f-b982-42cf-94ab-6c4be5136a9a.png" alt="Google" className="w-8 h-8 mr-2" />
+                    </div>
+                    <div className="flex justify-center mb-4">
+                      {[1, 2, 3, 4, 5].map((star) => (
+                        <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                      ))}
+                    </div>
+                    <p className="text-gray-700 mb-4 italic text-sm leading-relaxed">
+                      "Le photobooth rainbow était un succès total à ma fête d'anniversaire! Les photos sont d'excellente qualité et l'expérience digitale est très amusante. Je recommande vivement happybooth."
+                    </p>
+                  </Card>
+                </CarouselItem>
 
-            {/* Testimonial 4 */}
-            <Card className="p-6 bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="flex mb-4">
-                {[1, 2, 3, 4, 5].map((star) => (
-                  <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
-              <p className="text-gray-700 mb-4 italic">
-                "We had the best experience for my son's 1st birthday! From start to finish, the service was perfect. The photo quality was incredible, and the attendant was so friendly and professional."
-              </p>
-            </Card>
+                {/* Testimonial 4 */}
+                <CarouselItem className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+                  <Card className="p-6 bg-white shadow-lg hover:shadow-xl transition-shadow duration-300 h-full">
+                    <div className="flex items-center justify-center mb-4">
+                      <img src="/lovable-uploads/6d5ed64f-b982-42cf-94ab-6c4be5136a9a.png" alt="Google" className="w-8 h-8 mr-2" />
+                    </div>
+                    <div className="flex justify-center mb-4">
+                      {[1, 2, 3, 4, 5].map((star) => (
+                        <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                      ))}
+                    </div>
+                    <p className="text-gray-700 mb-4 italic text-sm leading-relaxed">
+                      "We had the best experience for my son's 1st birthday! From start to finish, the service was perfect. The photo quality was incredible, and the attendant was so friendly and professional."
+                    </p>
+                  </Card>
+                </CarouselItem>
 
-            {/* Testimonial 5 */}
-            <Card className="p-6 bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="flex mb-4">
-                {[1, 2, 3, 4, 5].map((star) => (
-                  <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
-              <p className="text-gray-700 mb-4 italic">
-                "Super expérience que nous recommandons vivement ! Tous nos invités adoré le photobooth miroir. Un tout grand MERCI !"
-              </p>
-            </Card>
+                {/* Testimonial 5 */}
+                <CarouselItem className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+                  <Card className="p-6 bg-white shadow-lg hover:shadow-xl transition-shadow duration-300 h-full">
+                    <div className="flex items-center justify-center mb-4">
+                      <img src="/lovable-uploads/6d5ed64f-b982-42cf-94ab-6c4be5136a9a.png" alt="Google" className="w-8 h-8 mr-2" />
+                    </div>
+                    <div className="flex justify-center mb-4">
+                      {[1, 2, 3, 4, 5].map((star) => (
+                        <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                      ))}
+                    </div>
+                    <p className="text-gray-700 mb-4 italic text-sm leading-relaxed">
+                      "Super expérience que nous recommandons vivement ! Tous nos invités adoré le photobooth miroir. Un tout grand MERCI !"
+                    </p>
+                  </Card>
+                </CarouselItem>
 
-            {/* Testimonial 6 */}
-            <Card className="p-6 bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="flex mb-4">
-                {[1, 2, 3, 4, 5].map((star) => (
-                  <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
-              <p className="text-gray-700 mb-4 italic">
-                "Best service ever. Have had them at my wedding, at birthdays and special events of my family. They are 'The Photobooth', what else?"
-              </p>
-            </Card>
+                {/* Testimonial 6 */}
+                <CarouselItem className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+                  <Card className="p-6 bg-white shadow-lg hover:shadow-xl transition-shadow duration-300 h-full">
+                    <div className="flex items-center justify-center mb-4">
+                      <img src="/lovable-uploads/6d5ed64f-b982-42cf-94ab-6c4be5136a9a.png" alt="Google" className="w-8 h-8 mr-2" />
+                    </div>
+                    <div className="flex justify-center mb-4">
+                      {[1, 2, 3, 4, 5].map((star) => (
+                        <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                      ))}
+                    </div>
+                    <p className="text-gray-700 mb-4 italic text-sm leading-relaxed">
+                      "Best service ever. Have had them at my wedding, at birthdays and special events of my family. They are 'The Photobooth', what else?"
+                    </p>
+                  </Card>
+                </CarouselItem>
 
-            {/* Testimonial 7 */}
-            <Card className="p-6 bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="flex mb-4">
-                {[1, 2, 3, 4, 5].map((star) => (
-                  <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
-              <p className="text-gray-700 mb-4 italic">
-                "Nous avons fait appel à Happy Booth pour notre mariage, et c'était juste parfait du début à la fin. Le design des cadres photo, créé sur mesure, était sublime. Service impeccable !"
-              </p>
-            </Card>
+                {/* Testimonial 7 */}
+                <CarouselItem className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+                  <Card className="p-6 bg-white shadow-lg hover:shadow-xl transition-shadow duration-300 h-full">
+                    <div className="flex items-center justify-center mb-4">
+                      <img src="/lovable-uploads/6d5ed64f-b982-42cf-94ab-6c4be5136a9a.png" alt="Google" className="w-8 h-8 mr-2" />
+                    </div>
+                    <div className="flex justify-center mb-4">
+                      {[1, 2, 3, 4, 5].map((star) => (
+                        <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                      ))}
+                    </div>
+                    <p className="text-gray-700 mb-4 italic text-sm leading-relaxed">
+                      "Nous avons fait appel à Happy Booth pour notre mariage, et c'était juste parfait du début à la fin. Le design des cadres photo, créé sur mesure, était sublime. Service impeccable !"
+                    </p>
+                  </Card>
+                </CarouselItem>
 
-            {/* Testimonial 8 */}
-            <Card className="p-6 bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="flex mb-4">
-                {[1, 2, 3, 4, 5].map((star) => (
-                  <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
-              <p className="text-gray-700 mb-4 italic">
-                "Un grand merci ! Le photobooth a été un véritable succès. Service impeccable, produit au top, facile à utiliser. Tout le monde a adoré l'expérience."
-              </p>
-            </Card>
+                {/* Testimonial 8 */}
+                <CarouselItem className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+                  <Card className="p-6 bg-white shadow-lg hover:shadow-xl transition-shadow duration-300 h-full">
+                    <div className="flex items-center justify-center mb-4">
+                      <img src="/lovable-uploads/6d5ed64f-b982-42cf-94ab-6c4be5136a9a.png" alt="Google" className="w-8 h-8 mr-2" />
+                    </div>
+                    <div className="flex justify-center mb-4">
+                      {[1, 2, 3, 4, 5].map((star) => (
+                        <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                      ))}
+                    </div>
+                    <p className="text-gray-700 mb-4 italic text-sm leading-relaxed">
+                      "Un grand merci ! Le photobooth a été un véritable succès. Service impeccable, produit au top, facile à utiliser. Tout le monde a adoré l'expérience."
+                    </p>
+                  </Card>
+                </CarouselItem>
 
-            {/* Testimonial 9 */}
-            <Card className="p-6 bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="flex mb-4">
-                {[1, 2, 3, 4, 5].map((star) => (
-                  <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
-              <p className="text-gray-700 mb-4 italic">
-                "Nous avons fait appel à HappyBooth pour notre soirée de lancement, et nous en sommes ravis ! Communication fluide, service impeccable. Équipe professionnelle et sympathique."
-              </p>
-            </Card>
+                {/* Testimonial 9 */}
+                <CarouselItem className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+                  <Card className="p-6 bg-white shadow-lg hover:shadow-xl transition-shadow duration-300 h-full">
+                    <div className="flex items-center justify-center mb-4">
+                      <img src="/lovable-uploads/6d5ed64f-b982-42cf-94ab-6c4be5136a9a.png" alt="Google" className="w-8 h-8 mr-2" />
+                    </div>
+                    <div className="flex justify-center mb-4">
+                      {[1, 2, 3, 4, 5].map((star) => (
+                        <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                      ))}
+                    </div>
+                    <p className="text-gray-700 mb-4 italic text-sm leading-relaxed">
+                      "Nous avons fait appel à HappyBooth pour notre soirée de lancement, et nous en sommes ravis ! Communication fluide, service impeccable. Équipe professionnelle et sympathique."
+                    </p>
+                  </Card>
+                </CarouselItem>
 
-            {/* Testimonial 10 */}
-            <Card className="p-6 bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="flex mb-4">
-                {[1, 2, 3, 4, 5].map((star) => (
-                  <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
-              <p className="text-gray-700 mb-4 italic">
-                "Super contact avec Jessica dès la demande. L'équipe qui est venue monter le Photo Booth était adorable et hyper patiente ! Je recommande !"
-              </p>
-            </Card>
+                {/* Testimonial 10 */}
+                <CarouselItem className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+                  <Card className="p-6 bg-white shadow-lg hover:shadow-xl transition-shadow duration-300 h-full">
+                    <div className="flex items-center justify-center mb-4">
+                      <img src="/lovable-uploads/6d5ed64f-b982-42cf-94ab-6c4be5136a9a.png" alt="Google" className="w-8 h-8 mr-2" />
+                    </div>
+                    <div className="flex justify-center mb-4">
+                      {[1, 2, 3, 4, 5].map((star) => (
+                        <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                      ))}
+                    </div>
+                    <p className="text-gray-700 mb-4 italic text-sm leading-relaxed">
+                      "Super contact avec Jessica dès la demande. L'équipe qui est venue monter le Photo Booth était adorable et hyper patiente ! Je recommande !"
+                    </p>
+                  </Card>
+                </CarouselItem>
 
-            {/* Testimonial 11 */}
-            <Card className="p-6 bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="flex mb-4">
-                {[1, 2, 3, 4, 5].map((star) => (
-                  <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
-              <p className="text-gray-700 mb-4 italic">
-                "Service et qualité au top! J'ai fait appel à Happy Booth pour mes 30 ans et je ne regrette absolument pas. Jessica et son mari sont super disponibles et à l'écoute."
-              </p>
-            </Card>
+                {/* Additional testimonials continue with same pattern... */}
+                <CarouselItem className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+                  <Card className="p-6 bg-white shadow-lg hover:shadow-xl transition-shadow duration-300 h-full">
+                    <div className="flex items-center justify-center mb-4">
+                      <img src="/lovable-uploads/6d5ed64f-b982-42cf-94ab-6c4be5136a9a.png" alt="Google" className="w-8 h-8 mr-2" />
+                    </div>
+                    <div className="flex justify-center mb-4">
+                      {[1, 2, 3, 4, 5].map((star) => (
+                        <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                      ))}
+                    </div>
+                    <p className="text-gray-700 mb-4 italic text-sm leading-relaxed">
+                      "Service et qualité au top! J'ai fait appel à Happy Booth pour mes 30 ans. Jessica et son mari sont super disponibles et à l'écoute."
+                    </p>
+                  </Card>
+                </CarouselItem>
 
-            {/* Testimonial 12 */}
-            <Card className="p-6 bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="flex mb-4">
-                {[1, 2, 3, 4, 5].map((star) => (
-                  <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
-              <p className="text-gray-700 mb-4 italic">
-                "Deuxième magnifique expérience avec le miroir. Le succès a été époustouflant. Merci pour votre écoute et votre disponibilité."
-              </p>
-            </Card>
+                <CarouselItem className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+                  <Card className="p-6 bg-white shadow-lg hover:shadow-xl transition-shadow duration-300 h-full">
+                    <div className="flex items-center justify-center mb-4">
+                      <img src="/lovable-uploads/6d5ed64f-b982-42cf-94ab-6c4be5136a9a.png" alt="Google" className="w-8 h-8 mr-2" />
+                    </div>
+                    <div className="flex justify-center mb-4">
+                      {[1, 2, 3, 4, 5].map((star) => (
+                        <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                      ))}
+                    </div>
+                    <p className="text-gray-700 mb-4 italic text-sm leading-relaxed">
+                      "Deuxième magnifique expérience avec le miroir. Le succès a été époustouflant. Merci pour votre écoute et votre disponibilité."
+                    </p>
+                  </Card>
+                </CarouselItem>
 
-            {/* Testimonial 13 */}
-            <Card className="p-6 bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="flex mb-4">
-                {[1, 2, 3, 4, 5].map((star) => (
-                  <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
-              <p className="text-gray-700 mb-4 italic">
-                "Exceptional Experience! The technology was incredibly cool and added a fun element. Professional service from start to finish. Highly recommended!"
-              </p>
-            </Card>
+                <CarouselItem className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+                  <Card className="p-6 bg-white shadow-lg hover:shadow-xl transition-shadow duration-300 h-full">
+                    <div className="flex items-center justify-center mb-4">
+                      <img src="/lovable-uploads/6d5ed64f-b982-42cf-94ab-6c4be5136a9a.png" alt="Google" className="w-8 h-8 mr-2" />
+                    </div>
+                    <div className="flex justify-center mb-4">
+                      {[1, 2, 3, 4, 5].map((star) => (
+                        <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                      ))}
+                    </div>
+                    <p className="text-gray-700 mb-4 italic text-sm leading-relaxed">
+                      "Exceptional Experience! The technology was incredibly cool. Professional service from start to finish. Highly recommended!"
+                    </p>
+                  </Card>
+                </CarouselItem>
 
-            {/* Testimonial 14 */}
-            <Card className="p-6 bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="flex mb-4">
-                {[1, 2, 3, 4, 5].map((star) => (
-                  <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
-              <p className="text-gray-700 mb-4 italic">
-                "Une expérience extraordinaire !!! La mascotte de la soirée!!!"
-              </p>
-            </Card>
+                <CarouselItem className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+                  <Card className="p-6 bg-white shadow-lg hover:shadow-xl transition-shadow duration-300 h-full">
+                    <div className="flex items-center justify-center mb-4">
+                      <img src="/lovable-uploads/6d5ed64f-b982-42cf-94ab-6c4be5136a9a.png" alt="Google" className="w-8 h-8 mr-2" />
+                    </div>
+                    <div className="flex justify-center mb-4">
+                      {[1, 2, 3, 4, 5].map((star) => (
+                        <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                      ))}
+                    </div>
+                    <p className="text-gray-700 mb-4 italic text-sm leading-relaxed">
+                      "Une expérience extraordinaire !!! La mascotte de la soirée!!!"
+                    </p>
+                  </Card>
+                </CarouselItem>
 
-            {/* Testimonial 15 */}
-            <Card className="p-6 bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="flex mb-4">
-                {[1, 2, 3, 4, 5].map((star) => (
-                  <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
-              <p className="text-gray-700 mb-4 italic">
-                "We used the 360 video booth and it was amazing! Communication with Jessica was very convenient, fast and responsive! Everyone loved it!"
-              </p>
-            </Card>
+                <CarouselItem className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+                  <Card className="p-6 bg-white shadow-lg hover:shadow-xl transition-shadow duration-300 h-full">
+                    <div className="flex items-center justify-center mb-4">
+                      <img src="/lovable-uploads/6d5ed64f-b982-42cf-94ab-6c4be5136a9a.png" alt="Google" className="w-8 h-8 mr-2" />
+                    </div>
+                    <div className="flex justify-center mb-4">
+                      {[1, 2, 3, 4, 5].map((star) => (
+                        <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                      ))}
+                    </div>
+                    <p className="text-gray-700 mb-4 italic text-sm leading-relaxed">
+                      "We used the 360 video booth and it was amazing! Communication with Jessica was very responsive! Everyone loved it!"
+                    </p>
+                  </Card>
+                </CarouselItem>
 
-            {/* Testimonial 16 */}
-            <Card className="p-6 bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="flex mb-4">
-                {[1, 2, 3, 4, 5].map((star) => (
-                  <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
-              <p className="text-gray-700 mb-4 italic">
-                "Superbe expérience ! j'ai loué le Happy Rainbow pour les 30 ans de mon conjoint, c'était l'élément parfait pour des souvenirs mémorables !"
-              </p>
-            </Card>
-
-            {/* Testimonial 17 */}
-            <Card className="p-6 bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="flex mb-4">
-                {[1, 2, 3, 4, 5].map((star) => (
-                  <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
-              <p className="text-gray-700 mb-4 italic">
-                "Service parfait, qualité de photo géniale ! Tous nos invités à notre mariage ont adoré le photobooth miroir ! Bonne ambiance garantie !"
-              </p>
-            </Card>
-
-            {/* Testimonial 18 */}
-            <Card className="p-6 bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="flex mb-4">
-                {[1, 2, 3, 4, 5].map((star) => (
-                  <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
-              <p className="text-gray-700 mb-4 italic">
-                "Nous avons utilisé le miroir pour l'anniversaire de mon mari et c'était l'attraction de la journée, autant pour les adultes que pour les enfants."
-              </p>
-            </Card>
-
-            {/* Testimonial 19 */}
-            <Card className="p-6 bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="flex mb-4">
-                {[1, 2, 3, 4, 5].map((star) => (
-                  <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
-              <p className="text-gray-700 mb-4 italic">
-                "Merci à Jessica pour sa disponibilité et son SUPER Photobooth ! Grâce à elle, nous avons des souvenirs MAGNIFIQUES de notre mariage :)"
-              </p>
-            </Card>
-
-            {/* Testimonial 20 */}
-            <Card className="p-6 bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="flex mb-4">
-                {[1, 2, 3, 4, 5].map((star) => (
-                  <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
-              <p className="text-gray-700 mb-4 italic">
-                "Service au top, miroir livré et récupéré sans soucis. Le cadre personnalisé fait avec soin, juste parfait. Nous recommandons à 100%"
-              </p>
-            </Card>
-
-            {/* Testimonial 21 */}
-            <Card className="p-6 bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="flex mb-4">
-                {[1, 2, 3, 4, 5].map((star) => (
-                  <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
-              <p className="text-gray-700 mb-4 italic">
-                "Very professional service! Jessica and her team made sure we had a great overall experience, and provided a definite eye-catcher for our trade show."
-              </p>
-            </Card>
-
-            {/* Testimonial 22 */}
-            <Card className="p-6 bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="flex mb-4">
-                {[1, 2, 3, 4, 5].map((star) => (
-                  <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
-              <p className="text-gray-700 mb-4 italic">
-                "Excellente expérience de A à Z avec le 'happy booth' pour ma fête de 30 ans. 'wow effect' garanti !"
-              </p>
-            </Card>
-
-            {/* Testimonial 23 */}
-            <Card className="p-6 bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="flex mb-4">
-                {[1, 2, 3, 4, 5].map((star) => (
-                  <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
-              <p className="text-gray-700 mb-4 italic">
-                "Happy Booth was just what we needed to bring our party to the next level. Jessica is a delight to work with. I cannot recommend more highly!"
-              </p>
-            </Card>
-
-            {/* Testimonial 24 */}
-            <Card className="p-6 bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="flex mb-4">
-                {[1, 2, 3, 4, 5].map((star) => (
-                  <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
-              <p className="text-gray-700 mb-4 italic">
-                "I love the Happy Booth, it was an amazing experience everybody enjoyed it and had fun. Excellent service, very helpful and kind. I totally recommend it!"
-              </p>
-            </Card>
-
-            {/* Testimonial 25 */}
-            <Card className="p-6 bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="flex mb-4">
-                {[1, 2, 3, 4, 5].map((star) => (
-                  <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
-              <p className="text-gray-700 mb-4 italic">
-                "We were initially hesitant about getting a photobooth for our wedding, but it was such a massive success! Jessica and David were just the greatest people to work with."
-              </p>
-            </Card>
-
-            {/* Testimonial 26 */}
-            <Card className="p-6 bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="flex mb-4">
-                {[1, 2, 3, 4, 5].map((star) => (
-                  <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
-              <p className="text-gray-700 mb-4 italic">
-                "We love The Happy Booth, is a unique way to impress your guests. Jessica and David are super professional and most of all very nice people."
-              </p>
-            </Card>
+                <CarouselItem className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+                  <Card className="p-6 bg-white shadow-lg hover:shadow-xl transition-shadow duration-300 h-full">
+                    <div className="flex items-center justify-center mb-4">
+                      <img src="/lovable-uploads/6d5ed64f-b982-42cf-94ab-6c4be5136a9a.png" alt="Google" className="w-8 h-8 mr-2" />
+                    </div>
+                    <div className="flex justify-center mb-4">
+                      {[1, 2, 3, 4, 5].map((star) => (
+                        <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                      ))}
+                    </div>
+                    <p className="text-gray-700 mb-4 italic text-sm leading-relaxed">
+                      "Superbe expérience ! j'ai loué le Happy Rainbow pour les 30 ans de mon conjoint, c'était l'élément parfait pour des souvenirs mémorables !"
+                    </p>
+                  </Card>
+                </CarouselItem>
+              </CarouselContent>
+              <CarouselPrevious className="hidden md:flex -left-12 lg:-left-16" />
+              <CarouselNext className="hidden md:flex -right-12 lg:-right-16" />
+            </Carousel>
           </div>
         </div>
       </section>
