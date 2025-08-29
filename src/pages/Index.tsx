@@ -75,7 +75,7 @@ const Index = () => {
     src: "/lovable-uploads/590cb129-8f7c-430a-8788-c25932913542.png",
     alt: "Deux amies avec cadre photo doré"
   }, {
-    src: "/lovable-uploads/48d8a7d4-1938-4e90-9052-3e214fa89408.png", 
+    src: "/lovable-uploads/48d8a7d4-1938-4e90-9052-3e214fa89408.png",
     alt: "Photos imprimées du photobooth avec un cadre personnalisé pour un événement corporate"
   }, {
     src: "/lovable-uploads/4a177c3d-bd93-4d8c-a6f3-fe9434e4a4be.png",
@@ -304,21 +304,13 @@ const Index = () => {
             {/* Right Content - 1/3 on desktop */}
             <div className="lg:col-span-1 relative flex justify-center mb-16 lg:mb-0">
               <div className="relative w-full max-w-sm lg:max-w-none">
-                <img 
-                  src="/lovable-uploads/f84fb375-7807-44f3-9cd3-34e6c4074c9a.png" 
-                  alt="Des gens qui s'amusent devant un photobooth" 
-                  className="w-64 sm:w-72 lg:w-full h-auto rounded-2xl shadow-2xl border border-white/20 mx-auto"
-                />
+                <img src="/lovable-uploads/f84fb375-7807-44f3-9cd3-34e6c4074c9a.png" alt="Des gens qui s'amusent devant un photobooth" className="w-64 sm:w-72 lg:w-full h-auto rounded-2xl shadow-2xl border border-white/20 mx-auto" />
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-black/20 to-transparent"></div>
                 
                 {/* Google Reviews Badge - centered on mobile, slightly overflowing left on desktop and very large screens */}
                 <div className="absolute -bottom-4 left-1/2 lg:left-auto lg:-bottom-6 lg:-left-8 xl:-left-12 2xl:-left-16 transform -translate-x-1/2 lg:transform-none bg-white/95 backdrop-blur-sm rounded-lg p-3 shadow-lg border border-gray-200">
                   <div className="flex items-center space-x-2 mb-1">
-                    <img 
-                      src="/lovable-uploads/82416f11-c9f5-4e9a-b407-60bbea2da5a8.png" 
-                      alt="Google Reviews" 
-                      className="h-16 lg:h-20 w-auto mx-auto"
-                    />
+                    <img src="/lovable-uploads/82416f11-c9f5-4e9a-b407-60bbea2da5a8.png" alt="Google Reviews" className="h-16 lg:h-20 w-auto mx-auto" />
                   </div>
                   <p className="text-xs lg:text-sm text-gray-600 whitespace-nowrap text-center">Basé sur 37 avis</p>
                 </div>
@@ -347,12 +339,7 @@ const Index = () => {
               </DialogTrigger>
               <DialogContent className="max-w-4xl w-full p-0 bg-black">
                 <div className="aspect-video w-full">
-                  <iframe 
-                    src="https://player.vimeo.com/video/731393641?badge=0&amp;autopause=0&amp;quality_selector=1&amp;progress_bar=1&amp;player_id=0&amp;app_id=58479&amp;autoplay=1" 
-                    className="w-full h-full rounded-lg" 
-                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write" 
-                    title="Happy Booth - Teaser"
-                  />
+                  <iframe src="https://player.vimeo.com/video/731393641?badge=0&amp;autopause=0&amp;quality_selector=1&amp;progress_bar=1&amp;player_id=0&amp;app_id=58479&amp;autoplay=1" className="w-full h-full rounded-lg" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Happy Booth - Teaser" />
                 </div>
               </DialogContent>
             </Dialog>
@@ -361,33 +348,18 @@ const Index = () => {
           {/* Photo Gallery - Carousel Layout */}
           <div className="max-w-6xl mx-auto">
             
-            <Carousel 
-              className="w-full"
-              plugins={[
-                Autoplay({
-                  delay: 2000,
-                })
-              ]}
-              opts={{
-                align: "start",
-                loop: true,
-              }}
-            >
+            <Carousel className="w-full" plugins={[Autoplay({
+            delay: 2000
+          })]} opts={{
+            align: "start",
+            loop: true
+          }}>
               <CarouselContent className="-ml-2 md:-ml-4">
-                {galleryImages.map((image, index) => (
-                  <CarouselItem 
-                    key={index}
-                    className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4"
-                  >
+                {galleryImages.map((image, index) => <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
                     <div className="aspect-square rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer group">
-                      <img 
-                        src={image.src} 
-                        alt={image.alt} 
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" 
-                      />
+                      <img src={image.src} alt={image.alt} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                     </div>
-                  </CarouselItem>
-                ))}
+                  </CarouselItem>)}
               </CarouselContent>
               <CarouselPrevious className="hidden md:flex -left-12" />
               <CarouselNext className="hidden md:flex -right-12" />
@@ -395,15 +367,7 @@ const Index = () => {
             
             {/* Mobile carousel indicators */}
             <div className="flex justify-center mt-6 space-x-2 md:hidden">
-              {galleryImages.map((_, index) => (
-                <button
-                  key={index}
-                  className={`w-2 h-2 rounded-full transition-colors ${
-                    index === currentGalleryIndex ? 'bg-primary' : 'bg-gray-300'
-                  }`}
-                  onClick={() => setCurrentGalleryIndex(index)}
-                />
-              ))}
+              {galleryImages.map((_, index) => <button key={index} className={`w-2 h-2 rounded-full transition-colors ${index === currentGalleryIndex ? 'bg-primary' : 'bg-gray-300'}`} onClick={() => setCurrentGalleryIndex(index)} />)}
             </div>
           </div>
         </div>
@@ -491,14 +455,9 @@ const Index = () => {
                 <Card className="max-w-6xl mx-auto overflow-hidden shadow-2xl">
                   <div className="grid lg:grid-cols-5">
                     <div className="lg:col-span-2 bg-gradient-to-br from-primary/10 to-accent/10 overflow-hidden h-48 sm:h-64 lg:h-auto">
-                      <img 
-                        src={model.image} 
-                        alt={model.name} 
-                        className={`w-full h-full object-cover ${
-                          model.id === '360' ? 'object-center scale-125' : ''
-                        }`}
-                        style={model.id === '360' ? { objectPosition: '50% 40%' } : {}}
-                      />
+                      <img src={model.image} alt={model.name} className={`w-full h-full object-cover ${model.id === '360' ? 'object-center scale-125' : ''}`} style={model.id === '360' ? {
+                    objectPosition: '50% 40%'
+                  } : {}} />
                     </div>
                     
                     <CardContent className="lg:col-span-3 p-4 sm:p-6 lg:p-8 flex flex-col justify-between">
@@ -563,7 +522,7 @@ const Index = () => {
       <section id="why-us" className="py-20 bg-gradient-to-br from-muted/20 to-muted/40">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-6">Nos photobooths t'offrent une soirée extraordinaire</h2>
+            <h2 className="text-4xl font-bold mb-6">Nos photomatons t'offrent une soirée extraordinaire</h2>
             <p className="text-xl text-muted-foreground">"Don't worry, be Happy Booth."</p>
           </div>
 
@@ -749,14 +708,12 @@ const Index = () => {
           </div>
 
           <div className="max-w-7xl mx-auto">
-            <Carousel
-              plugins={[Autoplay({ delay: 5000 })]}
-              className="w-full"
-              opts={{
-                align: "start",
-                loop: true,
-              }}
-            >
+            <Carousel plugins={[Autoplay({
+            delay: 5000
+          })]} className="w-full" opts={{
+            align: "start",
+            loop: true
+          }}>
               <CarouselContent className="-ml-2 md:-ml-4">
                 {/* Testimonial 1 */}
                 <CarouselItem className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
@@ -765,9 +722,7 @@ const Index = () => {
                       <img src="/lovable-uploads/6d5ed64f-b982-42cf-94ab-6c4be5136a9a.png" alt="Google" className="w-8 h-8 mr-2" />
                     </div>
                     <div className="flex justify-center mb-4">
-                      {[1, 2, 3, 4, 5].map((star) => (
-                        <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                      ))}
+                      {[1, 2, 3, 4, 5].map(star => <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />)}
                     </div>
                     <p className="text-gray-700 mb-4 italic text-sm leading-relaxed">
                       "Le photobooth Mirror est exceptionnel!! Vraiment parfait pour créer une ambiance festive auprès de nos invités. La qualité des photos est top 👍🏼 tactile, il a beaucoup de fonctionnalité. Je recommande à 100%"
@@ -782,9 +737,7 @@ const Index = () => {
                       <img src="/lovable-uploads/6d5ed64f-b982-42cf-94ab-6c4be5136a9a.png" alt="Google" className="w-8 h-8 mr-2" />
                     </div>
                     <div className="flex justify-center mb-4">
-                      {[1, 2, 3, 4, 5].map((star) => (
-                        <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                      ))}
+                      {[1, 2, 3, 4, 5].map(star => <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />)}
                     </div>
                     <p className="text-gray-700 mb-4 italic text-sm leading-relaxed">
                       "Everything was perfect, we absolutely loved it and recommend their service! Good quality price :)"
@@ -799,9 +752,7 @@ const Index = () => {
                       <img src="/lovable-uploads/6d5ed64f-b982-42cf-94ab-6c4be5136a9a.png" alt="Google" className="w-8 h-8 mr-2" />
                     </div>
                     <div className="flex justify-center mb-4">
-                      {[1, 2, 3, 4, 5].map((star) => (
-                        <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                      ))}
+                      {[1, 2, 3, 4, 5].map(star => <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />)}
                     </div>
                     <p className="text-gray-700 mb-4 italic text-sm leading-relaxed">
                       "Le photobooth rainbow était un succès total à ma fête d'anniversaire! Les photos sont d'excellente qualité et l'expérience digitale est très amusante. Je recommande vivement happybooth."
@@ -816,9 +767,7 @@ const Index = () => {
                       <img src="/lovable-uploads/6d5ed64f-b982-42cf-94ab-6c4be5136a9a.png" alt="Google" className="w-8 h-8 mr-2" />
                     </div>
                     <div className="flex justify-center mb-4">
-                      {[1, 2, 3, 4, 5].map((star) => (
-                        <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                      ))}
+                      {[1, 2, 3, 4, 5].map(star => <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />)}
                     </div>
                     <p className="text-gray-700 mb-4 italic text-sm leading-relaxed">
                       "We had the best experience for my son's 1st birthday! From start to finish, the service was perfect. The photo quality was incredible, and the attendant was so friendly and professional."
@@ -833,9 +782,7 @@ const Index = () => {
                       <img src="/lovable-uploads/6d5ed64f-b982-42cf-94ab-6c4be5136a9a.png" alt="Google" className="w-8 h-8 mr-2" />
                     </div>
                     <div className="flex justify-center mb-4">
-                      {[1, 2, 3, 4, 5].map((star) => (
-                        <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                      ))}
+                      {[1, 2, 3, 4, 5].map(star => <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />)}
                     </div>
                     <p className="text-gray-700 mb-4 italic text-sm leading-relaxed">
                       "Super expérience que nous recommandons vivement ! Tous nos invités adoré le photobooth miroir. Un tout grand MERCI !"
@@ -850,9 +797,7 @@ const Index = () => {
                       <img src="/lovable-uploads/6d5ed64f-b982-42cf-94ab-6c4be5136a9a.png" alt="Google" className="w-8 h-8 mr-2" />
                     </div>
                     <div className="flex justify-center mb-4">
-                      {[1, 2, 3, 4, 5].map((star) => (
-                        <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                      ))}
+                      {[1, 2, 3, 4, 5].map(star => <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />)}
                     </div>
                     <p className="text-gray-700 mb-4 italic text-sm leading-relaxed">
                       "Best service ever. Have had them at my wedding, at birthdays and special events of my family. They are 'The Photobooth', what else?"
@@ -867,9 +812,7 @@ const Index = () => {
                       <img src="/lovable-uploads/6d5ed64f-b982-42cf-94ab-6c4be5136a9a.png" alt="Google" className="w-8 h-8 mr-2" />
                     </div>
                     <div className="flex justify-center mb-4">
-                      {[1, 2, 3, 4, 5].map((star) => (
-                        <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                      ))}
+                      {[1, 2, 3, 4, 5].map(star => <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />)}
                     </div>
                     <p className="text-gray-700 mb-4 italic text-sm leading-relaxed">
                       "Nous avons fait appel à Happy Booth pour notre mariage, et c'était juste parfait du début à la fin. Le design des cadres photo, créé sur mesure, était sublime. Service impeccable !"
@@ -884,9 +827,7 @@ const Index = () => {
                       <img src="/lovable-uploads/6d5ed64f-b982-42cf-94ab-6c4be5136a9a.png" alt="Google" className="w-8 h-8 mr-2" />
                     </div>
                     <div className="flex justify-center mb-4">
-                      {[1, 2, 3, 4, 5].map((star) => (
-                        <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                      ))}
+                      {[1, 2, 3, 4, 5].map(star => <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />)}
                     </div>
                     <p className="text-gray-700 mb-4 italic text-sm leading-relaxed">
                       "Un grand merci ! Le photobooth a été un véritable succès. Service impeccable, produit au top, facile à utiliser. Tout le monde a adoré l'expérience."
@@ -901,9 +842,7 @@ const Index = () => {
                       <img src="/lovable-uploads/6d5ed64f-b982-42cf-94ab-6c4be5136a9a.png" alt="Google" className="w-8 h-8 mr-2" />
                     </div>
                     <div className="flex justify-center mb-4">
-                      {[1, 2, 3, 4, 5].map((star) => (
-                        <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                      ))}
+                      {[1, 2, 3, 4, 5].map(star => <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />)}
                     </div>
                     <p className="text-gray-700 mb-4 italic text-sm leading-relaxed">
                       "Nous avons fait appel à HappyBooth pour notre soirée de lancement, et nous en sommes ravis ! Communication fluide, service impeccable. Équipe professionnelle et sympathique."
@@ -918,9 +857,7 @@ const Index = () => {
                       <img src="/lovable-uploads/6d5ed64f-b982-42cf-94ab-6c4be5136a9a.png" alt="Google" className="w-8 h-8 mr-2" />
                     </div>
                     <div className="flex justify-center mb-4">
-                      {[1, 2, 3, 4, 5].map((star) => (
-                        <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                      ))}
+                      {[1, 2, 3, 4, 5].map(star => <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />)}
                     </div>
                     <p className="text-gray-700 mb-4 italic text-sm leading-relaxed">
                       "Super contact avec Jessica dès la demande. L'équipe qui est venue monter le Photo Booth était adorable et hyper patiente ! Je recommande !"
@@ -935,9 +872,7 @@ const Index = () => {
                       <img src="/lovable-uploads/6d5ed64f-b982-42cf-94ab-6c4be5136a9a.png" alt="Google" className="w-8 h-8 mr-2" />
                     </div>
                     <div className="flex justify-center mb-4">
-                      {[1, 2, 3, 4, 5].map((star) => (
-                        <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                      ))}
+                      {[1, 2, 3, 4, 5].map(star => <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />)}
                     </div>
                     <p className="text-gray-700 mb-4 italic text-sm leading-relaxed">
                       "Service et qualité au top! J'ai fait appel à Happy Booth pour mes 30 ans. Jessica et son mari sont super disponibles et à l'écoute."
@@ -951,9 +886,7 @@ const Index = () => {
                       <img src="/lovable-uploads/6d5ed64f-b982-42cf-94ab-6c4be5136a9a.png" alt="Google" className="w-8 h-8 mr-2" />
                     </div>
                     <div className="flex justify-center mb-4">
-                      {[1, 2, 3, 4, 5].map((star) => (
-                        <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                      ))}
+                      {[1, 2, 3, 4, 5].map(star => <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />)}
                     </div>
                     <p className="text-gray-700 mb-4 italic text-sm leading-relaxed">
                       "Deuxième magnifique expérience avec le miroir. Le succès a été époustouflant. Merci pour votre écoute et votre disponibilité."
@@ -967,9 +900,7 @@ const Index = () => {
                       <img src="/lovable-uploads/6d5ed64f-b982-42cf-94ab-6c4be5136a9a.png" alt="Google" className="w-8 h-8 mr-2" />
                     </div>
                     <div className="flex justify-center mb-4">
-                      {[1, 2, 3, 4, 5].map((star) => (
-                        <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                      ))}
+                      {[1, 2, 3, 4, 5].map(star => <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />)}
                     </div>
                     <p className="text-gray-700 mb-4 italic text-sm leading-relaxed">
                       "Exceptional Experience! The technology was incredibly cool. Professional service from start to finish. Highly recommended!"
@@ -983,9 +914,7 @@ const Index = () => {
                       <img src="/lovable-uploads/6d5ed64f-b982-42cf-94ab-6c4be5136a9a.png" alt="Google" className="w-8 h-8 mr-2" />
                     </div>
                     <div className="flex justify-center mb-4">
-                      {[1, 2, 3, 4, 5].map((star) => (
-                        <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                      ))}
+                      {[1, 2, 3, 4, 5].map(star => <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />)}
                     </div>
                     <p className="text-gray-700 mb-4 italic text-sm leading-relaxed">
                       "Une expérience extraordinaire !!! La mascotte de la soirée!!!"
@@ -999,9 +928,7 @@ const Index = () => {
                       <img src="/lovable-uploads/6d5ed64f-b982-42cf-94ab-6c4be5136a9a.png" alt="Google" className="w-8 h-8 mr-2" />
                     </div>
                     <div className="flex justify-center mb-4">
-                      {[1, 2, 3, 4, 5].map((star) => (
-                        <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                      ))}
+                      {[1, 2, 3, 4, 5].map(star => <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />)}
                     </div>
                     <p className="text-gray-700 mb-4 italic text-sm leading-relaxed">
                       "We used the 360 video booth and it was amazing! Communication with Jessica was very responsive! Everyone loved it!"
@@ -1015,9 +942,7 @@ const Index = () => {
                       <img src="/lovable-uploads/6d5ed64f-b982-42cf-94ab-6c4be5136a9a.png" alt="Google" className="w-8 h-8 mr-2" />
                     </div>
                     <div className="flex justify-center mb-4">
-                      {[1, 2, 3, 4, 5].map((star) => (
-                        <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                      ))}
+                      {[1, 2, 3, 4, 5].map(star => <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />)}
                     </div>
                     <p className="text-gray-700 mb-4 italic text-sm leading-relaxed">
                       "Superbe expérience ! j'ai loué le Happy Rainbow pour les 30 ans de mon conjoint, c'était l'élément parfait pour des souvenirs mémorables !"
