@@ -229,7 +229,7 @@ const Index = () => {
             {/* Left Content - 2/3 on desktop */}
             <div className="lg:col-span-2 space-y-6 lg:space-y-8 text-center lg:text-left">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight">
-                <span className="block">Location de photobooth</span>
+                <span className="block lg:inline">Location de photobooth</span>
                 <span className="block text-accent bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
                   en Suisse Romande
                 </span>
@@ -274,8 +274,8 @@ const Index = () => {
                 />
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-black/20 to-transparent"></div>
                 
-                {/* Google Reviews Badge - centered on mobile, slightly overflowing left on desktop */}
-                <div className="absolute -bottom-4 left-1/2 lg:left-auto lg:-bottom-6 lg:-left-8 transform -translate-x-1/2 lg:transform-none bg-white/95 backdrop-blur-sm rounded-lg p-3 shadow-lg border border-gray-200">
+                {/* Google Reviews Badge - centered on mobile, slightly overflowing left on desktop and very large screens */}
+                <div className="absolute -bottom-4 left-1/2 lg:left-auto lg:-bottom-6 lg:-left-8 xl:-left-12 2xl:-left-16 transform -translate-x-1/2 lg:transform-none bg-white/95 backdrop-blur-sm rounded-lg p-3 shadow-lg border border-gray-200">
                   <div className="flex items-center space-x-2 mb-1">
                     <img 
                       src="/lovable-uploads/82416f11-c9f5-4e9a-b407-60bbea2da5a8.png" 
