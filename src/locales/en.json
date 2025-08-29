@@ -1,0 +1,287 @@
+{
+  "nav": {
+    "models": "Our Models",
+    "whyUs": "Why Us",
+    "events": "Events", 
+    "howItWorks": "How It Works",
+    "faq": "FAQ",
+    "getQuote": "Get a Quote"
+  },
+  "hero": {
+    "title1": "Photobooth Rental",
+    "title2": "in French Switzerland",
+    "subtitle": "Transform your events into unforgettable memories with our latest generation photobooths",
+    "badge1": "Unlimited Prints",
+    "badge2": "Turnkey Service",
+    "badge3": "100% Customizable", 
+    "cta": "Get a Quote",
+    "heroImageAlt": "People having fun in front of a photobooth",
+    "googleReviewsAlt": "Google Reviews",
+    "basedOnReviews": "Based on 37 reviews"
+  },
+  "gallery": {
+    "title": "Our photobooths in action",
+    "subtitle": "Discover the magical atmosphere of our events",
+    "videoButton": "Discover in video"
+  },
+  "socialProof": {
+    "title": "Why 1000+ clients have trusted us since 2018", 
+    "subtitle": "Discover the numbers that speak for themselves",
+    "rating": "Average customer rating",
+    "ratingDesc": "Based on 37+ verified Google reviews",
+    "events": "Successful events",
+    "eventsDesc": "Weddings, birthdays, corporate events",
+    "coverage": "French Switzerland coverage",
+    "coverageDesc": "Lausanne, Geneva, Vaud, Valais, Fribourg",
+    "experience": "Party experience", 
+    "experienceDesc": "Exclusive technologies in Switzerland",
+    "clientsTitle": "Happy Clients",
+    "clientsDesc": "Here are some companies that have smiled for Happy Booth"
+  },
+  "models": {
+    "title": "Our models — Transparent \"all-inclusive\" pricing",
+    "subtitle": "Discover our complete range of photobooths with all services included",
+    "includedTitle": "Included in price:",
+    "delivery": "Delivery & pickup",
+    "deliveryDesc": "Free in Lausanne. Outside Lausanne: transport on quote.",
+    "hostOption": "Host animator option: 45 CHF/hour",
+    "cta": "Get a Quote",
+    "mirrorBooth": {
+      "name": "Mirror Booth",
+      "price": "1090 CHF",
+      "title": "The smart photobooth that steals the show",
+      "description": "Large full-length touch mirror, AI effects, signatures and emojis, custom frames, unlimited printing. The favorite for chic weddings and corporate events.",
+      "features": [
+        "Themed animations & boomerangs",
+        "AI-powered filters & background changes",
+        "Branded welcome screen & frames, frame choice by guest",
+        "Instant email sending + gallery", 
+        "Unlimited professional photo printing",
+        "Languages: FR, EN, DE, ES, PT, IT"
+      ],
+      "note": "Free delivery & pickup in Lausanne",
+      "included": [
+        "Installation & pickup",
+        "Unlimited printing",
+        "Online gallery",
+        "Complete customization", 
+        "Technical support"
+      ]
+    },
+    "rainbowBooth": {
+      "name": "Rainbow Booth",
+      "price": "790 CHF",
+      "title": "Chic, modern, super fun",
+      "description": "Rainbow light ring, trendy look that attracts all eyes.",
+      "features": [
+        "Rainbow light ring, trendy look that attracts all eyes",
+        "Social media sharing + on-site printing",
+        "Customizable frames, each guest chooses their favorite",
+        "Unlimited printing",
+        "\"Magic Screen\" & themed backgrounds",
+        "Backdrop options",
+        "NEW: AI effects"
+      ],
+      "included": [
+        "Unlimited printing",
+        "Online gallery",
+        "Complete customization",
+        "Technical support"
+      ]
+    },
+    "booth360": {
+      "name": "360 Happy Booth", 
+      "price": "890 CHF",
+      "title": "Spin, pose, shine",
+      "description": "Unlimited videos with instant sharing (WhatsApp, email, AirDrop).",
+      "features": [
+        "Unlimited videos with instant sharing (WhatsApp, email, AirDrop)",
+        "Custom effects + branded overlays, music", 
+        "Online gallery. 90cm platform for up to 4 people, safety stop",
+        "Delivery, installation and pickup included in Lausanne"
+      ],
+      "included": [
+        "Unlimited videos",
+        "Online gallery",
+        "Complete customization",
+        "Technical support"
+      ]
+    },
+    "retroBooth": {
+      "name": "Retro Booth",
+      "price": "790 CHF", 
+      "title": "Vintage elegance that melts all hearts",
+      "description": "Retro-chic style, compact format, ultra simple to use.",
+      "features": [
+        "Retro-chic style, compact format, ultra simple to use",
+        "Unlimited printing", 
+        "Mirror effect + touch screen: sign, draw, emojis",
+        "Custom frames, online gallery, accessories provided"
+      ],
+      "included": [
+        "Unlimited printing",
+        "Online gallery",
+        "Complete customization",
+        "Technical support"
+      ]
+    },
+    "phoneBooth": {
+      "name": "Phone Booth",
+      "price": "290 CHF",
+      "title": "Vintage audio guestbook", 
+      "description": "Pick up, leave a message, smile — ultra simple to use.",
+      "features": [
+        "Pick up, leave a message, smile — ultra simple to use",
+        "Clear audio quality, memories to relive",
+        "Autonomous without Wi-Fi or electricity, light and easy to place",
+        "Customizable welcome message, LED panel option 35 CHF",
+        "Logistics: with photobooth we deliver, otherwise very simple postal shipping"
+      ],
+      "included": [
+        "Delivery & pickup",
+        "Unlimited audio messages", 
+        "Personalized welcome message",
+        "Technical support"
+      ]
+    }
+  },
+  "whyUs": {
+    "title": "Our photobooths offer you an extraordinary evening",
+    "subtitle": "\"Don't worry, be Happy Booth.\"", 
+    "local": "Local & reliable",
+    "localDesc": "Throughout French Switzerland",
+    "delivery": "Delivery & installation",
+    "deliveryDesc": "We take care of everything",
+    "unlimited": "Unlimited prints",
+    "unlimitedDesc": "High quality",
+    "customization": "Total customization",
+    "customizationDesc": "Frames, HD animations, boomerangs",
+    "accessories": "Large selection of accessories",
+    "accessoriesDesc": "For all styles", 
+    "experience": "Collective experience",
+    "experienceDesc": "Unforgettable shared memories"
+  },
+  "useCases": {
+    "title": "When to rent a photobooth?",
+    "subtitle": "Perfect for all your events",
+    "weddings": "Weddings",
+    "weddingsDesc": "Photo guest book, frames matching the day's theme, reassuring turnkey service.",
+    "corporate": "Corporate",
+    "corporateDesc": "Team-building, conferences, product launches.",
+    "birthdays": "Birthdays", 
+    "birthdaysDesc": "18, 30, 50 years old... Create the event with style.",
+    "cta": "Get a Quote"
+  },
+  "howItWorks": {
+    "title": "How does it work?",
+    "subtitle": "Guaranteed simplicity in 4 steps",
+    "step1Title": "1. Booking",
+    "step1Desc": "Contact us to check availability and customize your photobooth.",
+    "step2Title": "2. Delivery & installation",
+    "step2Desc": "We deliver and install your photobooth 1-2h before your event starts.",
+    "step3Title": "3. Animation", 
+    "step3Desc": "Your guests have fun! Unlimited photos, instant prints, online sharing.",
+    "step4Title": "4. Pickup",
+    "step4Desc": "We pick up the equipment the next day and deliver all your HD photos."
+  },
+  "testimonials": {
+    "title": "What our clients say",
+    "subtitle": "Discover why they recommend us"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Everything you need to know about our photobooths",
+    "items": [
+      {
+        "question": "How much space is needed and can it be installed outside?",
+        "answer": "About 3×3 meters and an electrical outlet are needed. Outdoor installation is possible if the space is sheltered."
+      },
+      {
+        "question": "Is printing really unlimited?",
+        "answer": "YES! Unlike our competitors who limit to 150-400 prints, at Happy Booth it's REALLY unlimited. Your guests can print as much as they want. The more photos, the more fun!"
+      },
+      {
+        "question": "How do we get the digital photos?", 
+        "answer": "All photos are immediately available in a private online gallery accessible to all your guests. You will also receive all high-definition files after the event."
+      },
+      {
+        "question": "What if internet is weak or the photobooth breaks down?",
+        "answer": "Weak internet: No problem! Printing works offline, email sending will happen as soon as the network is available.\n\nBreakdown (very rare): We always have backup equipment ready and a technician available 24/7. In case of breakdown, we replace the equipment within the hour or fully refund the service. No event has ever been ruined by a breakdown with us."
+      },
+      {
+        "question": "Will my elderly guests or children know how to use it?",
+        "answer": "Absolutely! The interface is ultra-intuitive with clear icons and can be configured in 6 languages. Children from 5 years old use it without problem, and we can provide a stool for the smallest ones. Host option available to accompany your guests (45 CHF/hour)."
+      },
+      {
+        "question": "Why not simply put an iPhone with a printer?",
+        "answer": "A professional photobooth offers: studio quality (lighting, pro lens), interactive animations impossible on smartphone, high-quality instant prints, automatic queue management, complete customization, and above all real animation that creates the event. DIY requires someone dedicated all evening."
+      },
+      {
+        "question": "800-1000 CHF for a few hours, isn't that excessive?",
+        "answer": "Divided by 100 guests = 8-10 CHF per person for a personalized souvenir they will keep. Let's compare: a photographer costs 2000-4000 CHF, a DJ 1500 CHF. Our professional equipment costs over 15,000 CHF and requires maintenance, transport, customization (2h graphic preparation), installation (2h), and technical presence."
+      },
+      {
+        "question": "What if few people use it in the end?", 
+        "answer": "Never happened in 1000+ events! Average statistics: 80% of guests use it, 3-5 passes per person, 300-600 photos per event of 100 people. Strategic placement (near bar/dance floor) and our fun accessories guarantee success. \"Satisfied or refunded\" guarantee if less than 50 photos taken."
+      },
+      {
+        "question": "When to book?",
+        "answer": "Ideally 2-4 months in advance for major dates, but we also accept last-minute bookings depending on availability."
+      },
+      {
+        "question": "Why pay more than a low-cost provider's offer?",
+        "answer": "Budget offers often require you to manage yourself: equipment pickup (round trip by car), installation (1-2h assembly with manual), technical problem resolution, and return by carrier. They also generally limit prints (200-400 maximum) - imagine having to refuse prints to your guests at the end of the evening!\nOur premium service includes: complete installation/uninstallation by us, REALLY unlimited prints (often 500+ photos per event), immediate technical support in case of trouble, exclusive technologies (Mirror with AI, 360° platform), and professional graphic customization.\nThe 200-300 CHF extra cost generally represents less than 3 CHF per guest to eliminate all stress and guarantee a perfect experience. It's the assurance that at the slightest problem, it's our responsibility, not yours. On your event day, you have better things to do than play technician!"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Free Quote Request", 
+    "subtitle": "Receive your personalized offer within 24h",
+    "step1": "Your event",
+    "step2": "Your details",
+    "step3": "Confirmation",
+    "name": "Name",
+    "namePlaceholder": "Your full name",
+    "email": "Email",
+    "emailPlaceholder": "your@email.com",
+    "phone": "Phone",
+    "phonePlaceholder": "+41 76 123 45 67", 
+    "date": "Event date",
+    "eventType": "Event type",
+    "eventTypePlaceholder": "Select type",
+    "city": "City",
+    "cityPlaceholder": "Your event location",
+    "guests": "Number of guests",
+    "guestsPlaceholder": "Estimated number of guests",
+    "message": "Message (optional)",
+    "messagePlaceholder": "Additional details, special requests...",
+    "consentText": "I agree to be contacted by Happy Booth for my quote request",
+    "previous": "Previous",
+    "next": "Next", 
+    "submit": "Send my request",
+    "eventTypes": {
+      "wedding": "Wedding",
+      "corporate": "Corporate Event", 
+      "birthday": "Birthday",
+      "other": "Other"
+    },
+    "thankYou": "Thank you for your request!",
+    "thankYouDesc": "We will contact you within 24h with a personalized offer.",
+    "errorConsent": "Please accept the conditions to continue",
+    "successMessage": "Request sent! We will contact you quickly."
+  },
+  "footer": {
+    "tagline": "Happy Booth - Photobooth Rental French Switzerland",
+    "description": "Specialist in photobooth rental for weddings, corporate events and birthdays in French Switzerland. Turnkey service with free delivery in Lausanne.",
+    "quickLinks": "Quick Links",
+    "services": "Our Services",
+    "contact": "Contact",
+    "phone": "Phone", 
+    "email": "Email",
+    "address": "Address",
+    "addressText": "Lausanne, Switzerland",
+    "followUs": "Follow Us",
+    "copyright": "© 2024 Happy Booth. All rights reserved.",
+    "language": "Language"
+  }
+}

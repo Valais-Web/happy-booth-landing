@@ -15,6 +15,9 @@ import { Sparkles, Heart, Building, Calendar, Users, Camera, CheckCircle, ArrowR
 import { toast } from "sonner";
 import { ClientLogosCarousel } from "@/components/ClientLogosCarousel";
 import Autoplay from "embla-carousel-autoplay";
+import useTranslation from "@/hooks/useTranslation";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
+import SEOHead from "@/components/SEOHead";
 
 // Import images
 import heroPhotobooth from "@/assets/hero-photobooth.jpg";
@@ -30,6 +33,7 @@ const photoCollageBackground = "/lovable-uploads/6107f84d-437b-414d-899e-c282a7b
 const photoboothPartyImage = "/lovable-uploads/a394bdcc-7200-44ef-89d9-880e117c95ab.png";
 const newLogo = "/lovable-uploads/34b0e686-0ec5-4fb5-872c-39a4aa3d802c.png";
 const Index = () => {
+  const { t, tArray, language, isLoading } = useTranslation();
   const [formStep, setFormStep] = useState(1);
   const [formData, setFormData] = useState({
     name: '',
@@ -115,7 +119,7 @@ const Index = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.consent) {
-      toast.error("Veuillez accepter les conditions pour continuer");
+      toast.error(t('contact.errorConsent'));
       return;
     }
 
@@ -127,7 +131,7 @@ const Index = () => {
         gclid: formData.gclid
       });
     }
-    toast.success("Demande envoyée ! Nous vous contactons rapidement.");
+    toast.success(t('contact.successMessage'));
     console.log('Form submitted:', formData);
   };
   const nextStep = () => {
@@ -153,83 +157,65 @@ const Index = () => {
   };
   const models = [{
     id: 'mirror',
-    name: 'Mirror Booth',
-    price: '1090 CHF',
-    title: 'Le photobooth intelligent qui fait le show',
-    description: 'Grand miroir tactile plein-pied, effets IA, signatures et emojis, cadres sur mesure, impressions illimitées. Le favori des mariages chic et des soirées corporate.',
+    name: t('models.mirrorBooth.name'),
+    price: t('models.mirrorBooth.price'),
+    title: t('models.mirrorBooth.title'),
+    description: t('models.mirrorBooth.description'),
     image: '/lovable-uploads/a076d98b-87cf-4d16-b6bc-4ba9399b6dfb.png',
-    features: ['Animations thématiques & boomerangs', 'Filtres & changement de fond boostés par l\'IA', 'Écran d\'accueil & cadres brandés, choix du cadre par l\'invité', 'Envoi e-mail instantané + galerie', 'Impression photo pro illimitée', 'Langues : FR, EN, DE, ES, PT, IT'],
-    note: 'Livraison & récupération gratuites sur Lausanne',
-    included: ['Installation & récupération', 'Impressions illimitées', 'Galerie en ligne', 'Personnalisation complète', 'Support technique']
+    features: tArray('models.mirrorBooth.features'),
+    note: t('models.mirrorBooth.note'),
+    included: tArray('models.mirrorBooth.included')
   }, {
     id: 'rainbow',
-    name: 'Rainbow Booth',
-    price: '790 CHF',
-    title: 'Chic, moderne, super fun',
-    description: 'Anneau lumineux arc-en-ciel, look tendance qui attire tous les regards.',
+    name: t('models.rainbowBooth.name'),
+    price: t('models.rainbowBooth.price'),
+    title: t('models.rainbowBooth.title'),
+    description: t('models.rainbowBooth.description'),
     image: '/lovable-uploads/ebd7d9bc-48dd-4de8-9840-b3b8e35ff60e.png',
-    features: ['Anneau lumineux arc-en-ciel, look tendance qui attire tous les regards', 'Partage réseaux sociaux + impression sur place', 'Cadres personnalisables, chaque invité choisit son préféré', 'Impressions illimitées', '"Magic Screen" & fonds thématiques', 'Option backdrops', 'NOUVEAU : effets IA'],
-    included: ['Impressions illimitées', 'Galerie en ligne', 'Personnalisation complète', 'Support technique']
+    features: tArray('models.rainbowBooth.features'),
+    included: tArray('models.rainbowBooth.included')
   }, {
     id: '360',
-    name: '360 Happy Booth',
-    price: '890 CHF',
-    title: 'Tournez, posez, brillez',
-    description: 'Vidéos illimitées avec envoi instantané (WhatsApp, e-mail, AirDrop).',
+    name: t('models.booth360.name'),
+    price: t('models.booth360.price'),
+    title: t('models.booth360.title'),
+    description: t('models.booth360.description'),
     image: '/lovable-uploads/d2564ea4-aa85-43bf-887a-04fd3d343436.png',
-    features: ['Vidéos illimitées avec envoi instantané (WhatsApp, e-mail, AirDrop)', 'Effets personnalisés + superpositions brandées, musique', 'Galerie en ligne. Plateforme 90 cm jusqu\'à 4 personnes, arrêt sécu', 'Livraison, installation et récupération incluses à Lausanne'],
-    included: ['Vidéos illimitées', 'Galerie en ligne', 'Personnalisation complète', 'Support technique']
+    features: tArray('models.booth360.features'),
+    included: tArray('models.booth360.included')
   }, {
     id: 'retro',
-    name: 'Retro Booth',
-    price: '790 CHF',
-    title: 'L\'élégance vintage qui fait fondre tous les cœurs',
-    description: 'Style rétro-chic, format compact, ultra simple à utiliser.',
+    name: t('models.retroBooth.name'),
+    price: t('models.retroBooth.price'),
+    title: t('models.retroBooth.title'),
+    description: t('models.retroBooth.description'),
     image: '/lovable-uploads/01038a35-68c2-4046-a7c9-d7bd12a8dd7f.png',
-    features: ['Style rétro-chic, format compact, ultra simple à utiliser', 'Impressions illimitées', 'Effet miroir + écran tactile : signer, dessiner, emojis', 'Cadres perso, galerie en ligne, accessoires fournis'],
-    included: ['Impressions illimitées', 'Galerie en ligne', 'Personnalisation complète', 'Support technique']
+    features: tArray('models.retroBooth.features'),
+    included: tArray('models.retroBooth.included')
   }, {
     id: 'phone',
-    name: 'Phone Booth',
-    price: '290 CHF',
-    title: 'Audio guestbook vintage',
-    description: 'Décroche, laisse un message, souriez — utilisation ultra simple.',
+    name: t('models.phoneBooth.name'),
+    price: t('models.phoneBooth.price'),
+    title: t('models.phoneBooth.title'),
+    description: t('models.phoneBooth.description'),
     image: '/lovable-uploads/82b14e13-bb3a-4f24-8bd8-5f0342391319.png',
-    features: ['Décroche, laisse un message, souriez — utilisation ultra simple', 'Qualité audio claire, souvenirs à revivre', 'Autonome sans Wi-Fi ni électricité, léger et facile à placer', 'Message d\'accueil personnalisable, option panneau LED 35 CHF', 'Logistique : avec photobooth on livre, sinon envoi postal très simple'],
-    included: ['Livraison & récupération', 'Messages audio illimités', 'Message d\'accueil personnalisé', 'Support technique']
+    features: tArray('models.phoneBooth.features'),
+    included: tArray('models.phoneBooth.included')
   }];
-  const faqItems = [{
-    question: "Combien d'espace faut-il et peut-on l'installer dehors ?",
-    answer: "Il faut environ 3×3 mètres et une prise électrique. L'installation en extérieur est possible si l'espace est abrité."
-  }, {
-    question: "Est-ce vraiment illimité pour les impressions ?",
-    answer: "OUI ! Contrairement à nos concurrents qui limitent à 150-400 tirages, chez Happy Booth c'est VRAIMENT illimité. Vos invités peuvent imprimer autant qu'ils veulent. Plus il y a de photos, plus on rigole !"
-  }, {
-    question: "Comment récupère-t-on les photos numériques ?",
-    answer: "Toutes les photos sont disponibles immédiatement dans une galerie en ligne privée accessible à tous vos invités. Vous recevrez également l'ensemble des fichiers haute définition après l'événement."
-  }, {
-    question: "Et si internet est faible ou le photobooth tombe en panne ?",
-    answer: "Internet faible : Pas de problème ! L'impression fonctionne hors ligne, les envois par e-mail se feront dès que le réseau sera disponible.\n\nPanne (très rare) : Nous avons toujours un matériel de secours prêt et un technicien joignable 24/7. En cas de panne, nous remplaçons l'équipement dans l'heure ou nous vous remboursons intégralement la prestation. Aucun événement n'a jamais été gâché par une panne chez nous."
-  }, {
-    question: "Mes invités âgés ou les enfants sauront-ils l'utiliser ?",
-    answer: "Absolument ! L'interface est ultra-intuitive avec des icônes claires et peut être configurée dans 6 langues. Les enfants dès 5 ans l'utilisent sans problème, et nous pouvons fournir un tabouret pour les plus petits. Option hôte disponible pour accompagner vos invités (45 CHF/heure)."
-  }, {
-    question: "Pourquoi ne pas simplement mettre un iPhone avec une imprimante ?",
-    answer: "Un photobooth professionnel offre : qualité studio (éclairage, objectif pro), animations interactives impossibles sur smartphone, impressions instantanées haute qualité, gestion automatique des files d'attente, personnalisation complète, et surtout une vraie animation qui crée l'événement. Le DIY demande quelqu'un dédié toute la soirée."
-  }, {
-    question: "800-1000 CHF pour quelques heures, n'est-ce pas excessif ?",
-    answer: "Divisé par 100 invités = 8-10 CHF par personne pour un souvenir personnalisé qu'ils garderont. Comparons : un photographe coûte 2000-4000 CHF, un DJ 1500 CHF. Notre équipement professionnel coûte plus de 15'000 CHF et nécessite maintenance, transport, personnalisation (2h de préparation graphique), installation (2h), et présence technique."
-  }, {
-    question: "Et si peu de gens l'utilisent finalement ?",
-    answer: "Jamais arrivé en 1000+ événements ! Statistiques moyennes : 80% des invités l'utilisent, 3-5 passages par personne, 300-600 photos par événement de 100 personnes. Le placement stratégique (près du bar/piste) et nos accessoires fun garantissent le succès. Garantie \"satisfait ou remboursé\" si moins de 50 photos prises."
-  }, {
-    question: "Quand réserver ?",
-    answer: "Idéalement 2-4 mois à l'avance pour les grandes dates, mais nous acceptons aussi les réservations de dernière minute selon disponibilité."
-  }, {
-    question: "Pourquoi payer plus cher qu'une offre d'un prestataire low-cost ?",
-    answer: "Les offres économiques demandent souvent que vous gériez vous-même : le retrait du matériel (aller-retour en voiture), l'installation (1-2h de montage avec notice), la résolution des problèmes techniques, et le retour par transporteur. Elles limitent aussi généralement les impressions (200-400 maximum) - imaginez devoir refuser des tirages à vos invités en fin de soirée !\nNotre service premium inclut : installation/désinstallation complète par nos soins, impressions VRAIMENT illimitées (souvent 500+ photos par événement), support technique immédiat en cas de souci, technologies exclusives (Mirror avec IA, plateforme 360°), et personnalisation graphique professionnelle.\nLe surcoût de 200-300 CHF représente généralement moins de 3 CHF par invité pour éliminer tout stress et garantir une expérience parfaite. C'est l'assurance qu'au moindre problème, c'est notre responsabilité, pas la vôtre. Le jour de votre événement, vous avez mieux à faire que de jouer au technicien !"
-  }];
+  const faqItems = tArray('faq.items');
   return <div className="min-h-screen bg-background">
+      {/* SEO Head component for hreflang tags */}
+      <SEOHead language={language} translations={{ t }} />
+      
+      {isLoading && (
+        <div className="fixed inset-0 bg-white/80 backdrop-blur-sm z-50 flex items-center justify-center">
+          <div className="text-center">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
+            <p className="text-muted-foreground">Loading...</p>
+          </div>
+        </div>
+      )}
+
       {/* Header */}
       <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${isHeaderSticky ? 'bg-primary/10 backdrop-blur-md shadow-lg' : 'bg-transparent'}`}>
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
@@ -239,15 +225,15 @@ const Index = () => {
           </div>
           
           <nav className="hidden md:flex items-center space-x-6">
-            <button onClick={() => scrollToSection('models')} className="nav-link">Nos modèles</button>
-            <button onClick={() => scrollToSection('why-us')} className="nav-link">Pourquoi nous</button>
-            <button onClick={() => scrollToSection('use-cases')} className="nav-link">Evenements</button>
-            <button onClick={() => scrollToSection('how-it-works')} className="nav-link">Comment ça marche</button>
-            <button onClick={() => scrollToSection('faq')} className="nav-link">FAQ</button>
+            <button onClick={() => scrollToSection('models')} className="nav-link">{t('nav.models')}</button>
+            <button onClick={() => scrollToSection('why-us')} className="nav-link">{t('nav.whyUs')}</button>
+            <button onClick={() => scrollToSection('use-cases')} className="nav-link">{t('nav.events')}</button>
+            <button onClick={() => scrollToSection('how-it-works')} className="nav-link">{t('nav.howItWorks')}</button>
+            <button onClick={() => scrollToSection('faq')} className="nav-link">{t('nav.faq')}</button>
           </nav>
 
           <Button variant="default" size="sm" onClick={() => scrollToSection('contact-form')}>
-            Demander une offre
+            {t('nav.getQuote')}
           </Button>
         </div>
       </header>
@@ -266,14 +252,14 @@ const Index = () => {
             {/* Left Content - 2/3 on desktop */}
             <div className="lg:col-span-2 space-y-6 lg:space-y-8 text-center lg:text-left">
               <h1 className="text-3xl sm:text-4xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight">
-                <span className="block whitespace-nowrap">Location de photobooth</span>
+                <span className="block whitespace-nowrap">{t('hero.title1')}</span>
                 <span className="block text-accent bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent whitespace-nowrap">
-                  en Suisse Romande
+                  {t('hero.title2')}
                 </span>
               </h1>
               
               <p className="text-lg sm:text-xl lg:text-2xl text-white/95 leading-relaxed font-medium text-center lg:text-left">
-                Transformez vos événements en souvenirs inoubliables avec nos photomatons dernière génération
+                {t('hero.subtitle')}
               </p>
 
               {/* Benefit Badges - all on same line on desktop */}
@@ -1169,10 +1155,11 @@ const Index = () => {
               <img src="/lovable-uploads/ac502686-5897-4be4-bf80-2dfb03d33219.png" alt="Happy Booth Logo" className="h-12 w-auto" />
             </div>
             
-            <div className="border-t border-white/20 pt-6">
+            <div className="border-t border-white/20 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4">
               <p className="text-white/60">
-                © 2024 Happy Booth. Tous droits réservés.
+                {t('footer.copyright')}
               </p>
+              <LanguageSwitcher currentLanguage={language} />
             </div>
           </div>
         </div>
