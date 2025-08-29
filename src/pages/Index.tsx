@@ -1242,8 +1242,7 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <Sparkles className="h-8 w-8 text-accent" />
-                <span className="text-2xl font-bold">HAPPY BOOTH</span>
+                <img src="/lovable-uploads/ac502686-5897-4be4-bf80-2dfb03d33219.png" alt="Happy Booth Logo" className="h-12 w-auto" />
               </div>
               <p className="text-white/80">
                 Transformez vos événements en souvenirs inoubliables avec nos photomatons dernière génération.
