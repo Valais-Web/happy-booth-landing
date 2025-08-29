@@ -28,7 +28,7 @@ const useTranslation = () => {
   const loadTranslations = async (lang: string) => {
     try {
       setIsLoading(true);
-      const response = await fetch(`/src/locales/${lang}.json`);
+      const response = await fetch(`/locales/${lang}.json`);
       if (!response.ok) {
         throw new Error(`Failed to load translations for ${lang}`);
       }
@@ -39,7 +39,7 @@ const useTranslation = () => {
       // Fallback to French if English fails
       if (lang === 'en') {
         try {
-          const fallbackResponse = await fetch('/src/locales/fr.json');
+          const fallbackResponse = await fetch('/locales/fr.json');
           const fallbackData = await fallbackResponse.json();
           setTranslations(fallbackData);
           setLanguage('fr');

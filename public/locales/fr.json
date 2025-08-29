@@ -1,0 +1,321 @@
+{
+  "nav": {
+    "models": "Nos modèles",
+    "whyUs": "Pourquoi nous", 
+    "events": "Evenements",
+    "howItWorks": "Comment ça marche",
+    "faq": "FAQ",
+    "getQuote": "Demander une offre"
+  },
+  "hero": {
+    "title1": "Location de photobooth",
+    "title2": "en Suisse Romande", 
+    "subtitle": "Transformez vos événements en souvenirs inoubliables avec nos photomatons dernière génération",
+    "badge1": "Impressions illimitées",
+    "badge2": "Service clé en main", 
+    "badge3": "100% personnalisable",
+    "cta": "Demander une offre",
+    "heroImageAlt": "Des gens qui s'amusent devant un photobooth",
+    "googleReviewsAlt": "Google Reviews",
+    "basedOnReviews": "Basé sur 37 avis"
+  },
+  "gallery": {
+    "title": "Nos photobooths en action",
+    "subtitle": "Découvrez l'ambiance magique de nos événements", 
+    "videoButton": "Découvrir en vidéo"
+  },
+  "socialProof": {
+    "title": "Pourquoi 1000+ clients nous font confiance depuis 2018",
+    "subtitle": "Découvrez les chiffres qui parlent d'eux-mêmes",
+    "rating": "Note moyenne clients",
+    "ratingDesc": "Basé sur 37+ avis vérifiés Google",
+    "events": "Événements réussis", 
+    "eventsDesc": "Mariages, anniversaires, entreprises",
+    "coverage": "Couverture Suisse Romande",
+    "coverageDesc": "Lausanne, Genève, Vaud, Valais, Fribourg",
+    "experience": "Expérience de la fête",
+    "experienceDesc": "Technologies exclusives en Suisse",
+    "clientsTitle": "Happy Clients",
+    "clientsDesc": "Voici quelques entreprises qui ont souri pour le Happy Booth"
+  },
+  "models": {
+    "title": "Nos modèles — Tarifs transparents \"all-inclusive\"",
+    "subtitle": "Découvrez notre gamme complète de photomatons avec tous les services inclus",
+    "includedTitle": "Inclus dans le prix :",
+    "delivery": "Livraison & reprise",
+    "deliveryDesc": "Gratuit sur Lausanne. Hors Lausanne : transport sur devis.",
+    "hostOption": "Option Hôte animateur : 45 CHF/heure",
+    "cta": "Demander une offre",
+    "mirrorBooth": {
+      "name": "Mirror Booth",
+      "price": "1090 CHF", 
+      "title": "Le photobooth intelligent qui fait le show",
+      "description": "Grand miroir tactile plein-pied, effets IA, signatures et emojis, cadres sur mesure, impressions illimitées. Le favori des mariages chic et des soirées corporate.",
+      "features": [
+        "Animations thématiques & boomerangs",
+        "Filtres & changement de fond boostés par l'IA",
+        "Écran d'accueil & cadres brandés, choix du cadre par l'invité", 
+        "Envoi e-mail instantané + galerie",
+        "Impression photo pro illimitée",
+        "Langues : FR, EN, DE, ES, PT, IT"
+      ],
+      "note": "Livraison & récupération gratuites sur Lausanne",
+      "included": [
+        "Installation & récupération",
+        "Impressions illimitées", 
+        "Galerie en ligne",
+        "Personnalisation complète",
+        "Support technique"
+      ]
+    },
+    "rainbowBooth": {
+      "name": "Rainbow Booth",
+      "price": "790 CHF",
+      "title": "Chic, moderne, super fun", 
+      "description": "Anneau lumineux arc-en-ciel, look tendance qui attire tous les regards.",
+      "features": [
+        "Anneau lumineux arc-en-ciel, look tendance qui attire tous les regards",
+        "Partage réseaux sociaux + impression sur place",
+        "Cadres personnalisables, chaque invité choisit son préféré",
+        "Impressions illimitées",
+        "\"Magic Screen\" & fonds thématiques", 
+        "Option backdrops",
+        "NOUVEAU : effets IA"
+      ],
+      "included": [
+        "Impressions illimitées",
+        "Galerie en ligne", 
+        "Personnalisation complète",
+        "Support technique"
+      ]
+    },
+    "booth360": {
+      "name": "360 Happy Booth",
+      "price": "890 CHF",
+      "title": "Tournez, posez, brillez",
+      "description": "Vidéos illimitées avec envoi instantané (WhatsApp, e-mail, AirDrop).",
+      "features": [
+        "Vidéos illimitées avec envoi instantané (WhatsApp, e-mail, AirDrop)",
+        "Effets personnalisés + superpositions brandées, musique",
+        "Galerie en ligne. Plateforme 90 cm jusqu'à 4 personnes, arrêt sécu",
+        "Livraison, installation et récupération incluses à Lausanne"
+      ],
+      "included": [
+        "Vidéos illimitées",
+        "Galerie en ligne",
+        "Personnalisation complète", 
+        "Support technique"
+      ]
+    },
+    "retroBooth": {
+      "name": "Retro Booth", 
+      "price": "790 CHF",
+      "title": "L'élégance vintage qui fait fondre tous les cœurs",
+      "description": "Style rétro-chic, format compact, ultra simple à utiliser.",
+      "features": [
+        "Style rétro-chic, format compact, ultra simple à utiliser",
+        "Impressions illimitées",
+        "Effet miroir + écran tactile : signer, dessiner, emojis",
+        "Cadres perso, galerie en ligne, accessoires fournis"
+      ],
+      "included": [
+        "Impressions illimitées",
+        "Galerie en ligne",
+        "Personnalisation complète",
+        "Support technique"
+      ]
+    },
+    "phoneBooth": {
+      "name": "Phone Booth",
+      "price": "290 CHF", 
+      "title": "Audio guestbook vintage",
+      "description": "Décroche, laisse un message, souriez — utilisation ultra simple.",
+      "features": [
+        "Décroche, laisse un message, souriez — utilisation ultra simple",
+        "Qualité audio claire, souvenirs à revivre", 
+        "Autonome sans Wi-Fi ni électricité, léger et facile à placer",
+        "Message d'accueil personnalisable, option panneau LED 35 CHF",
+        "Logistique : avec photobooth on livre, sinon envoi postal très simple"
+      ],
+      "included": [
+        "Livraison & récupération",
+        "Messages audio illimités",
+        "Message d'accueil personnalisé",
+        "Support technique"
+      ]
+    }
+  },
+  "whyUs": {
+    "title": "Nos photomatons t'offrent une soirée extraordinaire",
+    "subtitle": "\"Don't worry, be Happy Booth.\"",
+    "local": "Local & fiable",
+    "localDesc": "Partout en Suisse Romande",
+    "delivery": "Livraison & installation", 
+    "deliveryDesc": "On s'occupe de tout",
+    "unlimited": "Imprimés illimités",
+    "unlimitedDesc": "De haute qualité",
+    "customization": "Personnalisation totale",
+    "customizationDesc": "Cadres, animations HD, boomerangs", 
+    "accessories": "Grand choix d'accessoires",
+    "accessoriesDesc": "Pour tous les styles",
+    "experience": "Expérience collective",
+    "experienceDesc": "Souvenirs partagés inoubliables"
+  },
+  "useCases": {
+    "title": "Quand louer un photobooth ?",
+    "subtitle": "Parfait pour tous vos événements",
+    "weddings": "Mariages",
+    "weddingsDesc": "Livre d'or photo, cadres au thème du jour, service clé en main rassurant.",
+    "corporate": "Entreprises", 
+    "corporateDesc": "Team-building, congrès, lancements produits.",
+    "birthdays": "Anniversaires",
+    "birthdaysDesc": "18, 30, 50 ans... Créez l'événement avec style.",
+    "cta": "Demander une offre"
+  },
+  "howItWorks": {
+    "title": "Comment ça marche ?",
+    "subtitle": "Simplicité garantie en 4 étapes",
+    "step1Title": "Réservez votre date",
+    "step1Desc": "Contactez-nous pour vérifier la disponibilité et recevoir un devis personnalisé en 24h",
+    "step2Title": "Personnalisation",
+    "step2Desc": "Nous créons vos cadres, animations et écrans aux couleurs de votre événement",
+    "step3Title": "Livraison & installation",
+    "step3Desc": "Notre équipe s'occupe de tout : livraison, installation, test. Zéro stress pour vous !",
+    "step4Title": "Profitez de la magie",
+    "step4Desc": "Vos invités s'amusent, créent des souvenirs et repartent avec leurs photos imprimées"
+  },
+  "testimonials": {
+    "title": "Ce que disent nos clients",
+    "subtitle": "Découvrez pourquoi ils nous recommandent"
+  },
+  "faq": {
+    "title": "Questions fréquentes", 
+    "subtitle": "Tout ce que vous devez savoir sur nos photobooths",
+    "items": [
+      {
+        "question": "Combien d'espace faut-il et peut-on l'installer dehors ?",
+        "answer": "Il faut environ 3×3 mètres et une prise électrique. L'installation en extérieur est possible si l'espace est abrité."
+      },
+      {
+        "question": "Est-ce vraiment illimité pour les impressions ?",
+        "answer": "OUI ! Contrairement à nos concurrents qui limitent à 150-400 tirages, chez Happy Booth c'est VRAIMENT illimité. Vos invités peuvent imprimer autant qu'ils veulent. Plus il y a de photos, plus on rigole !"
+      },
+      {
+        "question": "Comment récupère-t-on les photos numériques ?",
+        "answer": "Toutes les photos sont disponibles immédiatement dans une galerie en ligne privée accessible à tous vos invités. Vous recevrez également l'ensemble des fichiers haute définition après l'événement."
+      },
+      {
+        "question": "Et si internet est faible ou le photobooth tombe en panne ?",
+        "answer": "Internet faible : Pas de problème ! L'impression fonctionne hors ligne, les envois par e-mail se feront dès que le réseau sera disponible.\n\nPanne (très rare) : Nous avons toujours un matériel de secours prêt et un technicien joignable 24/7. En cas de panne, nous remplaçons l'équipement dans l'heure ou nous vous remboursons intégralement la prestation. Aucun événement n'a jamais été gâché par une panne chez nous."
+      },
+      {
+        "question": "Mes invités âgés ou les enfants sauront-ils l'utiliser ?",
+        "answer": "Absolument ! L'interface est ultra-intuitive avec des icônes claires et peut être configurée dans 6 langues. Les enfants dès 5 ans l'utilisent sans problème, et nous pouvons fournir un tabouret pour les plus petits. Option hôte disponible pour accompagner vos invités (45 CHF/heure)."
+      },
+      {
+        "question": "Pourquoi ne pas simplement mettre un iPhone avec une imprimante ?",
+        "answer": "Un photobooth professionnel offre : qualité studio (éclairage, objectif pro), animations interactives impossibles sur smartphone, impressions instantanées haute qualité, gestion automatique des files d'attente, personnalisation complète, et surtout une vraie animation qui crée l'événement. Le DIY demande quelqu'un dédié toute la soirée."
+      },
+      {
+        "question": "800-1000 CHF pour quelques heures, n'est-ce pas excessif ?",
+        "answer": "Divisé par 100 invités = 8-10 CHF par personne pour un souvenir personnalisé qu'ils garderont. Comparons : un photographe coûte 2000-4000 CHF, un DJ 1500 CHF. Notre équipement professionnel coûte plus de 15'000 CHF et nécessite maintenance, transport, personnalisation (2h de préparation graphique), installation (2h), et présence technique."
+      },
+      {
+        "question": "Et si peu de gens l'utilisent finalement ?",
+        "answer": "Jamais arrivé en 1000+ événements ! Statistiques moyennes : 80% des invités l'utilisent, 3-5 passages par personne, 300-600 photos par événement de 100 personnes. Le placement stratégique (près du bar/piste) et nos accessoires fun garantissent le succès. Garantie \"satisfait ou remboursé\" si moins de 50 photos prises."
+      },
+      {
+        "question": "Quand réserver ?",
+        "answer": "Idéalement 2-4 mois à l'avance pour les grandes dates, mais nous acceptons aussi les réservations de dernière minute selon disponibilité."
+      },
+      {
+        "question": "Pourquoi payer plus cher qu'une offre d'un prestataire low-cost ?",
+        "answer": "Les offres économiques demandent souvent que vous gériez vous-même : le retrait du matériel (aller-retour en voiture), l'installation (1-2h de montage avec notice), la résolution des problèmes techniques, et le retour par transporteur. Elles limitent aussi généralement les impressions (200-400 maximum) - imaginez devoir refuser des tirages à vos invités en fin de soirée !\nNotre service premium inclut : installation/désinstallation complète par nos soins, impressions VRAIMENT illimitées (souvent 500+ photos par événement), support technique immédiat en cas de souci, technologies exclusives (Mirror avec IA, plateforme 360°), et personnalisation graphique professionnelle.\nLe surcoût de 200-300 CHF représente généralement moins de 3 CHF par invité pour éliminer tout stress et garantir une expérience parfaite. C'est l'assurance qu'au moindre problème, c'est notre responsabilité, pas la vôtre. Le jour de votre événement, vous avez mieux à faire que de jouer au technicien !"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Demande de devis gratuit",
+    "subtitle": "Recevez votre offre personnalisée en 24h",
+    "step1": "Votre événement",
+    "step2": "Vos coordonnées", 
+    "step3": "Confirmation",
+    "name": "Nom",
+    "namePlaceholder": "Votre nom complet",
+    "email": "Email",
+    "emailPlaceholder": "votre@email.com",
+    "phone": "Téléphone",
+    "phonePlaceholder": "+41 76 123 45 67",
+    "date": "Date de l'événement",
+    "eventType": "Type d'événement",
+    "eventTypePlaceholder": "Sélectionnez le type",
+    "city": "Ville",
+    "cityPlaceholder": "Lieu de votre événement", 
+    "guests": "Nombre d'invités", 
+    "guestsPlaceholder": "Sélectionner le nombre",
+    "message": "Message (optionnel)",
+    "messagePlaceholder": "Détails supplémentaires, demandes spéciales...",
+    "consentText": "J'accepte d'être recontacté par Happy Booth pour ma demande de devis",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "submit": "Envoyer ma demande",
+    "backButton": "Retour",
+    "continueButton": "Continuer",
+    "formStep1Title": "Parlez-nous de vous",
+    "formStep2Title": "Détails de votre événement",
+    "formStep3Title": "Finalisez votre demande",
+    "modelLabel": "Modèle préféré",
+    "eventTypes": {
+      "wedding": "Mariage",
+      "corporate": "Événement d'entreprise",
+      "birthday": "Anniversaire", 
+      "other": "Autre"
+    },
+    "eventTypeOptions": {
+      "mariage": "Mariage",
+      "entreprise": "Événement d'entreprise",
+      "anniversaire": "Anniversaire",
+      "baby-shower": "Baby shower",
+      "graduation": "Remise de diplôme",
+      "autre": "Autre"
+    },
+    "guestOptions": {
+      "<50": "< 50",
+      "50-100": "50-100",
+      "100-200": "100-200",
+      ">200": "> 200"
+    },
+    "modelOptions": {
+      "mirror": "Mirror Booth - 1090 CHF",
+      "rainbow": "Rainbow Booth - 790 CHF",
+      "360": "360 Happy Booth - 890 CHF",
+      "retro": "Retro Booth - 790 CHF",
+      "phone": "Phone Booth - 290 CHF",
+      "conseil": "Conseillez-moi"
+    },
+    "badges": {
+      "response": "Réponse 24h",
+      "noCommitment": "Sans engagement",
+      "personalizedAdvice": "Conseil personnalisé"
+    },
+    "thankYou": "Merci pour votre demande !",
+    "thankYouDesc": "Nous vous contactons dans les 24h avec une offre personnalisée.",
+    "errorConsent": "Veuillez accepter les conditions pour continuer",
+    "successMessage": "Demande envoyée ! Nous vous contactons rapidement.",
+    "contactConsent": "J'accepte d'être contacté pour ce devis et la politique de confidentialité *"
+  },
+  "footer": {
+    "tagline": "Happy Booth - Location photobooth Suisse Romande",
+    "description": "Spécialiste de la location de photobooth pour mariages, événements d'entreprise et anniversaires en Suisse Romande. Service clé en main avec livraison gratuite sur Lausanne.",
+    "quickLinks": "Liens rapides",
+    "services": "Nos services", 
+    "contact": "Contact",
+    "phone": "Téléphone",
+    "email": "Email",
+    "address": "Adresse",
+    "addressText": "Lausanne, Suisse",
+    "followUs": "Suivez-nous",
+    "copyright": "© 2024 Happy Booth. Tous droits réservés.",
+    "language": "Langue"
+  }
+}
