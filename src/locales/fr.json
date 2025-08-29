@@ -252,25 +252,57 @@
     "city": "Ville",
     "cityPlaceholder": "Lieu de votre événement", 
     "guests": "Nombre d'invités", 
-    "guestsPlaceholder": "Estimation du nombre d'invités",
+    "guestsPlaceholder": "Sélectionner le nombre",
     "message": "Message (optionnel)",
     "messagePlaceholder": "Détails supplémentaires, demandes spéciales...",
     "consentText": "J'accepte d'être recontacté par Happy Booth pour ma demande de devis",
     "previous": "Précédent",
     "next": "Suivant",
     "submit": "Envoyer ma demande",
+    "backButton": "Retour",
+    "continueButton": "Continuer",
+    "formStep1Title": "Parlez-nous de vous",
+    "formStep2Title": "Détails de votre événement",
+    "formStep3Title": "Finalisez votre demande",
+    "modelLabel": "Modèle préféré",
     "eventTypes": {
       "wedding": "Mariage",
       "corporate": "Événement d'entreprise",
       "birthday": "Anniversaire", 
       "other": "Autre"
     },
+    "eventTypeOptions": {
+      "mariage": "Mariage",
+      "entreprise": "Événement d'entreprise",
+      "anniversaire": "Anniversaire",
+      "baby-shower": "Baby shower",
+      "graduation": "Remise de diplôme",
+      "autre": "Autre"
+    },
+    "guestOptions": {
+      "<50": "< 50",
+      "50-100": "50-100",
+      "100-200": "100-200",
+      ">200": "> 200"
+    },
+    "modelOptions": {
+      "mirror": "Mirror Booth - 1090 CHF",
+      "rainbow": "Rainbow Booth - 790 CHF",
+      "360": "360 Happy Booth - 890 CHF",
+      "retro": "Retro Booth - 790 CHF",
+      "phone": "Phone Booth - 290 CHF",
+      "conseil": "Conseillez-moi"
+    },
+    "badges": {
+      "response": "Réponse 24h",
+      "noCommitment": "Sans engagement",
+      "personalizedAdvice": "Conseil personnalisé"
+    },
     "thankYou": "Merci pour votre demande !",
     "thankYouDesc": "Nous vous contactons dans les 24h avec une offre personnalisée.",
     "errorConsent": "Veuillez accepter les conditions pour continuer",
     "successMessage": "Demande envoyée ! Nous vous contactons rapidement.",
-    "contactConsent": "J'accepte d'être contacté pour ce devis et la politique de confidentialité *",
-    "guestsPlaceholder": "Sélectionner le nombre"
+    "contactConsent": "J'accepte d'être contacté pour ce devis et la politique de confidentialité *"
   },
   "footer": {
     "tagline": "Happy Booth - Location photobooth Suisse Romande",
