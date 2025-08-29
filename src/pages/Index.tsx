@@ -268,13 +268,21 @@ const Index = () => {
             {/* Right Content - 1/3 on desktop */}
             <div className="lg:col-span-1 relative flex justify-center mb-16 lg:mb-0">
               <div className="relative w-full max-w-sm lg:max-w-none">
-                <img src="/lovable-uploads/f84fb375-7807-44f3-9cd3-34e6c4074c9a.png" alt="Des gens qui s'amusent devant un photobooth" className="w-64 sm:w-72 lg:w-full h-auto rounded-2xl shadow-2xl border border-white/20 mx-auto" />
+                <img 
+                  src="/lovable-uploads/f84fb375-7807-44f3-9cd3-34e6c4074c9a.png" 
+                  alt="Des gens qui s'amusent devant un photobooth" 
+                  className="w-64 sm:w-72 lg:w-full h-auto rounded-2xl shadow-2xl border border-white/20 mx-auto"
+                />
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-black/20 to-transparent"></div>
                 
                 {/* Google Reviews Badge - centered on mobile, slightly overflowing left on desktop and very large screens */}
                 <div className="absolute -bottom-4 left-1/2 lg:left-auto lg:-bottom-6 lg:-left-8 xl:-left-12 2xl:-left-16 transform -translate-x-1/2 lg:transform-none bg-white/95 backdrop-blur-sm rounded-lg p-3 shadow-lg border border-gray-200">
                   <div className="flex items-center space-x-2 mb-1">
-                    <img src="/lovable-uploads/82416f11-c9f5-4e9a-b407-60bbea2da5a8.png" alt="Google Reviews" className="h-16 lg:h-20 w-auto mx-auto" />
+                    <img 
+                      src="/lovable-uploads/82416f11-c9f5-4e9a-b407-60bbea2da5a8.png" 
+                      alt="Google Reviews" 
+                      className="h-16 lg:h-20 w-auto mx-auto"
+                    />
                   </div>
                   <p className="text-xs lg:text-sm text-gray-600 whitespace-nowrap text-center">Basé sur 37 avis</p>
                 </div>
@@ -336,7 +344,7 @@ const Index = () => {
                 <div className="text-4xl font-bold text-primary">1000+</div>
               </div>
               <h3 className="font-semibold mb-2">Événements réussis</h3>
-              <p className="text-sm text-muted-foreground">Mariages, anniversaires, corporate</p>
+              <p className="text-sm text-muted-foreground">Mariages, anniversaires, entreprises</p>
             </Card>
             
             <Card className="text-center p-6 hover:shadow-lg transition-all duration-300">
@@ -345,15 +353,15 @@ const Index = () => {
                 <div className="text-4xl font-bold text-primary">100%</div>
               </div>
               <h3 className="font-semibold mb-2">Couverture Suisse Romande</h3>
-              <p className="text-sm text-muted-foreground">Lausanne, Genève, Montreux, Valais</p>
+              <p className="text-sm text-muted-foreground">Lausanne, Genève, Vaud, Valais, Fribourg</p>
             </Card>
             
             <Card className="text-center p-6 hover:shadow-lg transition-all duration-300">
               <div className="mb-4">
                 <Award className="w-12 h-12 text-purple-500 mx-auto mb-2" />
-                <div className="text-4xl font-bold text-primary">2018</div>
+                <div className="text-4xl font-bold text-primary">+8 ans</div>
               </div>
-              <h3 className="font-semibold mb-2">Pionnier du photobooth moderne</h3>
+              <h3 className="font-semibold mb-2">Expérience de la fête</h3>
               <p className="text-sm text-muted-foreground">Technologies exclusives en Suisse</p>
             </Card>
           </div>
