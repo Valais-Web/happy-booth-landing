@@ -681,7 +681,7 @@ const Index = () => {
                 <Calendar className="w-12 h-12 text-primary mx-auto mb-4" />
                 <h3 className="font-bold text-lg mb-3">Réservez votre date</h3>
                 <p className="text-sm text-muted-foreground">
-                  Contactez-nous pour vérifier la disponibilité et recevoir un devis personnalisé en 2h
+                  Contactez-nous pour vérifier la disponibilité et recevoir un devis personnalisé en 24h
                 </p>
               </div>
             </Card>
