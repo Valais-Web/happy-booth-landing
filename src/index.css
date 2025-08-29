@@ -332,4 +332,14 @@ All colors MUST be HSL.
       font-size: 1.125rem;
     }
   }
+
+  /* Client Logos Carousel Animation */
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-100% / 3));
+    }
+  }
 }

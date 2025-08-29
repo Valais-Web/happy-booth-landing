@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React from "react";
 
 interface ClientLogo {
   src: string;
@@ -60,57 +60,33 @@ const clientLogos: ClientLogo[] = [
 ];
 
 export const ClientLogosCarousel = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % clientLogos.length);
-    }, 3000); // Change logo every 3 seconds
-
-    return () => clearInterval(interval);
-  }, []);
-
-  // Create an extended array for seamless infinite scrolling
-  const extendedLogos = [...clientLogos, ...clientLogos];
+  // Create multiple copies for truly seamless infinite scrolling
+  const extendedLogos = [...clientLogos, ...clientLogos, ...clientLogos];
 
   return (
-    <div className="py-12 bg-gray-50/50">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-8">
-          <h2 className="text-2xl font-bold text-gray-800 mb-2">
-            Ils nous font confiance
-          </h2>
-          <p className="text-gray-600">
-            Plus de 1000 clients satisfaits depuis 2018
-          </p>
-        </div>
-        
-        <div className="relative overflow-hidden">
+    <div className="relative overflow-hidden">
+      <div 
+        className="flex animate-[scroll_20s_linear_infinite]"
+        style={{
+          width: `${extendedLogos.length * (100/6)}%`
+        }}
+      >
+        {extendedLogos.map((logo, index) => (
           <div 
-            className="flex transition-transform duration-1000 ease-in-out"
-            style={{
-              transform: `translateX(-${(currentIndex * 100) / 6}%)`,
-              width: `${(extendedLogos.length * 100) / 6}%`
-            }}
+            key={`${logo.name}-${index}`}
+            className="flex-shrink-0 px-6 flex items-center justify-center"
+            style={{ width: `${100 / extendedLogos.length}%` }}
           >
-            {extendedLogos.map((logo, index) => (
-              <div 
-                key={`${logo.name}-${index}`}
-                className="flex-shrink-0 px-4 flex items-center justify-center"
-                style={{ width: `${100 / extendedLogos.length}%` }}
-              >
-                <div className="h-16 flex items-center justify-center group">
-                  <img
-                    src={logo.src}
-                    alt={logo.alt}
-                    className="max-h-full max-w-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300 opacity-70 group-hover:opacity-100"
-                    style={{ height: '60px' }}
-                  />
-                </div>
-              </div>
-            ))}
+            <div className="h-16 flex items-center justify-center group">
+              <img
+                src={logo.src}
+                alt={logo.alt}
+                className="max-h-full max-w-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300 opacity-60 group-hover:opacity-100"
+                style={{ height: '50px' }}
+              />
+            </div>
           </div>
-        </div>
+        ))}
       </div>
     </div>
   );
