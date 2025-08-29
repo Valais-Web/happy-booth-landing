@@ -537,7 +537,7 @@ const Index = () => {
           
           <div className="mt-12 text-center">
             <Card className="max-w-2xl mx-auto p-6 bg-blue-50 border-blue-200">
-              <h3 className="font-semibold text-blue-900 mb-2">Livraison & reprise incluses</h3>
+              <h3 className="font-semibold text-blue-900 mb-2">Livraison & reprise</h3>
               <p className="text-blue-700">Gratuit sur Lausanne. Hors Lausanne : transport sur devis.</p>
               <p className="text-sm text-blue-600 mt-2">
                 <strong>Option Hôte animateur :</strong> 45 CHF/heure
