@@ -9,12 +9,9 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
-import { Sparkles, Heart, Building, Calendar, Users, Camera, CheckCircle, ArrowRight, Star, Award, MapPin, Clock, ChevronLeft, ChevronRight, Play } from "lucide-react";
+import { Sparkles, Heart, Building, Calendar, Users, Camera, CheckCircle, ArrowRight, Star, Award, MapPin, Clock, ChevronLeft, ChevronRight } from "lucide-react";
 import { toast } from "sonner";
 import { ClientLogosCarousel } from "@/components/ClientLogosCarousel";
-import Autoplay from "embla-carousel-autoplay";
 
 // Import images
 import heroPhotobooth from "@/assets/hero-photobooth.jpg";
@@ -49,37 +46,21 @@ const Index = () => {
   const [selectedModel, setSelectedModel] = useState('mirror');
   const [isHeaderSticky, setIsHeaderSticky] = useState(false);
   const [currentGalleryIndex, setCurrentGalleryIndex] = useState(0);
-  const [isVideoDialogOpen, setIsVideoDialogOpen] = useState(false);
   const galleryImages = [{
-    src: "/lovable-uploads/4dc5051d-dec2-45c9-8f53-9e243fdbd2a5.png",
-    alt: "Groupe de femmes élégantes s'amusant avec des accessoires photobooth lors d'une soirée glamour"
+    src: heroPhotobooth,
+    alt: "Photobooth miroir élégant à un mariage"
   }, {
-    src: "/lovable-uploads/e36ddf1f-fd75-4dab-a03e-2a815107bbe8.png",
-    alt: "Groupe d'invités s'amusant devant un photobooth"
+    src: corporateEvent,
+    alt: "Événement corporatif avec photobooth"
   }, {
-    src: "/lovable-uploads/8a60f497-5e43-4f4a-a84e-6de61a53a43d.png",
-    alt: "Groupe d'amis célébrant avec champagne et confettis"
+    src: weddingPhotobooth,
+    alt: "Mariés s'amusant au photobooth"
   }, {
-    src: "/lovable-uploads/a3047dbb-6b51-423a-9b01-c35e795d02a9.png",
-    alt: "Fête avec confettis colorés et champagne"
+    src: booth360,
+    alt: "Photobooth 360° en action"
   }, {
-    src: "/lovable-uploads/5ae0f66e-36db-4464-9363-ce2c1c4448ab.png",
-    alt: "Groupe festif avec chapeaux de Noël"
-  }, {
-    src: "/lovable-uploads/de88bc30-9aeb-4d9a-a81b-276d197bb678.png",
-    alt: "Deux femmes souriantes tenant des photos de photobooth"
-  }, {
-    src: "/lovable-uploads/443dbe34-0895-4b83-82e3-3346546c59d6.png",
-    alt: "Couple posant avec un cadre personnalisé Happy Booth lors d'un événement TEDx"
-  }, {
-    src: "/lovable-uploads/590cb129-8f7c-430a-8788-c25932913542.png",
-    alt: "Deux amies avec cadre photo doré"
-  }, {
-    src: "/lovable-uploads/48d8a7d4-1938-4e90-9052-3e214fa89408.png", 
-    alt: "Photos imprimées du photobooth avec un cadre personnalisé pour un événement corporate"
-  }, {
-    src: "/lovable-uploads/4a177c3d-bd93-4d8c-a6f3-fe9434e4a4be.png",
-    alt: "Photobooth LED moderne installé en extérieur avec éclairage professionnel"
+    src: birthdayParty,
+    alt: "Anniversaire avec photobooth rétro"
   }];
   useEffect(() => {
     // Capture URL parameters
@@ -287,21 +268,13 @@ const Index = () => {
             {/* Right Content - 1/3 on desktop */}
             <div className="lg:col-span-1 relative flex justify-center mb-16 lg:mb-0">
               <div className="relative w-full max-w-sm lg:max-w-none">
-                <img 
-                  src="/lovable-uploads/f84fb375-7807-44f3-9cd3-34e6c4074c9a.png" 
-                  alt="Des gens qui s'amusent devant un photobooth" 
-                  className="w-64 sm:w-72 lg:w-full h-auto rounded-2xl shadow-2xl border border-white/20 mx-auto"
-                />
+                <img src="/lovable-uploads/f84fb375-7807-44f3-9cd3-34e6c4074c9a.png" alt="Des gens qui s'amusent devant un photobooth" className="w-64 sm:w-72 lg:w-full h-auto rounded-2xl shadow-2xl border border-white/20 mx-auto" />
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-black/20 to-transparent"></div>
                 
                 {/* Google Reviews Badge - centered on mobile, slightly overflowing left on desktop and very large screens */}
                 <div className="absolute -bottom-4 left-1/2 lg:left-auto lg:-bottom-6 lg:-left-8 xl:-left-12 2xl:-left-16 transform -translate-x-1/2 lg:transform-none bg-white/95 backdrop-blur-sm rounded-lg p-3 shadow-lg border border-gray-200">
                   <div className="flex items-center space-x-2 mb-1">
-                    <img 
-                      src="/lovable-uploads/82416f11-c9f5-4e9a-b407-60bbea2da5a8.png" 
-                      alt="Google Reviews" 
-                      className="h-16 lg:h-20 w-auto mx-auto"
-                    />
+                    <img src="/lovable-uploads/82416f11-c9f5-4e9a-b407-60bbea2da5a8.png" alt="Google Reviews" className="h-16 lg:h-20 w-auto mx-auto" />
                   </div>
                   <p className="text-xs lg:text-sm text-gray-600 whitespace-nowrap text-center">Basé sur 37 avis</p>
                 </div>
@@ -319,74 +292,21 @@ const Index = () => {
             <p className="text-xl text-muted-foreground">Découvrez l'ambiance magique de nos événements</p>
           </div>
           
-          {/* Video Section with Button */}
-          <div className="max-w-4xl mx-auto mb-12 text-center">
-            <Dialog open={isVideoDialogOpen} onOpenChange={setIsVideoDialogOpen}>
-              <DialogTrigger asChild>
-                <Button size="lg" className="mb-8 bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white font-semibold px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
-                  <Play className="w-5 h-5 mr-2" />
-                  Découvrir en vidéo
-                </Button>
-              </DialogTrigger>
-              <DialogContent className="max-w-4xl w-full p-0 bg-black">
-                <div className="aspect-video w-full">
-                  <iframe 
-                    src="https://player.vimeo.com/video/731393641?badge=0&amp;autopause=0&amp;quality_selector=1&amp;progress_bar=1&amp;player_id=0&amp;app_id=58479&amp;autoplay=1" 
-                    className="w-full h-full rounded-lg" 
-                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write" 
-                    title="Happy Booth - Teaser"
-                  />
-                </div>
-              </DialogContent>
-            </Dialog>
-          </div>
-
-          {/* Photo Gallery - Carousel Layout */}
-          <div className="max-w-6xl mx-auto">
-            <h3 className="text-xl font-semibold text-center mb-8">Nos plus beaux moments</h3>
-            <Carousel 
-              className="w-full"
-              plugins={[
-                Autoplay({
-                  delay: 2000,
-                })
-              ]}
-              opts={{
-                align: "start",
-                loop: true,
-              }}
-            >
-              <CarouselContent className="-ml-2 md:-ml-4">
-                {galleryImages.map((image, index) => (
-                  <CarouselItem 
-                    key={index}
-                    className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4"
-                  >
-                    <div className="aspect-square rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer group">
-                      <img 
-                        src={image.src} 
-                        alt={image.alt} 
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" 
-                      />
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious className="hidden md:flex -left-12" />
-              <CarouselNext className="hidden md:flex -right-12" />
-            </Carousel>
+          <div className="relative max-w-4xl mx-auto">
+            <div className="aspect-video rounded-xl overflow-hidden shadow-2xl">
+              <img src={galleryImages[currentGalleryIndex].src} alt={galleryImages[currentGalleryIndex].alt} className="w-full h-full object-cover transition-all duration-500" />
+            </div>
             
-            {/* Mobile carousel indicators */}
-            <div className="flex justify-center mt-6 space-x-2 md:hidden">
-              {galleryImages.map((_, index) => (
-                <button
-                  key={index}
-                  className={`w-2 h-2 rounded-full transition-colors ${
-                    index === currentGalleryIndex ? 'bg-primary' : 'bg-gray-300'
-                  }`}
-                  onClick={() => setCurrentGalleryIndex(index)}
-                />
-              ))}
+            <button onClick={prevGalleryImage} className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-primary rounded-full p-3 shadow-lg transition-all duration-300">
+              <ChevronLeft className="w-6 h-6" />
+            </button>
+            
+            <button onClick={nextGalleryImage} className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-primary rounded-full p-3 shadow-lg transition-all duration-300">
+              <ChevronRight className="w-6 h-6" />
+            </button>
+            
+            <div className="flex justify-center mt-6 space-x-2">
+              {galleryImages.map((_, index) => <button key={index} onClick={() => setCurrentGalleryIndex(index)} className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentGalleryIndex ? 'bg-primary' : 'bg-gray-300'}`} />)}
             </div>
           </div>
         </div>
@@ -415,7 +335,7 @@ const Index = () => {
                 <Heart className="w-12 h-12 text-red-500 mx-auto mb-2" />
                 <div className="text-4xl font-bold text-primary">1000+</div>
               </div>
-              <h3 className="font-semibold mb-2">Événements réussis</h3>
+              
               <p className="text-sm text-muted-foreground">Mariages, anniversaires, entreprises</p>
             </Card>
             
