@@ -10,6 +10,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Sparkles, Heart, Building, Calendar, Users, Camera, CheckCircle, ArrowRight, Star, Award, MapPin, Clock, ChevronLeft, ChevronRight } from "lucide-react";
+import ClientLogosCarousel from "@/components/ClientLogosCarousel";
 import { toast } from "sonner";
 
 // Import images
@@ -355,12 +356,8 @@ const Index = () => {
 
           <div className="mt-12 text-center">
             <p className="text-lg mb-6">Happy Clients — Voici quelques entreprises qui ont souri pour le Happy Booth</p>
-            <div className="flex flex-wrap justify-center items-center gap-6 opacity-70">
-              <Badge variant="outline" className="px-4 py-2 text-base">BCV</Badge>
-              <Badge variant="outline" className="px-4 py-2 text-base">Ville de Lausanne</Badge>
-              <Badge variant="outline" className="px-4 py-2 text-base">EPFL</Badge>
-              <Badge variant="outline" className="px-4 py-2 text-base">Montreux Jazz</Badge>
-              <Badge variant="outline" className="px-4 py-2 text-base">UNIL</Badge>
+            <div className="mt-8">
+              <ClientLogosCarousel />
             </div>
           </div>
         </div>
