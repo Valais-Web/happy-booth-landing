@@ -1065,23 +1065,23 @@ const Index = () => {
                 Obtenez votre devis personnalisé en quelques clics
               </p>
               
-              <div className="flex justify-center space-x-4 mb-8">
-                <Badge variant="secondary" className="px-4 py-2">
-                  <Clock className="w-4 h-4 mr-2" />
+              <div className="flex flex-wrap justify-center gap-2 sm:gap-4 mb-8 px-4 sm:px-0">
+                <Badge variant="secondary" className="px-3 py-2 text-xs sm:text-sm">
+                  <Clock className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
                   Réponse en 24h
                 </Badge>
-                <Badge variant="secondary" className="px-4 py-2">
-                  <CheckCircle className="w-4 h-4 mr-2" />
+                <Badge variant="secondary" className="px-3 py-2 text-xs sm:text-sm">
+                  <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
                   Sans engagement
                 </Badge>
-                <Badge variant="secondary" className="px-4 py-2">
-                  <Users className="w-4 h-4 mr-2" />
+                <Badge variant="secondary" className="px-3 py-2 text-xs sm:text-sm">
+                  <Users className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
                   Conseils personnalisés
                 </Badge>
               </div>
             </div>
 
-            <Card className="p-8 shadow-2xl">
+            <Card className="p-4 sm:p-8 shadow-2xl mx-4 sm:mx-0">
               <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Step Indicator */}
                 <div className="flex justify-center mb-8">
@@ -1115,7 +1115,7 @@ const Index = () => {
                       <Input id="phone" value={formData.phone} onChange={e => handleInputChange('phone', e.target.value)} placeholder="+41 79 XXX XX XX" />
                     </div>
 
-                    <Button type="button" onClick={nextStep} className="w-full cta-primary" disabled={!formData.name || !formData.email}>
+                    <Button type="button" onClick={nextStep} className="w-full cta-primary text-sm sm:text-base px-4 py-3" disabled={!formData.name || !formData.email}>
                       Continuer
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </Button>
@@ -1169,12 +1169,12 @@ const Index = () => {
                       </div>
                     </div>
 
-                    <div className="flex space-x-4">
-                      <Button type="button" onClick={prevStep} variant="outline" className="flex-1">
+                    <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
+                      <Button type="button" onClick={prevStep} variant="outline" className="flex-1 text-sm sm:text-base px-4 py-3">
                         <ChevronLeft className="w-4 h-4 mr-2" />
                         Retour
                       </Button>
-                      <Button type="button" onClick={nextStep} className="flex-1 cta-primary">
+                      <Button type="button" onClick={nextStep} className="flex-1 cta-primary text-sm sm:text-base px-4 py-3">
                         Continuer
                         <ArrowRight className="w-4 h-4 ml-2" />
                       </Button>
@@ -1219,14 +1219,14 @@ const Index = () => {
                     <input type="hidden" value={formData.wbraid} />
                     <input type="hidden" value={formData.gbraid} />
 
-                    <div className="flex space-x-4">
-                      <Button type="button" onClick={prevStep} variant="outline" className="flex-1">
+                    <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
+                      <Button type="button" onClick={prevStep} variant="outline" className="flex-1 text-sm sm:text-base px-4 py-3">
                         <ChevronLeft className="w-4 h-4 mr-2" />
                         Retour
                       </Button>
-                      <Button type="submit" className="flex-1 cta-primary text-lg py-3" disabled={!formData.consent}>
+                      <Button type="submit" className="flex-1 cta-primary text-sm sm:text-lg px-4 py-3" disabled={!formData.consent}>
                         Demander une offre
-                        <CheckCircle className="w-5 h-5 ml-2" />
+                        <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
                       </Button>
                     </div>
                   </div>}
