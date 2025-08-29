@@ -14,7 +14,7 @@ import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Sparkles, Heart, Building, Calendar, Users, Camera, CheckCircle, ArrowRight, Star, Award, MapPin, Clock, ChevronLeft, ChevronRight, Play } from "lucide-react";
 import { toast } from "sonner";
 import { ClientLogosCarousel } from "@/components/ClientLogosCarousel";
-import Autoplay from "embla-carousel-autoplay";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 
 // Import images
 import heroPhotobooth from "@/assets/hero-photobooth.jpg";
@@ -1243,6 +1243,8 @@ const Index = () => {
             <div className="flex justify-center mb-6">
               <img src="/lovable-uploads/ac502686-5897-4be4-bf80-2dfb03d33219.png" alt="Happy Booth Logo" className="h-12 w-auto" />
             </div>
+            
+            <LanguageSwitcher />
             
             <div className="border-t border-white/20 pt-6">
               <p className="text-white/60">
