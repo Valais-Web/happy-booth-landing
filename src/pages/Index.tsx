@@ -1239,40 +1239,16 @@ const Index = () => {
       {/* Footer */}
       <footer className="bg-primary text-white py-12">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div>
-              <div className="flex items-center space-x-2 mb-4">
-                <img src="/lovable-uploads/ac502686-5897-4be4-bf80-2dfb03d33219.png" alt="Happy Booth Logo" className="h-12 w-auto" />
-              </div>
-              <p className="text-white/80">
-                Transformez vos événements en souvenirs inoubliables avec nos photomatons dernière génération.
-              </p>
+          <div className="text-center">
+            <div className="flex justify-center mb-6">
+              <img src="/lovable-uploads/ac502686-5897-4be4-bf80-2dfb03d33219.png" alt="Happy Booth Logo" className="h-12 w-auto" />
             </div>
             
-            <div>
-              <h3 className="font-semibold mb-4">Navigation</h3>
-              <div className="space-y-2">
-                <button onClick={() => scrollToSection('models')} className="block text-white/80 hover:text-white">Nos modèles</button>
-                <button onClick={() => scrollToSection('why-us')} className="block text-white/80 hover:text-white">Pourquoi nous</button>
-                <button onClick={() => scrollToSection('testimonials')} className="block text-white/80 hover:text-white">Témoignages</button>
-                <button onClick={() => scrollToSection('faq')} className="block text-white/80 hover:text-white">FAQ</button>
-              </div>
-            </div>
-            
-            <div>
-              <h3 className="font-semibold mb-4">Couverture</h3>
-              <p className="text-white/80">
-                Nous couvrons Lausanne, Genève, Montreux, canton de Vaud & du Valais. 
-                Installation professionnelle, tests et reprise garantis.
+            <div className="border-t border-white/20 pt-6">
+              <p className="text-white/60">
+                © 2024 Happy Booth. Tous droits réservés.
               </p>
             </div>
-          </div>
-          
-          <div className="border-t border-white/20 mt-8 pt-8 text-center">
-            <p className="text-white/60">
-              © 2024 Happy Booth. Entreprise familiale fondée en 2018 à Lausanne. 
-              Nous apportons une touche magique à vos événements.
-            </p>
           </div>
         </div>
       </footer>
