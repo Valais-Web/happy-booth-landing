@@ -242,7 +242,7 @@ const Index = () => {
                   className="h-20 w-auto mx-auto"
                 />
               </div>
-              <p className="text-sm text-gray-600 whitespace-nowrap">Basé sur 37 avis</p>
+              <p className="text-sm text-gray-600 whitespace-nowrap text-center">Basé sur 37 avis</p>
             </div>
           </div>
         </div>
