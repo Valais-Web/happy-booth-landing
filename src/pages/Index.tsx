@@ -47,20 +47,35 @@ const Index = () => {
   const [isHeaderSticky, setIsHeaderSticky] = useState(false);
   const [currentGalleryIndex, setCurrentGalleryIndex] = useState(0);
   const galleryImages = [{
-    src: heroPhotobooth,
-    alt: "Photobooth miroir élégant à un mariage"
+    src: "/lovable-uploads/de88bc30-9aeb-4d9a-a81b-276d197bb678.png",
+    alt: "Deux femmes souriantes tenant des photos de photobooth"
   }, {
-    src: corporateEvent,
-    alt: "Événement corporatif avec photobooth"
+    src: "/lovable-uploads/e36ddf1f-fd75-4dab-a03e-2a815107bbe8.png",
+    alt: "Groupe d'invités s'amusant devant un photobooth"
   }, {
-    src: weddingPhotobooth,
-    alt: "Mariés s'amusant au photobooth"
+    src: "/lovable-uploads/aacf1ab9-2633-4d7a-9028-1a3576276b0e.png",
+    alt: "Photobooth élégant avec décoration florale blanche"
   }, {
-    src: booth360,
-    alt: "Photobooth 360° en action"
+    src: "/lovable-uploads/6ee63e4a-d1d6-4e45-ad97-cf0ebf4df059.png",
+    alt: "Famille avec accessoires colorés au photobooth"
   }, {
-    src: birthdayParty,
-    alt: "Anniversaire avec photobooth rétro"
+    src: "/lovable-uploads/8a60f497-5e43-4f4a-a84e-6de61a53a43d.png",
+    alt: "Groupe d'amis célébrant avec champagne et confettis"
+  }, {
+    src: "/lovable-uploads/3d5e3c01-e91e-4dfe-9500-28d0f31596cd.png",
+    alt: "Amis s'amusant avec des sifflets de fête"
+  }, {
+    src: "/lovable-uploads/5ae0f66e-36db-4464-9363-ce2c1c4448ab.png",
+    alt: "Groupe festif avec chapeaux de Noël"
+  }, {
+    src: "/lovable-uploads/a3047dbb-6b51-423a-9b01-c35e795d02a9.png",
+    alt: "Fête avec confettis colorés et champagne"
+  }, {
+    src: "/lovable-uploads/590cb129-8f7c-430a-8788-c25932913542.png",
+    alt: "Deux amies avec cadre photo doré"
+  }, {
+    src: "/lovable-uploads/a1a6b02e-7f1d-4268-bef7-ed0611437cdc.png",
+    alt: "Écran tactile interactif du photobooth"
   }];
   useEffect(() => {
     // Capture URL parameters
@@ -300,21 +315,35 @@ const Index = () => {
             <p className="text-xl text-muted-foreground">Découvrez l'ambiance magique de nos événements</p>
           </div>
           
-          <div className="relative max-w-4xl mx-auto">
-            <div className="aspect-video rounded-xl overflow-hidden shadow-2xl">
-              <img src={galleryImages[currentGalleryIndex].src} alt={galleryImages[currentGalleryIndex].alt} className="w-full h-full object-cover transition-all duration-500" />
+          {/* Video Section */}
+          <div className="max-w-4xl mx-auto mb-12">
+            <div className="aspect-video rounded-xl overflow-hidden shadow-2xl mb-6">
+              <iframe 
+                src="https://player.vimeo.com/video/731393641?badge=0&amp;autopause=0&amp;quality_selector=1&amp;progress_bar=1&amp;player_id=0&amp;app_id=58479" 
+                className="w-full h-full" 
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write" 
+                title="Happy Booth - Teaser"
+              />
             </div>
-            
-            <button onClick={prevGalleryImage} className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-primary rounded-full p-3 shadow-lg transition-all duration-300">
-              <ChevronLeft className="w-6 h-6" />
-            </button>
-            
-            <button onClick={nextGalleryImage} className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-primary rounded-full p-3 shadow-lg transition-all duration-300">
-              <ChevronRight className="w-6 h-6" />
-            </button>
-            
-            <div className="flex justify-center mt-6 space-x-2">
-              {galleryImages.map((_, index) => <button key={index} onClick={() => setCurrentGalleryIndex(index)} className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentGalleryIndex ? 'bg-primary' : 'bg-gray-300'}`} />)}
+          </div>
+
+          {/* Photo Gallery - Grid Layout */}
+          <div className="max-w-6xl mx-auto">
+            <h3 className="text-xl font-semibold text-center mb-8">Nos plus beaux moments</h3>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+              {galleryImages.map((image, index) => (
+                <div 
+                  key={index}
+                  className="aspect-square rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer group"
+                  onClick={() => setCurrentGalleryIndex(index)}
+                >
+                  <img 
+                    src={image.src} 
+                    alt={image.alt} 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" 
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </div>
