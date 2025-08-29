@@ -176,7 +176,7 @@ const Index = () => {
     price: '890 CHF',
     title: 'Tournez, posez, brillez',
     description: 'Vidéos illimitées avec envoi instantané (WhatsApp, e-mail, AirDrop).',
-    image: '/lovable-uploads/f98f6457-4377-4d5f-b2de-430ed2d93a1b.png',
+    image: '/lovable-uploads/d2564ea4-aa85-43bf-887a-04fd3d343436.png',
     features: ['Vidéos illimitées avec envoi instantané (WhatsApp, e-mail, AirDrop)', 'Effets personnalisés + superpositions brandées, musique', 'Galerie en ligne. Plateforme 90 cm jusqu\'à 4 personnes, arrêt sécu', 'Livraison, installation et récupération incluses à Lausanne'],
     included: ['Vidéos illimitées', 'Galerie en ligne', 'Personnalisation complète', 'Support technique']
   }, {
