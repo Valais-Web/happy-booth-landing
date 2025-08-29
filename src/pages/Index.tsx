@@ -226,11 +226,7 @@ const Index = () => {
         {/* Main Party Image */}
         <div className="absolute right-8 top-1/2 transform -translate-y-1/2 hidden lg:block">
           <div className="relative">
-            <img 
-              src={photoboothPartyImage} 
-              alt="Des gens qui s'amusent devant un photobooth" 
-              className="w-96 h-auto rounded-2xl shadow-2xl border border-white/20"
-            />
+            <img src={photoboothPartyImage} alt="Des gens qui s'amusent devant un photobooth" className="w-96 h-auto rounded-2xl shadow-2xl border border-white/20" />
             <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-black/20 to-transparent"></div>
           </div>
         </div>
@@ -319,7 +315,7 @@ const Index = () => {
             <Card className="text-center p-6 hover:shadow-lg transition-all duration-300">
               <div className="mb-4">
                 <Star className="w-12 h-12 text-yellow-500 mx-auto mb-2" />
-                <div className="text-4xl font-bold text-primary">5/5</div>
+                <div className="text-4xl font-bold text-primary">4.9/5</div>
               </div>
               <h3 className="font-semibold mb-2">Note moyenne clients</h3>
               <p className="text-sm text-muted-foreground">Basé sur 37+ avis vérifiés Google</p>
@@ -331,7 +327,7 @@ const Index = () => {
                 <div className="text-4xl font-bold text-primary">1000+</div>
               </div>
               <h3 className="font-semibold mb-2">Événements réussis</h3>
-              <p className="text-sm text-muted-foreground">Mariages, anniversaires, entreprises</p>
+              <p className="text-sm text-muted-foreground">5/5</p>
             </Card>
             
             <Card className="text-center p-6 hover:shadow-lg transition-all duration-300">
@@ -346,10 +342,10 @@ const Index = () => {
             <Card className="text-center p-6 hover:shadow-lg transition-all duration-300">
               <div className="mb-4">
                 <Award className="w-12 h-12 text-purple-500 mx-auto mb-2" />
-                <div className="text-4xl font-bold text-primary">8 ans</div>
+                <div className="text-4xl font-bold text-primary">2018</div>
               </div>
-              <h3 className="font-semibold mb-2">D'expérience de la fête</h3>
-              <p className="text-sm text-muted-foreground">Pionnier du photobooth moderne</p>
+              <h3 className="font-semibold mb-2">Pionnier du photobooth moderne</h3>
+              <p className="text-sm text-muted-foreground">Technologies exclusives en Suisse</p>
             </Card>
           </div>
 
