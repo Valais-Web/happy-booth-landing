@@ -46,6 +46,46 @@ const ClientLogosCarousel = () => {
     {
       src: "/lovable-uploads/193b9afe-32ef-4a3b-b287-345b39282ad5.png",
       alt: "World Health Organization"
+    },
+    {
+      src: "/lovable-uploads/65fa0e46-dff2-496f-8cd6-c60d0f37a442.png",
+      alt: "Capgemini"
+    },
+    {
+      src: "/lovable-uploads/145ef3c6-99df-45d1-8985-5184a7446e96.png",
+      alt: "Nestlé"
+    },
+    {
+      src: "/lovable-uploads/06db2bee-fa93-44cf-9f60-22affaf02318.png",
+      alt: "Vacheron Constantin"
+    },
+    {
+      src: "/lovable-uploads/ae726400-9c06-4613-8457-a2c4d91a3cf0.png",
+      alt: "Red Bull"
+    },
+    {
+      src: "/lovable-uploads/035c1973-0b33-4d5b-9c43-1f64ab4d1755.png",
+      alt: "Bulgari"
+    },
+    {
+      src: "/lovable-uploads/564024b2-dfd8-408f-8d05-1fa8129ad6dc.png",
+      alt: "JTI"
+    },
+    {
+      src: "/lovable-uploads/a59f7cf9-aa91-4899-ac5d-823eb25edb29.png",
+      alt: "Philip Morris International"
+    },
+    {
+      src: "/lovable-uploads/4ccac121-0ef3-41c3-ade8-4937f5c5e229.png",
+      alt: "Mandarin Oriental Geneva"
+    },
+    {
+      src: "/lovable-uploads/e9846a94-1732-464f-930d-c2ef8fa30c6f.png",
+      alt: "Logitech"
+    },
+    {
+      src: "/lovable-uploads/0b563ee7-2d62-4fd3-8626-177df7ce5604.png",
+      alt: "Paléo"
     }
   ];
 
