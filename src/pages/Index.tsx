@@ -239,10 +239,10 @@ const Index = () => {
                 <img 
                   src="/lovable-uploads/82416f11-c9f5-4e9a-b407-60bbea2da5a8.png" 
                   alt="Google Reviews" 
-                  className="h-16 w-auto mx-auto"
+                  className="h-20 w-auto mx-auto"
                 />
               </div>
-              <p className="text-sm text-gray-600 whitespace-nowrap">basé sur 37 avis</p>
+              <p className="text-sm text-gray-600 whitespace-nowrap">Basé sur 37 avis</p>
             </div>
           </div>
         </div>
