@@ -56,6 +56,56 @@ const clientLogos: ClientLogo[] = [
     src: "/lovable-uploads/805870f1-81da-4b24-aaf5-2b91df6890ba.png",
     alt: "Facchinetti Automobiles",
     name: "Facchinetti Automobiles"
+  },
+  {
+    src: "/lovable-uploads/5420e9c4-0077-4f60-adaa-00c30e134f07.png",
+    alt: "AON",
+    name: "AON"
+  },
+  {
+    src: "/lovable-uploads/9be45baf-9663-4ad4-8e76-87b57842f59e.png",
+    alt: "Ville de Genève",
+    name: "Ville de Genève"
+  },
+  {
+    src: "/lovable-uploads/ad968bbf-ba53-43a3-b234-bec36b226fb6.png",
+    alt: "Crans Montana Absolutely",
+    name: "Crans Montana Absolutely"
+  },
+  {
+    src: "/lovable-uploads/97c7442d-9318-4f0a-bd96-40138fcb0614.png",
+    alt: "Fédération Équestre Internationale",
+    name: "FEI"
+  },
+  {
+    src: "/lovable-uploads/59699c16-b1c3-426d-96ba-69a2b36100a5.png",
+    alt: "Clarins",
+    name: "Clarins"
+  },
+  {
+    src: "/lovable-uploads/f1011b7b-c967-4d87-883e-b577cb8ebf67.png",
+    alt: "World Health Organization",
+    name: "WHO"
+  },
+  {
+    src: "/lovable-uploads/a5dfd7d4-c5d2-44ca-88d6-e5dcbb0ae50a.png",
+    alt: "Capgemini",
+    name: "Capgemini"
+  },
+  {
+    src: "/lovable-uploads/d4708cae-1d22-4eb0-aa97-dc641c9b0a66.png",
+    alt: "Nestlé",
+    name: "Nestlé"
+  },
+  {
+    src: "/lovable-uploads/55960e1d-bdf4-49ed-9482-c71ee6b7204d.png",
+    alt: "Vacheron Constantin",
+    name: "Vacheron Constantin"
+  },
+  {
+    src: "/lovable-uploads/c7b9a5f4-7cbc-4dc6-98b5-302cbbd5cf99.png",
+    alt: "Red Bull",
+    name: "Red Bull"
   }
 ];
 
