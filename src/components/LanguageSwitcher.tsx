@@ -1,16 +1,19 @@
 import { Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 
 interface LanguageSwitcherProps {
   currentLanguage: string;
 }
 
 const LanguageSwitcher = ({ currentLanguage }: LanguageSwitcherProps) => {
+  const navigate = useNavigate();
+  
   const switchLanguage = (lang: string) => {
     if (lang === 'fr') {
-      window.location.href = '/fr';
+      navigate('/fr');
     } else {
-      window.location.href = '/en';
+      navigate('/en');
     }
   };
 
