@@ -266,22 +266,22 @@ const Index = () => {
               <div className="flex flex-col sm:flex-row sm:flex-wrap lg:flex-nowrap gap-3 sm:gap-4 justify-center lg:justify-start">
                 <div className="bg-white/15 backdrop-blur-sm border border-white/20 rounded-full px-4 lg:px-6 py-3 flex items-center space-x-2 justify-center">
                   <Camera className="w-5 h-5 text-yellow-400 flex-shrink-0" />
-                  <span className="text-white font-semibold text-sm lg:text-base">Impressions illimitées</span>
+                  <span className="text-white font-semibold text-sm lg:text-base">{t('hero.badge1')}</span>
                 </div>
                 <div className="bg-white/15 backdrop-blur-sm border border-white/20 rounded-full px-4 lg:px-6 py-3 flex items-center space-x-2 justify-center">
                   <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                  <span className="text-white font-semibold text-sm lg:text-base">Service clé en main</span>
+                  <span className="text-white font-semibold text-sm lg:text-base">{t('hero.badge2')}</span>
                 </div>
                 <div className="bg-white/15 backdrop-blur-sm border border-white/20 rounded-full px-4 lg:px-6 py-3 flex items-center space-x-2 justify-center">
                   <Sparkles className="w-5 h-5 text-purple-400 flex-shrink-0" />
-                  <span className="text-white font-semibold text-sm lg:text-base">100% personnalisable</span>
+                  <span className="text-white font-semibold text-sm lg:text-base">{t('hero.badge3')}</span>
                 </div>
               </div>
 
               {/* CTA Button */}
               <div className="pt-4 lg:pt-8 flex justify-center lg:justify-start">
                 <Button size="lg" className="bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-black font-bold text-lg lg:text-xl px-8 lg:px-12 py-4 lg:py-6 rounded-full shadow-2xl transform hover:scale-105 transition-all duration-300" onClick={() => scrollToSection('contact-form')}>
-                  Demander une offre
+                  {t('hero.cta')}
                   <ArrowRight className="ml-2 w-5 lg:w-6 h-5 lg:h-6" />
                 </Button>
               </div>
@@ -298,7 +298,7 @@ const Index = () => {
                   <div className="flex items-center space-x-2 mb-1">
                     <img src="/lovable-uploads/82416f11-c9f5-4e9a-b407-60bbea2da5a8.png" alt="Google Reviews" className="h-16 lg:h-20 w-auto mx-auto" />
                   </div>
-                  <p className="text-xs lg:text-sm text-gray-600 whitespace-nowrap text-center">Basé sur 37 avis</p>
+                  <p className="text-xs lg:text-sm text-gray-600 whitespace-nowrap text-center">{t('hero.basedOnReviews')}</p>
                 </div>
               </div>
             </div>
@@ -310,8 +310,8 @@ const Index = () => {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Nos photobooths en action</h2>
-            <p className="text-xl text-muted-foreground">Découvrez l'ambiance magique de nos événements</p>
+            <h2 className="text-3xl font-bold mb-4">{t('gallery.title')}</h2>
+            <p className="text-xl text-muted-foreground">{t('gallery.subtitle')}</p>
           </div>
           
           {/* Video Section with Button */}
@@ -320,7 +320,7 @@ const Index = () => {
               <DialogTrigger asChild>
                 <Button size="lg" className="mb-8 bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white font-semibold px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
                   <Play className="w-5 h-5 mr-2" />
-                  Découvrir en vidéo
+                  {t('gallery.videoButton')}
                 </Button>
               </DialogTrigger>
               <DialogContent className="max-w-4xl w-full p-0 bg-black">
@@ -363,8 +363,8 @@ const Index = () => {
       <section className="py-16 bg-gradient-to-br from-primary/5 to-accent/5">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Pourquoi 1000+ clients nous font confiance depuis 2018</h2>
-            <p className="text-xl text-muted-foreground">Découvrez les chiffres qui parlent d'eux-mêmes</p>
+            <h2 className="text-3xl font-bold mb-4">{t('socialProof.title')}</h2>
+            <p className="text-xl text-muted-foreground">{t('socialProof.subtitle')}</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -373,8 +373,8 @@ const Index = () => {
                 <Star className="w-12 h-12 text-yellow-500 mx-auto mb-2" />
                 <div className="text-4xl font-bold text-primary">5/5</div>
               </div>
-              <h3 className="font-semibold mb-2">Note moyenne clients</h3>
-              <p className="text-sm text-muted-foreground">Basé sur 37+ avis vérifiés Google</p>
+              <h3 className="font-semibold mb-2">{t('socialProof.rating')}</h3>
+              <p className="text-sm text-muted-foreground">{t('socialProof.ratingDesc')}</p>
             </Card>
             
             <Card className="text-center p-6 hover:shadow-lg transition-all duration-300">
@@ -382,8 +382,8 @@ const Index = () => {
                 <Heart className="w-12 h-12 text-red-500 mx-auto mb-2" />
                 <div className="text-4xl font-bold text-primary">1000+</div>
               </div>
-              <h3 className="font-semibold mb-2">Événements réussis</h3>
-              <p className="text-sm text-muted-foreground">Mariages, anniversaires, entreprises</p>
+              <h3 className="font-semibold mb-2">{t('socialProof.events')}</h3>
+              <p className="text-sm text-muted-foreground">{t('socialProof.eventsDesc')}</p>
             </Card>
             
             <Card className="text-center p-6 hover:shadow-lg transition-all duration-300">
@@ -391,8 +391,8 @@ const Index = () => {
                 <MapPin className="w-12 h-12 text-green-500 mx-auto mb-2" />
                 <div className="text-4xl font-bold text-primary">100%</div>
               </div>
-              <h3 className="font-semibold mb-2">Couverture Suisse Romande</h3>
-              <p className="text-sm text-muted-foreground">Lausanne, Genève, Vaud, Valais, Fribourg</p>
+              <h3 className="font-semibold mb-2">{t('socialProof.coverage')}</h3>
+              <p className="text-sm text-muted-foreground">{t('socialProof.coverageDesc')}</p>
             </Card>
             
             <Card className="text-center p-6 hover:shadow-lg transition-all duration-300">
@@ -400,16 +400,16 @@ const Index = () => {
                 <Award className="w-12 h-12 text-purple-500 mx-auto mb-2" />
                 <div className="text-4xl font-bold text-primary">+8 ans</div>
               </div>
-              <h3 className="font-semibold mb-2">Expérience de la fête</h3>
-              <p className="text-sm text-muted-foreground">Technologies exclusives en Suisse</p>
+              <h3 className="font-semibold mb-2">{t('socialProof.experience')}</h3>
+              <p className="text-sm text-muted-foreground">{t('socialProof.experienceDesc')}</p>
             </Card>
           </div>
 
           {/* Client Logos */}
           <div className="mt-16">
             <div className="text-center mb-8">
-              <h3 className="text-xl font-semibold mb-4">Happy Clients</h3>
-              <p className="text-muted-foreground">Voici quelques entreprises qui ont souri pour le Happy Booth</p>
+              <h3 className="text-xl font-semibold mb-4">{t('socialProof.clientsTitle')}</h3>
+              <p className="text-muted-foreground">{t('socialProof.clientsDesc')}</p>
             </div>
             <ClientLogosCarousel />
           </div>
@@ -421,9 +421,9 @@ const Index = () => {
       <section id="models" className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-6">Nos modèles — Tarifs transparents "all-inclusive"</h2>
+            <h2 className="text-4xl font-bold mb-6">{t('models.title')}</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Découvrez notre gamme complète de photomatons avec tous les services inclus
+              {t('models.subtitle')}
             </p>
           </div>
 
@@ -466,7 +466,7 @@ const Index = () => {
                         </div>
 
                         {model.included && <div className="bg-green-50 p-4 rounded-lg mb-6">
-                            <h5 className="font-semibold text-green-800 mb-2">Inclus dans le prix :</h5>
+                            <h5 className="font-semibold text-green-800 mb-2">{t('models.includedTitle')}</h5>
                             <div className="grid grid-cols-1 lg:grid-cols-2 gap-2">
                               {model.included.map((item, index) => <div key={index} className="flex items-center space-x-2">
                                   <CheckCircle className="w-4 h-4 text-green-600" />
@@ -483,7 +483,7 @@ const Index = () => {
                       selectModel(model.id);
                       scrollToSection('contact-form');
                     }}>
-                          Demander une offre
+                          {t('models.cta')}
                         </Button>
                       </div>
                     </CardContent>
@@ -494,10 +494,10 @@ const Index = () => {
           
           <div className="mt-12 text-center">
             <Card className="max-w-2xl mx-auto p-6 bg-blue-50 border-blue-200">
-              <h3 className="font-semibold text-blue-900 mb-2">Livraison & reprise</h3>
-              <p className="text-blue-700">Gratuit sur Lausanne. Hors Lausanne : transport sur devis.</p>
+              <h3 className="font-semibold text-blue-900 mb-2">{t('models.delivery')}</h3>
+              <p className="text-blue-700">{t('models.deliveryDesc')}</p>
               <p className="text-sm text-blue-600 mt-2">
-                <strong>Option Hôte animateur :</strong> 45 CHF/heure
+                <strong>{t('models.hostOption')}</strong>
               </p>
             </Card>
           </div>
@@ -508,45 +508,45 @@ const Index = () => {
       <section id="why-us" className="py-20 bg-gradient-to-br from-muted/20 to-muted/40">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-6">Nos photomatons t'offrent une soirée extraordinaire</h2>
-            <p className="text-xl text-muted-foreground">"Don't worry, be Happy Booth."</p>
+            <h2 className="text-4xl font-bold mb-6">{t('whyUs.title')}</h2>
+            <p className="text-xl text-muted-foreground">{t('whyUs.subtitle')}</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Card className="p-6 text-center hover:shadow-lg transition-all duration-300">
               <MapPin className="w-12 h-12 text-primary mx-auto mb-4" />
-              <h3 className="font-semibold mb-3">Local & fiable</h3>
-              <p className="text-muted-foreground">Partout en Suisse Romande</p>
+              <h3 className="font-semibold mb-3">{t('whyUs.local')}</h3>
+              <p className="text-muted-foreground">{t('whyUs.localDesc')}</p>
             </Card>
             
             <Card className="p-6 text-center hover:shadow-lg transition-all duration-300">
               <CheckCircle className="w-12 h-12 text-green-500 mx-auto mb-4" />
-              <h3 className="font-semibold mb-3">Livraison & installation</h3>
-              <p className="text-muted-foreground">On s'occupe de tout</p>
+              <h3 className="font-semibold mb-3">{t('whyUs.delivery')}</h3>
+              <p className="text-muted-foreground">{t('whyUs.deliveryDesc')}</p>
             </Card>
             
             <Card className="p-6 text-center hover:shadow-lg transition-all duration-300">
               <Camera className="w-12 h-12 text-blue-500 mx-auto mb-4" />
-              <h3 className="font-semibold mb-3">Imprimés illimités</h3>
-              <p className="text-muted-foreground">De haute qualité</p>
+              <h3 className="font-semibold mb-3">{t('whyUs.unlimited')}</h3>
+              <p className="text-muted-foreground">{t('whyUs.unlimitedDesc')}</p>
             </Card>
             
             <Card className="p-6 text-center hover:shadow-lg transition-all duration-300">
               <Sparkles className="w-12 h-12 text-purple-500 mx-auto mb-4" />
-              <h3 className="font-semibold mb-3">Personnalisation totale</h3>
-              <p className="text-muted-foreground">Cadres, animations HD, boomerangs</p>
+              <h3 className="font-semibold mb-3">{t('whyUs.customization')}</h3>
+              <p className="text-muted-foreground">{t('whyUs.customizationDesc')}</p>
             </Card>
             
             <Card className="p-6 text-center hover:shadow-lg transition-all duration-300">
               <Heart className="w-12 h-12 text-red-500 mx-auto mb-4" />
-              <h3 className="font-semibold mb-3">Grand choix d'accessoires</h3>
-              <p className="text-muted-foreground">Pour tous les styles</p>
+              <h3 className="font-semibold mb-3">{t('whyUs.accessories')}</h3>
+              <p className="text-muted-foreground">{t('whyUs.accessoriesDesc')}</p>
             </Card>
             
             <Card className="p-6 text-center hover:shadow-lg transition-all duration-300">
               <Users className="w-12 h-12 text-orange-500 mx-auto mb-4" />
-              <h3 className="font-semibold mb-3">Expérience collective</h3>
-              <p className="text-muted-foreground">Souvenirs partagés inoubliables</p>
+              <h3 className="font-semibold mb-3">{t('whyUs.experience')}</h3>
+              <p className="text-muted-foreground">{t('whyUs.experienceDesc')}</p>
             </Card>
           </div>
         </div>
@@ -556,8 +556,8 @@ const Index = () => {
       <section id="use-cases" className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-6">Quand louer un photobooth ?</h2>
-            <p className="text-xl text-muted-foreground">Parfait pour tous vos événements</p>
+            <h2 className="text-4xl font-bold mb-6">{t('useCases.title')}</h2>
+            <p className="text-xl text-muted-foreground">{t('useCases.subtitle')}</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -567,15 +567,15 @@ const Index = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/20" />
                 <div className="absolute bottom-4 left-4 text-white">
                   <Heart className="w-8 h-8 mb-2" />
-                  <h3 className="text-xl font-bold">Mariages</h3>
+                  <h3 className="text-xl font-bold">{t('useCases.weddings')}</h3>
                 </div>
               </div>
               <CardContent className="p-6">
                 <p className="text-muted-foreground mb-4">
-                  Livre d'or photo, cadres au thème du jour, service clé en main rassurant.
+                  {t('useCases.weddingsDesc')}
                 </p>
                 <Button className="w-full bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-black font-semibold" onClick={() => scrollToSection('contact-form')}>
-                  Demander une offre
+                  {t('useCases.cta')}
                 </Button>
               </CardContent>
             </Card>
@@ -586,15 +586,15 @@ const Index = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/20" />
                 <div className="absolute bottom-4 left-4 text-white">
                   <Building className="w-8 h-8 mb-2" />
-                  <h3 className="text-xl font-bold">Entreprises</h3>
+                  <h3 className="text-xl font-bold">{t('useCases.corporate')}</h3>
                 </div>
               </div>
               <CardContent className="p-6">
                 <p className="text-muted-foreground mb-4">
-                  Photos brandées, collecte d'e-mails, 360° pour activations, galerie privée sécurisée.
+                  {t('useCases.corporateDesc')}
                 </p>
                 <Button className="w-full bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-black font-semibold" onClick={() => scrollToSection('contact-form')}>
-                  Demander une offre
+                  {t('useCases.cta')}
                 </Button>
               </CardContent>
             </Card>
@@ -605,15 +605,15 @@ const Index = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/20" />
                 <div className="absolute bottom-4 left-4 text-white">
                   <Calendar className="w-8 h-8 mb-2" />
-                  <h3 className="text-xl font-bold">Anniversaires & fêtes privées</h3>
+                  <h3 className="text-xl font-bold">{t('useCases.birthdays')}</h3>
                 </div>
               </div>
               <CardContent className="p-6">
                 <p className="text-muted-foreground mb-4">
-                  Simple, fun, budget maîtrisé pour tous vos événements privés.
+                  {t('useCases.birthdaysDesc')}
                 </p>
                 <Button className="w-full bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-black font-semibold" onClick={() => scrollToSection('contact-form')}>
-                  Demander une offre
+                  {t('useCases.cta')}
                 </Button>
               </CardContent>
             </Card>
@@ -625,8 +625,8 @@ const Index = () => {
       <section id="how-it-works" className="py-20 bg-gradient-to-br from-primary/5 to-accent/5">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-6">Comment ça marche ? Simple comme bonjour !</h2>
-            <p className="text-xl text-muted-foreground">Votre événement parfait en 4 étapes faciles</p>
+            <h2 className="text-4xl font-bold mb-6">{t('howItWorks.title')}</h2>
+            <p className="text-xl text-muted-foreground">{t('howItWorks.subtitle')}</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -689,8 +689,8 @@ const Index = () => {
       <section id="testimonials" className="py-20 bg-gradient-to-br from-primary/5 to-accent/5">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-6">Ce que disent nos clients</h2>
-            <p className="text-xl text-muted-foreground">Des centaines d'événements réussis et des clients ravis</p>
+            <h2 className="text-4xl font-bold mb-6">{t('testimonials.title')}</h2>
+            <p className="text-xl text-muted-foreground">{t('testimonials.subtitle')}</p>
           </div>
 
           <div className="max-w-7xl mx-auto">
@@ -947,8 +947,8 @@ const Index = () => {
       <section id="faq" className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-6">Questions fréquentes</h2>
-            <p className="text-xl text-muted-foreground">Tout ce que vous devez savoir</p>
+            <h2 className="text-4xl font-bold mb-6">{t('faq.title')}</h2>
+            <p className="text-xl text-muted-foreground">{t('faq.subtitle')}</p>
           </div>
 
           <div className="max-w-3xl mx-auto">
@@ -971,23 +971,23 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold mb-6">Réservez votre photobooth</h2>
+              <h2 className="text-4xl font-bold mb-6">{t('contact.title')}</h2>
               <p className="text-xl text-muted-foreground mb-8">
-                Obtenez votre devis personnalisé en quelques clics
+                {t('contact.subtitle')}
               </p>
               
               <div className="flex flex-wrap justify-center gap-2 sm:gap-4 mb-8 px-4 sm:px-0">
                 <Badge variant="secondary" className="px-3 py-2 text-xs sm:text-sm">
                   <Clock className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
-                  Réponse en 24h
+                  {t('contact.badges.response')}
                 </Badge>
                 <Badge variant="secondary" className="px-3 py-2 text-xs sm:text-sm">
                   <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
-                  Sans engagement
+                  {t('contact.badges.noCommitment')}
                 </Badge>
                 <Badge variant="secondary" className="px-3 py-2 text-xs sm:text-sm">
                   <Users className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
-                  Conseils personnalisés
+                  {t('contact.badges.personalizedAdvice')}
                 </Badge>
               </div>
             </div>
@@ -1008,52 +1008,52 @@ const Index = () => {
 
                 {/* Step 1: Basic Info */}
                 {formStep === 1 && <div className="space-y-4">
-                    <h3 className="text-xl font-semibold text-center mb-6">Parlez-nous de vous</h3>
+                    <h3 className="text-xl font-semibold text-center mb-6">{t('contact.formStep1Title')}</h3>
                     
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
-                        <Label htmlFor="name">Nom *</Label>
-                        <Input id="name" value={formData.name} onChange={e => handleInputChange('name', e.target.value)} required placeholder="Votre nom" />
+                        <Label htmlFor="name">{t('contact.name')} *</Label>
+                        <Input id="name" value={formData.name} onChange={e => handleInputChange('name', e.target.value)} required placeholder={t('contact.namePlaceholder')} />
                       </div>
                       <div>
-                        <Label htmlFor="email">Email *</Label>
-                        <Input id="email" type="email" value={formData.email} onChange={e => handleInputChange('email', e.target.value)} required placeholder="votre@email.com" />
+                        <Label htmlFor="email">{t('contact.email')} *</Label>
+                        <Input id="email" type="email" value={formData.email} onChange={e => handleInputChange('email', e.target.value)} required placeholder={t('contact.emailPlaceholder')} />
                       </div>
                     </div>
 
                     <div>
-                      <Label htmlFor="phone">Téléphone</Label>
-                      <Input id="phone" value={formData.phone} onChange={e => handleInputChange('phone', e.target.value)} placeholder="+41 79 XXX XX XX" />
+                      <Label htmlFor="phone">{t('contact.phone')}</Label>
+                      <Input id="phone" value={formData.phone} onChange={e => handleInputChange('phone', e.target.value)} placeholder={t('contact.phonePlaceholder')} />
                     </div>
 
                     <Button type="button" onClick={nextStep} className="w-full cta-primary text-sm sm:text-base px-4 py-3" disabled={!formData.name || !formData.email}>
-                      Continuer
+                      {t('contact.continueButton')}
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </Button>
                   </div>}
 
                 {/* Step 2: Event Details */}
                 {formStep === 2 && <div className="space-y-4">
-                    <h3 className="text-xl font-semibold text-center mb-6">Détails de votre événement</h3>
+                    <h3 className="text-xl font-semibold text-center mb-6">{t('contact.formStep2Title')}</h3>
                     
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
-                        <Label htmlFor="date">Date de l'événement</Label>
+                        <Label htmlFor="date">{t('contact.date')}</Label>
                         <Input id="date" type="date" value={formData.date} onChange={e => handleInputChange('date', e.target.value)} />
                       </div>
                       <div>
-                        <Label htmlFor="eventType">Type d'événement</Label>
+                        <Label htmlFor="eventType">{t('contact.eventType')}</Label>
                         <Select onValueChange={value => handleInputChange('eventType', value)}>
                           <SelectTrigger>
-                            <SelectValue placeholder="Sélectionnez" />
+                            <SelectValue placeholder={t('contact.selectPlaceholder')} />
                           </SelectTrigger>
                           <SelectContent>
-                            <SelectItem value="mariage">Mariage</SelectItem>
-                            <SelectItem value="entreprise">Soirée d'entreprise</SelectItem>
-                            <SelectItem value="anniversaire">Anniversaire</SelectItem>
-                            <SelectItem value="baby-shower">Baby shower</SelectItem>
-                            <SelectItem value="graduation">Graduation</SelectItem>
-                            <SelectItem value="autre">Autre</SelectItem>
+                            <SelectItem value="mariage">{t('contact.eventTypeOptions.mariage')}</SelectItem>
+                            <SelectItem value="entreprise">{t('contact.eventTypeOptions.entreprise')}</SelectItem>
+                            <SelectItem value="anniversaire">{t('contact.eventTypeOptions.anniversaire')}</SelectItem>
+                            <SelectItem value="baby-shower">{t('contact.eventTypeOptions.baby-shower')}</SelectItem>
+                            <SelectItem value="graduation">{t('contact.eventTypeOptions.graduation')}</SelectItem>
+                            <SelectItem value="autre">{t('contact.eventTypeOptions.autre')}</SelectItem>
                           </SelectContent>
                         </Select>
                       </div>
@@ -1061,20 +1061,20 @@ const Index = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
-                        <Label htmlFor="city">Ville/Lieu</Label>
-                        <Input id="city" value={formData.city} onChange={e => handleInputChange('city', e.target.value)} placeholder="Lausanne, Genève..." />
+                        <Label htmlFor="city">{t('contact.city')}</Label>
+                        <Input id="city" value={formData.city} onChange={e => handleInputChange('city', e.target.value)} placeholder={t('contact.cityPlaceholder2')} />
                       </div>
                       <div>
-                        <Label htmlFor="guests">Nombre d'invités</Label>
+                        <Label htmlFor="guests">{t('contact.guests')}</Label>
                         <Select onValueChange={value => handleInputChange('guests', value)}>
                           <SelectTrigger>
-                            <SelectValue placeholder="Sélectionnez" />
+                            <SelectValue placeholder={t('contact.selectPlaceholder')} />
                           </SelectTrigger>
                           <SelectContent>
-                            <SelectItem value="<50">&lt; 50</SelectItem>
-                            <SelectItem value="50-100">50-100</SelectItem>
-                            <SelectItem value="100-200">100-200</SelectItem>
-                            <SelectItem value=">200">&gt; 200</SelectItem>
+                            <SelectItem value="<50">{t('contact.guestOptions.<50')}</SelectItem>
+                            <SelectItem value="50-100">{t('contact.guestOptions.50-100')}</SelectItem>
+                            <SelectItem value="100-200">{t('contact.guestOptions.100-200')}</SelectItem>
+                            <SelectItem value=">200">{t('contact.guestOptions.>200')}</SelectItem>
                           </SelectContent>
                         </Select>
                       </div>
@@ -1083,10 +1083,10 @@ const Index = () => {
                     <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
                       <Button type="button" onClick={prevStep} variant="outline" className="flex-1 text-sm sm:text-base px-4 py-3">
                         <ChevronLeft className="w-4 h-4 mr-2" />
-                        Retour
+                        {t('contact.backButton')}
                       </Button>
                       <Button type="button" onClick={nextStep} className="flex-1 cta-primary text-sm sm:text-base px-4 py-3">
-                        Continuer
+                        {t('contact.continueButton')}
                         <ArrowRight className="w-4 h-4 ml-2" />
                       </Button>
                     </div>
@@ -1094,34 +1094,34 @@ const Index = () => {
 
                 {/* Step 3: Model and Message */}
                 {formStep === 3 && <div className="space-y-4">
-                    <h3 className="text-xl font-semibold text-center mb-6">Finalisez votre demande</h3>
+                    <h3 className="text-xl font-semibold text-center mb-6">{t('contact.formStep3Title')}</h3>
                     
                     <div>
-                      <Label htmlFor="model">Modèle souhaité</Label>
+                      <Label htmlFor="model">{t('contact.modelLabel')}</Label>
                       <Select value={formData.model} onValueChange={value => handleInputChange('model', value)}>
                         <SelectTrigger>
-                          <SelectValue placeholder="Conseillez-moi" />
+                          <SelectValue placeholder={t('contact.advisePlaceholder')} />
                         </SelectTrigger>
                         <SelectContent>
-                          <SelectItem value="mirror">Mirror Booth - 1090 CHF</SelectItem>
-                          <SelectItem value="rainbow">Rainbow Booth - 790 CHF</SelectItem>
-                          <SelectItem value="360">360 Happy Booth - 890 CHF</SelectItem>
-                          <SelectItem value="retro">Retro Booth - 790 CHF</SelectItem>
-                          <SelectItem value="phone">Phone Booth - 290 CHF</SelectItem>
-                          <SelectItem value="conseil">Conseillez-moi</SelectItem>
+                          <SelectItem value="mirror">{t('contact.modelOptions.mirror')}</SelectItem>
+                          <SelectItem value="rainbow">{t('contact.modelOptions.rainbow')}</SelectItem>
+                          <SelectItem value="360">{t('contact.modelOptions.360')}</SelectItem>
+                          <SelectItem value="retro">{t('contact.modelOptions.retro')}</SelectItem>
+                          <SelectItem value="phone">{t('contact.modelOptions.phone')}</SelectItem>
+                          <SelectItem value="conseil">{t('contact.modelOptions.conseil')}</SelectItem>
                         </SelectContent>
                       </Select>
                     </div>
 
                     <div>
-                      <Label htmlFor="message">Message (optionnel)</Label>
-                      <Textarea id="message" value={formData.message} onChange={e => handleInputChange('message', e.target.value)} placeholder="Décrivez-nous votre événement, vos besoins spécifiques..." rows={4} />
+                      <Label htmlFor="message">{t('contact.message')}</Label>
+                      <Textarea id="message" value={formData.message} onChange={e => handleInputChange('message', e.target.value)} placeholder={t('contact.messagePlaceholder2')} rows={4} />
                     </div>
 
                     <div className="flex items-start space-x-2">
                       <Checkbox id="consent" checked={formData.consent} onCheckedChange={checked => handleInputChange('consent', checked as boolean)} className="mt-1" />
                       <Label htmlFor="consent" className="text-sm leading-relaxed">
-                        J'accepte d'être contacté pour ce devis et la politique de confidentialité *
+                        {t('contact.contactConsent')}
                       </Label>
                     </div>
 
@@ -1133,10 +1133,10 @@ const Index = () => {
                     <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
                       <Button type="button" onClick={prevStep} variant="outline" className="flex-1 text-sm sm:text-base px-4 py-3">
                         <ChevronLeft className="w-4 h-4 mr-2" />
-                        Retour
+                        {t('contact.backButton')}
                       </Button>
                       <Button type="submit" className="flex-1 cta-primary text-sm sm:text-lg px-4 py-3" disabled={!formData.consent}>
-                        Demander une offre
+                        {t('contact.submit')}
                         <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
                       </Button>
                     </div>
@@ -1169,7 +1169,7 @@ const Index = () => {
       <div className="fixed bottom-0 left-0 right-0 bg-white border-t shadow-lg p-4 md:hidden z-50">
         <div className="flex space-x-2">
           <Button className="flex-1 cta-primary" onClick={() => scrollToSection('contact-form')}>
-            Demander une offre
+            {t('contact.submit')}
           </Button>
         </div>
       </div>

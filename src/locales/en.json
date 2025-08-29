@@ -235,7 +235,7 @@
     ]
   },
   "contact": {
-    "title": "Free Quote Request", 
+    "title": "Free Quote Request",
     "subtitle": "Receive your personalized offer within 24h",
     "step1": "Your event",
     "step2": "Your details",
@@ -245,7 +245,7 @@
     "email": "Email",
     "emailPlaceholder": "your@email.com",
     "phone": "Phone",
-    "phonePlaceholder": "+41 76 123 45 67", 
+    "phonePlaceholder": "+41 76 123 45 67",
     "date": "Event date",
     "eventType": "Event type",
     "eventTypePlaceholder": "Select type",
@@ -257,18 +257,52 @@
     "messagePlaceholder": "Additional details, special requests...",
     "consentText": "I agree to be contacted by Happy Booth for my quote request",
     "previous": "Previous",
-    "next": "Next", 
+    "next": "Next",
     "submit": "Send my request",
     "eventTypes": {
       "wedding": "Wedding",
-      "corporate": "Corporate Event", 
+      "corporate": "Corporate Event",
       "birthday": "Birthday",
       "other": "Other"
     },
     "thankYou": "Thank you for your request!",
     "thankYouDesc": "We will contact you within 24h with a personalized offer.",
     "errorConsent": "Please accept the conditions to continue",
-    "successMessage": "Request sent! We will contact you quickly."
+    "successMessage": "Request sent! We will contact you quickly.",
+    "formStep1Title": "Tell us about yourself",
+    "formStep2Title": "Your event details",
+    "formStep3Title": "Finalize your request",
+    "eventTypeOptions": {
+      "mariage": "Wedding",
+      "entreprise": "Corporate event",
+      "anniversaire": "Birthday",
+      "baby-shower": "Baby shower",
+      "graduation": "Graduation",
+      "autre": "Other"
+    },
+    "guestOptions": {
+      "<50": "< 50",
+      "50-100": "50-100",
+      "100-200": "100-200",
+      ">200": "> 200"
+    },
+    "modelOptions": {
+      "mirror": "Mirror Booth - 1090 CHF",
+      "rainbow": "Rainbow Booth - 790 CHF",
+      "360": "360 Happy Booth - 890 CHF",
+      "retro": "Retro Booth - 790 CHF",
+      "phone": "Phone Booth - 290 CHF",
+      "conseil": "Advise me"
+    },
+    "badges": {
+      "response": "24h response",
+      "noCommitment": "No commitment",
+      "personalizedAdvice": "Personalized advice"
+    },
+    "modelLabel": "Preferred model",
+    "continueButton": "Continue",
+    "backButton": "Back",
+    "contactConsent": "I agree to be contacted for this quote and the privacy policy *"
   },
   "footer": {
     "tagline": "Happy Booth - Photobooth Rental French Switzerland",
