@@ -14,8 +14,8 @@ import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Sparkles, Heart, Building, Calendar, Users, Camera, CheckCircle, ArrowRight, Star, Award, MapPin, Clock, ChevronLeft, ChevronRight, Play } from "lucide-react";
 import { toast } from "sonner";
 import { ClientLogosCarousel } from "@/components/ClientLogosCarousel";
-import Autoplay from "embla-carousel-autoplay";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import Autoplay from "embla-carousel-autoplay";
 
 // Import images
 import heroPhotobooth from "@/assets/hero-photobooth.jpg";
@@ -183,7 +183,7 @@ const IndexEn = () => {
     title: 'Chic, modern, super fun',
     description: 'Rainbow light ring, trendy look that attracts all eyes.',
     image: '/lovable-uploads/ebd7d9bc-48dd-4de8-9840-b3b8e35ff60e.png',
-    features: ['Rainbow light ring, trendy look that attracts all eyes', 'Social media sharing + on-site printing', 'Customizable frames, each guest chooses their favorite', 'Unlimited prints', "\"Magic Screen\" & themed backgrounds", 'Backdrop options', 'NEW: AI effects'],
+    features: ['Rainbow light ring, trendy look that attracts all eyes', 'Social media sharing + on-site printing', 'Customizable frames, each guest chooses their favorite', 'Unlimited prints', '"Magic Screen" & themed backgrounds', 'Backdrop options', 'NEW: AI effects'],
     included: ['Unlimited prints', 'Online gallery', 'Complete customization', 'Technical support']
   }, {
     id: '360',
@@ -363,267 +363,638 @@ const IndexEn = () => {
       </section>
 
       {/* Models Section */}
-      <section id="models" className="py-20 bg-white">
+      <section id="models" className="py-20 bg-background">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12">Our Models</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {models.map(model => (
-              <Card key={model.id} className="shadow-lg">
-                <CardHeader>
-                  <CardTitle>{model.name}</CardTitle>
-                  <CardDescription>{model.price}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <img src={model.image} alt={model.name} className="w-full rounded-lg mb-4" />
-                  <p className="mb-2 font-semibold">{model.title}</p>
-                  <p className="mb-4">{model.description}</p>
-                  <ul className="list-disc list-inside mb-4 text-sm text-gray-700">
-                    {model.features.map((feature, idx) => (
-                      <li key={idx}>{feature}</li>
-                    ))}
-                  </ul>
-                  <p className="italic text-sm mb-2">{model.note}</p>
-                  <p className="font-semibold mb-1">Included:</p>
-                  <ul className="list-disc list-inside text-sm text-gray-700">
-                    {model.included.map((item, idx) => (
-                      <li key={idx}>{item}</li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">Our Photo Booth Models</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Professional equipment for every type of event. Choose the perfect photo booth for your celebration.
+            </p>
           </div>
+
+          <Tabs value={selectedModel} onValueChange={selectModel} className="w-full">
+            <TabsList className="grid w-full grid-cols-2 lg:grid-cols-5 mb-8">
+              {models.map((model) => (
+                <TabsTrigger key={model.id} value={model.id} className="text-sm">
+                  {model.name}
+                </TabsTrigger>
+              ))}
+            </TabsList>
+
+            {models.map((model) => (
+              <TabsContent key={model.id} value={model.id} className="w-full">
+                <Card className="overflow-hidden">
+                  <div className="grid lg:grid-cols-2 gap-8">
+                    <div className="p-8">
+                      <div className="flex items-center justify-between mb-4">
+                        <Badge variant="secondary" className="text-sm font-semibold">
+                          {model.price}
+                        </Badge>
+                      </div>
+                      
+                      <h3 className="text-3xl font-bold mb-2">{model.name}</h3>
+                      <h4 className="text-xl text-primary font-semibold mb-4">{model.title}</h4>
+                      <p className="text-muted-foreground mb-6 leading-relaxed">{model.description}</p>
+
+                      <div className="space-y-3 mb-6">
+                        {model.features.map((feature, index) => (
+                          <div key={index} className="flex items-start space-x-2">
+                            <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                            <span className="text-sm">{feature}</span>
+                          </div>
+                        ))}
+                      </div>
+
+                      {model.note && (
+                        <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
+                          <p className="text-sm text-blue-700 font-medium">{model.note}</p>
+                        </div>
+                      )}
+
+                      <Button 
+                        className="cta-primary w-full" 
+                        onClick={() => scrollToSection('contact-form')}
+                      >
+                        Request Quote for {model.name}
+                      </Button>
+                    </div>
+
+                    <div className="relative h-96 lg:h-full">
+                      <img 
+                        src={model.image} 
+                        alt={model.name}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  </div>
+                </Card>
+              </TabsContent>
+            ))}
+          </Tabs>
         </div>
       </section>
 
-      {/* Why Us Section */}
-      <section id="why-us" className="py-20 bg-gray-50">
+      {/* Why Choose Us Section */}
+      <section id="why-us" className="py-20 bg-muted/50">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12">Why Choose Us?</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <Sparkles className="mx-auto mb-4 w-12 h-12 text-yellow-400" />
-              <h3 className="text-xl font-semibold mb-2">Innovative Technology</h3>
-              <p>Our photobooths feature the latest AI effects and interactive animations.</p>
-            </div>
-            <div className="text-center">
-              <CheckCircle className="mx-auto mb-4 w-12 h-12 text-green-400" />
-              <h3 className="text-xl font-semibold mb-2">Turnkey Service</h3>
-              <p>We handle delivery, installation, and pickup so you can enjoy your event stress-free.</p>
-            </div>
-            <div className="text-center">
-              <Camera className="mx-auto mb-4 w-12 h-12 text-purple-400" />
-              <h3 className="text-xl font-semibold mb-2">Unlimited Prints</h3>
-              <p>Your guests can print as many photos as they want, no limits.</p>
-            </div>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">Why Choose Happy Booth?</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Over 1000 successful events in French Switzerland. Professional quality, unlimited service, and unforgettable memories.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Card className="p-6 text-center">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Camera className="w-8 h-8 text-primary" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Truly Unlimited Prints</h3>
+              <p className="text-muted-foreground">
+                Unlike our competitors who limit to 150-400 prints, with us it&apos;s REALLY unlimited. Print as much as you want!
+              </p>
+            </Card>
+
+            <Card className="p-6 text-center">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <CheckCircle className="w-8 h-8 text-primary" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Turnkey Service</h3>
+              <p className="text-muted-foreground">
+                Complete installation and removal by our team. You have nothing to manage, we take care of everything.
+              </p>
+            </Card>
+
+            <Card className="p-6 text-center">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Sparkles className="w-8 h-8 text-primary" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3">100% Customization</h3>
+              <p className="text-muted-foreground">
+                Custom frames, branded welcome screens, themed backgrounds. Everything adapts to your event.
+              </p>
+            </Card>
+
+            <Card className="p-6 text-center">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Award className="w-8 h-8 text-primary" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Professional Quality</h3>
+              <p className="text-muted-foreground">
+                Studio equipment worth 15,000+ CHF. Professional lighting and lenses for perfect photos.
+              </p>
+            </Card>
+
+            <Card className="p-6 text-center">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Users className="w-8 h-8 text-primary" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3">1000+ Successful Events</h3>
+              <p className="text-muted-foreground">
+                Trusted by companies, wedding planners, and private individuals throughout French Switzerland.
+              </p>
+            </Card>
+
+            <Card className="p-6 text-center">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Clock className="w-8 h-8 text-primary" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3">24/7 Support</h3>
+              <p className="text-muted-foreground">
+                Technician available 24/7. Backup equipment ready in case of any issue.
+              </p>
+            </Card>
           </div>
         </div>
       </section>
 
       {/* Use Cases Section */}
-      <section id="use-cases" className="py-20 bg-white">
+      <section id="use-cases" className="py-20 bg-background">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12">Events</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card>
-              <img src={weddingPhotobooth} alt="Wedding Photobooth" className="rounded-t-lg" />
-              <CardContent>
-                <CardTitle>Weddings</CardTitle>
-                <CardDescription>Make your special day unforgettable with fun and elegant photobooth experiences.</CardDescription>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">Perfect for All Your Events</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              From intimate weddings to large corporate events, our photo booths adapt to every occasion.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Card className="overflow-hidden group hover:shadow-xl transition-all duration-300">
+              <div className="relative h-48 overflow-hidden">
+                <img src={weddingPhotobooth} alt="Wedding photobooth" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                <Heart className="absolute top-4 right-4 w-6 h-6 text-white" />
+              </div>
+              <CardContent className="p-6">
+                <h3 className="text-xl font-semibold mb-3">Weddings</h3>
+                <p className="text-muted-foreground mb-4">
+                  Create unforgettable memories with your guests. Custom frames with your names and date.
+                </p>
+                <ul className="text-sm text-muted-foreground space-y-1">
+                  <li>• Custom romantic frames</li>
+                  <li>• Guest guestbook option</li>
+                  <li>• Online gallery for all guests</li>
+                </ul>
               </CardContent>
             </Card>
-            <Card>
-              <img src={corporateEvent} alt="Corporate Event" className="rounded-t-lg" />
-              <CardContent>
-                <CardTitle>Corporate Events</CardTitle>
-                <CardDescription>Boost team spirit and brand visibility with customized photobooths.</CardDescription>
+
+            <Card className="overflow-hidden group hover:shadow-xl transition-all duration-300">
+              <div className="relative h-48 overflow-hidden">
+                <img src={corporateEvent} alt="Corporate event" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                <Building className="absolute top-4 right-4 w-6 h-6 text-white" />
+              </div>
+              <CardContent className="p-6">
+                <h3 className="text-xl font-semibold mb-3">Corporate Events</h3>
+                <p className="text-muted-foreground mb-4">
+                  Strengthen team cohesion and brand your company&apos;s image with a professional photo booth.
+                </p>
+                <ul className="text-sm text-muted-foreground space-y-1">
+                  <li>• Frames branded with your logo</li>
+                  <li>• Team building activity</li>
+                  <li>• Content for social media</li>
+                </ul>
               </CardContent>
             </Card>
-            <Card>
-              <img src={birthdayParty} alt="Birthday Party" className="rounded-t-lg" />
-              <CardContent>
-                <CardTitle>Birthday Parties</CardTitle>
-                <CardDescription>Capture joyful moments and create lasting memories with friends and family.</CardDescription>
+
+            <Card className="overflow-hidden group hover:shadow-xl transition-all duration-300">
+              <div className="relative h-48 overflow-hidden">
+                <img src={birthdayParty} alt="Birthday party" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                <Calendar className="absolute top-4 right-4 w-6 h-6 text-white" />
+              </div>
+              <CardContent className="p-6">
+                <h3 className="text-xl font-semibold mb-3">Birthdays & Private Parties</h3>
+                <p className="text-muted-foreground mb-4">
+                  Whether it&apos;s 18, 30, 50 or more, make your birthday unforgettable with a photo booth.
+                </p>
+                <ul className="text-sm text-muted-foreground space-y-1">
+                  <li>• Themed accessories included</li>
+                  <li>• Personalized with age and name</li>
+                  <li>• Fun guaranteed for all ages</li>
+                </ul>
               </CardContent>
             </Card>
           </div>
+
+          <div className="text-center mt-12">
+            <Button className="cta-primary" onClick={() => scrollToSection('contact-form')}>
+              Book for Your Event
+              <ArrowRight className="w-4 h-4 ml-2" />
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Client Logos */}
+      <section className="py-16 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">They Trust Us</h2>
+            <p className="text-muted-foreground">
+              Leading companies and institutions in French Switzerland
+            </p>
+          </div>
+          
+          <ClientLogosCarousel />
         </div>
       </section>
 
       {/* How It Works Section */}
-      <section id="how-it-works" className="py-20 bg-gray-50">
+      <section id="how-it-works" className="py-20 bg-background">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12">How It Works</h2>
-          <div className="grid md:grid-cols-3 gap-8 text-center">
-            <div>
-              <Calendar className="mx-auto mb-4 w-12 h-12 text-yellow-400" />
-              <h3 className="text-xl font-semibold mb-2">Book Your Date</h3>
-              <p>Reserve your photobooth well in advance to secure your event date.</p>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">How It Works</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              A simple process for a stress-free experience. We handle everything from A to Z.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
+                1
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Contact</h3>
+              <p className="text-muted-foreground">
+                Tell us about your event via our form. We respond within 24 hours with a personalized quote.
+              </p>
             </div>
-            <div>
-              <Building className="mx-auto mb-4 w-12 h-12 text-green-400" />
-              <h3 className="text-xl font-semibold mb-2">We Deliver & Setup</h3>
-              <p>Our team handles delivery, installation, and setup at your venue.</p>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
+                2
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Customization</h3>
+              <p className="text-muted-foreground">
+                We create your custom frames, configure the interface in your colors, and prepare the equipment.
+              </p>
             </div>
-            <div>
-              <Users className="mx-auto mb-4 w-12 h-12 text-purple-400" />
-              <h3 className="text-xl font-semibold mb-2">Enjoy & Share</h3>
-              <p>Your guests enjoy unlimited prints, digital sharing, and fun animations.</p>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
+                3
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Installation</h3>
+              <p className="text-muted-foreground">
+                Our team delivers and installs the photo booth at your venue. Complete setup in 30 minutes.
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
+                4
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Fun & Memories</h3>
+              <p className="text-muted-foreground">
+                Your guests have unlimited fun! All photos are available instantly in an online gallery.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
+      {/* Video Demo Section */}
+      <section className="py-20 bg-muted/50">
+        <div className="container mx-auto px-4 text-center">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-4xl font-bold mb-8">See Our Photo Booths in Action</h2>
+            
+            <div className="relative aspect-video bg-black rounded-xl overflow-hidden shadow-2xl">
+              <img 
+                src={photoboothPartyImage} 
+                alt="Happy Booth in action during an event" 
+                className="w-full h-full object-cover"
+              />
+              
+              <Dialog open={isVideoDialogOpen} onOpenChange={setIsVideoDialogOpen}>
+                <DialogTrigger asChild>
+                  <button className="absolute inset-0 flex items-center justify-center bg-black/40 hover:bg-black/30 transition-all duration-300 group">
+                    <div className="w-24 h-24 bg-white/90 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <Play className="w-10 h-10 text-primary ml-1" />
+                    </div>
+                  </button>
+                </DialogTrigger>
+                <DialogContent className="max-w-4xl">
+                  <div className="aspect-video">
+                    <iframe 
+                      width="100%" 
+                      height="100%" 
+                      src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                      title="Happy Booth Demo" 
+                      frameBorder="0" 
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                      allowFullScreen
+                    ></iframe>
+                  </div>
+                </DialogContent>
+              </Dialog>
+            </div>
+
+            <p className="text-muted-foreground mt-6 text-lg">
+              Discover how our photo booths create magical moments at events
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Carousel */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">What Our Clients Say</h2>
+            <p className="text-xl text-muted-foreground">
+              Authentic testimonials from our satisfied clients
+            </p>
+          </div>
+
+          <Carousel
+            plugins={[
+              Autoplay({
+                delay: 6000,
+              }),
+            ]}
+            className="w-full max-w-4xl mx-auto"
+          >
+            <CarouselContent>
+              <CarouselItem>
+                <Card className="p-8 text-center">
+                  <div className="flex justify-center mb-4">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 text-yellow-500 fill-current" />
+                    ))}
+                  </div>
+                  <blockquote className="text-lg italic mb-6">
+                    "Incredible service! The photo booth was the highlight of our wedding. All our guests loved it and the photos are just perfect. We highly recommend Happy Booth!"
+                  </blockquote>
+                  <cite className="font-semibold">Sarah & Marc - Wedding in Lausanne</cite>
+                </Card>
+              </CarouselItem>
+              
+              <CarouselItem>
+                <Card className="p-8 text-center">
+                  <div className="flex justify-center mb-4">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 text-yellow-500 fill-current" />
+                    ))}
+                  </div>
+                  <blockquote className="text-lg italic mb-6">
+                    "Perfect for our company event. The professional setup and unlimited quality prints impressed all our employees. The Happy Booth team is ultra professional!"
+                  </blockquote>
+                  <cite className="font-semibold">Jean-Pierre - Google Switzerland</cite>
+                </Card>
+              </CarouselItem>
+              
+              <CarouselItem>
+                <Card className="p-8 text-center">
+                  <div className="flex justify-center mb-4">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 text-yellow-500 fill-current" />
+                    ))}
+                  </div>
+                  <blockquote className="text-lg italic mb-6">
+                    "The 360 booth was amazing for my 30th birthday! All my friends had so much fun and the videos are incredible. Thank you Happy Booth for this unforgettable evening!"
+                  </blockquote>
+                  <cite className="font-semibold">Camille - 30th Birthday in Geneva</cite>
+                </Card>
+              </CarouselItem>
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
+        </div>
+      </section>
+
       {/* FAQ Section */}
-      <section id="faq" className="py-20 bg-white">
+      <section id="faq" className="py-20 bg-muted/50">
         <div className="container mx-auto px-4 max-w-4xl">
-          <h2 className="text-4xl font-bold text-center mb-12">FAQ</h2>
-          <Accordion type="single" collapsible>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">Frequently Asked Questions</h2>
+            <p className="text-xl text-muted-foreground">
+              All the answers to your questions about our photo booth services
+            </p>
+          </div>
+
+          <Accordion type="single" collapsible className="space-y-4">
             {faqItems.map((item, index) => (
               <AccordionItem key={index} value={`item-${index}`}>
-                <AccordionTrigger>{item.question}</AccordionTrigger>
-                <AccordionContent>{item.answer}</AccordionContent>
+                <AccordionTrigger className="text-left font-semibold">
+                  {item.question}
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed whitespace-pre-line">
+                  {item.answer}
+                </AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
         </div>
       </section>
 
-      {/* Contact Form Section */}
-      <section id="contact-form" className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4 max-w-3xl">
-          <h2 className="text-4xl font-bold text-center mb-12">Request a Quote</h2>
-          <form onSubmit={handleSubmit} className="space-y-6">
-            {formStep === 1 && (
-              <>
-                <div>
-                  <Label htmlFor="name">Name</Label>
-                  <Input
-                    id="name"
-                    type="text"
-                    value={formData.name}
-                    onChange={e => handleInputChange('name', e.target.value)}
-                    required
-                  />
+      {/* Contact Form */}
+      <section id="contact-form" className="py-20 bg-background">
+        <div className="container mx-auto px-4 max-w-2xl">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4">Request Your Free Quote</h2>
+            <p className="text-xl text-muted-foreground">
+              Tell us about your event and get a personalized offer within 24 hours
+            </p>
+          </div>
+
+          <Card className="p-8">
+            <form onSubmit={handleSubmit} className="space-y-6">
+              {formStep === 1 && (
+                <div className="space-y-6">
+                  <div className="text-center mb-6">
+                    <h3 className="text-xl font-semibold mb-2">Step 1/3 - Your Information</h3>
+                    <div className="w-full bg-gray-200 rounded-full h-2">
+                      <div className="bg-primary h-2 rounded-full" style={{width: '33%'}}></div>
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                      <Label htmlFor="name">Full Name *</Label>
+                      <Input 
+                        id="name" 
+                        value={formData.name} 
+                        onChange={(e) => handleInputChange('name', e.target.value)}
+                        placeholder="Your full name"
+                        required 
+                      />
+                    </div>
+                    <div>
+                      <Label htmlFor="email">Email Address *</Label>
+                      <Input 
+                        id="email" 
+                        type="email" 
+                        value={formData.email} 
+                        onChange={(e) => handleInputChange('email', e.target.value)}
+                        placeholder="your@email.com"
+                        required 
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <Label htmlFor="phone">Phone Number</Label>
+                    <Input 
+                      id="phone" 
+                      type="tel" 
+                      value={formData.phone} 
+                      onChange={(e) => handleInputChange('phone', e.target.value)}
+                      placeholder="+41 XX XXX XX XX"
+                    />
+                  </div>
+
+                  <Button type="button" onClick={nextStep} className="w-full cta-primary text-lg py-3">
+                    Continue <ArrowRight className="w-5 h-5 ml-2" />
+                  </Button>
                 </div>
-                <div>
-                  <Label htmlFor="email">Email</Label>
-                  <Input
-                    id="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={e => handleInputChange('email', e.target.value)}
-                    required
-                  />
+              )}
+
+              {formStep === 2 && (
+                <div className="space-y-6">
+                  <div className="text-center mb-6">
+                    <h3 className="text-xl font-semibold mb-2">Step 2/3 - Your Event</h3>
+                    <div className="w-full bg-gray-200 rounded-full h-2">
+                      <div className="bg-primary h-2 rounded-full" style={{width: '66%'}}></div>
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                      <Label htmlFor="date">Event Date</Label>
+                      <Input 
+                        id="date" 
+                        type="date" 
+                        value={formData.date} 
+                        onChange={(e) => handleInputChange('date', e.target.value)}
+                      />
+                    </div>
+                    <div>
+                      <Label htmlFor="city">City</Label>
+                      <Input 
+                        id="city" 
+                        value={formData.city} 
+                        onChange={(e) => handleInputChange('city', e.target.value)}
+                        placeholder="Lausanne, Geneva, Montreux..."
+                      />
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                      <Label htmlFor="eventType">Event Type</Label>
+                      <Select value={formData.eventType} onValueChange={(value) => handleInputChange('eventType', value)}>
+                        <SelectTrigger>
+                          <SelectValue placeholder="Select event type" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="wedding">Wedding</SelectItem>
+                          <SelectItem value="birthday">Birthday</SelectItem>
+                          <SelectItem value="corporate">Corporate Event</SelectItem>
+                          <SelectItem value="graduation">Graduation</SelectItem>
+                          <SelectItem value="anniversary">Anniversary</SelectItem>
+                          <SelectItem value="other">Other</SelectItem>
+                        </SelectContent>
+                      </Select>
+                    </div>
+                    <div>
+                      <Label htmlFor="guests">Number of Guests</Label>
+                      <Select value={formData.guests} onValueChange={(value) => handleInputChange('guests', value)}>
+                        <SelectTrigger>
+                          <SelectValue placeholder="Select number" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="20-50">20-50 people</SelectItem>
+                          <SelectItem value="50-100">50-100 people</SelectItem>
+                          <SelectItem value="100-200">100-200 people</SelectItem>
+                          <SelectItem value="200+">200+ people</SelectItem>
+                        </SelectContent>
+                      </Select>
+                    </div>
+                  </div>
+
+                  <div>
+                    <Label htmlFor="model">Preferred Model</Label>
+                    <Select value={formData.model} onValueChange={(value) => handleInputChange('model', value)}>
+                      <SelectTrigger>
+                        <SelectValue placeholder="Let us advise you" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="mirror">Mirror Booth (1090 CHF)</SelectItem>
+                        <SelectItem value="rainbow">Rainbow Booth (790 CHF)</SelectItem>
+                        <SelectItem value="360">360 Happy Booth (890 CHF)</SelectItem>
+                        <SelectItem value="retro">Retro Booth (790 CHF)</SelectItem>
+                        <SelectItem value="phone">Phone Booth (290 CHF)</SelectItem>
+                        <SelectItem value="advice">Advise me</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
+
+                  <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
+                    <Button type="button" onClick={prevStep} variant="outline" className="flex-1 text-sm sm:text-base px-4 py-3">
+                      <ChevronLeft className="w-4 h-4 mr-2" />
+                      Back
+                    </Button>
+                    <Button type="button" onClick={nextStep} className="flex-1 cta-primary text-sm sm:text-lg px-4 py-3">
+                      Continue <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
+                    </Button>
+                  </div>
                 </div>
-                <div>
-                  <Label htmlFor="phone">Phone</Label>
-                  <Input
-                    id="phone"
-                    type="tel"
-                    value={formData.phone}
-                    onChange={e => handleInputChange('phone', e.target.value)}
-                  />
+              )}
+
+              {formStep === 3 && (
+                <div className="space-y-6">
+                  <div className="text-center mb-6">
+                    <h3 className="text-xl font-semibold mb-2">Step 3/3 - Final Details</h3>
+                    <div className="w-full bg-gray-200 rounded-full h-2">
+                      <div className="bg-primary h-2 rounded-full" style={{width: '100%'}}></div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <Label htmlFor="message">Message (optional)</Label>
+                    <Textarea 
+                      id="message" 
+                      value={formData.message} 
+                      onChange={(e) => handleInputChange('message', e.target.value)}
+                      placeholder="Tell us about your event, your specific needs..."
+                      rows={4}
+                    />
+                  </div>
+
+                  <div className="flex items-start space-x-2">
+                    <Checkbox 
+                      id="consent" 
+                      checked={formData.consent} 
+                      onCheckedChange={(checked) => handleInputChange('consent', checked as boolean)}
+                      className="mt-1"
+                    />
+                    <Label htmlFor="consent" className="text-sm leading-relaxed">
+                      I agree to be contacted for this quote and the privacy policy *
+                    </Label>
+                  </div>
+
+                  {/* Hidden fields for tracking */}
+                  <input type="hidden" value={formData.gclid} />
+                  <input type="hidden" value={formData.wbraid} />
+                  <input type="hidden" value={formData.gbraid} />
+
+                  <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
+                    <Button type="button" onClick={prevStep} variant="outline" className="flex-1 text-sm sm:text-base px-4 py-3">
+                      <ChevronLeft className="w-4 h-4 mr-2" />
+                      Back
+                    </Button>
+                    <Button type="submit" className="flex-1 cta-primary text-sm sm:text-lg px-4 py-3" disabled={!formData.consent}>
+                      Request Quote
+                      <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
+                    </Button>
+                  </div>
                 </div>
-                <div className="flex justify-end">
-                  <Button type="button" onClick={nextStep}>Next</Button>
-                </div>
-              </>
-            )}
-            {formStep === 2 && (
-              <>
-                <div>
-                  <Label htmlFor="date">Event Date</Label>
-                  <Input
-                    id="date"
-                    type="date"
-                    value={formData.date}
-                    onChange={e => handleInputChange('date', e.target.value)}
-                    required
-                  />
-                </div>
-                <div>
-                  <Label htmlFor="eventType">Event Type</Label>
-                  <Select
-                    onValueChange={value => handleInputChange('eventType', value)}
-                    value={formData.eventType}
-                  >
-                    <SelectTrigger id="eventType">
-                      <SelectValue placeholder="Select event type" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="wedding">Wedding</SelectItem>
-                      <SelectItem value="corporate">Corporate Event</SelectItem>
-                      <SelectItem value="birthday">Birthday Party</SelectItem>
-                      <SelectItem value="other">Other</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-                <div>
-                  <Label htmlFor="city">City</Label>
-                  <Input
-                    id="city"
-                    type="text"
-                    value={formData.city}
-                    onChange={e => handleInputChange('city', e.target.value)}
-                    required
-                  />
-                </div>
-                <div className="flex justify-between">
-                  <Button type="button" variant="outline" onClick={prevStep}>Back</Button>
-                  <Button type="button" onClick={nextStep}>Next</Button>
-                </div>
-              </>
-            )}
-            {formStep === 3 && (
-              <>
-                <div>
-                  <Label>Choose Your Model</Label>
-                  <Tabs value={selectedModel} onValueChange={selectModel} className="mb-4">
-                    <TabsList>
-                      {models.map(model => (
-                        <TabsTrigger key={model.id} value={model.id}>{model.name}</TabsTrigger>
-                      ))}
-                    </TabsList>
-                  </Tabs>
-                </div>
-                <div>
-                  <Label htmlFor="guests">Number of Guests</Label>
-                  <Input
-                    id="guests"
-                    type="number"
-                    min={1}
-                    value={formData.guests}
-                    onChange={e => handleInputChange('guests', e.target.value)}
-                    required
-                  />
-                </div>
-                <div>
-                  <Label htmlFor="message">Additional Message</Label>
-                  <Textarea
-                    id="message"
-                    value={formData.message}
-                    onChange={e => handleInputChange('message', e.target.value)}
-                  />
-                </div>
-                <div className="flex items-center space-x-2">
-                  <Checkbox
-                    id="consent"
-                    checked={formData.consent}
-                    onCheckedChange={checked => handleInputChange('consent', checked === true)}
-                    required
-                  />
-                  <Label htmlFor="consent" className="text-sm">
-                    I accept the terms and conditions
-                  </Label>
-                </div>
-                <div className="flex justify-between">
-                  <Button type="button" variant="outline" onClick={prevStep}>Back</Button>
-                  <Button type="submit">Send Request</Button>
-                </div>
-              </>
-            )}
-          </form>
+              )}
+            </form>
+          </Card>
         </div>
       </section>
 
