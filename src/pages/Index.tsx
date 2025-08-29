@@ -9,7 +9,9 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Sparkles, Heart, Building, Calendar, Users, Camera, CheckCircle, ArrowRight, Star, Award, MapPin, Clock, ChevronLeft, ChevronRight } from "lucide-react";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { Sparkles, Heart, Building, Calendar, Users, Camera, CheckCircle, ArrowRight, Star, Award, MapPin, Clock, ChevronLeft, ChevronRight, Play } from "lucide-react";
 import { toast } from "sonner";
 import { ClientLogosCarousel } from "@/components/ClientLogosCarousel";
 
@@ -46,6 +48,7 @@ const Index = () => {
   const [selectedModel, setSelectedModel] = useState('mirror');
   const [isHeaderSticky, setIsHeaderSticky] = useState(false);
   const [currentGalleryIndex, setCurrentGalleryIndex] = useState(0);
+  const [isVideoDialogOpen, setIsVideoDialogOpen] = useState(false);
   const galleryImages = [{
     src: "/lovable-uploads/de88bc30-9aeb-4d9a-a81b-276d197bb678.png",
     alt: "Deux femmes souriantes tenant des photos de photobooth"
@@ -315,34 +318,68 @@ const Index = () => {
             <p className="text-xl text-muted-foreground">Découvrez l'ambiance magique de nos événements</p>
           </div>
           
-          {/* Video Section */}
-          <div className="max-w-4xl mx-auto mb-12">
-            <div className="aspect-video rounded-xl overflow-hidden shadow-2xl mb-6">
-              <iframe 
-                src="https://player.vimeo.com/video/731393641?badge=0&amp;autopause=0&amp;quality_selector=1&amp;progress_bar=1&amp;player_id=0&amp;app_id=58479" 
-                className="w-full h-full" 
-                allow="autoplay; fullscreen; picture-in-picture; clipboard-write" 
-                title="Happy Booth - Teaser"
-              />
-            </div>
-          </div>
-
-          {/* Photo Gallery - Grid Layout */}
-          <div className="max-w-6xl mx-auto">
-            <h3 className="text-xl font-semibold text-center mb-8">Nos plus beaux moments</h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-              {galleryImages.map((image, index) => (
-                <div 
-                  key={index}
-                  className="aspect-square rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer group"
-                  onClick={() => setCurrentGalleryIndex(index)}
-                >
-                  <img 
-                    src={image.src} 
-                    alt={image.alt} 
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" 
+          {/* Video Section with Button */}
+          <div className="max-w-4xl mx-auto mb-12 text-center">
+            <Dialog open={isVideoDialogOpen} onOpenChange={setIsVideoDialogOpen}>
+              <DialogTrigger asChild>
+                <Button size="lg" className="mb-8 bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white font-semibold px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
+                  <Play className="w-5 h-5 mr-2" />
+                  Découvrir en vidéo
+                </Button>
+              </DialogTrigger>
+              <DialogContent className="max-w-4xl w-full p-0 bg-black">
+                <div className="aspect-video w-full">
+                  <iframe 
+                    src="https://player.vimeo.com/video/731393641?badge=0&amp;autopause=0&amp;quality_selector=1&amp;progress_bar=1&amp;player_id=0&amp;app_id=58479&amp;autoplay=1" 
+                    className="w-full h-full rounded-lg" 
+                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write" 
+                    title="Happy Booth - Teaser"
                   />
                 </div>
+              </DialogContent>
+            </Dialog>
+          </div>
+
+          {/* Photo Gallery - Carousel Layout */}
+          <div className="max-w-6xl mx-auto">
+            <h3 className="text-xl font-semibold text-center mb-8">Nos plus beaux moments</h3>
+            <Carousel 
+              className="w-full"
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+            >
+              <CarouselContent className="-ml-2 md:-ml-4">
+                {galleryImages.map((image, index) => (
+                  <CarouselItem 
+                    key={index}
+                    className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4"
+                  >
+                    <div className="aspect-square rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer group">
+                      <img 
+                        src={image.src} 
+                        alt={image.alt} 
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" 
+                      />
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="hidden md:flex -left-12" />
+              <CarouselNext className="hidden md:flex -right-12" />
+            </Carousel>
+            
+            {/* Mobile carousel indicators */}
+            <div className="flex justify-center mt-6 space-x-2 md:hidden">
+              {galleryImages.map((_, index) => (
+                <button
+                  key={index}
+                  className={`w-2 h-2 rounded-full transition-colors ${
+                    index === currentGalleryIndex ? 'bg-primary' : 'bg-gray-300'
+                  }`}
+                  onClick={() => setCurrentGalleryIndex(index)}
+                />
               ))}
             </div>
           </div>
