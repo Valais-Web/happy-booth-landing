@@ -28,6 +28,11 @@ const clientLogos: ClientLogo[] = [
     name: "Valmont"
   },
   {
+    src: "/lovable-uploads/843b3ed9-bbcf-4838-91e8-af59de0bfdb6.png",
+    alt: "Ville de Lausanne",
+    name: "Ville de Lausanne"
+  },
+  {
     src: "/lovable-uploads/1f49336f-ab7b-431a-a494-036ed5b2ef80.png",
     alt: "Hyatt",
     name: "Hyatt"
@@ -43,6 +48,11 @@ const clientLogos: ClientLogo[] = [
     name: "IMD"
   },
   {
+    src: "/lovable-uploads/358f41db-1555-4b5a-a1a7-72970547db92.png",
+    alt: "International School Lausanne",
+    name: "International School Lausanne"
+  },
+  {
     src: "/lovable-uploads/805870f1-81da-4b24-aaf5-2b91df6890ba.png",
     alt: "Facchinetti Automobiles",
     name: "Facchinetti Automobiles"
@@ -51,6 +61,11 @@ const clientLogos: ClientLogo[] = [
     src: "/lovable-uploads/5420e9c4-0077-4f60-adaa-00c30e134f07.png",
     alt: "AON",
     name: "AON"
+  },
+  {
+    src: "/lovable-uploads/9be45baf-9663-4ad4-8e76-87b57842f59e.png",
+    alt: "Ville de Genève",
+    name: "Ville de Genève"
   },
   {
     src: "/lovable-uploads/ad968bbf-ba53-43a3-b234-bec36b226fb6.png",
@@ -141,7 +156,7 @@ export const ClientLogosCarousel = () => {
   return (
     <div className="relative overflow-hidden">
       <div 
-        className="flex animate-[scroll_60s_linear_infinite]"
+        className="flex animate-[scroll_30s_linear_infinite]"
         style={{
           width: `${extendedLogos.length * (100/6)}%`
         }}
