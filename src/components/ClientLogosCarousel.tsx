@@ -106,46 +106,6 @@ const clientLogos: ClientLogo[] = [
     src: "/lovable-uploads/c7b9a5f4-7cbc-4dc6-98b5-302cbbd5cf99.png",
     alt: "Red Bull",
     name: "Red Bull"
-  },
-  {
-    src: "/lovable-uploads/b81d34da-8b03-4bfd-ace2-cf2d8da78706.png",
-    alt: "BVLGARI",
-    name: "BVLGARI"
-  },
-  {
-    src: "/lovable-uploads/6985b3cb-e8c8-4edf-ba39-49ad371ff4f5.png",
-    alt: "JTI",
-    name: "JTI"
-  },
-  {
-    src: "/lovable-uploads/f84fb375-7807-44f3-9cd3-34e6c4074c9a.png",
-    alt: "Logitech",
-    name: "Logitech"
-  },
-  {
-    src: "/lovable-uploads/a394bdcc-7200-44ef-89d9-880e117c95ab.png",
-    alt: "Paléo",
-    name: "Paléo"
-  },
-  {
-    src: "/lovable-uploads/c100f269-3b06-4b8c-9d45-a9e4c3ba4ed9.png",
-    alt: "UNIL - Université de Lausanne",
-    name: "UNIL"
-  },
-  {
-    src: "/lovable-uploads/572c82d5-70d2-4e44-9555-a0fffac05ff5.png",
-    alt: "Uber",
-    name: "Uber"
-  },
-  {
-    src: "/lovable-uploads/6107f84d-437b-414d-899e-c282a7bf7ee2.png",
-    alt: "AXA",
-    name: "AXA"
-  },
-  {
-    src: "/lovable-uploads/b6b8b200-43f3-4a87-a177-891a85e8c478.png",
-    alt: "Pictet",
-    name: "Pictet"
   }
 ];
 
@@ -156,7 +116,7 @@ export const ClientLogosCarousel = () => {
   return (
     <div className="relative overflow-hidden">
       <div 
-        className="flex animate-[scroll_60s_linear_infinite]"
+        className="flex animate-[scroll_20s_linear_infinite]"
         style={{
           width: `${extendedLogos.length * (100/6)}%`
         }}
