@@ -232,22 +232,6 @@ const Index = () => {
               className="w-96 h-auto rounded-2xl shadow-2xl border border-white/20"
             />
             <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-black/20 to-transparent"></div>
-            
-            {/* Google Reviews Badge */}
-            <div className="absolute bottom-4 left-4 bg-white rounded-xl p-3 shadow-lg max-w-[200px]">
-              <div className="flex items-center space-x-2 mb-1">
-                <img src="/lovable-uploads/google-logo.png" alt="Google" className="w-16 h-auto" />
-              </div>
-              <div className="flex items-center space-x-1 mb-1">
-                <span className="text-orange-500 font-bold text-lg">5.0</span>
-                <div className="flex">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-orange-500 text-orange-500" />
-                  ))}
-                </div>
-              </div>
-              <p className="text-sm text-gray-600 font-medium">Basé sur 37 avis</p>
-            </div>
           </div>
         </div>
 
