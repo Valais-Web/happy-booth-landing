@@ -135,8 +135,33 @@ export const ClientLogosCarousel = () => {
 
   return (
     <div className="relative overflow-hidden">
+      {/* Mobile version - 3 logos visible */}
       <div 
-        className="flex animate-[scroll_60s_linear_infinite]"
+        className="flex md:hidden animate-[scroll_60s_linear_infinite]"
+        style={{
+          width: `${extendedLogos.length * (100/3)}%`
+        }}
+      >
+        {extendedLogos.map((logo, index) => (
+          <div 
+            key={`${logo.name}-${index}`}
+            className="flex-shrink-0 px-4 flex items-center justify-center"
+            style={{ width: `${100 / extendedLogos.length}%` }}
+          >
+            <div className="h-20 flex items-center justify-center group">
+              <img
+                src={logo.src}
+                alt={logo.alt}
+                className="max-h-full max-w-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300 opacity-60 group-hover:opacity-100 h-[70px]"
+              />
+            </div>
+          </div>
+        ))}
+      </div>
+      
+      {/* Desktop version - 6 logos visible */}
+      <div 
+        className="hidden md:flex animate-[scroll_60s_linear_infinite]"
         style={{
           width: `${extendedLogos.length * (100/6)}%`
         }}
@@ -151,8 +176,7 @@ export const ClientLogosCarousel = () => {
               <img
                 src={logo.src}
                 alt={logo.alt}
-                className="max-h-full max-w-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300 opacity-60 group-hover:opacity-100"
-                style={{ height: '50px' }}
+                className="max-h-full max-w-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300 opacity-60 group-hover:opacity-100 h-[50px]"
               />
             </div>
           </div>
