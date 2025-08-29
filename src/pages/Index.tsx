@@ -232,6 +232,18 @@ const Index = () => {
               className="w-96 h-auto rounded-2xl shadow-2xl border border-white/20"
             />
             <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-black/20 to-transparent"></div>
+            
+            {/* Google Reviews Badge */}
+            <div className="absolute -bottom-6 -left-6 bg-white/95 backdrop-blur-sm rounded-lg p-3 shadow-lg border border-gray-200">
+              <div className="flex items-center space-x-2 mb-1">
+                <img 
+                  src="/lovable-uploads/82416f11-c9f5-4e9a-b407-60bbea2da5a8.png" 
+                  alt="Google Reviews" 
+                  className="h-6 w-auto"
+                />
+              </div>
+              <p className="text-sm text-gray-600 whitespace-nowrap">basé sur 37 avis</p>
+            </div>
           </div>
         </div>
 
