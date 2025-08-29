@@ -157,6 +157,7 @@ const Index = () => {
     price: '1090 CHF',
     title: 'Le photobooth intelligent qui fait le show',
     description: 'Grand miroir tactile plein-pied, effets IA, signatures et emojis, cadres sur mesure, impressions illimitées. Le favori des mariages chic et des soirées corporate.',
+    image: '/lovable-uploads/a076d98b-87cf-4d16-b6bc-4ba9399b6dfb.png',
     features: ['Animations thématiques & boomerangs', 'Filtres & changement de fond boostés par l\'IA', 'Écran d\'accueil & cadres brandés, choix du cadre par l\'invité', 'Envoi e-mail instantané + galerie', 'Impression photo pro illimitée', 'Langues : FR, EN, DE, ES, PT, IT'],
     note: 'Livraison & récupération gratuites sur Lausanne',
     included: ['Installation & récupération', 'Impressions illimitées', 'Galerie en ligne', 'Personnalisation complète', 'Support technique']
@@ -166,6 +167,7 @@ const Index = () => {
     price: '790 CHF',
     title: 'Chic, moderne, super fun',
     description: 'Anneau lumineux arc-en-ciel, look tendance qui attire tous les regards.',
+    image: '/lovable-uploads/ebd7d9bc-48dd-4de8-9840-b3b8e35ff60e.png',
     features: ['Anneau lumineux arc-en-ciel, look tendance qui attire tous les regards', 'Partage réseaux sociaux + impression sur place', 'Cadres personnalisables, chaque invité choisit son préféré', 'Impressions illimitées', '"Magic Screen" & fonds thématiques', 'Option backdrops', 'NOUVEAU : effets IA'],
     included: ['Impressions illimitées', 'Galerie en ligne', 'Personnalisation complète', 'Support technique']
   }, {
@@ -174,6 +176,7 @@ const Index = () => {
     price: '890 CHF',
     title: 'Tournez, posez, brillez',
     description: 'Vidéos illimitées avec envoi instantané (WhatsApp, e-mail, AirDrop).',
+    image: '/lovable-uploads/f98f6457-4377-4d5f-b2de-430ed2d93a1b.png',
     features: ['Vidéos illimitées avec envoi instantané (WhatsApp, e-mail, AirDrop)', 'Effets personnalisés + superpositions brandées, musique', 'Galerie en ligne. Plateforme 90 cm jusqu\'à 4 personnes, arrêt sécu', 'Livraison, installation et récupération incluses à Lausanne'],
     included: ['Vidéos illimitées', 'Galerie en ligne', 'Personnalisation complète', 'Support technique']
   }, {
@@ -182,6 +185,7 @@ const Index = () => {
     price: '790 CHF',
     title: 'L\'élégance vintage qui fait fondre tous les cœurs',
     description: 'Style rétro-chic, format compact, ultra simple à utiliser.',
+    image: '/lovable-uploads/01038a35-68c2-4046-a7c9-d7bd12a8dd7f.png',
     features: ['Style rétro-chic, format compact, ultra simple à utiliser', 'Impressions illimitées', 'Effet miroir + écran tactile : signer, dessiner, emojis', 'Cadres perso, galerie en ligne, accessoires fournis'],
     included: ['Impressions illimitées', 'Galerie en ligne', 'Personnalisation complète', 'Support technique']
   }, {
@@ -190,6 +194,7 @@ const Index = () => {
     price: '290 CHF',
     title: 'Audio guestbook vintage',
     description: 'Décroche, laisse un message, souriez — utilisation ultra simple.',
+    image: '/lovable-uploads/82b14e13-bb3a-4f24-8bd8-5f0342391319.png',
     features: ['Décroche, laisse un message, souriez — utilisation ultra simple', 'Qualité audio claire, souvenirs à revivre', 'Autonome sans Wi-Fi ni électricité, léger et facile à placer', 'Message d\'accueil personnalisable, option panneau LED 35 CHF', 'Logistique : avec photobooth on livre, sinon envoi postal très simple'],
     included: ['Livraison & récupération', 'Messages audio illimités', 'Message d\'accueil personnalisé', 'Support technique']
   }];
@@ -474,7 +479,7 @@ const Index = () => {
                 <Card className="max-w-4xl mx-auto overflow-hidden shadow-2xl">
                   <div className="grid md:grid-cols-2">
                     <div className="aspect-square bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center p-8">
-                      <img src={photoboothCollection} alt={model.name} className="w-full h-full object-cover rounded-lg shadow-lg" />
+                      <img src={model.image} alt={model.name} className="w-full h-full object-cover rounded-lg shadow-lg" />
                     </div>
                     
                     <CardContent className="p-8 flex flex-col justify-between">
