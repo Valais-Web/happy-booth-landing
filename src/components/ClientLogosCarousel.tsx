@@ -28,11 +28,6 @@ const clientLogos: ClientLogo[] = [
     name: "Valmont"
   },
   {
-    src: "/lovable-uploads/1f49336f-ab7b-431a-a494-036ed5b2ef80.png",
-    alt: "Hyatt",
-    name: "Hyatt"
-  },
-  {
     src: "/lovable-uploads/5e7a381d-fb0f-4018-95dc-394052d9a67e.png",
     alt: "Julius Bär",
     name: "Julius Bär"
