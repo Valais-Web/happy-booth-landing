@@ -14,7 +14,6 @@ import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Sparkles, Heart, Building, Calendar, Users, Camera, CheckCircle, ArrowRight, Star, Award, MapPin, Clock, ChevronLeft, ChevronRight, Play } from "lucide-react";
 import { toast } from "sonner";
 import { ClientLogosCarousel } from "@/components/ClientLogosCarousel";
-import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import Autoplay from "embla-carousel-autoplay";
 
 // Import images
@@ -1245,11 +1244,10 @@ const Index = () => {
               <img src="/lovable-uploads/ac502686-5897-4be4-bf80-2dfb03d33219.png" alt="Happy Booth Logo" className="h-12 w-auto" />
             </div>
             
-            <div className="border-t border-white/20 pt-6 flex justify-between items-center">
+            <div className="border-t border-white/20 pt-6">
               <p className="text-white/60">
                 © 2024 Happy Booth. Tous droits réservés.
               </p>
-              <LanguageSwitcher />
             </div>
           </div>
         </div>
