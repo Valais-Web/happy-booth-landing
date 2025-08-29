@@ -202,20 +202,32 @@ const Index = () => {
     question: "Combien d'espace faut-il et peut-on l'installer dehors ?",
     answer: "Il faut environ 3×3 mètres et une prise électrique. L'installation en extérieur est possible si l'espace est abrité."
   }, {
-    question: "Y a-t-il une limite d'impressions ?",
-    answer: "Non, les impressions sont illimitées pour tous nos modèles !"
+    question: "Est-ce vraiment illimité pour les impressions ?",
+    answer: "OUI ! Contrairement à nos concurrents qui limitent à 150-400 tirages, chez Happy Booth c'est VRAIMENT illimité. Vos invités peuvent imprimer autant qu'ils veulent. Plus il y a de photos, plus on rigole !"
+  }, {
+    question: "Comment récupère-t-on les photos numériques ?",
+    answer: "Toutes les photos sont disponibles immédiatement dans une galerie en ligne privée accessible à tous vos invités. Vous recevrez également l'ensemble des fichiers haute définition après l'événement."
   }, {
     question: "Et si internet est faible ?",
     answer: "Pas de problème ! L'impression fonctionne hors ligne, les envois par e-mail se feront dès que le réseau sera disponible."
   }, {
-    question: "Quelle différence avec un smartphone ?",
-    answer: "Nos photobooths offrent des cadres brandés, des accessoires, une impression immédiate, un grand angle, un éclairage studio professionnel et une expérience collective unique."
+    question: "Mes invités âgés ou les enfants sauront-ils l'utiliser ?",
+    answer: "Absolument ! L'interface est ultra-intuitive avec des icônes claires et peut être configurée dans 6 langues. Les enfants dès 5 ans l'utilisent sans problème, et nous pouvons fournir un tabouret pour les plus petits. Option hôte disponible pour accompagner vos invités (45 CHF/heure)."
+  }, {
+    question: "Pourquoi ne pas simplement mettre un iPhone avec une imprimante ?",
+    answer: "Un photobooth professionnel offre : qualité studio (éclairage, objectif pro), animations interactives impossibles sur smartphone, impressions instantanées haute qualité, gestion automatique des files d'attente, personnalisation complète, et surtout une vraie animation qui crée l'événement. Le DIY demande quelqu'un dédié toute la soirée."
+  }, {
+    question: "800-1000 CHF pour quelques heures, n'est-ce pas excessif ?",
+    answer: "Divisé par 100 invités = 8-10 CHF par personne pour un souvenir personnalisé qu'ils garderont. Compare : un photographe coûte 2000-4000 CHF, un DJ 1500 CHF. Notre équipement professionnel coûte plus de 15'000 CHF et nécessite maintenance, transport, personnalisation (2h de préparation graphique), installation (2h), et présence technique."
+  }, {
+    question: "Et si peu de gens l'utilisent finalement ?",
+    answer: "Jamais arrivé en 1000+ événements ! Statistiques moyennes : 80% des invités l'utilisent, 3-5 passages par personne, 300-600 photos par événement de 100 personnes. Le placement stratégique (près du bar/piste) et nos accessoires fun garantissent le succès. Garantie \"satisfait ou remboursé\" si moins de 50 photos prises."
   }, {
     question: "Quand réserver ?",
     answer: "Idéalement 2-4 mois à l'avance pour les grandes dates, mais nous acceptons aussi les réservations de dernière minute selon disponibilité."
   }, {
-    question: "Proposez-vous un opérateur ?",
-    answer: "Oui, nous proposons un service d'hôte animateur à 45 CHF/heure pour accompagner vos invités."
+    question: "Pourquoi payer plus cher qu'une offre d'un prestataire low-cost ?",
+    answer: "Les offres économiques demandent souvent que vous gériez vous-même : le retrait du matériel (aller-retour en voiture), l'installation (1-2h de montage avec notice), la résolution des problèmes techniques, et le retour par transporteur. Elles limitent aussi généralement les impressions (200-400 maximum) - imaginez devoir refuser des tirages à vos invités en fin de soirée !\nNotre service premium inclut : installation/désinstallation complète par nos soins, impressions VRAIMENT illimitées (souvent 500+ photos par événement), support technique immédiat en cas de souci, technologies exclusives (Mirror avec IA, plateforme 360°), et personnalisation graphique professionnelle.\nLe surcoût de 200-300 CHF représente généralement moins de 3 CHF par invité pour éliminer tout stress et garantir une expérience parfaite. C'est l'assurance qu'au moindre problème, c'est notre responsabilité, pas la vôtre. Le jour de votre événement, vous avez mieux à faire que de jouer au technicien !"
   }];
   return <div className="min-h-screen bg-background">
       {/* Header */}
