@@ -28,21 +28,6 @@ const clientLogos: ClientLogo[] = [
     name: "Valmont"
   },
   {
-    src: "/lovable-uploads/843b3ed9-bbcf-4838-91e8-af59de0bfdb6.png",
-    alt: "Ville de Lausanne",
-    name: "Ville de Lausanne"
-  },
-  {
-    src: "/lovable-uploads/1f49336f-ab7b-431a-a494-036ed5b2ef80.png",
-    alt: "Hyatt",
-    name: "Hyatt"
-  },
-  {
-    src: "/lovable-uploads/5e7a381d-fb0f-4018-95dc-394052d9a67e.png",
-    alt: "Julius Bär",
-    name: "Julius Bär"
-  },
-  {
     src: "/lovable-uploads/24a9a7c9-582a-4381-9116-c89b0b8b60a8.png",
     alt: "IMD",
     name: "IMD"
@@ -61,11 +46,6 @@ const clientLogos: ClientLogo[] = [
     src: "/lovable-uploads/5420e9c4-0077-4f60-adaa-00c30e134f07.png",
     alt: "AON",
     name: "AON"
-  },
-  {
-    src: "/lovable-uploads/9be45baf-9663-4ad4-8e76-87b57842f59e.png",
-    alt: "Ville de Genève",
-    name: "Ville de Genève"
   },
   {
     src: "/lovable-uploads/ad968bbf-ba53-43a3-b234-bec36b226fb6.png",
@@ -106,6 +86,46 @@ const clientLogos: ClientLogo[] = [
     src: "/lovable-uploads/c7b9a5f4-7cbc-4dc6-98b5-302cbbd5cf99.png",
     alt: "Red Bull",
     name: "Red Bull"
+  },
+  {
+    src: "/lovable-uploads/5216f186-5040-4785-a39c-3002e161fff9.png",
+    alt: "BVLGARI",
+    name: "BVLGARI"
+  },
+  {
+    src: "/lovable-uploads/846ce8c0-7b16-406b-8c3d-9a57d8b0024e.png",
+    alt: "JTI",
+    name: "JTI"
+  },
+  {
+    src: "/lovable-uploads/ed7aaa5c-447c-4550-b495-748b96ac5e0d.png",
+    alt: "Logitech",
+    name: "Logitech"
+  },
+  {
+    src: "/lovable-uploads/62e4e618-77b9-438f-bb87-1a72ec539e0a.png",
+    alt: "Paléo",
+    name: "Paléo"
+  },
+  {
+    src: "/lovable-uploads/81d58fdd-3806-47ea-9596-29fa47408c81.png",
+    alt: "UNIL HEC Lausanne",
+    name: "UNIL HEC Lausanne"
+  },
+  {
+    src: "/lovable-uploads/b9878d38-8f77-46b5-bfbc-4451a427e32d.png",
+    alt: "Uber",
+    name: "Uber"
+  },
+  {
+    src: "/lovable-uploads/d00c663c-8f4b-43a3-b9de-255a5cbdebd6.png",
+    alt: "AXA",
+    name: "AXA"
+  },
+  {
+    src: "/lovable-uploads/ad31ee0a-3bd3-49d0-a0c8-79693e624f1d.png",
+    alt: "Pictet",
+    name: "Pictet"
   }
 ];
 
@@ -116,7 +136,7 @@ export const ClientLogosCarousel = () => {
   return (
     <div className="relative overflow-hidden">
       <div 
-        className="flex animate-[scroll_20s_linear_infinite]"
+        className="flex animate-[scroll_40s_linear_infinite]"
         style={{
           width: `${extendedLogos.length * (100/6)}%`
         }}
