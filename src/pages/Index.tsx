@@ -15,6 +15,7 @@ import { Sparkles, Heart, Building, Calendar, Users, Camera, CheckCircle, ArrowR
 import { toast } from "sonner";
 import { ClientLogosCarousel } from "@/components/ClientLogosCarousel";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import Autoplay from "embla-carousel-autoplay";
 
 // Import images
 import heroPhotobooth from "@/assets/hero-photobooth.jpg";
