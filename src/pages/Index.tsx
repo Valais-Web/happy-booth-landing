@@ -223,34 +223,10 @@ const Index = () => {
           <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/70 to-black/75"></div>
         </div>
 
-        {/* Main Party Image */}
-        <div className="absolute right-8 top-1/2 transform -translate-y-1/2 hidden lg:block">
-          <div className="relative">
-            <img 
-              src="/lovable-uploads/f84fb375-7807-44f3-9cd3-34e6c4074c9a.png" 
-              alt="Des gens qui s'amusent devant un photobooth" 
-              className="w-96 h-auto rounded-2xl shadow-2xl border border-white/20"
-            />
-            <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-black/20 to-transparent"></div>
-            
-            {/* Google Reviews Badge */}
-            <div className="absolute -bottom-6 -left-6 bg-white/95 backdrop-blur-sm rounded-lg p-3 shadow-lg border border-gray-200">
-              <div className="flex items-center space-x-2 mb-1">
-                <img 
-                  src="/lovable-uploads/82416f11-c9f5-4e9a-b407-60bbea2da5a8.png" 
-                  alt="Google Reviews" 
-                  className="h-20 w-auto mx-auto"
-                />
-              </div>
-              <p className="text-sm text-gray-600 whitespace-nowrap text-center">Basé sur 37 avis</p>
-            </div>
-          </div>
-        </div>
-
         {/* Content */}
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl space-y-12">
-            {/* Main Content */}
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left Content */}
             <div className="space-y-8 text-left">
               <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight">
                 Location de Photobooth
@@ -264,7 +240,7 @@ const Index = () => {
               </p>
 
               {/* Benefit Badges */}
-              <div className="flex flex-wrap gap-4 mt-12">
+              <div className="flex flex-wrap gap-4">
                 <div className="bg-white/15 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3 flex items-center space-x-2">
                   <Camera className="w-5 h-5 text-yellow-400" />
                   <span className="text-white font-semibold">Impressions illimitées</span>
@@ -285,6 +261,30 @@ const Index = () => {
                   Demander une offre
                   <ArrowRight className="ml-2 w-6 h-6" />
                 </Button>
+              </div>
+            </div>
+
+            {/* Right Content - Main Party Image */}
+            <div className="relative flex justify-center lg:justify-end">
+              <div className="relative">
+                <img 
+                  src="/lovable-uploads/f84fb375-7807-44f3-9cd3-34e6c4074c9a.png" 
+                  alt="Des gens qui s'amusent devant un photobooth" 
+                  className="w-80 lg:w-96 h-auto rounded-2xl shadow-2xl border border-white/20"
+                />
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-black/20 to-transparent"></div>
+                
+                {/* Google Reviews Badge */}
+                <div className="absolute -bottom-6 -left-6 bg-white/95 backdrop-blur-sm rounded-lg p-3 shadow-lg border border-gray-200">
+                  <div className="flex items-center space-x-2 mb-1">
+                    <img 
+                      src="/lovable-uploads/82416f11-c9f5-4e9a-b407-60bbea2da5a8.png" 
+                      alt="Google Reviews" 
+                      className="h-20 w-auto mx-auto"
+                    />
+                  </div>
+                  <p className="text-sm text-gray-600 whitespace-nowrap text-center">Basé sur 37 avis</p>
+                </div>
               </div>
             </div>
           </div>
