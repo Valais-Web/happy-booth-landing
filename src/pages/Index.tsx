@@ -216,75 +216,59 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 md:pt-0">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background Image (Photo Collage) with Overlay */}
         <div className="absolute inset-0">
           <img src={photoCollageBackground} alt="Collage de photos souvenirs" className="w-full h-full object-cover object-center opacity-20" />
           <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/70 to-black/75"></div>
         </div>
 
+        {/* Main Party Image */}
+        <div className="absolute right-8 top-1/2 transform -translate-y-1/2 hidden lg:block">
+          <div className="relative">
+            <img src={photoboothPartyImage} alt="Des gens qui s'amusent devant un photobooth" className="w-96 h-auto rounded-2xl shadow-2xl border border-white/20" />
+            <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-black/20 to-transparent"></div>
+          </div>
+        </div>
+
         {/* Content */}
         <div className="container mx-auto px-4 relative z-10">
-          <div className="grid lg:grid-cols-3 gap-8 lg:gap-12 items-center">
-            {/* Left Content - 2/3 on desktop */}
-            <div className="lg:col-span-2 space-y-6 lg:space-y-8 text-center lg:text-left">
-              <h1 className="text-3xl sm:text-4xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight">
-                <span className="block whitespace-nowrap">Location de photobooth</span>
-                <span className="block text-accent bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent whitespace-nowrap">
+          <div className="max-w-4xl space-y-12">
+            {/* Main Content */}
+            <div className="space-y-8 text-left">
+              <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight">
+                Location de Photobooth
+                <span className="block text-accent bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
                   en Suisse Romande
                 </span>
               </h1>
               
-              <p className="text-lg sm:text-xl lg:text-2xl text-white/95 leading-relaxed font-medium text-center lg:text-left">
+              <p className="text-xl md:text-2xl text-white/95 max-w-2xl leading-relaxed font-medium">
                 Transformez vos événements en souvenirs inoubliables avec nos photomatons dernière génération
               </p>
 
-              {/* Benefit Badges - all on same line on desktop */}
-              <div className="flex flex-col sm:flex-row sm:flex-wrap lg:flex-nowrap gap-3 sm:gap-4 justify-center lg:justify-start">
-                <div className="bg-white/15 backdrop-blur-sm border border-white/20 rounded-full px-4 lg:px-6 py-3 flex items-center space-x-2 justify-center">
-                  <Camera className="w-5 h-5 text-yellow-400 flex-shrink-0" />
-                  <span className="text-white font-semibold text-sm lg:text-base">Impressions illimitées</span>
+              {/* Benefit Badges */}
+              <div className="flex flex-wrap gap-4 mt-12">
+                <div className="bg-white/15 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3 flex items-center space-x-2">
+                  <Camera className="w-5 h-5 text-yellow-400" />
+                  <span className="text-white font-semibold">Impressions illimitées</span>
                 </div>
-                <div className="bg-white/15 backdrop-blur-sm border border-white/20 rounded-full px-4 lg:px-6 py-3 flex items-center space-x-2 justify-center">
-                  <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                  <span className="text-white font-semibold text-sm lg:text-base">Service clé en main</span>
+                <div className="bg-white/15 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3 flex items-center space-x-2">
+                  <CheckCircle className="w-5 h-5 text-green-400" />
+                  <span className="text-white font-semibold">Service clé en main</span>
                 </div>
-                <div className="bg-white/15 backdrop-blur-sm border border-white/20 rounded-full px-4 lg:px-6 py-3 flex items-center space-x-2 justify-center">
-                  <Sparkles className="w-5 h-5 text-purple-400 flex-shrink-0" />
-                  <span className="text-white font-semibold text-sm lg:text-base">100% personnalisable</span>
+                <div className="bg-white/15 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3 flex items-center space-x-2">
+                  <Sparkles className="w-5 h-5 text-purple-400" />
+                  <span className="text-white font-semibold">100% personnalisable</span>
                 </div>
               </div>
 
               {/* CTA Button */}
-              <div className="pt-4 lg:pt-8 flex justify-center lg:justify-start">
-                <Button size="lg" className="bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-black font-bold text-lg lg:text-xl px-8 lg:px-12 py-4 lg:py-6 rounded-full shadow-2xl transform hover:scale-105 transition-all duration-300" onClick={() => scrollToSection('contact-form')}>
+              <div className="pt-8">
+                <Button size="lg" className="bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-black font-bold text-xl px-12 py-6 rounded-full shadow-2xl transform hover:scale-105 transition-all duration-300" onClick={() => scrollToSection('contact-form')}>
                   Demander une offre
-                  <ArrowRight className="ml-2 w-5 lg:w-6 h-5 lg:h-6" />
+                  <ArrowRight className="ml-2 w-6 h-6" />
                 </Button>
-              </div>
-            </div>
-
-            {/* Right Content - 1/3 on desktop */}
-            <div className="lg:col-span-1 relative flex justify-center mb-16 lg:mb-0">
-              <div className="relative w-full max-w-sm lg:max-w-none">
-                <img 
-                  src="/lovable-uploads/f84fb375-7807-44f3-9cd3-34e6c4074c9a.png" 
-                  alt="Des gens qui s'amusent devant un photobooth" 
-                  className="w-64 sm:w-72 lg:w-full h-auto rounded-2xl shadow-2xl border border-white/20 mx-auto"
-                />
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-black/20 to-transparent"></div>
-                
-                {/* Google Reviews Badge - centered on mobile, slightly overflowing left on desktop and very large screens */}
-                <div className="absolute -bottom-4 left-1/2 lg:left-auto lg:-bottom-6 lg:-left-8 xl:-left-12 2xl:-left-16 transform -translate-x-1/2 lg:transform-none bg-white/95 backdrop-blur-sm rounded-lg p-3 shadow-lg border border-gray-200">
-                  <div className="flex items-center space-x-2 mb-1">
-                    <img 
-                      src="/lovable-uploads/82416f11-c9f5-4e9a-b407-60bbea2da5a8.png" 
-                      alt="Google Reviews" 
-                      className="h-16 lg:h-20 w-auto mx-auto"
-                    />
-                  </div>
-                  <p className="text-xs lg:text-sm text-gray-600 whitespace-nowrap text-center">Basé sur 37 avis</p>
-                </div>
               </div>
             </div>
           </div>
@@ -343,7 +327,7 @@ const Index = () => {
                 <div className="text-4xl font-bold text-primary">1000+</div>
               </div>
               <h3 className="font-semibold mb-2">Événements réussis</h3>
-              <p className="text-sm text-muted-foreground">Mariages, anniversaires, corporate</p>
+              <p className="text-sm text-muted-foreground">5/5</p>
             </Card>
             
             <Card className="text-center p-6 hover:shadow-lg transition-all duration-300">
