@@ -208,8 +208,8 @@ const Index = () => {
     question: "Comment récupère-t-on les photos numériques ?",
     answer: "Toutes les photos sont disponibles immédiatement dans une galerie en ligne privée accessible à tous vos invités. Vous recevrez également l'ensemble des fichiers haute définition après l'événement."
   }, {
-    question: "Et si internet est faible ?",
-    answer: "Pas de problème ! L'impression fonctionne hors ligne, les envois par e-mail se feront dès que le réseau sera disponible."
+    question: "Et si internet est faible ou le photobooth tombe en panne ?",
+    answer: "Internet faible : Pas de problème ! L'impression fonctionne hors ligne, les envois par e-mail se feront dès que le réseau sera disponible.\n\nPanne (très rare) : Nous avons toujours un matériel de secours prêt et un technicien joignable 24/7. En cas de panne, nous remplaçons l'équipement dans l'heure ou nous vous remboursons intégralement la prestation. Aucun événement n'a jamais été gâché par une panne chez nous."
   }, {
     question: "Mes invités âgés ou les enfants sauront-ils l'utiliser ?",
     answer: "Absolument ! L'interface est ultra-intuitive avec des icônes claires et peut être configurée dans 6 langues. Les enfants dès 5 ans l'utilisent sans problème, et nous pouvons fournir un tabouret pour les plus petits. Option hôte disponible pour accompagner vos invités (45 CHF/heure)."
@@ -1042,11 +1042,11 @@ const Index = () => {
 
           <div className="max-w-3xl mx-auto">
             <Accordion type="single" collapsible className="w-full">
-              {faqItems.map((item, index) => <AccordionItem key={index} value={`item-${index}`}>
-                  <AccordionTrigger className="text-left">
+              {faqItems.map((item, index) => <AccordionItem key={index} value={`item-${index}`} className="border-b border-gray-200">
+                  <AccordionTrigger className="text-left text-lg font-semibold text-gray-900 hover:text-primary py-6">
                     {item.question}
                   </AccordionTrigger>
-                  <AccordionContent>
+                  <AccordionContent className="text-gray-600 leading-relaxed pb-6">
                     {item.answer}
                   </AccordionContent>
                 </AccordionItem>)}
