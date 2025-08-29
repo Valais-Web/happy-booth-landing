@@ -156,7 +156,7 @@ export const ClientLogosCarousel = () => {
   return (
     <div className="relative overflow-hidden">
       <div 
-        className="flex animate-[scroll_30s_linear_infinite]"
+        className="flex animate-[scroll_60s_linear_infinite]"
         style={{
           width: `${extendedLogos.length * (100/6)}%`
         }}
