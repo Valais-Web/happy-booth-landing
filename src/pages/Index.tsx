@@ -493,9 +493,9 @@ const Index = () => {
                       <div>
                         <div className="flex items-center justify-between mb-4">
                           <h3 className="text-3xl font-bold text-primary">{model.name}</h3>
-                          <Badge variant="default" className="text-xl px-4 py-2 bg-gradient-to-r from-yellow-400 to-orange-500">
-                            {model.price}
-                          </Badge>
+                           <Badge variant="default" className="text-xl px-4 py-2 bg-gradient-to-r from-yellow-400 to-orange-500 flex items-center justify-center text-center">
+                             {model.price}
+                           </Badge>
                         </div>
                         
                         <h4 className="text-xl font-semibold mb-4">{model.title}</h4>
