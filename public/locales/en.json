@@ -168,8 +168,8 @@
     "weddingsDesc": "Photo guest book, frames matching the day's theme, reassuring turnkey service.",
     "corporate": "Corporate",
     "corporateDesc": "Team-building, conferences, product launches.",
-    "private_events": "Private Events", 
-    "private_eventsDesc": "Birthdays, graduations, baby showers or any other occasion",
+    "birthdays": "Birthdays", 
+    "birthdaysDesc": "18, 30, 50 years old... Create the event with style.",
     "cta": "Get a Quote"
   },
   "howItWorks": {
