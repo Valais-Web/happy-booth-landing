@@ -369,7 +369,7 @@ const Index = () => {
           {/* Client Logos */}
           <div className="mt-16">
             <div className="text-center mb-8">
-              <h3 className="text-xl font-semibold mb-4">Ils nous font confiance</h3>
+              <h3 className="text-xl font-semibold mb-4">Happy Clients</h3>
               <p className="text-muted-foreground">Voici quelques entreprises qui ont souri pour le Happy Booth</p>
             </div>
             <ClientLogosCarousel />
