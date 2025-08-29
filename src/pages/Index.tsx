@@ -216,7 +216,7 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 md:pt-0">
         {/* Background Image (Photo Collage) with Overlay */}
         <div className="absolute inset-0">
           <img src={photoCollageBackground} alt="Collage de photos souvenirs" className="w-full h-full object-cover object-center opacity-20" />
@@ -225,65 +225,65 @@ const Index = () => {
 
         {/* Content */}
         <div className="container mx-auto px-4 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Left Content */}
-            <div className="space-y-8 text-left">
-              <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight">
-                Location de Photobooth
+            <div className="space-y-6 lg:space-y-8 text-center lg:text-left">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white leading-tight">
+                <span className="block">Location de Photobooth</span>
                 <span className="block text-accent bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
                   en Suisse Romande
                 </span>
               </h1>
               
-              <p className="text-xl md:text-2xl text-white/95 max-w-2xl leading-relaxed font-medium">
+              <p className="text-lg md:text-xl lg:text-2xl text-white/95 leading-relaxed font-medium max-w-2xl mx-auto lg:mx-0">
                 Transformez vos événements en souvenirs inoubliables avec nos photomatons dernière génération
               </p>
 
-              {/* Benefit Badges */}
-              <div className="flex flex-wrap gap-4">
-                <div className="bg-white/15 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3 flex items-center space-x-2">
-                  <Camera className="w-5 h-5 text-yellow-400" />
-                  <span className="text-white font-semibold">Impressions illimitées</span>
+              {/* Benefit Badges - Single row on desktop, stacked on mobile */}
+              <div className="flex flex-col md:flex-row md:flex-wrap lg:flex-nowrap gap-3 lg:gap-4 justify-center lg:justify-start">
+                <div className="bg-white/15 backdrop-blur-sm border border-white/20 rounded-full px-4 lg:px-6 py-3 flex items-center justify-center space-x-2 whitespace-nowrap">
+                  <Camera className="w-4 lg:w-5 h-4 lg:h-5 text-yellow-400 flex-shrink-0" />
+                  <span className="text-white font-semibold text-sm lg:text-base">Impressions illimitées</span>
                 </div>
-                <div className="bg-white/15 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3 flex items-center space-x-2">
-                  <CheckCircle className="w-5 h-5 text-green-400" />
-                  <span className="text-white font-semibold">Service clé en main</span>
+                <div className="bg-white/15 backdrop-blur-sm border border-white/20 rounded-full px-4 lg:px-6 py-3 flex items-center justify-center space-x-2 whitespace-nowrap">
+                  <CheckCircle className="w-4 lg:w-5 h-4 lg:h-5 text-green-400 flex-shrink-0" />
+                  <span className="text-white font-semibold text-sm lg:text-base">Service clé en main</span>
                 </div>
-                <div className="bg-white/15 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3 flex items-center space-x-2">
-                  <Sparkles className="w-5 h-5 text-purple-400" />
-                  <span className="text-white font-semibold">100% personnalisable</span>
+                <div className="bg-white/15 backdrop-blur-sm border border-white/20 rounded-full px-4 lg:px-6 py-3 flex items-center justify-center space-x-2 whitespace-nowrap">
+                  <Sparkles className="w-4 lg:w-5 h-4 lg:h-5 text-purple-400 flex-shrink-0" />
+                  <span className="text-white font-semibold text-sm lg:text-base">100% personnalisable</span>
                 </div>
               </div>
 
               {/* CTA Button */}
-              <div className="pt-8">
-                <Button size="lg" className="bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-black font-bold text-xl px-12 py-6 rounded-full shadow-2xl transform hover:scale-105 transition-all duration-300" onClick={() => scrollToSection('contact-form')}>
+              <div className="pt-4 lg:pt-8">
+                <Button size="lg" className="bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-black font-bold text-lg lg:text-xl px-8 lg:px-12 py-4 lg:py-6 rounded-full shadow-2xl transform hover:scale-105 transition-all duration-300" onClick={() => scrollToSection('contact-form')}>
                   Demander une offre
-                  <ArrowRight className="ml-2 w-6 h-6" />
+                  <ArrowRight className="ml-2 w-5 lg:w-6 h-5 lg:h-6" />
                 </Button>
               </div>
             </div>
 
             {/* Right Content - Main Party Image */}
-            <div className="relative flex justify-center lg:justify-end">
+            <div className="relative flex justify-center lg:justify-end mt-8 lg:mt-0">
               <div className="relative">
                 <img 
                   src="/lovable-uploads/f84fb375-7807-44f3-9cd3-34e6c4074c9a.png" 
                   alt="Des gens qui s'amusent devant un photobooth" 
-                  className="w-80 lg:w-96 h-auto rounded-2xl shadow-2xl border border-white/20"
+                  className="w-64 md:w-80 lg:w-96 h-auto rounded-2xl shadow-2xl border border-white/20 max-w-full"
                 />
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-black/20 to-transparent"></div>
                 
-                {/* Google Reviews Badge */}
-                <div className="absolute -bottom-6 -left-6 bg-white/95 backdrop-blur-sm rounded-lg p-3 shadow-lg border border-gray-200">
+                {/* Google Reviews Badge - Centered on mobile */}
+                <div className="absolute -bottom-4 md:-bottom-6 left-1/2 transform -translate-x-1/2 lg:left-0 lg:transform-none lg:-left-6 bg-white/95 backdrop-blur-sm rounded-lg p-2 lg:p-3 shadow-lg border border-gray-200">
                   <div className="flex items-center space-x-2 mb-1">
                     <img 
                       src="/lovable-uploads/82416f11-c9f5-4e9a-b407-60bbea2da5a8.png" 
                       alt="Google Reviews" 
-                      className="h-20 w-auto mx-auto"
+                      className="h-12 md:h-16 lg:h-20 w-auto mx-auto"
                     />
                   </div>
-                  <p className="text-sm text-gray-600 whitespace-nowrap text-center">Basé sur 37 avis</p>
+                  <p className="text-xs md:text-sm text-gray-600 whitespace-nowrap text-center">Basé sur 37 avis</p>
                 </div>
               </div>
             </div>
