@@ -618,8 +618,8 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 group">
               <div className="aspect-video relative overflow-hidden">
-                <img src={weddingPhotobooth} alt="Mariage avec photobooth" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                <img src="/lovable-uploads/d771b9da-b8b2-4894-b82c-7b7f3039f314.png" alt="Mariage avec photobooth" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/20" />
                 <div className="absolute bottom-4 left-4 text-white">
                   <Heart className="w-8 h-8 mb-2" />
                   <h3 className="text-xl font-bold">Mariages</h3>
@@ -629,7 +629,7 @@ const Index = () => {
                 <p className="text-muted-foreground mb-4">
                   Livre d'or photo, cadres au thème du jour, service clé en main rassurant.
                 </p>
-                <Button variant="outline" className="w-full" onClick={() => scrollToSection('contact-form')}>
+                <Button className="w-full bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-black font-semibold" onClick={() => scrollToSection('contact-form')}>
                   Demander une offre
                 </Button>
               </CardContent>
@@ -637,8 +637,8 @@ const Index = () => {
 
             <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 group">
               <div className="aspect-video relative overflow-hidden">
-                <img src={corporateEvent} alt="Événement d'entreprise" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                <img src="/lovable-uploads/9abc5a59-8f14-4549-9e70-851cd3908594.png" alt="Événement d'entreprise" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/20" />
                 <div className="absolute bottom-4 left-4 text-white">
                   <Building className="w-8 h-8 mb-2" />
                   <h3 className="text-xl font-bold">Entreprises</h3>
@@ -648,7 +648,7 @@ const Index = () => {
                 <p className="text-muted-foreground mb-4">
                   Photos brandées, collecte d'e-mails, 360° pour activations, galerie privée sécurisée.
                 </p>
-                <Button variant="outline" className="w-full" onClick={() => scrollToSection('contact-form')}>
+                <Button className="w-full bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-black font-semibold" onClick={() => scrollToSection('contact-form')}>
                   Demander une offre
                 </Button>
               </CardContent>
@@ -656,8 +656,8 @@ const Index = () => {
 
             <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 group">
               <div className="aspect-video relative overflow-hidden">
-                <img src={birthdayParty} alt="Anniversaire" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                <img src="/lovable-uploads/b365149b-da81-4e81-8ed5-3bc6de0c9867.png" alt="Anniversaire" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/20" />
                 <div className="absolute bottom-4 left-4 text-white">
                   <Calendar className="w-8 h-8 mb-2" />
                   <h3 className="text-xl font-bold">Anniversaires & fêtes privées</h3>
@@ -667,7 +667,7 @@ const Index = () => {
                 <p className="text-muted-foreground mb-4">
                   Simple, fun, budget maîtrisé pour tous vos événements privés.
                 </p>
-                <Button variant="outline" className="w-full" onClick={() => scrollToSection('contact-form')}>
+                <Button className="w-full bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-black font-semibold" onClick={() => scrollToSection('contact-form')}>
                   Demander une offre
                 </Button>
               </CardContent>
