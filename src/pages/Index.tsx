@@ -561,7 +561,7 @@ const Index = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 group">
+            <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 group flex flex-col h-full">
               <div className="aspect-video relative overflow-hidden">
                 <img src="/lovable-uploads/d771b9da-b8b2-4894-b82c-7b7f3039f314.png" alt="Mariage avec photobooth" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/20" />
@@ -570,8 +570,8 @@ const Index = () => {
                   <h3 className="text-xl font-bold">{t('useCases.weddings')}</h3>
                 </div>
               </div>
-              <CardContent className="p-6">
-                <p className="text-muted-foreground mb-4">
+              <CardContent className="p-6 flex flex-col flex-grow">
+                <p className="text-muted-foreground mb-4 flex-grow">
                   {t('useCases.weddingsDesc')}
                 </p>
                 <Button className="w-full bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-black font-semibold" onClick={() => scrollToSection('contact-form')}>
@@ -580,7 +580,7 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 group">
+            <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 group flex flex-col h-full">
               <div className="aspect-video relative overflow-hidden">
                 <img src="/lovable-uploads/9abc5a59-8f14-4549-9e70-851cd3908594.png" alt="Événement d'entreprise" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/20" />
@@ -589,8 +589,8 @@ const Index = () => {
                   <h3 className="text-xl font-bold">{t('useCases.corporate')}</h3>
                 </div>
               </div>
-              <CardContent className="p-6">
-                <p className="text-muted-foreground mb-4">
+              <CardContent className="p-6 flex flex-col flex-grow">
+                <p className="text-muted-foreground mb-4 flex-grow">
                   {t('useCases.corporateDesc')}
                 </p>
                 <Button className="w-full bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-black font-semibold" onClick={() => scrollToSection('contact-form')}>
@@ -599,7 +599,7 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 group">
+            <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 group flex flex-col h-full">
               <div className="aspect-video relative overflow-hidden">
                 <img src="/lovable-uploads/b365149b-da81-4e81-8ed5-3bc6de0c9867.png" alt="Anniversaire" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/20" />
@@ -608,8 +608,8 @@ const Index = () => {
                   <h3 className="text-xl font-bold">{t('useCases.birthdays')}</h3>
                 </div>
               </div>
-              <CardContent className="p-6">
-                <p className="text-muted-foreground mb-4">
+              <CardContent className="p-6 flex flex-col flex-grow">
+                <p className="text-muted-foreground mb-4 flex-grow">
                   {t('useCases.birthdaysDesc')}
                 </p>
                 <Button className="w-full bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-black font-semibold" onClick={() => scrollToSection('contact-form')}>
