@@ -627,7 +627,7 @@ const Index = () => {
               </div>
               <CardContent className="p-6">
                 <p className="text-muted-foreground mb-4">
-                  Brise-glace, livre d'or photo, cadres au thème du jour, service clé en main rassurant.
+                  Livre d'or photo, cadres au thème du jour, service clé en main rassurant.
                 </p>
                 <Button variant="outline" className="w-full" onClick={() => scrollToSection('contact-form')}>
                   Demander une offre
