@@ -267,24 +267,6 @@ const Index = () => {
                 </div>
               </div>
 
-              {/* Google Reviews Badge */}
-              <div className="flex items-center justify-start">
-                <div className="bg-white/95 backdrop-blur-sm rounded-xl px-4 py-3 shadow-lg border border-white/20 flex items-center space-x-3">
-                  <div className="flex items-center space-x-2">
-                    <span className="text-blue-600 font-bold text-lg">Google</span>
-                    <div className="flex items-center space-x-1">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                      ))}
-                    </div>
-                  </div>
-                  <div className="text-sm">
-                    <div className="font-semibold text-gray-900">5.0</div>
-                    <div className="text-gray-600">Basé sur 37 avis</div>
-                  </div>
-                </div>
-              </div>
-
               {/* CTA Button */}
               <div className="pt-8">
                 <Button size="lg" className="bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-black font-bold text-xl px-12 py-6 rounded-full shadow-2xl transform hover:scale-105 transition-all duration-300" onClick={() => scrollToSection('contact-form')}>
