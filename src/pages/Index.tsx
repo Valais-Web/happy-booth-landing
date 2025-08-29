@@ -227,7 +227,7 @@ const Index = () => {
         <div className="absolute right-8 top-1/2 transform -translate-y-1/2 hidden lg:block">
           <div className="relative">
             <img 
-              src={photoboothPartyImage} 
+              src="/lovable-uploads/f84fb375-7807-44f3-9cd3-34e6c4074c9a.png" 
               alt="Des gens qui s'amusent devant un photobooth" 
               className="w-96 h-auto rounded-2xl shadow-2xl border border-white/20"
             />
