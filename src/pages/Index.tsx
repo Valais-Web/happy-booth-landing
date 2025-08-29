@@ -218,7 +218,7 @@ const Index = () => {
     answer: "Un photobooth professionnel offre : qualité studio (éclairage, objectif pro), animations interactives impossibles sur smartphone, impressions instantanées haute qualité, gestion automatique des files d'attente, personnalisation complète, et surtout une vraie animation qui crée l'événement. Le DIY demande quelqu'un dédié toute la soirée."
   }, {
     question: "800-1000 CHF pour quelques heures, n'est-ce pas excessif ?",
-    answer: "Divisé par 100 invités = 8-10 CHF par personne pour un souvenir personnalisé qu'ils garderont. Compare : un photographe coûte 2000-4000 CHF, un DJ 1500 CHF. Notre équipement professionnel coûte plus de 15'000 CHF et nécessite maintenance, transport, personnalisation (2h de préparation graphique), installation (2h), et présence technique."
+    answer: "Divisé par 100 invités = 8-10 CHF par personne pour un souvenir personnalisé qu'ils garderont. Comparons : un photographe coûte 2000-4000 CHF, un DJ 1500 CHF. Notre équipement professionnel coûte plus de 15'000 CHF et nécessite maintenance, transport, personnalisation (2h de préparation graphique), installation (2h), et présence technique."
   }, {
     question: "Et si peu de gens l'utilisent finalement ?",
     answer: "Jamais arrivé en 1000+ événements ! Statistiques moyennes : 80% des invités l'utilisent, 3-5 passages par personne, 300-600 photos par événement de 100 personnes. Le placement stratégique (près du bar/piste) et nos accessoires fun garantissent le succès. Garantie \"satisfait ou remboursé\" si moins de 50 photos prises."
