@@ -559,7 +559,7 @@ const Index = () => {
             <Card className="p-6 text-center hover:shadow-lg transition-all duration-300">
               <MapPin className="w-12 h-12 text-primary mx-auto mb-4" />
               <h3 className="font-semibold mb-3">Local & fiable</h3>
-              <p className="text-muted-foreground">Lausanne, Genève, Vaud & Valais</p>
+              <p className="text-muted-foreground">Partout en Suisse Romande</p>
             </Card>
             
             <Card className="p-6 text-center hover:shadow-lg transition-all duration-300">
