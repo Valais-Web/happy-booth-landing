@@ -14,6 +14,7 @@ import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Sparkles, Heart, Building, Calendar, Users, Camera, CheckCircle, ArrowRight, Star, Award, MapPin, Clock, ChevronLeft, ChevronRight, Play } from "lucide-react";
 import { toast } from "sonner";
 import { ClientLogosCarousel } from "@/components/ClientLogosCarousel";
+import Autoplay from "embla-carousel-autoplay";
 
 // Import images
 import heroPhotobooth from "@/assets/hero-photobooth.jpg";
@@ -345,6 +346,11 @@ const Index = () => {
             <h3 className="text-xl font-semibold text-center mb-8">Nos plus beaux moments</h3>
             <Carousel 
               className="w-full"
+              plugins={[
+                Autoplay({
+                  delay: 2000,
+                })
+              ]}
               opts={{
                 align: "start",
                 loop: true,
