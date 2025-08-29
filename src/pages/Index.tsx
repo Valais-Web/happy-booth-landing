@@ -476,13 +476,13 @@ const Index = () => {
             </TabsList>
 
             {models.map(model => <TabsContent key={model.id} value={model.id}>
-                <Card className="max-w-4xl mx-auto overflow-hidden shadow-2xl">
-                  <div className="grid md:grid-cols-2">
-                    <div className="aspect-square bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center p-8">
-                      <img src={model.image} alt={model.name} className="w-full h-full object-cover rounded-lg shadow-lg" />
+                <Card className="max-w-6xl mx-auto overflow-hidden shadow-2xl">
+                  <div className="grid md:grid-cols-5">
+                    <div className="md:col-span-2 bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center p-4">
+                      <img src={model.image} alt={model.name} className="w-full h-auto object-contain rounded-lg shadow-lg max-h-96" />
                     </div>
                     
-                    <CardContent className="p-8 flex flex-col justify-between">
+                    <CardContent className="md:col-span-3 p-8 flex flex-col justify-between">
                       <div>
                         <div className="flex items-center justify-between mb-4">
                           <h3 className="text-3xl font-bold text-primary">{model.name}</h3>
@@ -494,7 +494,7 @@ const Index = () => {
                         <h4 className="text-xl font-semibold mb-4">{model.title}</h4>
                         <p className="text-muted-foreground mb-6">{model.description}</p>
                         
-                        <div className="space-y-3 mb-6">
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-3 mb-6">
                           {model.features.map((feature, index) => <div key={index} className="flex items-start space-x-2">
                               <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
                               <span className="text-sm">{feature}</span>
@@ -503,7 +503,7 @@ const Index = () => {
 
                         {model.included && <div className="bg-green-50 p-4 rounded-lg mb-6">
                             <h5 className="font-semibold text-green-800 mb-2">Inclus dans le prix :</h5>
-                            <div className="grid grid-cols-1 gap-2">
+                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-2">
                               {model.included.map((item, index) => <div key={index} className="flex items-center space-x-2">
                                   <CheckCircle className="w-4 h-4 text-green-600" />
                                   <span className="text-sm text-green-700">{item}</span>
