@@ -467,10 +467,10 @@ const Index = () => {
 
           <Tabs value={selectedModel} onValueChange={setSelectedModel} className="w-full">
             <TabsList className="grid w-full grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 mb-8 p-1 h-auto gap-1">
-              {models.map(model => <TabsTrigger key={model.id} value={model.id} className="data-[state=active]:bg-primary data-[state=active]:text-white p-2 sm:p-3 lg:p-4 text-xs sm:text-sm font-medium">
-                  <div className="text-center">
+              {models.map(model => <TabsTrigger key={model.id} value={model.id} className="data-[state=active]:bg-primary data-[state=active]:text-white p-2 sm:p-3 lg:p-4 text-xs sm:text-sm font-medium flex items-center justify-center">
+                  <div className="text-center w-full">
                     <div className="font-bold text-xs sm:text-sm">{model.name}</div>
-                    <div className="text-xs opacity-75">{model.price}</div>
+                    <div className="text-xs opacity-75 text-center">{model.price}</div>
                   </div>
                 </TabsTrigger>)}
             </TabsList>
