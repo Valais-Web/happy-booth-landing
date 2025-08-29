@@ -228,9 +228,9 @@ const Index = () => {
           <div className="grid lg:grid-cols-3 gap-8 lg:gap-12 items-center">
             {/* Left Content - 2/3 on desktop */}
             <div className="lg:col-span-2 space-y-6 lg:space-y-8 text-center lg:text-left">
-              <h1 className="text-3xl sm:text-4xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight max-w-lg mx-auto lg:mx-0 lg:max-w-none">
-                <span className="block">Location de photobooth</span>
-                <span className="block text-accent bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
+              <h1 className="text-3xl sm:text-4xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight">
+                <span className="block whitespace-nowrap">Location de photobooth</span>
+                <span className="block text-accent bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent whitespace-nowrap">
                   en Suisse Romande
                 </span>
               </h1>
