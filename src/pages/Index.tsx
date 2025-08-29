@@ -226,8 +226,24 @@ const Index = () => {
         {/* Main Party Image */}
         <div className="absolute right-8 top-1/2 transform -translate-y-1/2 hidden lg:block">
           <div className="relative">
-            <img src={photoboothPartyImage} alt="Des gens qui s'amusent devant un photobooth" className="w-96 h-auto rounded-2xl shadow-2xl border border-white/20" />
+            <img 
+              src={photoboothPartyImage} 
+              alt="Des gens qui s'amusent devant un photobooth" 
+              className="w-96 h-auto rounded-2xl shadow-2xl border border-white/20"
+            />
             <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-black/20 to-transparent"></div>
+            
+            {/* Google Reviews Badge */}
+            <div className="absolute -bottom-6 -left-6 bg-white/95 backdrop-blur-sm rounded-lg p-3 shadow-lg border border-gray-200">
+              <div className="flex items-center space-x-2 mb-1">
+                <img 
+                  src="/lovable-uploads/82416f11-c9f5-4e9a-b407-60bbea2da5a8.png" 
+                  alt="Google Reviews" 
+                  className="h-6 w-auto"
+                />
+              </div>
+              <p className="text-sm text-gray-600 whitespace-nowrap">basé sur 37 avis</p>
+            </div>
           </div>
         </div>
 
@@ -238,7 +254,9 @@ const Index = () => {
             <div className="space-y-8 text-left">
               <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight">
                 Location de Photobooth
-                <span className="block text-accent bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">Basé sur 37 avis</span>
+                <span className="block text-accent bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
+                  en Suisse Romande
+                </span>
               </h1>
               
               <p className="text-xl md:text-2xl text-white/95 max-w-2xl leading-relaxed font-medium">
