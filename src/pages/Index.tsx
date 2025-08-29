@@ -478,8 +478,8 @@ const Index = () => {
             {models.map(model => <TabsContent key={model.id} value={model.id}>
                 <Card className="max-w-6xl mx-auto overflow-hidden shadow-2xl">
                   <div className="grid md:grid-cols-5">
-                    <div className="md:col-span-2 bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center p-4">
-                      <img src={model.image} alt={model.name} className="w-full h-auto object-contain rounded-lg shadow-lg max-h-96" />
+                    <div className="md:col-span-2 bg-gradient-to-br from-primary/10 to-accent/10 overflow-hidden">
+                      <img src={model.image} alt={model.name} className="w-full h-full object-cover" />
                     </div>
                     
                     <CardContent className="md:col-span-3 p-8 flex flex-col justify-between">
