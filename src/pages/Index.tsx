@@ -241,7 +241,7 @@ const Index = () => {
           <nav className="hidden md:flex items-center space-x-6">
             <button onClick={() => scrollToSection('models')} className="nav-link">Nos modèles</button>
             <button onClick={() => scrollToSection('why-us')} className="nav-link">Pourquoi nous</button>
-            <button onClick={() => scrollToSection('use-cases')} className="nav-link">Mariage & Pro</button>
+            <button onClick={() => scrollToSection('use-cases')} className="nav-link">Evenements</button>
             <button onClick={() => scrollToSection('how-it-works')} className="nav-link">Comment ça marche</button>
             <button onClick={() => scrollToSection('faq')} className="nav-link">FAQ</button>
           </nav>
