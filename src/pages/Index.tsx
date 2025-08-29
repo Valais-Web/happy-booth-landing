@@ -24,7 +24,7 @@ import happyBoothLogo from "@/assets/happy-booth-logo.png";
 // Import new images
 const photoCollageBackground = "/lovable-uploads/6107f84d-437b-414d-899e-c282a7bf7ee2.png";
 const photoboothPartyImage = "/lovable-uploads/a394bdcc-7200-44ef-89d9-880e117c95ab.png";
-const newLogo = "/lovable-uploads/e6a60166-30fb-4d5e-b253-76e752b1eb08.png";
+const newLogo = "/lovable-uploads/34b0e686-0ec5-4fb5-872c-39a4aa3d802c.png";
 const Index = () => {
   const [formStep, setFormStep] = useState(1);
   const [formData, setFormData] = useState({
