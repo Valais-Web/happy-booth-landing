@@ -466,10 +466,10 @@ const Index = () => {
           </div>
 
           <Tabs value={selectedModel} onValueChange={setSelectedModel} className="w-full">
-            <TabsList className="grid w-full grid-cols-5 mb-12 p-2 h-auto">
-              {models.map(model => <TabsTrigger key={model.id} value={model.id} className="data-[state=active]:bg-primary data-[state=active]:text-white p-4 text-sm font-medium">
+            <TabsList className="grid w-full grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 mb-8 p-1 h-auto gap-1">
+              {models.map(model => <TabsTrigger key={model.id} value={model.id} className="data-[state=active]:bg-primary data-[state=active]:text-white p-2 sm:p-3 lg:p-4 text-xs sm:text-sm font-medium">
                   <div className="text-center">
-                    <div className="font-bold">{model.name}</div>
+                    <div className="font-bold text-xs sm:text-sm">{model.name}</div>
                     <div className="text-xs opacity-75">{model.price}</div>
                   </div>
                 </TabsTrigger>)}
@@ -477,8 +477,8 @@ const Index = () => {
 
             {models.map(model => <TabsContent key={model.id} value={model.id}>
                 <Card className="max-w-6xl mx-auto overflow-hidden shadow-2xl">
-                  <div className="grid md:grid-cols-5">
-                    <div className="md:col-span-2 bg-gradient-to-br from-primary/10 to-accent/10 overflow-hidden">
+                  <div className="grid lg:grid-cols-5">
+                    <div className="lg:col-span-2 bg-gradient-to-br from-primary/10 to-accent/10 overflow-hidden h-48 sm:h-64 lg:h-auto">
                       <img 
                         src={model.image} 
                         alt={model.name} 
@@ -489,7 +489,7 @@ const Index = () => {
                       />
                     </div>
                     
-                    <CardContent className="md:col-span-3 p-8 flex flex-col justify-between">
+                    <CardContent className="lg:col-span-3 p-4 sm:p-6 lg:p-8 flex flex-col justify-between">
                       <div>
                         <div className="flex items-center justify-between mb-4">
                           <h3 className="text-3xl font-bold text-primary">{model.name}</h3>
