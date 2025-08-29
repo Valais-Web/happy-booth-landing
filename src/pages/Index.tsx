@@ -343,7 +343,7 @@ const Index = () => {
 
           {/* Photo Gallery - Carousel Layout */}
           <div className="max-w-6xl mx-auto">
-            <h3 className="text-xl font-semibold text-center mb-8">Nos plus beaux moments</h3>
+            
             <Carousel 
               className="w-full"
               plugins={[
