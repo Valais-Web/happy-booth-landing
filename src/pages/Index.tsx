@@ -50,35 +50,35 @@ const Index = () => {
   const [currentGalleryIndex, setCurrentGalleryIndex] = useState(0);
   const [isVideoDialogOpen, setIsVideoDialogOpen] = useState(false);
   const galleryImages = [{
-    src: "/lovable-uploads/de88bc30-9aeb-4d9a-a81b-276d197bb678.png",
-    alt: "Deux femmes souriantes tenant des photos de photobooth"
+    src: "/lovable-uploads/4dc5051d-dec2-45c9-8f53-9e243fdbd2a5.png",
+    alt: "Groupe de femmes élégantes s'amusant avec des accessoires photobooth lors d'une soirée glamour"
   }, {
     src: "/lovable-uploads/e36ddf1f-fd75-4dab-a03e-2a815107bbe8.png",
     alt: "Groupe d'invités s'amusant devant un photobooth"
   }, {
-    src: "/lovable-uploads/aacf1ab9-2633-4d7a-9028-1a3576276b0e.png",
-    alt: "Photobooth élégant avec décoration florale blanche"
-  }, {
-    src: "/lovable-uploads/6ee63e4a-d1d6-4e45-ad97-cf0ebf4df059.png",
-    alt: "Famille avec accessoires colorés au photobooth"
-  }, {
     src: "/lovable-uploads/8a60f497-5e43-4f4a-a84e-6de61a53a43d.png",
     alt: "Groupe d'amis célébrant avec champagne et confettis"
-  }, {
-    src: "/lovable-uploads/3d5e3c01-e91e-4dfe-9500-28d0f31596cd.png",
-    alt: "Amis s'amusant avec des sifflets de fête"
-  }, {
-    src: "/lovable-uploads/5ae0f66e-36db-4464-9363-ce2c1c4448ab.png",
-    alt: "Groupe festif avec chapeaux de Noël"
   }, {
     src: "/lovable-uploads/a3047dbb-6b51-423a-9b01-c35e795d02a9.png",
     alt: "Fête avec confettis colorés et champagne"
   }, {
+    src: "/lovable-uploads/5ae0f66e-36db-4464-9363-ce2c1c4448ab.png",
+    alt: "Groupe festif avec chapeaux de Noël"
+  }, {
+    src: "/lovable-uploads/de88bc30-9aeb-4d9a-a81b-276d197bb678.png",
+    alt: "Deux femmes souriantes tenant des photos de photobooth"
+  }, {
+    src: "/lovable-uploads/443dbe34-0895-4b83-82e3-3346546c59d6.png",
+    alt: "Couple posant avec un cadre personnalisé Happy Booth lors d'un événement TEDx"
+  }, {
     src: "/lovable-uploads/590cb129-8f7c-430a-8788-c25932913542.png",
     alt: "Deux amies avec cadre photo doré"
   }, {
-    src: "/lovable-uploads/a1a6b02e-7f1d-4268-bef7-ed0611437cdc.png",
-    alt: "Écran tactile interactif du photobooth"
+    src: "/lovable-uploads/48d8a7d4-1938-4e90-9052-3e214fa89408.png", 
+    alt: "Photos imprimées du photobooth avec un cadre personnalisé pour un événement corporate"
+  }, {
+    src: "/lovable-uploads/4a177c3d-bd93-4d8c-a6f3-fe9434e4a4be.png",
+    alt: "Photobooth LED moderne installé en extérieur avec éclairage professionnel"
   }];
   useEffect(() => {
     // Capture URL parameters
