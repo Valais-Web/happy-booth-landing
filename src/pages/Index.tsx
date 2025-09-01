@@ -84,6 +84,36 @@ const Index = () => {
   }, {
     src: "/lovable-uploads/f6d5733b-59ac-48cf-bebc-0372beec0d05.png",
     alt: "Couple utilisant un photobooth miroir LED avec éclairage vert coloré"
+  }, {
+    src: "/lovable-uploads/c7da75f9-3b3b-4755-bc47-92e9592fc7a1.png",
+    alt: "Deux amies souriantes montrant leurs photos imprimées du photobooth"
+  }, {
+    src: "/lovable-uploads/2dd145c3-1fcc-4e8a-88b7-723a516d0ab9.png",
+    alt: "Groupe d'amies utilisant un photobooth avec décoration argentée lors d'un événement"
+  }, {
+    src: "/lovable-uploads/e633d2a4-96c9-4680-89df-10441ae6271c.png",
+    alt: "Groupe de femmes glamour s'amusant devant un photobooth lors d'une soirée élégante"
+  }, {
+    src: "/lovable-uploads/65254db7-af84-45ff-9e3e-04b394c9a4ca.png",
+    alt: "Photo imprimée du photobooth avec cadre personnalisé pour événement corporatif"
+  }, {
+    src: "/lovable-uploads/fe600cdd-0c6d-4b2a-8da0-2d9c52e346d6.png",
+    alt: "Femme utilisant un photobooth miroir avec effets spéciaux et éclairage coloré"
+  }, {
+    src: "/lovable-uploads/e6c8f3d5-9fd4-4f32-926f-93141334cefb.png",
+    alt: "Photo imprimée du photobooth lors d'un événement TEDx avec branding personnalisé"
+  }, {
+    src: "/lovable-uploads/4f2cb588-fb28-4a67-863d-65b17ce7fc37.png",
+    alt: "Photobooth miroir LED élégant installé lors d'un événement avec décoration florale"
+  }, {
+    src: "/lovable-uploads/b4e96505-76df-4e9a-b601-9de7e37e57c0.png",
+    alt: "Invités s'amusant avec un photobooth miroir interactif lors d'une soirée privée"
+  }, {
+    src: "/lovable-uploads/487a833c-415d-45e4-b63b-917dc7c1e5a8.png",
+    alt: "Photobooth moderne installé en extérieur sous un parasol avec éclairage LED"
+  }, {
+    src: "/lovable-uploads/4874f8c7-d042-479f-be4a-e683f3465b83.png",
+    alt: "Groupe d'amis déguisés s'amusant devant un photobooth lors d'une fête costumée"
   }];
   useEffect(() => {
     // Capture URL parameters
