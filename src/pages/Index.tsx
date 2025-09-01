@@ -171,7 +171,7 @@ const Index = () => {
     price: t('models.rainbowBooth.price'),
     title: t('models.rainbowBooth.title'),
     description: t('models.rainbowBooth.description'),
-    image: '/lovable-uploads/ebd7d9bc-48dd-4de8-9840-b3b8e35ff60e.png',
+    image: '/lovable-uploads/7bbfe067-8199-4ede-8ab0-046d22fc465e.png',
     features: tArray('models.rainbowBooth.features'),
     included: tArray('models.rainbowBooth.included')
   }, {
@@ -189,7 +189,7 @@ const Index = () => {
     price: t('models.retroBooth.price'),
     title: t('models.retroBooth.title'),
     description: t('models.retroBooth.description'),
-    image: '/lovable-uploads/01038a35-68c2-4046-a7c9-d7bd12a8dd7f.png',
+    image: '/lovable-uploads/82b14e13-bb3a-4f24-8bd8-5f0342391319.png',
     features: tArray('models.retroBooth.features'),
     included: tArray('models.retroBooth.included')
   }, {
@@ -198,7 +198,7 @@ const Index = () => {
     price: t('models.phoneBooth.price'),
     title: t('models.phoneBooth.title'),
     description: t('models.phoneBooth.description'),
-    image: '/lovable-uploads/82b14e13-bb3a-4f24-8bd8-5f0342391319.png',
+    image: '/lovable-uploads/01038a35-68c2-4046-a7c9-d7bd12a8dd7f.png',
     features: tArray('models.phoneBooth.features'),
     included: tArray('models.phoneBooth.included')
   }];
