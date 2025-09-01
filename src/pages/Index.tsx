@@ -55,35 +55,65 @@ const Index = () => {
   const [currentGalleryIndex, setCurrentGalleryIndex] = useState(0);
   const [isVideoDialogOpen, setIsVideoDialogOpen] = useState(false);
   const galleryImages = [{
-    src: "/lovable-uploads/4dc5051d-dec2-45c9-8f53-9e243fdbd2a5.png",
-    alt: "Groupe de femmes élégantes s'amusant avec des accessoires photobooth lors d'une soirée glamour"
+    src: "/lovable-uploads/86178317-da56-41e0-b0f0-29d6cbdb7e97.png",
+    alt: "Groupe de femmes élégantes utilisant un photobooth en extérieur avec éclairage LED"
   }, {
-    src: "/lovable-uploads/e36ddf1f-fd75-4dab-a03e-2a815107bbe8.png",
-    alt: "Groupe d'invités s'amusant devant un photobooth"
+    src: "/lovable-uploads/fc36c40b-ffdc-4035-b37a-5fcefb803b06.png",
+    alt: "Trois amies s'amusant devant un photobooth miroir interactif"
   }, {
-    src: "/lovable-uploads/8a60f497-5e43-4f4a-a84e-6de61a53a43d.png",
-    alt: "Groupe d'amis célébrant avec champagne et confettis"
+    src: "/lovable-uploads/04ace80f-35cc-45fc-9ee6-6abbb701fa67.png",
+    alt: "Femme utilisant un photobooth tactile avec éclairage rouge LED"
   }, {
-    src: "/lovable-uploads/a3047dbb-6b51-423a-9b01-c35e795d02a9.png",
-    alt: "Fête avec confettis colorés et champagne"
+    src: "/lovable-uploads/5242a589-be2e-4df7-9969-e2d450b7df31.png",
+    alt: "Deux amies avec lunettes de soleil roses posant pour un photobooth"
   }, {
-    src: "/lovable-uploads/5ae0f66e-36db-4464-9363-ce2c1c4448ab.png",
-    alt: "Groupe festif avec chapeaux de Noël"
+    src: "/lovable-uploads/eb2cf670-4ade-4fb9-a4a3-e642a3e6966e.png",
+    alt: "Groupe d'amies s'amusant avec accessoires photobooth colorés"
   }, {
-    src: "/lovable-uploads/de88bc30-9aeb-4d9a-a81b-276d197bb678.png",
-    alt: "Deux femmes souriantes tenant des photos de photobooth"
+    src: "/lovable-uploads/44dd8e6f-6d7d-4f28-93a9-ae97970c3087.png",
+    alt: "Mur de photos imprimées du photobooth lors d'un événement"
   }, {
-    src: "/lovable-uploads/443dbe34-0895-4b83-82e3-3346546c59d6.png",
-    alt: "Couple posant avec un cadre personnalisé Happy Booth lors d'un événement TEDx"
+    src: "/lovable-uploads/42eadc60-f6f6-462e-9289-07b0649ad377.png",
+    alt: "Couple élégant utilisant un photobooth 360 lors d'un événement formel"
   }, {
-    src: "/lovable-uploads/590cb129-8f7c-430a-8788-c25932913542.png",
-    alt: "Deux amies avec cadre photo doré"
+    src: "/lovable-uploads/3c4a797f-fefc-427b-9c8b-2f4ab5b9d29d.png",
+    alt: "Amis posant devant un photobooth avec cadre personnalisé Mamma Mia"
   }, {
-    src: "/lovable-uploads/48d8a7d4-1938-4e90-9052-3e214fa89408.png",
-    alt: "Photos imprimées du photobooth avec un cadre personnalisé pour un événement corporate"
+    src: "/lovable-uploads/efb782e4-48e6-4981-9ffd-c76d68e64b80.png",
+    alt: "Photobooth moderne blanc dans un environnement moderne avec éclairage rouge"
   }, {
-    src: "/lovable-uploads/4a177c3d-bd93-4d8c-a6f3-fe9434e4a4be.png",
-    alt: "Photobooth LED moderne installé en extérieur avec éclairage professionnel"
+    src: "/lovable-uploads/f6d5733b-59ac-48cf-bebc-0372beec0d05.png",
+    alt: "Couple utilisant un photobooth miroir LED avec éclairage vert coloré"
+  }, {
+    src: "/lovable-uploads/c7da75f9-3b3b-4755-bc47-92e9592fc7a1.png",
+    alt: "Deux amies souriantes montrant leurs photos imprimées du photobooth"
+  }, {
+    src: "/lovable-uploads/2dd145c3-1fcc-4e8a-88b7-723a516d0ab9.png",
+    alt: "Groupe d'amies utilisant un photobooth avec décoration argentée lors d'un événement"
+  }, {
+    src: "/lovable-uploads/e633d2a4-96c9-4680-89df-10441ae6271c.png",
+    alt: "Groupe de femmes glamour s'amusant devant un photobooth lors d'une soirée élégante"
+  }, {
+    src: "/lovable-uploads/65254db7-af84-45ff-9e3e-04b394c9a4ca.png",
+    alt: "Photo imprimée du photobooth avec cadre personnalisé pour événement corporatif"
+  }, {
+    src: "/lovable-uploads/fe600cdd-0c6d-4b2a-8da0-2d9c52e346d6.png",
+    alt: "Femme utilisant un photobooth miroir avec effets spéciaux et éclairage coloré"
+  }, {
+    src: "/lovable-uploads/e6c8f3d5-9fd4-4f32-926f-93141334cefb.png",
+    alt: "Photo imprimée du photobooth lors d'un événement TEDx avec branding personnalisé"
+  }, {
+    src: "/lovable-uploads/4f2cb588-fb28-4a67-863d-65b17ce7fc37.png",
+    alt: "Photobooth miroir LED élégant installé lors d'un événement avec décoration florale"
+  }, {
+    src: "/lovable-uploads/b4e96505-76df-4e9a-b601-9de7e37e57c0.png",
+    alt: "Invités s'amusant avec un photobooth miroir interactif lors d'une soirée privée"
+  }, {
+    src: "/lovable-uploads/487a833c-415d-45e4-b63b-917dc7c1e5a8.png",
+    alt: "Photobooth moderne installé en extérieur sous un parasol avec éclairage LED"
+  }, {
+    src: "/lovable-uploads/4874f8c7-d042-479f-be4a-e683f3465b83.png",
+    alt: "Groupe d'amis déguisés s'amusant devant un photobooth lors d'une fête costumée"
   }];
   useEffect(() => {
     // Capture URL parameters
@@ -171,7 +201,7 @@ const Index = () => {
     price: t('models.rainbowBooth.price'),
     title: t('models.rainbowBooth.title'),
     description: t('models.rainbowBooth.description'),
-    image: '/lovable-uploads/ebd7d9bc-48dd-4de8-9840-b3b8e35ff60e.png',
+    image: '/lovable-uploads/7bbfe067-8199-4ede-8ab0-046d22fc465e.png',
     features: tArray('models.rainbowBooth.features'),
     included: tArray('models.rainbowBooth.included')
   }, {
@@ -189,7 +219,7 @@ const Index = () => {
     price: t('models.retroBooth.price'),
     title: t('models.retroBooth.title'),
     description: t('models.retroBooth.description'),
-    image: '/lovable-uploads/01038a35-68c2-4046-a7c9-d7bd12a8dd7f.png',
+    image: '/lovable-uploads/82b14e13-bb3a-4f24-8bd8-5f0342391319.png',
     features: tArray('models.retroBooth.features'),
     included: tArray('models.retroBooth.included')
   }, {
@@ -198,7 +228,7 @@ const Index = () => {
     price: t('models.phoneBooth.price'),
     title: t('models.phoneBooth.title'),
     description: t('models.phoneBooth.description'),
-    image: '/lovable-uploads/82b14e13-bb3a-4f24-8bd8-5f0342391319.png',
+    image: '/lovable-uploads/01038a35-68c2-4046-a7c9-d7bd12a8dd7f.png',
     features: tArray('models.phoneBooth.features'),
     included: tArray('models.phoneBooth.included')
   }];
@@ -290,7 +320,7 @@ const Index = () => {
             {/* Right Content - 1/3 on desktop */}
             <div className="lg:col-span-1 relative flex justify-center mb-16 lg:mb-0">
               <div className="relative w-full max-w-sm lg:max-w-none">
-                <img src="/lovable-uploads/f84fb375-7807-44f3-9cd3-34e6c4074c9a.png" alt="Des gens qui s'amusent devant un photobooth" className="w-64 sm:w-72 lg:w-full h-auto rounded-2xl shadow-2xl border border-white/20 mx-auto" />
+                <img src="/lovable-uploads/ff5d47ab-254b-4e8b-bd44-ac626bf44c71.png" alt="Des gens qui s'amusent devant un photobooth" className="w-64 sm:w-72 lg:w-full h-auto rounded-2xl shadow-2xl border border-white/20 mx-auto" />
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-black/20 to-transparent"></div>
                 
                 {/* Google Reviews Badge - centered on mobile, slightly overflowing left on desktop and very large screens */}
@@ -564,7 +594,7 @@ const Index = () => {
             <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 group flex flex-col h-full">
               <div className="aspect-video relative overflow-hidden">
                 <img src="/lovable-uploads/d771b9da-b8b2-4894-b82c-7b7f3039f314.png" alt="Mariage avec photobooth" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/20" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/75 to-black/35 backdrop-blur-[1px]" />
                 <div className="absolute bottom-4 left-4 text-white">
                   <Heart className="w-8 h-8 mb-2" />
                   <h3 className="text-xl font-bold">{t('useCases.weddings')}</h3>
@@ -583,7 +613,7 @@ const Index = () => {
             <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 group flex flex-col h-full">
               <div className="aspect-video relative overflow-hidden">
                 <img src="/lovable-uploads/9abc5a59-8f14-4549-9e70-851cd3908594.png" alt="Événement d'entreprise" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/20" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/75 to-black/35 backdrop-blur-[1px]" />
                 <div className="absolute bottom-4 left-4 text-white">
                   <Building className="w-8 h-8 mb-2" />
                   <h3 className="text-xl font-bold">{t('useCases.corporate')}</h3>
@@ -602,7 +632,7 @@ const Index = () => {
             <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 group flex flex-col h-full">
               <div className="aspect-video relative overflow-hidden">
                 <img src="/lovable-uploads/b365149b-da81-4e81-8ed5-3bc6de0c9867.png" alt="Anniversaire" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/20" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/75 to-black/35 backdrop-blur-[1px]" />
                 <div className="absolute bottom-4 left-4 text-white">
                   <Calendar className="w-8 h-8 mb-2" />
                   <h3 className="text-xl font-bold">{t('useCases.birthdays')}</h3>
