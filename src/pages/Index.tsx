@@ -594,7 +594,7 @@ const Index = () => {
             <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 group flex flex-col h-full">
               <div className="aspect-video relative overflow-hidden">
                 <img src="/lovable-uploads/d771b9da-b8b2-4894-b82c-7b7f3039f314.png" alt="Mariage avec photobooth" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/85 to-black/50 backdrop-blur-[2px]" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/75 to-black/35 backdrop-blur-[1px]" />
                 <div className="absolute bottom-4 left-4 text-white">
                   <Heart className="w-8 h-8 mb-2" />
                   <h3 className="text-xl font-bold">{t('useCases.weddings')}</h3>
@@ -613,7 +613,7 @@ const Index = () => {
             <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 group flex flex-col h-full">
               <div className="aspect-video relative overflow-hidden">
                 <img src="/lovable-uploads/9abc5a59-8f14-4549-9e70-851cd3908594.png" alt="Événement d'entreprise" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/85 to-black/50 backdrop-blur-[2px]" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/75 to-black/35 backdrop-blur-[1px]" />
                 <div className="absolute bottom-4 left-4 text-white">
                   <Building className="w-8 h-8 mb-2" />
                   <h3 className="text-xl font-bold">{t('useCases.corporate')}</h3>
@@ -632,7 +632,7 @@ const Index = () => {
             <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 group flex flex-col h-full">
               <div className="aspect-video relative overflow-hidden">
                 <img src="/lovable-uploads/b365149b-da81-4e81-8ed5-3bc6de0c9867.png" alt="Anniversaire" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/85 to-black/50 backdrop-blur-[2px]" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/75 to-black/35 backdrop-blur-[1px]" />
                 <div className="absolute bottom-4 left-4 text-white">
                   <Calendar className="w-8 h-8 mb-2" />
                   <h3 className="text-xl font-bold">{t('useCases.birthdays')}</h3>
