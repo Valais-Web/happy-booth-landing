@@ -290,7 +290,7 @@ const Index = () => {
             {/* Right Content - 1/3 on desktop */}
             <div className="lg:col-span-1 relative flex justify-center mb-16 lg:mb-0">
               <div className="relative w-full max-w-sm lg:max-w-none">
-                <img src="/lovable-uploads/f84fb375-7807-44f3-9cd3-34e6c4074c9a.png" alt="Des gens qui s'amusent devant un photobooth" className="w-64 sm:w-72 lg:w-full h-auto rounded-2xl shadow-2xl border border-white/20 mx-auto" />
+                <img src="/lovable-uploads/ff5d47ab-254b-4e8b-bd44-ac626bf44c71.png" alt="Des gens qui s'amusent devant un photobooth" className="w-64 sm:w-72 lg:w-full h-auto rounded-2xl shadow-2xl border border-white/20 mx-auto" />
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-black/20 to-transparent"></div>
                 
                 {/* Google Reviews Badge - centered on mobile, slightly overflowing left on desktop and very large screens */}
