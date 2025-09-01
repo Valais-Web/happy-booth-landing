@@ -55,35 +55,35 @@ const Index = () => {
   const [currentGalleryIndex, setCurrentGalleryIndex] = useState(0);
   const [isVideoDialogOpen, setIsVideoDialogOpen] = useState(false);
   const galleryImages = [{
-    src: "/lovable-uploads/4dc5051d-dec2-45c9-8f53-9e243fdbd2a5.png",
-    alt: "Groupe de femmes élégantes s'amusant avec des accessoires photobooth lors d'une soirée glamour"
+    src: "/lovable-uploads/86178317-da56-41e0-b0f0-29d6cbdb7e97.png",
+    alt: "Groupe de femmes élégantes utilisant un photobooth en extérieur avec éclairage LED"
   }, {
-    src: "/lovable-uploads/e36ddf1f-fd75-4dab-a03e-2a815107bbe8.png",
-    alt: "Groupe d'invités s'amusant devant un photobooth"
+    src: "/lovable-uploads/fc36c40b-ffdc-4035-b37a-5fcefb803b06.png",
+    alt: "Trois amies s'amusant devant un photobooth miroir interactif"
   }, {
-    src: "/lovable-uploads/8a60f497-5e43-4f4a-a84e-6de61a53a43d.png",
-    alt: "Groupe d'amis célébrant avec champagne et confettis"
+    src: "/lovable-uploads/04ace80f-35cc-45fc-9ee6-6abbb701fa67.png",
+    alt: "Femme utilisant un photobooth tactile avec éclairage rouge LED"
   }, {
-    src: "/lovable-uploads/a3047dbb-6b51-423a-9b01-c35e795d02a9.png",
-    alt: "Fête avec confettis colorés et champagne"
+    src: "/lovable-uploads/5242a589-be2e-4df7-9969-e2d450b7df31.png",
+    alt: "Deux amies avec lunettes de soleil roses posant pour un photobooth"
   }, {
-    src: "/lovable-uploads/5ae0f66e-36db-4464-9363-ce2c1c4448ab.png",
-    alt: "Groupe festif avec chapeaux de Noël"
+    src: "/lovable-uploads/eb2cf670-4ade-4fb9-a4a3-e642a3e6966e.png",
+    alt: "Groupe d'amies s'amusant avec accessoires photobooth colorés"
   }, {
-    src: "/lovable-uploads/de88bc30-9aeb-4d9a-a81b-276d197bb678.png",
-    alt: "Deux femmes souriantes tenant des photos de photobooth"
+    src: "/lovable-uploads/44dd8e6f-6d7d-4f28-93a9-ae97970c3087.png",
+    alt: "Mur de photos imprimées du photobooth lors d'un événement"
   }, {
-    src: "/lovable-uploads/443dbe34-0895-4b83-82e3-3346546c59d6.png",
-    alt: "Couple posant avec un cadre personnalisé Happy Booth lors d'un événement TEDx"
+    src: "/lovable-uploads/42eadc60-f6f6-462e-9289-07b0649ad377.png",
+    alt: "Couple élégant utilisant un photobooth 360 lors d'un événement formel"
   }, {
-    src: "/lovable-uploads/590cb129-8f7c-430a-8788-c25932913542.png",
-    alt: "Deux amies avec cadre photo doré"
+    src: "/lovable-uploads/3c4a797f-fefc-427b-9c8b-2f4ab5b9d29d.png",
+    alt: "Amis posant devant un photobooth avec cadre personnalisé Mamma Mia"
   }, {
-    src: "/lovable-uploads/48d8a7d4-1938-4e90-9052-3e214fa89408.png",
-    alt: "Photos imprimées du photobooth avec un cadre personnalisé pour un événement corporate"
+    src: "/lovable-uploads/efb782e4-48e6-4981-9ffd-c76d68e64b80.png",
+    alt: "Photobooth moderne blanc dans un environnement moderne avec éclairage rouge"
   }, {
-    src: "/lovable-uploads/4a177c3d-bd93-4d8c-a6f3-fe9434e4a4be.png",
-    alt: "Photobooth LED moderne installé en extérieur avec éclairage professionnel"
+    src: "/lovable-uploads/f6d5733b-59ac-48cf-bebc-0372beec0d05.png",
+    alt: "Couple utilisant un photobooth miroir LED avec éclairage vert coloré"
   }];
   useEffect(() => {
     // Capture URL parameters
