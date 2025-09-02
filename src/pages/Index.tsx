@@ -165,7 +165,7 @@ const Index = () => {
     try {
       // Submit to Netlify (must include "form-name" field)
       const netlifyFormData = {
-        "form-name": "quote",
+        "form-name": "contact",
         name: formData.name,
         email: formData.email,
         phone: formData.phone,
