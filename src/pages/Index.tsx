@@ -1229,14 +1229,6 @@ const Index = () => {
         </div>
       </footer>
 
-      {/* Sticky Mobile CTA */}
-      <div className="fixed bottom-0 left-0 right-0 bg-white border-t shadow-lg p-4 md:hidden z-50">
-        <div className="flex space-x-2">
-          <Button className="flex-1 cta-primary" onClick={() => scrollToSection('contact-form')}>
-            {t('contact.submit')}
-          </Button>
-        </div>
-      </div>
     </div>;
 };
 export default Index;
