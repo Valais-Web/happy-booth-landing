@@ -158,11 +158,55 @@ const Index = () => {
       (window as any).dataLayer.push({
         event: 'lead_submit',
         form: 'quote',
-        gclid: formData.gclid
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        date: formData.date,
+        eventType: formData.eventType,
+        city: formData.city,
+        guests: formData.guests,
+        model: formData.model,
+        message: formData.message,
+        gclid: formData.gclid,
+        wbraid: formData.wbraid,
+        gbraid: formData.gbraid,
+        timestamp: new Date().toISOString()
       });
     }
-    toast.success(t('contact.successMessage'));
-    console.log('Form submitted:', formData);
+
+    // Submit to Netlify
+    const form = e.target as HTMLFormElement;
+    const formDataToSubmit = new FormData(form);
+    
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(formDataToSubmit as any).toString()
+    })
+      .then(() => {
+        toast.success(t('contact.successMessage'));
+        // Reset form
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          date: '',
+          eventType: '',
+          city: '',
+          guests: '',
+          model: '',
+          message: '',
+          consent: false,
+          gclid: '',
+          wbraid: '',
+          gbraid: ''
+        });
+        setFormStep(1);
+      })
+      .catch((error) => {
+        console.error('Form submission error:', error);
+        toast.error('Une erreur est survenue. Veuillez réessayer.');
+      });
   };
   const nextStep = () => {
     if (formStep < 3) setFormStep(formStep + 1);
@@ -1023,7 +1067,9 @@ const Index = () => {
             </div>
 
             <Card className="p-4 sm:p-8 shadow-2xl mx-4 sm:mx-0">
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+                <input type="hidden" name="form-name" value="contact" />
+                <input type="hidden" name="bot-field" />
                 {/* Step Indicator */}
                 <div className="flex justify-center mb-8">
                   <div className="flex items-center space-x-4">
@@ -1043,17 +1089,17 @@ const Index = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
                         <Label htmlFor="name">{t('contact.name')} *</Label>
-                        <Input id="name" value={formData.name} onChange={e => handleInputChange('name', e.target.value)} required placeholder={t('contact.namePlaceholder')} />
+                        <Input id="name" name="name" value={formData.name} onChange={e => handleInputChange('name', e.target.value)} required placeholder={t('contact.namePlaceholder')} />
                       </div>
                       <div>
                         <Label htmlFor="email">{t('contact.email')} *</Label>
-                        <Input id="email" type="email" value={formData.email} onChange={e => handleInputChange('email', e.target.value)} required placeholder={t('contact.emailPlaceholder')} />
+                        <Input id="email" name="email" type="email" value={formData.email} onChange={e => handleInputChange('email', e.target.value)} required placeholder={t('contact.emailPlaceholder')} />
                       </div>
                     </div>
 
                     <div>
                       <Label htmlFor="phone">{t('contact.phone')}</Label>
-                      <Input id="phone" value={formData.phone} onChange={e => handleInputChange('phone', e.target.value)} placeholder={t('contact.phonePlaceholder')} />
+                      <Input id="phone" name="phone" value={formData.phone} onChange={e => handleInputChange('phone', e.target.value)} placeholder={t('contact.phonePlaceholder')} />
                     </div>
 
                     <Button type="button" onClick={nextStep} className="w-full cta-primary text-sm sm:text-base px-4 py-3" disabled={!formData.name || !formData.email}>
@@ -1069,11 +1115,11 @@ const Index = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
                         <Label htmlFor="date">{t('contact.date')}</Label>
-                        <Input id="date" type="date" value={formData.date} onChange={e => handleInputChange('date', e.target.value)} />
+                        <Input id="date" name="date" type="date" value={formData.date} onChange={e => handleInputChange('date', e.target.value)} />
                       </div>
                       <div>
                         <Label htmlFor="eventType">{t('contact.eventType')}</Label>
-                        <Select onValueChange={value => handleInputChange('eventType', value)}>
+                        <Select name="eventType" onValueChange={value => handleInputChange('eventType', value)}>
                           <SelectTrigger>
                             <SelectValue placeholder={t('contact.eventTypePlaceholder')} />
                           </SelectTrigger>
@@ -1092,11 +1138,11 @@ const Index = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
                         <Label htmlFor="city">{t('contact.city')}</Label>
-                        <Input id="city" value={formData.city} onChange={e => handleInputChange('city', e.target.value)} placeholder={t('contact.cityPlaceholder')} />
+                        <Input id="city" name="city" value={formData.city} onChange={e => handleInputChange('city', e.target.value)} placeholder={t('contact.cityPlaceholder')} />
                       </div>
                       <div>
                         <Label htmlFor="guests">{t('contact.guests')}</Label>
-                        <Select onValueChange={value => handleInputChange('guests', value)}>
+                        <Select name="guests" onValueChange={value => handleInputChange('guests', value)}>
                           <SelectTrigger>
                             <SelectValue placeholder={t('contact.guestsPlaceholder')} />
                           </SelectTrigger>
@@ -1128,7 +1174,7 @@ const Index = () => {
                     
                     <div>
                       <Label htmlFor="model">{t('contact.modelLabel')}</Label>
-                      <Select value={formData.model} onValueChange={value => handleInputChange('model', value)}>
+                      <Select name="model" value={formData.model} onValueChange={value => handleInputChange('model', value)}>
                         <SelectTrigger>
                           <SelectValue placeholder={t('contact.modelOptions.conseil')} />
                         </SelectTrigger>
@@ -1145,20 +1191,20 @@ const Index = () => {
 
                     <div>
                       <Label htmlFor="message">{t('contact.message')}</Label>
-                      <Textarea id="message" value={formData.message} onChange={e => handleInputChange('message', e.target.value)} placeholder={t('contact.messagePlaceholder')} rows={4} />
+                      <Textarea id="message" name="message" value={formData.message} onChange={e => handleInputChange('message', e.target.value)} placeholder={t('contact.messagePlaceholder')} rows={4} />
                     </div>
 
                     <div className="flex items-start space-x-2">
-                      <Checkbox id="consent" checked={formData.consent} onCheckedChange={checked => handleInputChange('consent', checked as boolean)} className="mt-1" />
+                      <Checkbox id="consent" name="consent" checked={formData.consent} onCheckedChange={checked => handleInputChange('consent', checked as boolean)} className="mt-1" />
                       <Label htmlFor="consent" className="text-sm leading-relaxed">
                         {t('contact.contactConsent')}
                       </Label>
                     </div>
 
                     {/* Hidden fields for tracking */}
-                    <input type="hidden" value={formData.gclid} />
-                    <input type="hidden" value={formData.wbraid} />
-                    <input type="hidden" value={formData.gbraid} />
+                    <input type="hidden" name="gclid" value={formData.gclid} />
+                    <input type="hidden" name="wbraid" value={formData.wbraid} />
+                    <input type="hidden" name="gbraid" value={formData.gbraid} />
 
                     <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
                       <Button type="button" onClick={prevStep} variant="outline" className="flex-1 text-sm sm:text-base px-4 py-3">
@@ -1195,14 +1241,6 @@ const Index = () => {
         </div>
       </footer>
 
-      {/* Sticky Mobile CTA */}
-      <div className="fixed bottom-0 left-0 right-0 bg-white border-t shadow-lg p-4 md:hidden z-50">
-        <div className="flex space-x-2">
-          <Button className="flex-1 cta-primary" onClick={() => scrollToSection('contact-form')}>
-            {t('contact.submit')}
-          </Button>
-        </div>
-      </div>
     </div>;
 };
 export default Index;
