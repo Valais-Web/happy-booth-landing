@@ -146,18 +146,26 @@ const Index = () => {
       [field]: value
     }));
   };
-  const handleSubmit = (e: React.FormEvent) => {
+
+  function encode(data: Record<string, string>) {
+    return Object.keys(data)
+      .map(
+        key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key] ?? "")
+      )
+      .join("&");
+  }
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.consent) {
       toast.error(t('contact.errorConsent'));
       return;
     }
 
-    // Push to dataLayer for tracking
-    if (typeof window !== 'undefined' && (window as any).dataLayer) {
-      (window as any).dataLayer.push({
-        event: 'lead_submit',
-        form: 'quote',
+    try {
+      // Submit to Netlify (must include "form-name" field)
+      const netlifyFormData = {
+        "form-name": "quote",
         name: formData.name,
         email: formData.email,
         phone: formData.phone,
@@ -170,43 +178,60 @@ const Index = () => {
         gclid: formData.gclid,
         wbraid: formData.wbraid,
         gbraid: formData.gbraid,
-        timestamp: new Date().toISOString()
-      });
-    }
+        consent: formData.consent.toString()
+      };
 
-    // Submit to Netlify
-    const form = e.target as HTMLFormElement;
-    const formDataToSubmit = new FormData(form);
-    
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(formDataToSubmit as any).toString()
-    })
-      .then(() => {
-        toast.success(t('contact.successMessage'));
-        // Reset form
-        setFormData({
-          name: '',
-          email: '',
-          phone: '',
-          date: '',
-          eventType: '',
-          city: '',
-          guests: '',
-          model: '',
-          message: '',
-          consent: false,
-          gclid: '',
-          wbraid: '',
-          gbraid: ''
-        });
-        setFormStep(1);
-      })
-      .catch((error) => {
-        console.error('Form submission error:', error);
-        toast.error('Une erreur est survenue. Veuillez réessayer.');
+      await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode(netlifyFormData)
       });
+
+      // Push to dataLayer for tracking
+      if (typeof window !== 'undefined' && (window as any).dataLayer) {
+        (window as any).dataLayer.push({
+          event: 'lead_submit',
+          form: 'quote',
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          date: formData.date,
+          eventType: formData.eventType,
+          city: formData.city,
+          guests: formData.guests,
+          model: formData.model,
+          message: formData.message,
+          gclid: formData.gclid,
+          wbraid: formData.wbraid,
+          gbraid: formData.gbraid,
+          timestamp: new Date().toISOString()
+        });
+      }
+
+      toast.success(t('contact.successMessage'));
+      
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        date: '',
+        eventType: '',
+        city: '',
+        guests: '',
+        model: '',
+        message: '',
+        consent: false,
+        gclid: '',
+        wbraid: '',
+        gbraid: ''
+      });
+      setFormStep(1);
+      
+    } catch (error) {
+      console.error('Form submission error:', error);
+      toast.error('Une erreur est survenue. Veuillez réessayer.');
+    }
   };
   const nextStep = () => {
     if (formStep < 3) setFormStep(formStep + 1);
