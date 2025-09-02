@@ -158,7 +158,19 @@ const Index = () => {
       (window as any).dataLayer.push({
         event: 'lead_submit',
         form: 'quote',
-        gclid: formData.gclid
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        date: formData.date,
+        eventType: formData.eventType,
+        city: formData.city,
+        guests: formData.guests,
+        model: formData.model,
+        message: formData.message,
+        gclid: formData.gclid,
+        wbraid: formData.wbraid,
+        gbraid: formData.gbraid,
+        timestamp: new Date().toISOString()
       });
     }
 
