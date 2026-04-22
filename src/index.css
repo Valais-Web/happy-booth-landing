@@ -119,6 +119,7 @@
     position: relative;
     display: inline-block;
     color: hsl(var(--ink));
+    isolation: isolate;
   }
   .h1-highlight::before {
     content: '';
