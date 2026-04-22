@@ -254,10 +254,10 @@ const Index = () => {
             <h1 className="font-display font-bold text-[clamp(2.75rem,7.5vw,6.5rem)] leading-[0.95] tracking-tight mb-8">
               {language === 'en' ? (
                 <>
-                  <span className="block">Photobooth rental</span>
                   <span className="block">
-                    <span className="h1-highlight">in French</span>
+                    Photobooth <span className="h1-highlight">rental</span>
                   </span>
+                  <span className="block accent-italic">in French-speaking</span>
                   <span className="block accent-italic">Switzerland</span>
                 </>
               ) : (
