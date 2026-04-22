@@ -378,9 +378,9 @@ const Index = () => {
       <section className="py-20 bg-cream">
         <div className="container mx-auto px-5 max-w-[1320px]">
           <div className="text-center max-w-3xl mx-auto mb-14">
-            <span className="eyebrow mb-5">Confiance</span>
+            <span className="eyebrow mb-5">{t('headings.trustEyebrow')}</span>
             <h2 className="font-display font-bold text-[clamp(2.25rem,5vw,4rem)] leading-[1] mb-5">
-              1000+ clients <span className="accent-italic">depuis 2018.</span>
+              {t('headings.trustTitle')} <span className="accent-italic">{t('headings.trustTitleItalic')}</span>
             </h2>
             <p className="text-lg text-ink-soft">{t('socialProof.subtitle')}</p>
           </div>
@@ -534,9 +534,9 @@ const Index = () => {
         <div className="container mx-auto px-5 max-w-[1320px]">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             <div>
-              <span className="eyebrow mb-5">Pourquoi nous</span>
+              <span className="eyebrow mb-5">{t('headings.whyUsEyebrow')}</span>
               <h2 className="font-display font-bold text-[clamp(2.25rem,5vw,4rem)] leading-[1] mb-5">
-                Le service qu'on aurait voulu <span className="accent-italic">trouver ailleurs.</span>
+                {t('headings.whyUsTitle')} <span className="accent-italic">{t('headings.whyUsTitleItalic')}</span>
               </h2>
               <p className="text-lg text-ink-soft accent-italic">{t('whyUs.subtitle')}</p>
             </div>
