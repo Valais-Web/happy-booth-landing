@@ -700,16 +700,6 @@ const Index = () => {
                 ))}
               </div>
 
-              <div className="pt-8 border-t border-ink/20 space-y-4">
-                <div>
-                  <strong className="block text-xs tracking-[0.08em] uppercase opacity-60 mb-1 font-semibold text-ink">{t('footer.phone')}</strong>
-                  <a href="tel:+41792447217" className="text-ink font-semibold border-b-[1.5px] border-ink no-underline">+41 79 244 72 17</a>
-                </div>
-                <div>
-                  <strong className="block text-xs tracking-[0.08em] uppercase opacity-60 mb-1 font-semibold text-ink">{t('footer.email')}</strong>
-                  <a href="mailto:hello@thehappybooth.net" className="text-ink font-semibold border-b-[1.5px] border-ink no-underline">hello@thehappybooth.net</a>
-                </div>
-              </div>
             </div>
 
             <div className="bg-cream rounded-3xl p-7 sm:p-10 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.2)]">
@@ -873,38 +863,28 @@ const Index = () => {
       </section>
 
       {/* FOOTER */}
-      <footer className="bg-ink text-cream/70 py-16">
+      <footer className="bg-ink text-cream/70 py-12">
         <div className="container mx-auto px-5 max-w-[1320px]">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mb-12">
-            <div className="col-span-2">
-              <div className="font-display font-bold text-2xl text-cream mb-4 flex items-center gap-2.5 tracking-tight">
-                <img src={newLogo} alt="Happy Booth" className="h-8 w-auto" />
-              </div>
-              <p className="font-serif italic text-base text-cream/60 max-w-sm leading-relaxed">
-                {t('footer.tagline')}
-              </p>
-            </div>
-            <div>
-              <h4 className="text-xs tracking-[0.1em] uppercase text-cream mb-4 font-semibold">{t('footer.quickLinks')}</h4>
-              <ul className="space-y-2.5 text-sm">
-                <li><button onClick={() => scrollToSection('models')} className="text-cream/65 hover:text-cream transition-colors">{t('nav.models')}</button></li>
-                <li><button onClick={() => scrollToSection('use-cases')} className="text-cream/65 hover:text-cream transition-colors">{t('nav.events')}</button></li>
-                <li><button onClick={() => scrollToSection('how-it-works')} className="text-cream/65 hover:text-cream transition-colors">{t('nav.howItWorks')}</button></li>
-                <li><button onClick={() => scrollToSection('faq')} className="text-cream/65 hover:text-cream transition-colors">{t('nav.faq')}</button></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-xs tracking-[0.1em] uppercase text-cream mb-4 font-semibold">{t('footer.contact')}</h4>
-              <ul className="space-y-2.5 text-sm">
-                <li><a href="tel:+41792447217" className="text-cream/65 hover:text-cream transition-colors">+41 79 244 72 17</a></li>
-                <li><a href="mailto:hello@thehappybooth.net" className="text-cream/65 hover:text-cream transition-colors">hello@thehappybooth.net</a></li>
-                <li className="text-cream/65">{t('footer.addressText')}</li>
-              </ul>
-            </div>
-          </div>
-          <div className="pt-7 border-t border-cream/10 flex flex-wrap justify-between items-center gap-4 text-[13px]">
-            <p className="text-cream/60">{t('footer.copyright')}</p>
+          <div className="flex flex-col items-center text-center gap-5">
+            <img src={newLogo} alt="Happy Booth" className="h-9 w-auto" />
+            <p className="font-serif italic text-base text-cream/70 max-w-md leading-relaxed">
+              {t('footer.tagline')}
+            </p>
             <LanguageSwitcher currentLanguage={language} />
+          </div>
+          <div className="mt-10 pt-6 border-t border-cream/10 flex flex-col sm:flex-row justify-between items-center gap-3 text-[13px] text-cream/60">
+            <p>{t('footer.copyright')}</p>
+            <p>
+              {t('footer.builtBy')}{' '}
+              <a
+                href="https://valaisweb.ch"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-cream/80 hover:text-cream underline underline-offset-2"
+              >
+                Valais Web
+              </a>
+            </p>
           </div>
         </div>
       </footer>
