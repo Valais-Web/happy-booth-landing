@@ -252,12 +252,24 @@ const Index = () => {
             </a>
 
             <h1 className="font-display font-bold text-[clamp(2.75rem,7.5vw,6.5rem)] leading-[0.95] tracking-tight mb-8">
-              <span className="block">{t('headings.heroLine1')}</span>
-              <span className="block">
-                <span className="h1-highlight">{t('headings.heroHighlight')}</span>{' '}
-                <span className="accent-italic">{t('headings.heroLine2Italic')}</span>
-              </span>
-              <span className="block accent-italic">{t('headings.heroLine3Italic')}</span>
+              {language === 'en' ? (
+                <>
+                  <span className="block">Photobooth rental</span>
+                  <span className="block">
+                    <span className="h1-highlight">in French</span>
+                  </span>
+                  <span className="block accent-italic">Switzerland</span>
+                </>
+              ) : (
+                <>
+                  <span className="block">Location de</span>
+                  <span className="block">
+                    <span className="h1-highlight">photobooth</span>{' '}
+                    <span className="accent-italic">en</span>
+                  </span>
+                  <span className="block accent-italic">Suisse Romande</span>
+                </>
+              )}
             </h1>
 
             <p className="text-lg md:text-xl text-ink-soft max-w-2xl mx-auto mb-10 leading-relaxed">
@@ -325,9 +337,9 @@ const Index = () => {
       <section className="py-24 bg-cream">
         <div className="container mx-auto px-5 max-w-[1320px]">
           <div className="text-center max-w-3xl mx-auto mb-14">
-            <span className="eyebrow mb-5">{t('headings.galleryEyebrow')}</span>
+            <span className="eyebrow mb-5">Galerie</span>
             <h2 className="font-display font-bold text-[clamp(2.25rem,5vw,4rem)] leading-[1] mb-5">
-              {t('headings.galleryTitle')} <span className="accent-italic">{t('headings.galleryTitleItalic')}</span>
+              Nos photobooths <span className="accent-italic">en action.</span>
             </h2>
             <p className="text-lg text-ink-soft">{t('gallery.subtitle')}</p>
 
@@ -366,9 +378,9 @@ const Index = () => {
       <section className="py-20 bg-cream">
         <div className="container mx-auto px-5 max-w-[1320px]">
           <div className="text-center max-w-3xl mx-auto mb-14">
-            <span className="eyebrow mb-5">{t('headings.trustEyebrow')}</span>
+            <span className="eyebrow mb-5">Confiance</span>
             <h2 className="font-display font-bold text-[clamp(2.25rem,5vw,4rem)] leading-[1] mb-5">
-              {t('headings.trustTitle')} <span className="accent-italic">{t('headings.trustTitleItalic')}</span>
+              1000+ clients <span className="accent-italic">depuis 2018.</span>
             </h2>
             <p className="text-lg text-ink-soft">{t('socialProof.subtitle')}</p>
           </div>
@@ -378,7 +390,7 @@ const Index = () => {
               { Icon: Star, value: '5/5', title: t('socialProof.rating'), desc: t('socialProof.ratingDesc'), bg: 'bg-yellow-soft' },
               { Icon: Heart, value: '1000+', title: t('socialProof.events'), desc: t('socialProof.eventsDesc'), bg: 'bg-pink-soft' },
               { Icon: MapPin, value: '100%', title: t('socialProof.coverage'), desc: t('socialProof.coverageDesc'), bg: 'bg-blue-soft' },
-              { Icon: Award, value: t('headings.experienceYears'), title: t('socialProof.experience'), desc: t('socialProof.experienceDesc'), bg: 'bg-mint' },
+              { Icon: Award, value: '+8 ans', title: t('socialProof.experience'), desc: t('socialProof.experienceDesc'), bg: 'bg-mint' },
             ].map((s, i) => (
               <div key={i} className="bg-white border border-ink/10 rounded-3xl p-7 text-center hover:-translate-y-1 transition-transform">
                 <div className={`w-14 h-14 ${s.bg} rounded-2xl mx-auto mb-4 flex items-center justify-center`}>
@@ -397,9 +409,9 @@ const Index = () => {
       <section id="use-cases" className="py-24 bg-cream">
         <div className="container mx-auto px-5 max-w-[1320px]">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="eyebrow mb-5">{t('headings.useCasesEyebrow')}</span>
+            <span className="eyebrow mb-5">Pour tous vos événements</span>
             <h2 className="font-display font-bold text-[clamp(2.25rem,5vw,4rem)] leading-[1] mb-5">
-              {t('headings.useCasesTitle')} <span className="accent-italic">{t('headings.useCasesTitleItalic')}</span>
+              Un photomaton. <span className="accent-italic">Mille occasions.</span>
             </h2>
             <p className="text-lg text-ink-soft">{t('useCases.subtitle')}</p>
           </div>
@@ -431,10 +443,10 @@ const Index = () => {
           <div className="text-center max-w-3xl mx-auto mb-14">
             <span className="eyebrow mb-5" style={{ color: 'hsl(var(--yellow))' }}>
               <style>{`#models .eyebrow::before{background:hsl(var(--yellow))}`}</style>
-              {t('headings.modelsEyebrow')}
+              Nos photomatons
             </span>
             <h2 className="font-display font-bold text-[clamp(2.25rem,5vw,4rem)] leading-[1] text-cream mb-5">
-              {t('headings.modelsTitle')} <span className="accent-italic">{t('headings.modelsTitleItalic')}</span>
+              Six booths, <span className="accent-italic">six ambiances.</span>
             </h2>
             <p className="text-lg text-cream/70">{t('models.subtitle')}</p>
           </div>
@@ -522,9 +534,9 @@ const Index = () => {
         <div className="container mx-auto px-5 max-w-[1320px]">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             <div>
-              <span className="eyebrow mb-5">{t('headings.whyEyebrow')}</span>
+              <span className="eyebrow mb-5">Pourquoi nous</span>
               <h2 className="font-display font-bold text-[clamp(2.25rem,5vw,4rem)] leading-[1] mb-5">
-                {t('headings.whyTitle')} <span className="accent-italic">{t('headings.whyTitleItalic')}</span>
+                Le service qu'on aurait voulu <span className="accent-italic">trouver ailleurs.</span>
               </h2>
               <p className="text-lg text-ink-soft accent-italic">{t('whyUs.subtitle')}</p>
             </div>
@@ -547,9 +559,9 @@ const Index = () => {
       <section id="how-it-works" className="py-24 bg-cream-warm">
         <div className="container mx-auto px-5 max-w-[1320px]">
           <div className="text-center max-w-3xl mx-auto mb-14">
-            <span className="eyebrow mb-5">{t('headings.howEyebrow')}</span>
+            <span className="eyebrow mb-5">Comment ça marche</span>
             <h2 className="font-display font-bold text-[clamp(2.25rem,5vw,4rem)] leading-[1] mb-5">
-              {t('headings.howTitle')} <span className="accent-italic">{t('headings.howTitleItalic')}</span>
+              Quatre étapes, <span className="accent-italic">zéro stress.</span>
             </h2>
             <p className="text-lg text-ink-soft">{t('howItWorks.subtitle')}</p>
           </div>
@@ -569,9 +581,9 @@ const Index = () => {
       <section id="testimonials" className="py-24 bg-cream overflow-hidden">
         <div className="container mx-auto px-5 max-w-[1320px]">
           <div className="text-center max-w-3xl mx-auto mb-14">
-            <span className="eyebrow mb-5">{t('headings.testimonialsEyebrow')}</span>
+            <span className="eyebrow mb-5">Clients heureux</span>
             <h2 className="font-display font-bold text-[clamp(2.25rem,5vw,4rem)] leading-[1] mb-5">
-              {t('headings.testimonialsTitle')} <span className="accent-italic">{t('headings.testimonialsTitleItalic')}</span>
+              Ils en parlent <span className="accent-italic">encore.</span>
             </h2>
             <p className="text-lg text-ink-soft">{t('testimonials.subtitle')}</p>
           </div>
@@ -610,9 +622,9 @@ const Index = () => {
           <div className="bg-white rounded-3xl p-8 md:p-12 border border-ink/10 grid md:grid-cols-2 gap-12 items-center relative overflow-hidden">
             <div className="absolute -top-20 -right-20 w-64 h-64 bg-yellow-soft rounded-full z-0" />
             <div className="relative z-10">
-              <span className="eyebrow mb-5">{t('headings.pricingEyebrow')}</span>
+              <span className="eyebrow mb-5">Tarifs all-inclusive</span>
               <h3 className="font-display font-bold text-[clamp(1.75rem,3.2vw,2.5rem)] leading-[1.05] mb-4">
-                {t('headings.pricingTitle1')} <span className="accent-italic">{t('headings.pricingTitleItalic')}</span>{t('headings.pricingTitle2')}
+                Des forfaits <span className="accent-italic">tout compris</span>, sans surprise
               </h3>
               <p className="text-[15px] text-ink-soft/80 mb-5">{t('models.subtitle')}</p>
               <span className="inline-block font-display font-bold text-lg px-4 py-1.5 bg-yellow text-ink rounded-full">
@@ -620,7 +632,13 @@ const Index = () => {
               </span>
             </div>
             <ul className="relative z-10 list-none">
-              {(tArray('headings.pricingItems') as string[]).map((item, i) => (
+              {[
+                'Installation & récupération incluses',
+                'Impressions vraiment illimitées',
+                'Personnalisation graphique complète',
+                'Galerie en ligne après l\'événement',
+                'Support technique réactif',
+              ].map((item, i) => (
                 <li key={i} className="py-2.5 pl-8 text-[15px] text-ink relative border-b border-ink/10 last:border-b-0">
                   <span className="absolute left-0 top-3 w-5 h-5 bg-ink text-cream rounded-full text-[11px] font-bold flex items-center justify-center">✓</span>
                   {item}
@@ -636,9 +654,9 @@ const Index = () => {
         <div className="container mx-auto px-5 max-w-[1320px]">
           <div className="grid lg:grid-cols-[1fr_1.4fr] gap-16 items-start">
             <div>
-              <span className="eyebrow mb-5">{t('headings.faqEyebrow')}</span>
+              <span className="eyebrow mb-5">FAQ</span>
               <h2 className="font-display font-bold text-[clamp(2.25rem,5vw,4rem)] leading-[1] mb-5">
-                {t('headings.faqTitle')} <span className="accent-italic">{t('headings.faqTitleItalic')}</span>
+                Questions <span className="accent-italic">fréquentes.</span>
               </h2>
               <p className="text-lg text-ink-soft">{t('faq.subtitle')}</p>
             </div>
@@ -668,10 +686,10 @@ const Index = () => {
             <div>
               <span className="eyebrow mb-5" style={{ color: 'hsl(var(--ink))' }}>
                 <style>{`#contact-form .eyebrow::before{background:hsl(var(--ink))}`}</style>
-                {t('headings.contactEyebrow')}
+                Devis gratuit
               </span>
               <h2 className="font-display font-bold text-[clamp(2.5rem,5.5vw,4.5rem)] leading-[0.95] tracking-tight text-ink mb-6">
-                {t('headings.contactTitle')} <span className="accent-italic">{t('headings.contactTitleItalic')}</span>
+                On vient à <span className="accent-italic">la fête</span>
               </h2>
               <p className="text-[17px] text-ink/80 mb-8 max-w-md">{t('contact.subtitle')}</p>
 
