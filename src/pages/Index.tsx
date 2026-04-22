@@ -307,11 +307,11 @@ const Index = () => {
           {/* Scattered polaroids */}
           <div className="relative mt-16 md:mt-20 h-[340px] md:h-[440px]">
             {[
-              { src: galleryImages[0].src, cls: 'left-[2%] md:left-[5%] top-10 w-[120px] h-[150px] md:w-[180px] md:h-[220px] -rotate-[8deg] z-[2]', cap: 'mariage' },
+              { src: galleryImages[0].src, cls: 'left-[2%] md:left-[5%] top-10 w-[120px] h-[150px] md:w-[180px] md:h-[220px] -rotate-[8deg] z-[2]', cap: language === 'en' ? 'wedding' : 'mariage' },
               { src: galleryImages[3].src, cls: 'left-[18%] md:left-[22%] top-24 md:top-[100px] w-[130px] h-[160px] md:w-[200px] md:h-[250px] rotate-[4deg] z-[3]', cap: 'fun' },
-              { src: galleryImages[7].src, cls: 'left-[38%] md:left-[42%] top-5 w-[140px] h-[170px] md:w-[210px] md:h-[260px] -rotate-[3deg] z-[4]', cap: 'souvenirs' },
-              { src: galleryImages[10].src, cls: 'right-[18%] md:right-[22%] top-24 md:top-[90px] w-[130px] h-[160px] md:w-[190px] md:h-[240px] rotate-[6deg] z-[3]', cap: 'rires' },
-              { src: galleryImages[12].src, cls: 'right-[2%] md:right-[4%] top-10 md:top-[30px] w-[120px] h-[150px] md:w-[180px] md:h-[230px] -rotate-[5deg] z-[2]', cap: 'magie' },
+              { src: galleryImages[7].src, cls: 'left-[38%] md:left-[42%] top-5 w-[140px] h-[170px] md:w-[210px] md:h-[260px] -rotate-[3deg] z-[4]', cap: language === 'en' ? 'memories' : 'souvenirs' },
+              { src: galleryImages[10].src, cls: 'right-[18%] md:right-[22%] top-24 md:top-[90px] w-[130px] h-[160px] md:w-[190px] md:h-[240px] rotate-[6deg] z-[3]', cap: language === 'en' ? 'laughs' : 'rires' },
+              { src: galleryImages[12].src, cls: 'right-[2%] md:right-[4%] top-10 md:top-[30px] w-[120px] h-[150px] md:w-[180px] md:h-[230px] -rotate-[5deg] z-[2]', cap: language === 'en' ? 'magic' : 'magie' },
             ].map((p, i) => (
               <div key={i} className={`polaroid absolute ${p.cls}`}>
                 <div className="w-full h-full overflow-hidden">
