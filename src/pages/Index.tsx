@@ -252,12 +252,24 @@ const Index = () => {
             </a>
 
             <h1 className="font-display font-bold text-[clamp(2.75rem,7.5vw,6.5rem)] leading-[0.95] tracking-tight mb-8">
-              <span className="block">Location de</span>
-              <span className="block">
-                <span className="h1-highlight">photobooth</span>{' '}
-                <span className="accent-italic">en</span>
-              </span>
-              <span className="block accent-italic">Suisse Romande</span>
+              {language === 'en' ? (
+                <>
+                  <span className="block">Photobooth rental</span>
+                  <span className="block">
+                    <span className="h1-highlight">in French</span>
+                  </span>
+                  <span className="block accent-italic">Switzerland</span>
+                </>
+              ) : (
+                <>
+                  <span className="block">Location de</span>
+                  <span className="block">
+                    <span className="h1-highlight">photobooth</span>{' '}
+                    <span className="accent-italic">en</span>
+                  </span>
+                  <span className="block accent-italic">Suisse Romande</span>
+                </>
+              )}
             </h1>
 
             <p className="text-lg md:text-xl text-ink-soft max-w-2xl mx-auto mb-10 leading-relaxed">
