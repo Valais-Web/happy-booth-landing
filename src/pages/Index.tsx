@@ -378,7 +378,7 @@ const Index = () => {
               { Icon: Star, value: '5/5', title: t('socialProof.rating'), desc: t('socialProof.ratingDesc'), bg: 'bg-yellow-soft' },
               { Icon: Heart, value: '1000+', title: t('socialProof.events'), desc: t('socialProof.eventsDesc'), bg: 'bg-pink-soft' },
               { Icon: MapPin, value: '100%', title: t('socialProof.coverage'), desc: t('socialProof.coverageDesc'), bg: 'bg-blue-soft' },
-              { Icon: Award, value: '+8 ans', title: t('socialProof.experience'), desc: t('socialProof.experienceDesc'), bg: 'bg-mint' },
+              { Icon: Award, value: t('headings.experienceYears'), title: t('socialProof.experience'), desc: t('socialProof.experienceDesc'), bg: 'bg-mint' },
             ].map((s, i) => (
               <div key={i} className="bg-white border border-ink/10 rounded-3xl p-7 text-center hover:-translate-y-1 transition-transform">
                 <div className={`w-14 h-14 ${s.bg} rounded-2xl mx-auto mb-4 flex items-center justify-center`}>
@@ -620,13 +620,7 @@ const Index = () => {
               </span>
             </div>
             <ul className="relative z-10 list-none">
-              {[
-                'Installation & récupération incluses',
-                'Impressions vraiment illimitées',
-                'Personnalisation graphique complète',
-                'Galerie en ligne après l\'événement',
-                'Support technique réactif',
-              ].map((item, i) => (
+              {(tArray('headings.pricingItems') as string[]).map((item, i) => (
                 <li key={i} className="py-2.5 pl-8 text-[15px] text-ink relative border-b border-ink/10 last:border-b-0">
                   <span className="absolute left-0 top-3 w-5 h-5 bg-ink text-cream rounded-full text-[11px] font-bold flex items-center justify-center">✓</span>
                   {item}

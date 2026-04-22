@@ -42,7 +42,15 @@
     "faqTitleItalic": "asked questions.",
     "contactEyebrow": "Free quote",
     "contactTitle": "We're coming",
-    "contactTitleItalic": "to the party"
+    "contactTitleItalic": "to the party",
+    "experienceYears": "8+ yrs",
+    "pricingItems": [
+      "Setup & teardown included",
+      "Truly unlimited prints",
+      "Full graphic customization",
+      "Online gallery after the event",
+      "Responsive technical support"
+    ]
   },
   "hero": {
     "title1": "Photobooth Rental",

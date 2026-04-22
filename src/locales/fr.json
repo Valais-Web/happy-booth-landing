@@ -42,7 +42,15 @@
     "faqTitleItalic": "fréquentes.",
     "contactEyebrow": "Devis gratuit",
     "contactTitle": "On vient à",
-    "contactTitleItalic": "la fête"
+    "contactTitleItalic": "la fête",
+    "experienceYears": "+8 ans",
+    "pricingItems": [
+      "Installation & récupération incluses",
+      "Impressions vraiment illimitées",
+      "Personnalisation graphique complète",
+      "Galerie en ligne après l'événement",
+      "Support technique réactif"
+    ]
   },
   "hero": {
     "title1": "Location de photobooth",
