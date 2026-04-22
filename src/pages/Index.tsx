@@ -16,6 +16,7 @@ import Autoplay from "embla-carousel-autoplay";
 import useTranslation from "@/hooks/useTranslation";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import SEOHead from "@/components/SEOHead";
+import darkLogo from "@/assets/happy-booth-logo-dark.png";
 
 const newLogo = "/lovable-uploads/34b0e686-0ec5-4fb5-872c-39a4aa3d802c.png";
 
@@ -205,7 +206,7 @@ const Index = () => {
       <header className="fixed top-4 left-4 right-4 z-50">
         <nav className="max-w-[1320px] mx-auto bg-cream/85 backdrop-blur-xl border border-ink/10 rounded-full pl-6 pr-3 py-2.5 flex items-center justify-between">
           <a href="#" className="flex items-center gap-2 font-display font-bold text-xl tracking-tight text-ink no-underline">
-            <img src={newLogo} alt="Happy Booth" className="h-8 w-auto" />
+            <img src={darkLogo} alt="Happy Booth" className="h-9 w-auto" />
           </a>
           <div className="hidden md:flex items-center gap-7 text-sm font-medium">
             <button onClick={() => scrollToSection('models')} className="text-ink-soft hover:text-pink transition-colors">{t('nav.models')}</button>
