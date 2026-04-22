@@ -337,9 +337,9 @@ const Index = () => {
       <section className="py-24 bg-cream">
         <div className="container mx-auto px-5 max-w-[1320px]">
           <div className="text-center max-w-3xl mx-auto mb-14">
-            <span className="eyebrow mb-5">Galerie</span>
+            <span className="eyebrow mb-5">{t('headings.galleryEyebrow')}</span>
             <h2 className="font-display font-bold text-[clamp(2.25rem,5vw,4rem)] leading-[1] mb-5">
-              Nos photobooths <span className="accent-italic">en action.</span>
+              {t('headings.galleryTitle')} <span className="accent-italic">{t('headings.galleryTitleItalic')}</span>
             </h2>
             <p className="text-lg text-ink-soft">{t('gallery.subtitle')}</p>
 
@@ -409,9 +409,9 @@ const Index = () => {
       <section id="use-cases" className="py-24 bg-cream">
         <div className="container mx-auto px-5 max-w-[1320px]">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="eyebrow mb-5">Pour tous vos événements</span>
+            <span className="eyebrow mb-5">{t('headings.useCasesEyebrow')}</span>
             <h2 className="font-display font-bold text-[clamp(2.25rem,5vw,4rem)] leading-[1] mb-5">
-              Un photomaton. <span className="accent-italic">Mille occasions.</span>
+              {t('headings.useCasesTitle')} <span className="accent-italic">{t('headings.useCasesTitleItalic')}</span>
             </h2>
             <p className="text-lg text-ink-soft">{t('useCases.subtitle')}</p>
           </div>
@@ -443,10 +443,10 @@ const Index = () => {
           <div className="text-center max-w-3xl mx-auto mb-14">
             <span className="eyebrow mb-5" style={{ color: 'hsl(var(--yellow))' }}>
               <style>{`#models .eyebrow::before{background:hsl(var(--yellow))}`}</style>
-              Nos photomatons
+              {t('headings.modelsEyebrow')}
             </span>
             <h2 className="font-display font-bold text-[clamp(2.25rem,5vw,4rem)] leading-[1] text-cream mb-5">
-              Six booths, <span className="accent-italic">six ambiances.</span>
+              {t('headings.modelsTitle')} <span className="accent-italic">{t('headings.modelsTitleItalic')}</span>
             </h2>
             <p className="text-lg text-cream/70">{t('models.subtitle')}</p>
           </div>
@@ -559,9 +559,9 @@ const Index = () => {
       <section id="how-it-works" className="py-24 bg-cream-warm">
         <div className="container mx-auto px-5 max-w-[1320px]">
           <div className="text-center max-w-3xl mx-auto mb-14">
-            <span className="eyebrow mb-5">Comment ça marche</span>
+            <span className="eyebrow mb-5">{t('headings.howEyebrow')}</span>
             <h2 className="font-display font-bold text-[clamp(2.25rem,5vw,4rem)] leading-[1] mb-5">
-              Quatre étapes, <span className="accent-italic">zéro stress.</span>
+              {t('headings.howTitle')} <span className="accent-italic">{t('headings.howTitleItalic')}</span>
             </h2>
             <p className="text-lg text-ink-soft">{t('howItWorks.subtitle')}</p>
           </div>
@@ -581,9 +581,9 @@ const Index = () => {
       <section id="testimonials" className="py-24 bg-cream overflow-hidden">
         <div className="container mx-auto px-5 max-w-[1320px]">
           <div className="text-center max-w-3xl mx-auto mb-14">
-            <span className="eyebrow mb-5">Clients heureux</span>
+            <span className="eyebrow mb-5">{t('headings.testimonialsEyebrow')}</span>
             <h2 className="font-display font-bold text-[clamp(2.25rem,5vw,4rem)] leading-[1] mb-5">
-              Ils en parlent <span className="accent-italic">encore.</span>
+              {t('headings.testimonialsTitle')} <span className="accent-italic">{t('headings.testimonialsTitleItalic')}</span>
             </h2>
             <p className="text-lg text-ink-soft">{t('testimonials.subtitle')}</p>
           </div>
@@ -622,9 +622,9 @@ const Index = () => {
           <div className="bg-white rounded-3xl p-8 md:p-12 border border-ink/10 grid md:grid-cols-2 gap-12 items-center relative overflow-hidden">
             <div className="absolute -top-20 -right-20 w-64 h-64 bg-yellow-soft rounded-full z-0" />
             <div className="relative z-10">
-              <span className="eyebrow mb-5">Tarifs all-inclusive</span>
+              <span className="eyebrow mb-5">{t('headings.pricingEyebrow')}</span>
               <h3 className="font-display font-bold text-[clamp(1.75rem,3.2vw,2.5rem)] leading-[1.05] mb-4">
-                Des forfaits <span className="accent-italic">tout compris</span>, sans surprise
+                {t('headings.pricingTitle')} <span className="accent-italic">{t('headings.pricingTitleItalic')}</span>
               </h3>
               <p className="text-[15px] text-ink-soft/80 mb-5">{t('models.subtitle')}</p>
               <span className="inline-block font-display font-bold text-lg px-4 py-1.5 bg-yellow text-ink rounded-full">
@@ -632,13 +632,7 @@ const Index = () => {
               </span>
             </div>
             <ul className="relative z-10 list-none">
-              {[
-                'Installation & récupération incluses',
-                'Impressions vraiment illimitées',
-                'Personnalisation graphique complète',
-                'Galerie en ligne après l\'événement',
-                'Support technique réactif',
-              ].map((item, i) => (
+              {tArray('headings.pricingItems').map((item: string, i: number) => (
                 <li key={i} className="py-2.5 pl-8 text-[15px] text-ink relative border-b border-ink/10 last:border-b-0">
                   <span className="absolute left-0 top-3 w-5 h-5 bg-ink text-cream rounded-full text-[11px] font-bold flex items-center justify-center">✓</span>
                   {item}
@@ -654,9 +648,9 @@ const Index = () => {
         <div className="container mx-auto px-5 max-w-[1320px]">
           <div className="grid lg:grid-cols-[1fr_1.4fr] gap-16 items-start">
             <div>
-              <span className="eyebrow mb-5">FAQ</span>
+              <span className="eyebrow mb-5">{t('headings.faqEyebrow')}</span>
               <h2 className="font-display font-bold text-[clamp(2.25rem,5vw,4rem)] leading-[1] mb-5">
-                Questions <span className="accent-italic">fréquentes.</span>
+                {t('headings.faqTitle')} <span className="accent-italic">{t('headings.faqTitleItalic')}</span>
               </h2>
               <p className="text-lg text-ink-soft">{t('faq.subtitle')}</p>
             </div>
@@ -686,10 +680,10 @@ const Index = () => {
             <div>
               <span className="eyebrow mb-5" style={{ color: 'hsl(var(--ink))' }}>
                 <style>{`#contact-form .eyebrow::before{background:hsl(var(--ink))}`}</style>
-                Devis gratuit
+                {t('headings.contactEyebrow')}
               </span>
               <h2 className="font-display font-bold text-[clamp(2.5rem,5.5vw,4.5rem)] leading-[0.95] tracking-tight text-ink mb-6">
-                On vient à <span className="accent-italic">la fête</span>
+                {t('headings.contactTitle')} <span className="accent-italic">{t('headings.contactTitleItalic')}</span>
               </h2>
               <p className="text-[17px] text-ink/80 mb-8 max-w-md">{t('contact.subtitle')}</p>
 
@@ -706,16 +700,6 @@ const Index = () => {
                 ))}
               </div>
 
-              <div className="pt-8 border-t border-ink/20 space-y-4">
-                <div>
-                  <strong className="block text-xs tracking-[0.08em] uppercase opacity-60 mb-1 font-semibold text-ink">{t('footer.phone')}</strong>
-                  <a href="tel:+41792447217" className="text-ink font-semibold border-b-[1.5px] border-ink no-underline">+41 79 244 72 17</a>
-                </div>
-                <div>
-                  <strong className="block text-xs tracking-[0.08em] uppercase opacity-60 mb-1 font-semibold text-ink">{t('footer.email')}</strong>
-                  <a href="mailto:hello@thehappybooth.net" className="text-ink font-semibold border-b-[1.5px] border-ink no-underline">hello@thehappybooth.net</a>
-                </div>
-              </div>
             </div>
 
             <div className="bg-cream rounded-3xl p-7 sm:p-10 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.2)]">
@@ -879,38 +863,28 @@ const Index = () => {
       </section>
 
       {/* FOOTER */}
-      <footer className="bg-ink text-cream/70 py-16">
+      <footer className="bg-ink text-cream/70 py-12">
         <div className="container mx-auto px-5 max-w-[1320px]">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mb-12">
-            <div className="col-span-2">
-              <div className="font-display font-bold text-2xl text-cream mb-4 flex items-center gap-2.5 tracking-tight">
-                <img src={newLogo} alt="Happy Booth" className="h-8 w-auto" />
-              </div>
-              <p className="font-serif italic text-base text-cream/60 max-w-sm leading-relaxed">
-                {t('footer.tagline')}
-              </p>
-            </div>
-            <div>
-              <h4 className="text-xs tracking-[0.1em] uppercase text-cream mb-4 font-semibold">{t('footer.quickLinks')}</h4>
-              <ul className="space-y-2.5 text-sm">
-                <li><button onClick={() => scrollToSection('models')} className="text-cream/65 hover:text-cream transition-colors">{t('nav.models')}</button></li>
-                <li><button onClick={() => scrollToSection('use-cases')} className="text-cream/65 hover:text-cream transition-colors">{t('nav.events')}</button></li>
-                <li><button onClick={() => scrollToSection('how-it-works')} className="text-cream/65 hover:text-cream transition-colors">{t('nav.howItWorks')}</button></li>
-                <li><button onClick={() => scrollToSection('faq')} className="text-cream/65 hover:text-cream transition-colors">{t('nav.faq')}</button></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-xs tracking-[0.1em] uppercase text-cream mb-4 font-semibold">{t('footer.contact')}</h4>
-              <ul className="space-y-2.5 text-sm">
-                <li><a href="tel:+41792447217" className="text-cream/65 hover:text-cream transition-colors">+41 79 244 72 17</a></li>
-                <li><a href="mailto:hello@thehappybooth.net" className="text-cream/65 hover:text-cream transition-colors">hello@thehappybooth.net</a></li>
-                <li className="text-cream/65">{t('footer.addressText')}</li>
-              </ul>
-            </div>
-          </div>
-          <div className="pt-7 border-t border-cream/10 flex flex-wrap justify-between items-center gap-4 text-[13px]">
-            <p className="text-cream/60">{t('footer.copyright')}</p>
+          <div className="flex flex-col items-center text-center gap-5">
+            <img src={newLogo} alt="Happy Booth" className="h-9 w-auto" />
+            <p className="font-serif italic text-base text-cream/70 max-w-md leading-relaxed">
+              {t('footer.tagline')}
+            </p>
             <LanguageSwitcher currentLanguage={language} />
+          </div>
+          <div className="mt-10 pt-6 border-t border-cream/10 flex flex-col sm:flex-row justify-between items-center gap-3 text-[13px] text-cream/60">
+            <p>{t('footer.copyright')}</p>
+            <p>
+              {t('footer.builtBy')}{' '}
+              <a
+                href="https://valaisweb.ch"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-cream/80 hover:text-cream underline underline-offset-2"
+              >
+                Valais Web
+              </a>
+            </p>
           </div>
         </div>
       </footer>
