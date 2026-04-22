@@ -327,7 +327,7 @@ const Index = () => {
           <div className="text-center max-w-3xl mx-auto mb-14">
             <span className="eyebrow mb-5">Galerie</span>
             <h2 className="font-display font-bold text-[clamp(2.25rem,5vw,4rem)] leading-[1] mb-5">
-              {t('gallery.title')}
+              Nos photobooths <span className="accent-italic">en action.</span>
             </h2>
             <p className="text-lg text-ink-soft">{t('gallery.subtitle')}</p>
 
@@ -368,7 +368,7 @@ const Index = () => {
           <div className="text-center max-w-3xl mx-auto mb-14">
             <span className="eyebrow mb-5">Confiance</span>
             <h2 className="font-display font-bold text-[clamp(2.25rem,5vw,4rem)] leading-[1] mb-5">
-              {t('socialProof.title')}
+              1000+ clients <span className="accent-italic">depuis 2018.</span>
             </h2>
             <p className="text-lg text-ink-soft">{t('socialProof.subtitle')}</p>
           </div>
@@ -397,9 +397,9 @@ const Index = () => {
       <section id="use-cases" className="py-24 bg-cream">
         <div className="container mx-auto px-5 max-w-[1320px]">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="eyebrow mb-5">Quand louer</span>
+            <span className="eyebrow mb-5">Pour tous vos événements</span>
             <h2 className="font-display font-bold text-[clamp(2.25rem,5vw,4rem)] leading-[1] mb-5">
-              {t('useCases.title')}
+              Un photomaton. <span className="accent-italic">Mille occasions.</span>
             </h2>
             <p className="text-lg text-ink-soft">{t('useCases.subtitle')}</p>
           </div>
@@ -431,10 +431,10 @@ const Index = () => {
           <div className="text-center max-w-3xl mx-auto mb-14">
             <span className="eyebrow mb-5" style={{ color: 'hsl(var(--yellow))' }}>
               <style>{`#models .eyebrow::before{background:hsl(var(--yellow))}`}</style>
-              Nos modèles
+              Nos photomatons
             </span>
             <h2 className="font-display font-bold text-[clamp(2.25rem,5vw,4rem)] leading-[1] text-cream mb-5">
-              {t('models.title')}
+              Six booths, <span className="accent-italic">six ambiances.</span>
             </h2>
             <p className="text-lg text-cream/70">{t('models.subtitle')}</p>
           </div>
@@ -524,7 +524,7 @@ const Index = () => {
             <div>
               <span className="eyebrow mb-5">Pourquoi nous</span>
               <h2 className="font-display font-bold text-[clamp(2.25rem,5vw,4rem)] leading-[1] mb-5">
-                {t('whyUs.title')}
+                Le service qu'on aurait voulu <span className="accent-italic">trouver ailleurs.</span>
               </h2>
               <p className="text-lg text-ink-soft accent-italic">{t('whyUs.subtitle')}</p>
             </div>
@@ -549,7 +549,7 @@ const Index = () => {
           <div className="text-center max-w-3xl mx-auto mb-14">
             <span className="eyebrow mb-5">Comment ça marche</span>
             <h2 className="font-display font-bold text-[clamp(2.25rem,5vw,4rem)] leading-[1] mb-5">
-              {t('howItWorks.title')}
+              Quatre étapes, <span className="accent-italic">zéro stress.</span>
             </h2>
             <p className="text-lg text-ink-soft">{t('howItWorks.subtitle')}</p>
           </div>
@@ -569,9 +569,9 @@ const Index = () => {
       <section id="testimonials" className="py-24 bg-cream overflow-hidden">
         <div className="container mx-auto px-5 max-w-[1320px]">
           <div className="text-center max-w-3xl mx-auto mb-14">
-            <span className="eyebrow mb-5">Témoignages</span>
+            <span className="eyebrow mb-5">Clients heureux</span>
             <h2 className="font-display font-bold text-[clamp(2.25rem,5vw,4rem)] leading-[1] mb-5">
-              {t('testimonials.title')}
+              Ils en parlent <span className="accent-italic">encore.</span>
             </h2>
             <p className="text-lg text-ink-soft">{t('testimonials.subtitle')}</p>
           </div>
@@ -644,7 +644,7 @@ const Index = () => {
             <div>
               <span className="eyebrow mb-5">FAQ</span>
               <h2 className="font-display font-bold text-[clamp(2.25rem,5vw,4rem)] leading-[1] mb-5">
-                {t('faq.title')}
+                Questions <span className="accent-italic">fréquentes.</span>
               </h2>
               <p className="text-lg text-ink-soft">{t('faq.subtitle')}</p>
             </div>
