@@ -163,13 +163,46 @@
   },
   "useCases": {
     "title": "When to rent a photobooth?",
-    "subtitle": "Perfect for all your events",
+    "subtitle": "Whatever you're planning, we adapt to your theme, your vibe and your goals. Here's how we make every kind of event shine.",
     "weddings": "Weddings",
-    "weddingsDesc": "Photo guest book, frames matching the day's theme, reassuring turnkey service.",
+    "weddingsTag": "Weddings",
+    "weddingsTitle": "The",
+    "weddingsTitleItalic": "common thread",
+    "weddingsTitleEnd": "everyone will talk about",
+    "weddingsDesc": "Your guests don't all know each other yet? The photobooth breaks the ice. Loved ones leave with prints they'll keep forever, and you with hundreds of photos even the photographer wouldn't have caught.",
+    "weddingsFeatures": [
+      "Frames matching your wedding colors",
+      "Unlimited prints all night long",
+      "Online gallery shared with guests",
+      "Props and costumes included"
+    ],
+    "weddingsCta": "Wedding quote",
     "corporate": "Corporate",
-    "corporateDesc": "Team-building, conferences, product launches.",
-    "birthdays": "Private Events", 
-    "birthdaysDesc": "Birthdays, baby shower, graduation, any kind of event.",
+    "corporateTag": "Corporate events",
+    "corporateTitle": "The kind of",
+    "corporateTitleItalic": "brand content",
+    "corporateTitleEnd": "that takes a selfie",
+    "corporateDesc": "Annual party, product launch, trade show, team building. We integrate your logo, your colors, your message. Your team and visitors share spontaneously on LinkedIn and Instagram. Activation, data and visibility in one package.",
+    "corporateFeatures": [
+      "Full customization to your brand",
+      "Opt-in email collection (GDPR)",
+      "HD export for your internal comms",
+      "Dedicated host option (45 CHF/h)"
+    ],
+    "corporateCta": "Corporate quote",
+    "birthdays": "Private Parties",
+    "birthdaysTag": "Private parties",
+    "birthdaysTitle": "The activation that",
+    "birthdaysTitleItalic": "saves",
+    "birthdaysTitleEnd": "any kind of party",
+    "birthdaysDesc": "Birthday, baby shower, graduation, bachelorette, family party. Everyone joins in, from teens to grandparents. You enjoy your party while the booth keeps your guests entertained.",
+    "birthdaysFeatures": [
+      "Setup and teardown handled by us",
+      "Guests get it in 3 seconds",
+      "Unlimited prints, your choice of format",
+      "Online gallery after the event"
+    ],
+    "birthdaysCta": "Private party quote",
     "cta": "Get a Quote"
   },
   "howItWorks": {
