@@ -159,9 +159,39 @@ const Index = () => {
   ];
 
   const useCases = [
-    { tag: 'mariage', title: t('useCases.weddings'), desc: t('useCases.weddingsDesc'), bg: 'bg-pink-soft', emoji: '💍' },
-    { tag: 'corporate', title: t('useCases.corporate'), desc: t('useCases.corporateDesc'), bg: 'bg-blue-soft', emoji: '🎯' },
-    { tag: 'birthday', title: t('useCases.birthdays'), desc: t('useCases.birthdaysDesc'), bg: 'bg-yellow-soft', emoji: '🎂' },
+    {
+      tag: t('useCases.weddingsTag'),
+      titleStart: t('useCases.weddingsTitle'),
+      titleItalic: t('useCases.weddingsTitleItalic'),
+      titleEnd: t('useCases.weddingsTitleEnd'),
+      desc: t('useCases.weddingsDesc'),
+      features: t('useCases.weddingsFeatures') as unknown as string[],
+      cta: t('useCases.weddingsCta'),
+      bg: 'bg-pink-soft',
+      emoji: '💍',
+    },
+    {
+      tag: t('useCases.corporateTag'),
+      titleStart: t('useCases.corporateTitle'),
+      titleItalic: t('useCases.corporateTitleItalic'),
+      titleEnd: t('useCases.corporateTitleEnd'),
+      desc: t('useCases.corporateDesc'),
+      features: t('useCases.corporateFeatures') as unknown as string[],
+      cta: t('useCases.corporateCta'),
+      bg: 'bg-blue-soft',
+      emoji: '🎯',
+    },
+    {
+      tag: t('useCases.birthdaysTag'),
+      titleStart: t('useCases.birthdaysTitle'),
+      titleItalic: t('useCases.birthdaysTitleItalic'),
+      titleEnd: t('useCases.birthdaysTitleEnd'),
+      desc: t('useCases.birthdaysDesc'),
+      features: t('useCases.birthdaysFeatures') as unknown as string[],
+      cta: t('useCases.birthdaysCta'),
+      bg: 'bg-yellow-soft',
+      emoji: '🎂',
+    },
   ];
 
   const whyFeatures = [
