@@ -159,9 +159,39 @@ const Index = () => {
   ];
 
   const useCases = [
-    { tag: 'mariage', title: t('useCases.weddings'), desc: t('useCases.weddingsDesc'), bg: 'bg-pink-soft', emoji: '💍' },
-    { tag: 'corporate', title: t('useCases.corporate'), desc: t('useCases.corporateDesc'), bg: 'bg-blue-soft', emoji: '🎯' },
-    { tag: 'birthday', title: t('useCases.birthdays'), desc: t('useCases.birthdaysDesc'), bg: 'bg-yellow-soft', emoji: '🎂' },
+    {
+      tag: t('useCases.weddingsTag'),
+      titleStart: t('useCases.weddingsTitle'),
+      titleItalic: t('useCases.weddingsTitleItalic'),
+      titleEnd: t('useCases.weddingsTitleEnd'),
+      desc: t('useCases.weddingsDesc'),
+      features: t('useCases.weddingsFeatures') as unknown as string[],
+      cta: t('useCases.weddingsCta'),
+      bg: 'bg-pink-soft',
+      emoji: '💍',
+    },
+    {
+      tag: t('useCases.corporateTag'),
+      titleStart: t('useCases.corporateTitle'),
+      titleItalic: t('useCases.corporateTitleItalic'),
+      titleEnd: t('useCases.corporateTitleEnd'),
+      desc: t('useCases.corporateDesc'),
+      features: t('useCases.corporateFeatures') as unknown as string[],
+      cta: t('useCases.corporateCta'),
+      bg: 'bg-blue-soft',
+      emoji: '🎯',
+    },
+    {
+      tag: t('useCases.birthdaysTag'),
+      titleStart: t('useCases.birthdaysTitle'),
+      titleItalic: t('useCases.birthdaysTitleItalic'),
+      titleEnd: t('useCases.birthdaysTitleEnd'),
+      desc: t('useCases.birthdaysDesc'),
+      features: t('useCases.birthdaysFeatures') as unknown as string[],
+      cta: t('useCases.birthdaysCta'),
+      bg: 'bg-yellow-soft',
+      emoji: '🎂',
+    },
   ];
 
   const whyFeatures = [
@@ -419,17 +449,27 @@ const Index = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {useCases.map((u, i) => (
-              <div key={i} className={`${u.bg} rounded-3xl p-10 relative overflow-hidden min-h-[420px] flex flex-col justify-between hover:-translate-y-1.5 transition-transform`}>
-                <div>
-                  <div className="text-xs tracking-[0.1em] uppercase font-semibold text-ink/60 mb-4">{u.tag}</div>
-                  <h3 className="font-display font-bold text-3xl leading-[1.05] mb-4 tracking-tight">{u.title}</h3>
+              <div key={i} className={`${u.bg} rounded-3xl p-10 relative overflow-hidden flex flex-col hover:-translate-y-1.5 transition-transform`}>
+                <div className="flex-1">
+                  <div className="text-sm tracking-[0.1em] uppercase font-semibold text-ink/60 mb-5">{u.tag}</div>
+                  <h3 className="font-display font-bold text-[1.875rem] sm:text-[2rem] leading-[1.05] mb-5 tracking-tight">
+                    {u.titleStart} <span className="accent-italic">{u.titleItalic}</span> {u.titleEnd}
+                  </h3>
                   <p className="text-[15px] text-ink-soft leading-relaxed mb-6">{u.desc}</p>
+                  <ul className="space-y-2.5 mb-8">
+                    {u.features.map((f, j) => (
+                      <li key={j} className="flex items-start gap-2.5 text-[15px] text-ink">
+                        <span className="text-ink/70 mt-0.5">✓</span>
+                        <span>{f}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
                 <button
                   onClick={() => scrollToSection('contact-form')}
-                  className="self-start text-ink text-sm font-semibold inline-flex items-center gap-1.5 border-b-[1.5px] border-ink pb-0.5 hover:gap-2.5 transition-all"
+                  className="self-start text-ink text-sm font-semibold inline-flex items-center gap-1.5 border-b-[1.5px] border-ink pb-0.5 hover:gap-2.5 transition-all relative z-10"
                 >
-                  {t('useCases.cta')} <ArrowRight className="w-3.5 h-3.5" />
+                  {u.cta} <ArrowRight className="w-3.5 h-3.5" />
                 </button>
                 <span className="absolute -bottom-8 -right-5 text-[140px] opacity-25 leading-none -rotate-[8deg] pointer-events-none">{u.emoji}</span>
               </div>
