@@ -135,6 +135,7 @@ const Index = () => {
     { id: '360', name: t('models.booth360.name'), price: t('models.booth360.price'), title: t('models.booth360.title'), description: t('models.booth360.description'), image: '/lovable-uploads/d2564ea4-aa85-43bf-887a-04fd3d343436.png', features: tArray('models.booth360.features'), included: tArray('models.booth360.included') },
     { id: 'retro', name: t('models.retroBooth.name'), price: t('models.retroBooth.price'), title: t('models.retroBooth.title'), description: t('models.retroBooth.description'), image: '/lovable-uploads/82b14e13-bb3a-4f24-8bd8-5f0342391319.png', features: tArray('models.retroBooth.features'), included: tArray('models.retroBooth.included') },
     { id: 'phone', name: t('models.phoneBooth.name'), price: t('models.phoneBooth.price'), title: t('models.phoneBooth.title'), description: t('models.phoneBooth.description'), image: '/lovable-uploads/01038a35-68c2-4046-a7c9-d7bd12a8dd7f.png', features: tArray('models.phoneBooth.features'), included: tArray('models.phoneBooth.included') },
+    { id: 'icon', name: t('models.iconBooth.name'), price: t('models.iconBooth.price'), title: t('models.iconBooth.title'), description: t('models.iconBooth.description'), image: '/lovable-uploads/icon-booth.jpg', features: tArray('models.iconBooth.features'), note: t('models.iconBooth.note'), included: tArray('models.iconBooth.included') },
   ];
   const faqItems = tArray('faq.items') as Array<{ question: string; answer: string }>;
 
@@ -493,7 +494,7 @@ const Index = () => {
           </div>
 
           <Tabs value={selectedModel} onValueChange={setSelectedModel} className="w-full max-w-6xl mx-auto">
-            <TabsList className="grid w-full grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 mb-8 p-1 h-auto gap-1 bg-white/5 border border-white/10 rounded-2xl">
+            <TabsList className="grid w-full grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 mb-8 p-1 h-auto gap-1 bg-white/5 border border-white/10 rounded-2xl">
               {models.map(model => (
                 <TabsTrigger
                   key={model.id}
