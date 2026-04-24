@@ -143,6 +143,29 @@
         "Message d'accueil personnalisé",
         "Support technique"
       ]
+    },
+    "iconBooth": {
+      "name": "Icon Booth",
+      "price": "890 CHF",
+      "title": "L'élégance premium qui sublime chaque événement",
+      "description": "Une expérience visuelle haut de gamme, sobre, raffinée et pensée pour marquer les esprits. Un véritable outil de marketing expérientiel pour capter l'attention et maximiser la visibilité de votre marque.",
+      "features": [
+        "Design élégant en bois et esthétique moderne pour une intégration parfaite dans les événements les plus exclusifs",
+        "Écran arrière grand format + écran tactile à l'avant pour diffuser contenu personnalisé, messages de marque ou temps forts",
+        "Qualité photo irréprochable grâce à un appareil professionnel et un éclairage studio",
+        "Idéal pour mariages, événements privés et activations marketing premium",
+        "Impressions illimitées incluses pour que chaque invité reparte avec un souvenir",
+        "Cadres personnalisés sur mesure par notre graphiste + visuel personnalisé pour l'écran arrière inclus",
+        "Activations marketing : enquêtes interactives, jeux IA, concours, collecte de leads en temps réel"
+      ],
+      "note": "Livraison, installation et récupération incluses à Lausanne",
+      "included": [
+        "Livraison & installation",
+        "Impressions illimitées",
+        "Visuel écran arrière personnalisé",
+        "Cadres sur mesure",
+        "Support technique"
+      ]
     }
   },
   "whyUs": {
