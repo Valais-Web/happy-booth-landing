@@ -53,6 +53,9 @@ const Index = () => {
     { src: "/lovable-uploads/b4e96505-76df-4e9a-b601-9de7e37e57c0.png", alt: "Invités s'amusant avec un photobooth miroir interactif lors d'une soirée privée" },
     { src: "/lovable-uploads/487a833c-415d-45e4-b63b-917dc7c1e5a8.png", alt: "Photobooth moderne installé en extérieur sous un parasol avec éclairage LED" },
     { src: "/lovable-uploads/4874f8c7-d042-479f-be4a-e683f3465b83.png", alt: "Groupe d'amis déguisés s'amusant devant un photobooth lors d'une fête costumée" },
+    { src: "/lovable-uploads/gallery-icon-booth-mansion.jpg", alt: "Icon Booth élégant installé dans un salon luxueux avec rideaux dorés et décoration florale" },
+    { src: "/lovable-uploads/gallery-mirror-disco-prints.jpg", alt: "Photobooth miroir LED avec tirages photo disco lors d'une fête de fin d'année" },
+    { src: "/lovable-uploads/gallery-mirror-booth-ballroom.jpg", alt: "Mirror Booth installé dans une salle de bal classique avec lustres et accessoires" },
   ];
 
   useEffect(() => {
