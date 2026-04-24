@@ -195,12 +195,12 @@ const Index = () => {
   ];
 
   const whyFeatures = [
-    { icon: MapPin, title: t('whyUs.local'), desc: t('whyUs.localDesc'), bg: 'bg-pink-soft' },
-    { icon: CheckCircle, title: t('whyUs.delivery'), desc: t('whyUs.deliveryDesc'), bg: 'bg-yellow-soft' },
-    { icon: Camera, title: t('whyUs.unlimited'), desc: t('whyUs.unlimitedDesc'), bg: 'bg-blue-soft' },
-    { icon: Sparkles, title: t('whyUs.customization'), desc: t('whyUs.customizationDesc'), bg: 'bg-mint' },
-    { icon: Heart, title: t('whyUs.accessories'), desc: t('whyUs.accessoriesDesc'), bg: 'bg-lilac' },
-    { icon: Users, title: t('whyUs.experience'), desc: t('whyUs.experienceDesc'), bg: 'bg-pink-soft' },
+    { emoji: '🚚', title: t('whyUs.local'), desc: t('whyUs.localDesc'), bg: 'bg-pink-soft' },
+    { emoji: '🖨️', title: t('whyUs.delivery'), desc: t('whyUs.deliveryDesc'), bg: 'bg-yellow-soft' },
+    { emoji: '🎨', title: t('whyUs.unlimited'), desc: t('whyUs.unlimitedDesc'), bg: 'bg-blue-soft' },
+    { emoji: '🎭', title: t('whyUs.customization'), desc: t('whyUs.customizationDesc'), bg: 'bg-mint' },
+    { emoji: '📲', title: t('whyUs.accessories'), desc: t('whyUs.accessoriesDesc'), bg: 'bg-lilac' },
+    { emoji: '💬', title: t('whyUs.experience'), desc: t('whyUs.experienceDesc'), bg: 'bg-pink-soft' },
   ];
 
   const howSteps = [
@@ -584,8 +584,8 @@ const Index = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-8">
               {whyFeatures.map((f, i) => (
                 <div key={i} className="pt-6 border-t-2 border-ink">
-                  <div className={`w-11 h-11 rounded-xl ${f.bg} flex items-center justify-center mb-4`}>
-                    <f.icon className="w-5 h-5 text-ink" />
+                  <div className={`w-11 h-11 rounded-xl ${f.bg} flex items-center justify-center mb-4 text-xl leading-none`} aria-hidden="true">
+                    {f.emoji}
                   </div>
                   <h3 className="font-display font-bold text-[17px] mb-1.5">{f.title}</h3>
                   <p className="text-sm text-ink-soft/80 leading-relaxed">{f.desc}</p>
