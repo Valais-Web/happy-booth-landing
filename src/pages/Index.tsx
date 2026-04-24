@@ -579,7 +579,7 @@ const Index = () => {
               <h2 className="font-display font-bold text-[clamp(2.25rem,5vw,4rem)] leading-[1] mb-5">
                 {t('headings.whyUsTitle')} <span className="accent-italic">{t('headings.whyUsTitleItalic')}</span>
               </h2>
-              <p className="text-lg text-ink-soft accent-italic">{t('whyUs.subtitle')}</p>
+              <p className="text-lg text-ink-soft">{t('whyUs.subtitle')}</p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-8">
               {whyFeatures.map((f, i) => (
