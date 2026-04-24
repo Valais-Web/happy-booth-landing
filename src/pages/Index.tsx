@@ -865,6 +865,7 @@ const Index = () => {
                           <SelectItem value="360">{t('contact.modelOptions.360')}</SelectItem>
                           <SelectItem value="retro">{t('contact.modelOptions.retro')}</SelectItem>
                           <SelectItem value="phone">{t('contact.modelOptions.phone')}</SelectItem>
+                          <SelectItem value="icon">{t('contact.modelOptions.icon')}</SelectItem>
                           <SelectItem value="conseil">{t('contact.modelOptions.conseil')}</SelectItem>
                         </SelectContent>
                       </Select>
