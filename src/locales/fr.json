@@ -17,7 +17,7 @@
     "cta": "Demander une offre",
     "heroImageAlt": "Des gens qui s'amusent devant un photobooth",
     "googleReviewsAlt": "Google Reviews",
-    "basedOnReviews": "Basé sur 37 avis"
+    "basedOnReviews": "Basé sur 57 avis"
   },
   "gallery": {
     "title": "Nos photobooths en action",
@@ -143,33 +143,91 @@
         "Message d'accueil personnalisé",
         "Support technique"
       ]
+    },
+    "iconBooth": {
+      "name": "Icon Booth",
+      "price": "890 CHF",
+      "title": "L'élégance premium qui sublime chaque événement",
+      "description": "Une expérience visuelle haut de gamme, sobre, raffinée et pensée pour marquer les esprits. Un véritable outil de marketing expérientiel pour capter l'attention et maximiser la visibilité de votre marque.",
+      "features": [
+        "Design élégant en bois et esthétique moderne pour une intégration parfaite dans les événements les plus exclusifs",
+        "Écran arrière grand format + écran tactile à l'avant pour diffuser contenu personnalisé, messages de marque ou temps forts",
+        "Qualité photo irréprochable grâce à un appareil professionnel et un éclairage studio",
+        "Idéal pour mariages, événements privés et activations marketing premium",
+        "Impressions illimitées incluses pour que chaque invité reparte avec un souvenir",
+        "Cadres personnalisés sur mesure par notre graphiste + visuel personnalisé pour l'écran arrière inclus",
+        "Activations marketing : enquêtes interactives, jeux IA, concours, collecte de leads en temps réel"
+      ],
+      "note": "Livraison, installation et récupération incluses à Lausanne",
+      "included": [
+        "Livraison & installation",
+        "Impressions illimitées",
+        "Visuel écran arrière personnalisé",
+        "Cadres sur mesure",
+        "Support technique"
+      ]
     }
   },
   "whyUs": {
     "title": "Nos photomatons t'offrent une soirée extraordinaire",
-    "subtitle": "\"Don't worry, be Happy Booth.\"",
-    "local": "Local & fiable",
-    "localDesc": "Partout en Suisse Romande",
-    "delivery": "Livraison & installation", 
-    "deliveryDesc": "On s'occupe de tout",
-    "unlimited": "Imprimés illimités",
-    "unlimitedDesc": "De haute qualité",
-    "customization": "Personnalisation totale",
-    "customizationDesc": "Cadres, animations HD, boomerangs", 
-    "accessories": "Grand choix d'accessoires",
-    "accessoriesDesc": "Pour tous les styles",
-    "experience": "Expérience collective",
-    "experienceDesc": "Souvenirs partagés inoubliables"
+    "subtitle": "On est pionniers du photomaton interactif en Suisse romande depuis 2018. Entreprise familiale, équipe réactive, aucun intermédiaire. Ce qu'on promet, on le fait.",
+    "local": "Livraison sur place",
+    "localDesc": "On installe, on règle, on démonte. Vous n'avez rien à faire.",
+    "delivery": "Impressions illimitées",
+    "deliveryDesc": "Tirages haute qualité, autant que vos invités le souhaitent.",
+    "unlimited": "100% personnalisable",
+    "unlimitedDesc": "Cadres, logos, boomerangs, backdrops. Tout est à votre image.",
+    "customization": "Accessoires inclus",
+    "customizationDesc": "Large choix de déguisements pour chaque type d'événement.",
+    "accessories": "Partage instantané",
+    "accessoriesDesc": "Email, réseaux sociaux, galerie en ligne privée.",
+    "experience": "Support dédié",
+    "experienceDesc": "Une vraie équipe qui répond, avant, pendant, après."
   },
   "useCases": {
     "title": "Quand louer un photobooth ?",
-    "subtitle": "Parfait pour tous vos événements",
+    "subtitle": "Peu importe ce que vous organisez, on s'adapte à votre thème, votre ambiance et vos objectifs. Voici comment on fait briller chaque type d'événement.",
     "weddings": "Mariages",
-    "weddingsDesc": "Livre d'or photo, cadres au thème du jour, service clé en main rassurant.",
-    "corporate": "Entreprises", 
-    "corporateDesc": "Team-building, congrès, lancements produits.",
-    "birthdays": "Anniversaires",
-    "birthdaysDesc": "18, 30, 50 ans... Créez l'événement avec style.",
+    "weddingsTag": "Mariages",
+    "weddingsTitle": "Le photographe fait les poses. Nous, on fait les",
+    "weddingsTitleItalic": "fous rires",
+    "weddingsTitleEnd": ".",
+    "weddingsDesc": "Vos invités ne se connaissent pas encore tous ? Le photomaton brise la glace. Vos proches repartent avec des tirages qu'ils garderont pour toujours, et vous avec des centaines de photos que même le photographe n'aurait pas capturées.",
+    "weddingsFeatures": [
+      "Cadres aux couleurs du mariage",
+      "Impressions illimitées toute la soirée",
+      "Galerie en ligne partagée aux invités",
+      "Accessoires et déguisements inclus"
+    ],
+    "weddingsCta": "Devis mariage",
+    "corporate": "Entreprises",
+    "corporateTag": "Événements d'entreprise",
+    "corporateTitle": "L'animation qui fait",
+    "corporateTitleItalic": "parler",
+    "corporateTitleEnd": "votre marque",
+    "corporateDesc": "Soirée annuelle, lancement produit, salon, team building. On intègre votre logo, vos couleurs, votre message. Vos collaborateurs et visiteurs partagent spontanément sur LinkedIn et Instagram. Animation, data et visibilité dans le même package.",
+    "corporateFeatures": [
+      "Personnalisation complète à votre charte",
+      "Collecte d'emails opt-in (RGPD)",
+      "Export HD pour votre comm interne",
+      "Hôte dédié en option (45 CHF/h)"
+    ],
+    "corporateCta": "Devis entreprise",
+    "birthdays": "Fêtes privées",
+    "birthdaysTag": "Fêtes privées",
+    "birthdaysTitle": "Des rires, des photos, des",
+    "birthdaysTitleItalic": "souvenirs",
+    "birthdaysTitleEnd": "qui durent",
+    "birthdaysDesc": "Anniversaire, baby shower, graduation, EVJF, fête de famille. Tout le monde participe, des ados aux grands-parents. Vous profitez de votre fête pendant que le booth s'occupe d'amuser vos invités.",
+    "birthdaysFeatures": [
+      "Installation et démontage par nos soins",
+      "Prise en main en 3 secondes",
+      "Impressions illimitées, format au choix",
+      "Galerie en ligne après l'événement"
+    ],
+    "birthdaysCta": "Devis fête privée",
+    "corporateDesc_legacy": "Team-building, congrès, lancements produits.",
+    "birthdaysDesc_legacy": "Anniversaires, baby shower, graduation.",
     "cta": "Demander une offre"
   },
   "howItWorks": {
@@ -306,16 +364,47 @@
   },
   "footer": {
     "tagline": "Happy Booth - Location photobooth Suisse Romande",
-    "description": "Spécialiste de la location de photobooth pour mariages, événements d'entreprise et anniversaires en Suisse Romande. Service clé en main avec livraison gratuite sur Lausanne.",
-    "quickLinks": "Liens rapides",
-    "services": "Nos services", 
-    "contact": "Contact",
-    "phone": "Téléphone",
-    "email": "Email",
-    "address": "Adresse",
-    "addressText": "Lausanne, Suisse",
-    "followUs": "Suivez-nous",
-    "copyright": "© 2024 Happy Booth. Tous droits réservés.",
+    "copyright": "© 2026 Happy Booth. Tous droits réservés.",
+    "builtBy": "Site réalisé par",
     "language": "Langue"
+  },
+  "headings": {
+    "trustEyebrow": "Confiance",
+    "trustTitle": "1000+ clients",
+    "trustTitleItalic": "depuis 2018.",
+    "whyUsEyebrow": "Pourquoi nous",
+    "whyUsTitle": "Le service qu'on aurait voulu",
+    "whyUsTitleItalic": "trouver ailleurs.",
+    "galleryEyebrow": "Galerie",
+    "galleryTitle": "Nos photobooths",
+    "galleryTitleItalic": "en action.",
+    "useCasesEyebrow": "Pour tous vos événements",
+    "useCasesTitle": "Un photomaton.",
+    "useCasesTitleItalic": "Mille occasions.",
+    "modelsEyebrow": "Nos photomatons",
+    "modelsTitle": "Six booths,",
+    "modelsTitleItalic": "six ambiances.",
+    "howEyebrow": "Comment ça marche",
+    "howTitle": "Quatre étapes,",
+    "howTitleItalic": "zéro stress.",
+    "testimonialsEyebrow": "Clients heureux",
+    "testimonialsTitle": "Ils en parlent",
+    "testimonialsTitleItalic": "encore.",
+    "pricingEyebrow": "Tarifs all-inclusive",
+    "pricingTitle": "Des forfaits",
+    "pricingTitleItalic": "tout compris, sans surprise",
+    "pricingItems": [
+      "Installation & récupération incluses",
+      "Impressions vraiment illimitées",
+      "Personnalisation graphique complète",
+      "Galerie en ligne après l'événement",
+      "Support technique réactif"
+    ],
+    "faqEyebrow": "FAQ",
+    "faqTitle": "Questions",
+    "faqTitleItalic": "fréquentes.",
+    "contactEyebrow": "Devis gratuit",
+    "contactTitle": "On vient à",
+    "contactTitleItalic": "la fête"
   }
 }

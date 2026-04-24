@@ -2,349 +2,190 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* Happy Booth — Direction "fun confiant"
+   All colors in HSL. Cream base + accents.
 */
 
 @layer base {
   :root {
-    /* Happy Booth Design System */
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Brand palette */
+    --cream: 40 67% 96%;          /* #fbf7ef */
+    --cream-warm: 44 65% 91%;     /* #f5eedd */
+    --ink: 0 0% 10%;              /* #1a1a1a */
+    --ink-soft: 0 0% 23%;         /* #3a3a3a */
+
+    --pink: 332 100% 68%;         /* #ff5ea8 */
+    --pink-soft: 332 100% 86%;    /* #ffb8d4 */
+    --yellow: 48 100% 65%;        /* #ffd84d */
+    --yellow-soft: 50 100% 83%;   /* #fff0a8 */
+    --blue: 224 100% 64%;         /* #4a7cff */
+    --blue-soft: 222 100% 83%;    /* #a8c4ff */
+    --lilac: 260 100% 83%;        /* #c4a8ff */
+    --mint: 156 53% 67%;          /* #7dd9b8 */
+    --coral: 13 100% 66%;         /* #ff7a52 */
+
+    /* Semantic tokens mapped to brand */
+    --background: var(--cream);
+    --foreground: var(--ink);
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: var(--ink);
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: var(--ink);
 
-    /* Primary violet */
-    --primary: 264 49% 60%;
-    --primary-foreground: 210 40% 98%;
+    --primary: var(--ink);
+    --primary-foreground: var(--cream);
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: var(--cream-warm);
+    --secondary-foreground: var(--ink);
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: var(--cream-warm);
+    --muted-foreground: 0 0% 42%;
 
-    /* Accent colors for Happy Booth */
-    --accent: 264 49% 60%;
+    --accent: var(--pink);
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 0 0% 10% / 0.1;
+    --input: 0 0% 10% / 0.12;
+    --ring: var(--ink);
 
-    --radius: 0.75rem;
-
-    /* Happy Booth Color Palette */
-    --violet-primary: 264 49% 60%;
-    --blue-primary: 198 93% 60%;
-    --green-accent: 158 64% 52%;
-    --orange-cta: 30 100% 50%;
-    --orange-hover: 14 100% 57%;
-
-    /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(198, 93%, 60%) 0%, hsl(264, 49%, 60%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(158, 64%, 72%) 0%, hsl(158, 100%, 41%) 100%);
-    --gradient-cta: linear-gradient(135deg, hsl(44, 100%, 51%) 0%, hsl(30, 100%, 50%) 100%);
-    --gradient-cta-hover: linear-gradient(135deg, hsl(30, 100%, 50%) 0%, hsl(348, 83%, 47%) 100%);
-    --gradient-neutral: linear-gradient(135deg, hsl(0, 0%, 93%) 0%, hsl(210, 14%, 74%) 100%);
-
-    /* Shadows */
-    --shadow-natural: 0 6px 6px -3px rgba(0, 0, 0, 0.2);
-    --shadow-deep: 0 12px 50px -12px rgba(0, 0, 0, 0.4);
-
-    /* Typography */
-    --font-heading: 'Dosis', sans-serif;
-    --font-body: 'Nunito Sans', sans-serif;
+    --radius: 1rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --background: var(--ink);
+    --foreground: var(--cream);
+    --card: 0 0% 14%;
+    --card-foreground: var(--cream);
+    --popover: 0 0% 14%;
+    --popover-foreground: var(--cream);
+    --primary: var(--cream);
+    --primary-foreground: var(--ink);
+    --secondary: 0 0% 18%;
+    --secondary-foreground: var(--cream);
+    --muted: 0 0% 18%;
+    --muted-foreground: 0 0% 65%;
+    --accent: var(--pink);
+    --accent-foreground: 0 0% 100%;
+    --border: 0 0% 100% / 0.1;
+    --input: 0 0% 100% / 0.12;
+    --ring: var(--cream);
   }
 }
 
 @layer base {
   * {
-    @apply border-border;
+    border-color: hsl(var(--ink) / 0.1);
+  }
+
+  html {
+    scroll-behavior: smooth;
   }
 
   body {
     @apply bg-background text-foreground;
-    font-family: var(--font-body);
+    font-family: 'Inter', -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
   }
 
-  /* Force Dosis for all headings */
   h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-heading);
+    font-family: 'Bricolage Grotesque', sans-serif;
+    letter-spacing: -0.025em;
   }
 
-  /* Import Google Fonts */
-  @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Nunito+Sans:wght@300;400;600;700&display=swap');
+  ::selection {
+    background: hsl(var(--yellow));
+    color: hsl(var(--ink));
+  }
 }
 
 @layer components {
-  /* Typography */
-  .hero-title {
-    font-family: var(--font-heading);
-    font-size: 2.625rem;
-    font-weight: 700;
-    line-height: 1.2;
-    background: var(--gradient-hero);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 1.5rem;
-  }
-
-  .hero-subtitle {
-    font-family: var(--font-body);
-    font-size: 1.25rem;
-    line-height: 1.6;
-    color: hsl(var(--muted-foreground));
-  }
-
-  .section-title {
-    font-family: var(--font-heading);
-    font-size: 2.25rem;
-    font-weight: 500;
-    text-align: center;
-    margin-bottom: 1rem;
-  }
-
-  .section-subtitle {
-    font-family: var(--font-body);
-    font-size: 1.125rem;
-    color: hsl(var(--muted-foreground));
-    text-align: center;
-  }
-
-  /* Gradients */
-  .hero-gradient {
-    background: var(--gradient-hero);
-    color: white;
+  /* Highlighted word — yellow underlay, slight tilt */
+  .h1-highlight {
     position: relative;
-    overflow: hidden;
+    display: inline-block;
+    color: hsl(var(--ink));
+    isolation: isolate;
   }
-
-  .hero-gradient::before {
+  .h1-highlight::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: radial-gradient(circle at 30% 40%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
-    pointer-events: none;
+    inset: -2% -4%;
+    background: hsl(var(--yellow));
+    z-index: -1;
+    border-radius: 0.5rem;
+    transform: rotate(-1.5deg);
   }
 
-  .model-gradient {
-    background: var(--gradient-accent);
+  /* Italic serif accent */
+  .accent-italic {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: -0.01em;
   }
 
-  /* Navigation */
-  .nav-link {
-    font-family: var(--font-body);
-    font-weight: 500;
-    color: rgba(255, 255, 255, 0.9);
-    text-decoration: none;
-    transition: color 0.3s ease;
+  /* Polaroid card */
+  .polaroid {
+    background: white;
+    padding: 12px 12px 44px;
+    box-shadow: 0 20px 50px -15px hsl(var(--ink) / 0.25), 0 2px 6px hsl(var(--ink) / 0.06);
+    transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  .polaroid:hover {
+    transform: rotate(0deg) scale(1.05) translateY(-8px) !important;
+    z-index: 30;
+  }
+  .polaroid-caption {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 14px;
   }
 
-  .nav-link:hover {
-    color: white;
-  }
-
-  /* Cards */
-  .form-card {
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: var(--shadow-deep);
-  }
-
-  .feature-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid hsl(var(--border));
-    box-shadow: var(--shadow-natural);
-  }
-
-  .feature-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-deep);
-  }
-
-  .model-card {
-    padding: 2rem;
-    border: 1px solid hsl(var(--border));
-    box-shadow: var(--shadow-natural);
-  }
-
-  .pricing-card {
-    border: 2px solid hsl(var(--border));
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-  }
-
-  .pricing-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-deep);
-    border-color: hsl(var(--violet-primary));
-  }
-
-  /* Use Case Cards */
-  .use-case-card {
-    padding: 2rem;
-    color: white;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .use-case-wedding {
-    background: linear-gradient(135deg, hsl(330, 100%, 45%) 0%, hsl(300, 100%, 35%) 100%);
-  }
-
-  .use-case-business {
-    background: linear-gradient(135deg, hsl(220, 100%, 45%) 0%, hsl(200, 100%, 35%) 100%);
-  }
-
-  .use-case-party {
-    background: linear-gradient(135deg, hsl(280, 100%, 45%) 0%, hsl(260, 100%, 35%) 100%);
-  }
-
-  /* Badges */
-  .badge-feature {
-    background: rgba(255, 255, 255, 0.2);
-    color: white;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    font-weight: 500;
-  }
-
-  /* Buttons */
-  .cta-primary {
-    background: var(--gradient-cta);
-    color: white;
-    font-family: var(--font-body);
-    font-weight: 600;
+  /* Eyebrow tag */
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 13px;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
-    border: none;
-    transition: all 0.3s ease;
-    box-shadow: var(--shadow-natural);
+    font-weight: 600;
+    color: hsl(var(--pink));
   }
-
-  .cta-primary:hover {
-    background: var(--gradient-cta-hover);
-    transform: scale(1.02) rotate(0.5deg);
-    box-shadow: var(--shadow-deep);
-    color: white;
-  }
-
-  .cta-phone {
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    color: rgba(255, 255, 255, 0.9);
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-  }
-
-  .cta-phone:hover {
-    background: rgba(255, 255, 255, 0.2);
-    color: white;
-    border-color: rgba(255, 255, 255, 0.5);
-  }
-
-  /* Model Image */
-  .model-image {
-    position: relative;
-    overflow: hidden;
-  }
-
-  .model-image::before {
+  .eyebrow::before {
     content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(45deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
-    pointer-events: none;
+    width: 20px;
+    height: 2px;
+    background: hsl(var(--pink));
+    border-radius: 2px;
   }
 
-  /* Responsive */
-  @media (max-width: 767px) {
-    .hero-title {
-      font-size: 2rem;
-    }
-    
-    .section-title {
-      font-size: 1.875rem;
-    }
-    
-    .hero-subtitle {
-      font-size: 1.125rem;
-    }
+  /* Marquee mask */
+  .marquee-mask {
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
   }
 
-  /* Client Logos Carousel Animation */
-  @keyframes scroll {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(calc(-100% / 3));
-    }
-  }
+  /* Gradient backgrounds for booth visuals */
+  .grad-mirror { background: linear-gradient(135deg, hsl(var(--lilac)), hsl(260 100% 71%)); }
+  .grad-rainbow { background: linear-gradient(90deg, hsl(var(--pink)), hsl(var(--yellow)), hsl(var(--mint)), hsl(var(--blue))); }
+  .grad-360 { background: linear-gradient(135deg, hsl(var(--coral)), hsl(var(--pink))); }
+  .grad-retro { background: linear-gradient(135deg, hsl(var(--yellow)), hsl(var(--coral))); }
+  .grad-phone { background: linear-gradient(135deg, hsl(var(--mint)), hsl(var(--blue))); }
+  .grad-ink { background: linear-gradient(135deg, hsl(0 0% 16%), hsl(0 0% 35%)); }
 }
