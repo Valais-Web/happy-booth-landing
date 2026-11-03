@@ -18,7 +18,10 @@ import LanguageSwitcher from "@/components/LanguageSwitcher";
 import SEOHead from "@/components/SEOHead";
 import darkLogo from "@/assets/happy-booth-logo-dark.png";
 
-const newLogo = "/lovable-uploads/34b0e686-0ec5-4fb5-872c-39a4aa3d802c.png";
+// Practical email check: something@something.tld, no spaces
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+const newLogo = "/lovable-uploads/34b0e686-0ec5-4fb5-872c-39a4aa3d802c.webp";
 
 const Index = () => {
   const { t, tArray, language, isLoading } = useTranslation();
@@ -29,33 +32,33 @@ const Index = () => {
     gclid: '', wbraid: '', gbraid: '', consent: false
   });
   const [selectedModel, setSelectedModel] = useState('mirror');
-  const [currentGalleryIndex, setCurrentGalleryIndex] = useState(0);
   const [isVideoDialogOpen, setIsVideoDialogOpen] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const galleryImages = [
-    { src: "/lovable-uploads/86178317-da56-41e0-b0f0-29d6cbdb7e97.png", alt: "Groupe de femmes élégantes utilisant un photobooth en extérieur avec éclairage LED" },
-    { src: "/lovable-uploads/fc36c40b-ffdc-4035-b37a-5fcefb803b06.png", alt: "Trois amies s'amusant devant un photobooth miroir interactif" },
-    { src: "/lovable-uploads/04ace80f-35cc-45fc-9ee6-6abbb701fa67.png", alt: "Femme utilisant un photobooth tactile avec éclairage rouge LED" },
-    { src: "/lovable-uploads/5242a589-be2e-4df7-9969-e2d450b7df31.png", alt: "Deux amies avec lunettes de soleil roses posant pour un photobooth" },
-    { src: "/lovable-uploads/eb2cf670-4ade-4fb9-a4a3-e642a3e6966e.png", alt: "Groupe d'amies s'amusant avec accessoires photobooth colorés" },
-    { src: "/lovable-uploads/44dd8e6f-6d7d-4f28-93a9-ae97970c3087.png", alt: "Mur de photos imprimées du photobooth lors d'un événement" },
-    { src: "/lovable-uploads/42eadc60-f6f6-462e-9289-07b0649ad377.png", alt: "Couple élégant utilisant un photobooth 360 lors d'un événement formel" },
-    { src: "/lovable-uploads/3c4a797f-fefc-427b-9c8b-2f4ab5b9d29d.png", alt: "Amis posant devant un photobooth avec cadre personnalisé Mamma Mia" },
-    { src: "/lovable-uploads/efb782e4-48e6-4981-9ffd-c76d68e64b80.png", alt: "Photobooth moderne blanc dans un environnement moderne avec éclairage rouge" },
-    { src: "/lovable-uploads/f6d5733b-59ac-48cf-bebc-0372beec0d05.png", alt: "Couple utilisant un photobooth miroir LED avec éclairage vert coloré" },
-    { src: "/lovable-uploads/c7da75f9-3b3b-4755-bc47-92e9592fc7a1.png", alt: "Deux amies souriantes montrant leurs photos imprimées du photobooth" },
-    { src: "/lovable-uploads/2dd145c3-1fcc-4e8a-88b7-723a516d0ab9.png", alt: "Groupe d'amies utilisant un photobooth avec décoration argentée lors d'un événement" },
-    { src: "/lovable-uploads/e633d2a4-96c9-4680-89df-10441ae6271c.png", alt: "Groupe de femmes glamour s'amusant devant un photobooth lors d'une soirée élégante" },
-    { src: "/lovable-uploads/65254db7-af84-45ff-9e3e-04b394c9a4ca.png", alt: "Photo imprimée du photobooth avec cadre personnalisé pour événement corporatif" },
-    { src: "/lovable-uploads/fe600cdd-0c6d-4b2a-8da0-2d9c52e346d6.png", alt: "Femme utilisant un photobooth miroir avec effets spéciaux et éclairage coloré" },
-    { src: "/lovable-uploads/e6c8f3d5-9fd4-4f32-926f-93141334cefb.png", alt: "Photo imprimée du photobooth lors d'un événement TEDx avec branding personnalisé" },
-    { src: "/lovable-uploads/4f2cb588-fb28-4a67-863d-65b17ce7fc37.png", alt: "Photobooth miroir LED élégant installé lors d'un événement avec décoration florale" },
-    { src: "/lovable-uploads/b4e96505-76df-4e9a-b601-9de7e37e57c0.png", alt: "Invités s'amusant avec un photobooth miroir interactif lors d'une soirée privée" },
-    { src: "/lovable-uploads/487a833c-415d-45e4-b63b-917dc7c1e5a8.png", alt: "Photobooth moderne installé en extérieur sous un parasol avec éclairage LED" },
-    { src: "/lovable-uploads/4874f8c7-d042-479f-be4a-e683f3465b83.png", alt: "Groupe d'amis déguisés s'amusant devant un photobooth lors d'une fête costumée" },
-    { src: "/lovable-uploads/gallery-icon-booth-mansion.jpg", alt: "Icon Booth élégant installé dans un salon luxueux avec rideaux dorés et décoration florale" },
-    { src: "/lovable-uploads/gallery-mirror-disco-prints.jpg", alt: "Photobooth miroir LED avec tirages photo disco lors d'une fête de fin d'année" },
-    { src: "/lovable-uploads/gallery-mirror-booth-ballroom.jpg", alt: "Mirror Booth installé dans une salle de bal classique avec lustres et accessoires" },
+    { src: "/lovable-uploads/86178317-da56-41e0-b0f0-29d6cbdb7e97.webp", alt: "Groupe de femmes élégantes utilisant un photobooth en extérieur avec éclairage LED" },
+    { src: "/lovable-uploads/fc36c40b-ffdc-4035-b37a-5fcefb803b06.webp", alt: "Trois amies s'amusant devant un photobooth miroir interactif" },
+    { src: "/lovable-uploads/04ace80f-35cc-45fc-9ee6-6abbb701fa67.webp", alt: "Femme utilisant un photobooth tactile avec éclairage rouge LED" },
+    { src: "/lovable-uploads/5242a589-be2e-4df7-9969-e2d450b7df31.webp", alt: "Deux amies avec lunettes de soleil roses posant pour un photobooth" },
+    { src: "/lovable-uploads/eb2cf670-4ade-4fb9-a4a3-e642a3e6966e.webp", alt: "Groupe d'amies s'amusant avec accessoires photobooth colorés" },
+    { src: "/lovable-uploads/44dd8e6f-6d7d-4f28-93a9-ae97970c3087.webp", alt: "Mur de photos imprimées du photobooth lors d'un événement" },
+    { src: "/lovable-uploads/42eadc60-f6f6-462e-9289-07b0649ad377.webp", alt: "Couple élégant utilisant un photobooth 360 lors d'un événement formel" },
+    { src: "/lovable-uploads/3c4a797f-fefc-427b-9c8b-2f4ab5b9d29d.webp", alt: "Amis posant devant un photobooth avec cadre personnalisé Mamma Mia" },
+    { src: "/lovable-uploads/efb782e4-48e6-4981-9ffd-c76d68e64b80.webp", alt: "Photobooth moderne blanc dans un environnement moderne avec éclairage rouge" },
+    { src: "/lovable-uploads/f6d5733b-59ac-48cf-bebc-0372beec0d05.webp", alt: "Couple utilisant un photobooth miroir LED avec éclairage vert coloré" },
+    { src: "/lovable-uploads/c7da75f9-3b3b-4755-bc47-92e9592fc7a1.webp", alt: "Deux amies souriantes montrant leurs photos imprimées du photobooth" },
+    { src: "/lovable-uploads/2dd145c3-1fcc-4e8a-88b7-723a516d0ab9.webp", alt: "Groupe d'amies utilisant un photobooth avec décoration argentée lors d'un événement" },
+    { src: "/lovable-uploads/e633d2a4-96c9-4680-89df-10441ae6271c.webp", alt: "Groupe de femmes glamour s'amusant devant un photobooth lors d'une soirée élégante" },
+    { src: "/lovable-uploads/65254db7-af84-45ff-9e3e-04b394c9a4ca.webp", alt: "Photo imprimée du photobooth avec cadre personnalisé pour événement corporatif" },
+    { src: "/lovable-uploads/fe600cdd-0c6d-4b2a-8da0-2d9c52e346d6.webp", alt: "Femme utilisant un photobooth miroir avec effets spéciaux et éclairage coloré" },
+    { src: "/lovable-uploads/e6c8f3d5-9fd4-4f32-926f-93141334cefb.webp", alt: "Photo imprimée du photobooth lors d'un événement TEDx avec branding personnalisé" },
+    { src: "/lovable-uploads/4f2cb588-fb28-4a67-863d-65b17ce7fc37.webp", alt: "Photobooth miroir LED élégant installé lors d'un événement avec décoration florale" },
+    { src: "/lovable-uploads/b4e96505-76df-4e9a-b601-9de7e37e57c0.webp", alt: "Invités s'amusant avec un photobooth miroir interactif lors d'une soirée privée" },
+    { src: "/lovable-uploads/487a833c-415d-45e4-b63b-917dc7c1e5a8.webp", alt: "Photobooth moderne installé en extérieur sous un parasol avec éclairage LED" },
+    { src: "/lovable-uploads/4874f8c7-d042-479f-be4a-e683f3465b83.webp", alt: "Groupe d'amis déguisés s'amusant devant un photobooth lors d'une fête costumée" },
+    { src: "/lovable-uploads/gallery-icon-booth-mansion.webp", alt: "Icon Booth élégant installé dans un salon luxueux avec rideaux dorés et décoration florale" },
+    { src: "/lovable-uploads/gallery-mirror-disco-prints.webp", alt: "Photobooth miroir LED avec tirages photo disco lors d'une fête de fin d'année" },
+    { src: "/lovable-uploads/gallery-mirror-booth-ballroom.webp", alt: "Mirror Booth installé dans une salle de bal classique avec lustres et accessoires" },
   ];
 
   useEffect(() => {
@@ -66,10 +69,6 @@ const Index = () => {
       wbraid: urlParams.get('wbraid') || '',
       gbraid: urlParams.get('gbraid') || ''
     }));
-    const galleryInterval = setInterval(() => {
-      setCurrentGalleryIndex(prev => (prev + 1) % galleryImages.length);
-    }, 4000);
-    return () => clearInterval(galleryInterval);
   }, []);
 
   const handleInputChange = (field: string, value: string | boolean) => {
@@ -82,12 +81,27 @@ const Index = () => {
       .join("&");
   }
 
+  const isValidEmail = (email: string) => EMAIL_REGEX.test(email.trim());
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (isSubmitting) return;
+    // Pressing Enter on steps 1-2 should move forward, not send a half-filled request
+    if (formStep < 3) {
+      nextStep();
+      return;
+    }
+    // Step 1 fields are unmounted by now, so native validation no longer protects them
+    if (!formData.name.trim() || !isValidEmail(formData.email)) {
+      toast.error(t('contact.errorEmail'));
+      setFormStep(1);
+      return;
+    }
     if (!formData.consent) {
       toast.error(t('contact.errorConsent'));
       return;
     }
+    setIsSubmitting(true);
     try {
       const netlifyFormData = {
         "form-name": "contact",
@@ -97,13 +111,16 @@ const Index = () => {
         gclid: formData.gclid, wbraid: formData.wbraid, gbraid: formData.gbraid,
         consent: formData.consent.toString()
       };
-      await fetch("/", {
+      const response = await fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: encode(netlifyFormData)
       });
-      if (typeof window !== 'undefined' && (window as any).dataLayer) {
-        (window as any).dataLayer.push({
+      if (!response.ok) {
+        throw new Error(`Form submission failed with status ${response.status}`);
+      }
+      if (typeof window !== 'undefined' && window.dataLayer) {
+        window.dataLayer.push({
           event: 'lead_submit', form: 'quote',
           name: formData.name, email: formData.email, phone: formData.phone,
           date: formData.date, eventType: formData.eventType, city: formData.city,
@@ -113,19 +130,29 @@ const Index = () => {
         });
       }
       toast.success(t('contact.successMessage'));
-      setFormData({
+      // Keep the ad click IDs so a second request is still attributed
+      setFormData(prev => ({
         name: '', email: '', phone: '', date: '', eventType: '', city: '',
         guests: '', model: '', message: '', consent: false,
-        gclid: '', wbraid: '', gbraid: ''
-      });
+        gclid: prev.gclid, wbraid: prev.wbraid, gbraid: prev.gbraid
+      }));
       setFormStep(1);
     } catch (error) {
+      // Keep the visitor's answers so they can retry without retyping
       console.error('Form submission error:', error);
-      toast.error('Une erreur est survenue. Veuillez réessayer.');
+      toast.error(t('contact.errorSubmit'));
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
-  const nextStep = () => { if (formStep < 3) setFormStep(formStep + 1); };
+  const nextStep = () => {
+    if (formStep === 1 && (!formData.name.trim() || !isValidEmail(formData.email))) {
+      toast.error(t('contact.errorEmail'));
+      return;
+    }
+    if (formStep < 3) setFormStep(formStep + 1);
+  };
   const prevStep = () => { if (formStep > 1) setFormStep(formStep - 1); };
   const selectModel = (model: string) => { setSelectedModel(model); handleInputChange('model', model); };
   const scrollToSection = (sectionId: string) => {
@@ -133,12 +160,12 @@ const Index = () => {
   };
 
   const models = [
-    { id: 'mirror', name: t('models.mirrorBooth.name'), price: t('models.mirrorBooth.price'), title: t('models.mirrorBooth.title'), description: t('models.mirrorBooth.description'), image: '/lovable-uploads/859eb1d3-caf4-468d-a627-5809753fa116.jpg', features: tArray('models.mirrorBooth.features'), note: t('models.mirrorBooth.note'), included: tArray('models.mirrorBooth.included') },
-    { id: 'rainbow', name: t('models.rainbowBooth.name'), price: t('models.rainbowBooth.price'), title: t('models.rainbowBooth.title'), description: t('models.rainbowBooth.description'), image: '/lovable-uploads/7bbfe067-8199-4ede-8ab0-046d22fc465e.png', features: tArray('models.rainbowBooth.features'), included: tArray('models.rainbowBooth.included') },
-    { id: '360', name: t('models.booth360.name'), price: t('models.booth360.price'), title: t('models.booth360.title'), description: t('models.booth360.description'), image: '/lovable-uploads/c0833e33-3d65-4770-8417-29559aa5ab6b.jpg', features: tArray('models.booth360.features'), included: tArray('models.booth360.included') },
-    { id: 'retro', name: t('models.retroBooth.name'), price: t('models.retroBooth.price'), title: t('models.retroBooth.title'), description: t('models.retroBooth.description'), image: '/lovable-uploads/82b14e13-bb3a-4f24-8bd8-5f0342391319.png', features: tArray('models.retroBooth.features'), included: tArray('models.retroBooth.included') },
-    { id: 'icon', name: t('models.iconBooth.name'), price: t('models.iconBooth.price'), title: t('models.iconBooth.title'), description: t('models.iconBooth.description'), image: '/lovable-uploads/icon-booth.jpg', features: tArray('models.iconBooth.features'), note: t('models.iconBooth.note'), included: tArray('models.iconBooth.included') },
-    { id: 'phone', name: t('models.phoneBooth.name'), price: t('models.phoneBooth.price'), title: t('models.phoneBooth.title'), description: t('models.phoneBooth.description'), image: '/lovable-uploads/01038a35-68c2-4046-a7c9-d7bd12a8dd7f.png', features: tArray('models.phoneBooth.features'), included: tArray('models.phoneBooth.included') },
+    { id: 'mirror', name: t('models.mirrorBooth.name'), price: t('models.mirrorBooth.price'), title: t('models.mirrorBooth.title'), description: t('models.mirrorBooth.description'), image: '/lovable-uploads/859eb1d3-caf4-468d-a627-5809753fa116.webp', features: tArray('models.mirrorBooth.features'), note: t('models.mirrorBooth.note'), included: tArray('models.mirrorBooth.included') },
+    { id: 'rainbow', name: t('models.rainbowBooth.name'), price: t('models.rainbowBooth.price'), title: t('models.rainbowBooth.title'), description: t('models.rainbowBooth.description'), image: '/lovable-uploads/7bbfe067-8199-4ede-8ab0-046d22fc465e.webp', features: tArray('models.rainbowBooth.features'), included: tArray('models.rainbowBooth.included') },
+    { id: '360', name: t('models.booth360.name'), price: t('models.booth360.price'), title: t('models.booth360.title'), description: t('models.booth360.description'), image: '/lovable-uploads/c0833e33-3d65-4770-8417-29559aa5ab6b.webp', features: tArray('models.booth360.features'), included: tArray('models.booth360.included') },
+    { id: 'retro', name: t('models.retroBooth.name'), price: t('models.retroBooth.price'), title: t('models.retroBooth.title'), description: t('models.retroBooth.description'), image: '/lovable-uploads/82b14e13-bb3a-4f24-8bd8-5f0342391319.webp', features: tArray('models.retroBooth.features'), included: tArray('models.retroBooth.included') },
+    { id: 'icon', name: t('models.iconBooth.name'), price: t('models.iconBooth.price'), title: t('models.iconBooth.title'), description: t('models.iconBooth.description'), image: '/lovable-uploads/icon-booth.webp', features: tArray('models.iconBooth.features'), note: t('models.iconBooth.note'), included: tArray('models.iconBooth.included') },
+    { id: 'phone', name: t('models.phoneBooth.name'), price: t('models.phoneBooth.price'), title: t('models.phoneBooth.title'), description: t('models.phoneBooth.description'), image: '/lovable-uploads/01038a35-68c2-4046-a7c9-d7bd12a8dd7f.webp', features: tArray('models.phoneBooth.features'), included: tArray('models.phoneBooth.included') },
   ];
   const faqItems = tArray('faq.items') as Array<{ question: string; answer: string }>;
 
@@ -398,7 +425,7 @@ const Index = () => {
               {galleryImages.map((image, index) => (
                 <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
                   <div className="aspect-square rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group">
-                    <img src={image.src} alt={image.alt} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                    <img src={image.src} alt={image.alt} loading="lazy" decoding="async" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                   </div>
                 </CarouselItem>
               ))}
@@ -519,6 +546,8 @@ const Index = () => {
                     <img
                       src={model.image}
                       alt={model.name}
+                      loading="lazy"
+                      decoding="async"
                       className={`w-full h-full object-cover ${model.id === '360' ? 'scale-125' : ''}`}
                       style={model.id === '360' ? { objectPosition: '50% 40%' } : {}}
                     />
@@ -892,7 +921,7 @@ const Index = () => {
                       <button type="button" onClick={prevStep} className="flex-1 bg-white border-[1.5px] border-ink/20 text-ink py-4 rounded-xl font-semibold hover:bg-ink hover:text-cream transition-all inline-flex items-center justify-center gap-2">
                         <ChevronLeft className="w-4 h-4" /> {t('contact.backButton')}
                       </button>
-                      <button type="submit" disabled={!formData.consent} className="flex-1 bg-ink text-cream py-4 rounded-xl font-semibold hover:bg-pink hover:text-white transition-all disabled:opacity-50 disabled:cursor-not-allowed inline-flex items-center justify-center gap-2">
+                      <button type="submit" disabled={!formData.consent || isSubmitting} className="flex-1 bg-ink text-cream py-4 rounded-xl font-semibold hover:bg-pink hover:text-white transition-all disabled:opacity-50 disabled:cursor-not-allowed inline-flex items-center justify-center gap-2">
                         {t('contact.submit')} <CheckCircle className="w-4 h-4" />
                       </button>
                     </div>
@@ -912,7 +941,7 @@ const Index = () => {
       <footer className="bg-ink text-cream/70 py-12">
         <div className="container mx-auto px-5 max-w-[1320px]">
           <div className="flex flex-col items-center text-center gap-5">
-            <img src={newLogo} alt="Happy Booth" className="h-9 w-auto" />
+            <img src={newLogo} alt="Happy Booth" loading="lazy" decoding="async" className="h-9 w-auto" />
             <p className="font-serif italic text-base text-cream/70 max-w-md leading-relaxed">
               {t('footer.tagline')}
             </p>
@@ -929,6 +958,16 @@ const Index = () => {
                 className="text-cream/80 hover:text-cream underline underline-offset-2"
               >
                 Valais Web
+              </a>
+              <span className="mx-2 text-cream/30" aria-hidden="true">·</span>
+              {t('footer.adsBy')}{' '}
+              <a
+                href="https://flashads.ch"
+                target="_blank"
+                rel="noopener"
+                className="text-cream/80 hover:text-cream underline underline-offset-2"
+              >
+                Flash Ads
               </a>
             </p>
           </div>

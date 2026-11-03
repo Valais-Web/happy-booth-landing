@@ -1,8 +1,10 @@
 import { useEffect } from 'react';
 
+const SITE_URL = 'https://lp.thehappybooth.ch';
+
 interface SEOHeadProps {
   language: string;
-  translations: any;
+  translations: unknown;
 }
 
 const SEOHead = ({ language, translations }: SEOHeadProps) => {
@@ -12,6 +14,7 @@ const SEOHead = ({ language, translations }: SEOHeadProps) => {
       ? 'Photobooth Rental French Switzerland | Happy Booth'
       : 'Location Photobooth Suisse Romande | Happy Booth';
     document.title = title;
+    document.documentElement.lang = language === 'en' ? 'en' : 'fr';
 
     // Update meta description
     const metaDescription = document.querySelector('meta[name="description"]');
@@ -22,33 +25,35 @@ const SEOHead = ({ language, translations }: SEOHeadProps) => {
       metaDescription.setAttribute('content', description);
     }
 
+    // Canonical URL (one per language)
+    const canonicalHref = `${SITE_URL}/${language === 'en' ? 'en' : 'fr'}`;
+    let canonical = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.rel = 'canonical';
+      document.head.appendChild(canonical);
+    }
+    canonical.href = canonicalHref;
+    document.querySelector('meta[property="og:url"]')?.setAttribute('content', canonicalHref);
+
     // Remove existing hreflang links
     const existingHreflangs = document.querySelectorAll('link[hreflang]');
     existingHreflangs.forEach(link => link.remove());
 
     // Add hreflang links
     const head = document.head;
-    
-    // French version
-    const frLink = document.createElement('link');
-    frLink.rel = 'alternate';
-    frLink.hreflang = 'fr';
-    frLink.href = window.location.origin + '/fr';
-    head.appendChild(frLink);
-
-    // English version
-    const enLink = document.createElement('link');
-    enLink.rel = 'alternate';
-    enLink.hreflang = 'en';
-    enLink.href = window.location.origin + '/en';
-    head.appendChild(enLink);
-
-    // Default version
-    const defaultLink = document.createElement('link');
-    defaultLink.rel = 'alternate';
-    defaultLink.hreflang = 'x-default';
-    defaultLink.href = window.location.origin + '/fr';
-    head.appendChild(defaultLink);
+    const alternates: [string, string][] = [
+      ['fr', `${SITE_URL}/fr`],
+      ['en', `${SITE_URL}/en`],
+      ['x-default', `${SITE_URL}/fr`],
+    ];
+    alternates.forEach(([hreflang, href]) => {
+      const link = document.createElement('link');
+      link.rel = 'alternate';
+      link.hreflang = hreflang;
+      link.href = href;
+      head.appendChild(link);
+    });
 
     // Update Open Graph tags
     const ogTitle = document.querySelector('meta[property="og:title"]');
