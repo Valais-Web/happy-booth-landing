@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react';
 
-type TranslationData = {
-  [key: string]: any;
-};
+type TranslationValue = string | TranslationValue[] | { [key: string]: TranslationValue };
+type TranslationData = { [key: string]: TranslationValue };
 
 const useTranslation = () => {
   const [translations, setTranslations] = useState<TranslationData>({});
@@ -55,11 +54,11 @@ const useTranslation = () => {
   // Translation function
   const t = (key: string): string => {
     const keys = key.split('.');
-    let value: any = translations;
+    let value: unknown = translations;
     
     for (const k of keys) {
       if (value && typeof value === 'object' && k in value) {
-        value = value[k];
+        value = (value as Record<string, unknown>)[k];
       } else {
         console.warn(`Translation key "${key}" not found for language "${language}"`);
         return key; // Return key as fallback
@@ -70,13 +69,14 @@ const useTranslation = () => {
   };
 
   // Get array of translations (for FAQ items, features, etc.)
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any -- callers cast items to their own shapes
   const tArray = (key: string): any[] => {
     const keys = key.split('.');
-    let value: any = translations;
+    let value: unknown = translations;
     
     for (const k of keys) {
       if (value && typeof value === 'object' && k in value) {
-        value = value[k];
+        value = (value as Record<string, unknown>)[k];
       } else {
         console.warn(`Translation array key "${key}" not found for language "${language}"`);
         return [];

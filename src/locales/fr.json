@@ -17,7 +17,7 @@
     "cta": "Demander une offre",
     "heroImageAlt": "Des gens qui s'amusent devant un photobooth",
     "googleReviewsAlt": "Google Reviews",
-    "basedOnReviews": "Basé sur 57 avis"
+    "basedOnReviews": "Basé sur 66 avis"
   },
   "gallery": {
     "title": "Nos photobooths en action",
@@ -28,7 +28,7 @@
     "title": "Pourquoi 1000+ clients nous font confiance depuis 2018",
     "subtitle": "Découvrez les chiffres qui parlent d'eux-mêmes",
     "rating": "Note moyenne clients",
-    "ratingDesc": "Basé sur 37+ avis vérifiés Google",
+    "ratingDesc": "Basé sur 66 avis vérifiés Google",
     "events": "Événements réussis", 
     "eventsDesc": "Mariages, anniversaires, entreprises",
     "coverage": "Couverture Suisse Romande",
@@ -275,8 +275,8 @@
         "answer": "Un photobooth professionnel offre : qualité studio (éclairage, objectif pro), animations interactives impossibles sur smartphone, impressions instantanées haute qualité, gestion automatique des files d'attente, personnalisation complète, et surtout une vraie animation qui crée l'événement. Le DIY demande quelqu'un dédié toute la soirée."
       },
       {
-        "question": "800-1000 CHF pour quelques heures, n'est-ce pas excessif ?",
-        "answer": "Divisé par 100 invités = 8-10 CHF par personne pour un souvenir personnalisé qu'ils garderont. Comparons : un photographe coûte 2000-4000 CHF, un DJ 1500 CHF. Notre équipement professionnel coûte plus de 15'000 CHF et nécessite maintenance, transport, personnalisation (2h de préparation graphique), installation (2h), et présence technique."
+        "question": "290-1090 CHF pour quelques heures, n'est-ce pas excessif ?",
+        "answer": "Divisé par 100 invités = 3-11 CHF par personne pour un souvenir personnalisé qu'ils garderont. Comparons : un photographe coûte 2000-4000 CHF, un DJ 1500 CHF. Notre équipement professionnel coûte plus de 15'000 CHF et nécessite maintenance, transport, personnalisation (2h de préparation graphique), installation (2h), et présence technique."
       },
       {
         "question": "Et si peu de gens l'utilisent finalement ?",
@@ -360,12 +360,15 @@
     "thankYouDesc": "Nous vous contactons dans les 24h avec une offre personnalisée.",
     "errorConsent": "Veuillez accepter les conditions pour continuer",
     "successMessage": "Demande envoyée ! Nous vous contactons rapidement.",
+    "errorEmail": "Veuillez indiquer votre nom et une adresse e-mail valide",
+    "errorSubmit": "L'envoi a échoué. Vos informations sont conservées, veuillez réessayer ou nous écrire directement.",
     "contactConsent": "J'accepte d'être contacté pour ce devis et la politique de confidentialité *"
   },
   "footer": {
     "tagline": "Happy Booth - Location photobooth Suisse Romande",
     "copyright": "© 2026 Happy Booth. Tous droits réservés.",
     "builtBy": "Site réalisé par",
+    "adsBy": "Ads par",
     "language": "Langue"
   },
   "headings": {

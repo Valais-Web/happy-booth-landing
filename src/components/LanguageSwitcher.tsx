@@ -7,11 +7,9 @@ interface LanguageSwitcherProps {
 
 const LanguageSwitcher = ({ currentLanguage }: LanguageSwitcherProps) => {
   const switchLanguage = (lang: string) => {
-    if (lang === 'fr') {
-      window.location.href = '/fr';
-    } else {
-      window.location.href = '/en';
-    }
+    // Keep the query string (gclid, wbraid, gbraid, utm_*) so ad attribution survives the switch
+    const path = lang === 'fr' ? '/fr' : '/en';
+    window.location.href = `${path}${window.location.search}${window.location.hash}`;
   };
 
   return (

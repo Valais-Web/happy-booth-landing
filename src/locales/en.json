@@ -17,7 +17,7 @@
     "cta": "Get a Quote",
     "heroImageAlt": "People having fun in front of a photobooth",
     "googleReviewsAlt": "Google Reviews",
-    "basedOnReviews": "Based on 57 reviews"
+    "basedOnReviews": "Based on 66 reviews"
   },
   "gallery": {
     "title": "Our photobooths in action",
@@ -28,7 +28,7 @@
     "title": "Why 1000+ clients have trusted us since 2018", 
     "subtitle": "Discover the numbers that speak for themselves",
     "rating": "Average customer rating",
-    "ratingDesc": "Based on 57+ verified Google reviews",
+    "ratingDesc": "Based on 66 verified Google reviews",
     "events": "Successful events",
     "eventsDesc": "Weddings, birthdays, corporate events",
     "coverage": "French Switzerland coverage",
@@ -273,8 +273,8 @@
         "answer": "A professional photobooth offers: studio quality (lighting, pro lens), interactive animations impossible on smartphone, high-quality instant prints, automatic queue management, complete customization, and above all real animation that creates the event. DIY requires someone dedicated all evening."
       },
       {
-        "question": "800-1000 CHF for a few hours, isn't that excessive?",
-        "answer": "Divided by 100 guests = 8-10 CHF per person for a personalized souvenir they will keep. Let's compare: a photographer costs 2000-4000 CHF, a DJ 1500 CHF. Our professional equipment costs over 15,000 CHF and requires maintenance, transport, customization (2h graphic preparation), installation (2h), and technical presence."
+        "question": "290-1090 CHF for a few hours, isn't that excessive?",
+        "answer": "Divided by 100 guests = 3-11 CHF per person for a personalized souvenir they will keep. Let's compare: a photographer costs 2000-4000 CHF, a DJ 1500 CHF. Our professional equipment costs over 15,000 CHF and requires maintenance, transport, customization (2h graphic preparation), installation (2h), and technical presence."
       },
       {
         "question": "What if few people use it in the end?", 
@@ -325,6 +325,8 @@
     "thankYouDesc": "We will contact you within 24h with a personalized offer.",
     "errorConsent": "Please accept the conditions to continue",
     "successMessage": "Request sent! We will contact you quickly.",
+    "errorEmail": "Please enter your name and a valid email address",
+    "errorSubmit": "Sending failed. Your details have been kept, please try again or email us directly.",
     "formStep1Title": "Tell us about yourself",
     "formStep2Title": "Your event details",
     "formStep3Title": "Finalize your request",
@@ -365,6 +367,7 @@
     "tagline": "Happy Booth - Photobooth Rental French-speaking Switzerland",
     "copyright": "© 2026 Happy Booth. All rights reserved.",
     "builtBy": "Website built by",
+    "adsBy": "Ads by",
     "language": "Language"
   },
   "headings": {
